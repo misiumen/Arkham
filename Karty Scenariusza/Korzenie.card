@@ -1,0 +1,24 @@
+{
+  "type": "场景卡",
+  "name": "Korzenie",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "场景卡",
+    "is_back": true
+  },
+  "is_back": false,
+  "serial_number": "1",
+  "threshold": "8",
+  "flavor": "Bolą mnie korzenie.",
+  "picture_base64": "",
+  "tts_config": {
+    "version": "v2",
+    "script_id": "5879F001"
+  },
+  "content_hash": "7f0c0a2aa1c888487dd29b23ac729eb820b6263b74b13a745c7e5d2f9455e159"
+}
