@@ -1,6 +1,6 @@
 {
   "type": "地点卡",
-  "name": "Ugór",
+  "name": "Ugór1",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -26,5 +26,5 @@
     "version": "v2",
     "script_id": "49B04BD6"
   },
-  "content_hash": "81881c44eb548b19fe79fe3627cd73f67999585aec60ab0ae9bdeac60fc623d4"
+  "content_hash": "ffc4ea0db71fdd359114517cfd961de323915f20731ae8c6a8105eb7ee5ec5fd"
 }
