@@ -32,7 +32,9 @@
     "subtitle": "Biznesmen Krętacz",
     "card_back": {
       "size": 30,
-      "option": "Opcje tworzenia talii: karty Łotra (<rog>) o poziomie 0-5, karty Poszukiwacza (<see>) o poziomie 0-2, karty neutralne o poziomie 0-5."
+      "option": "Opcje tworzenia talii: karty Łotra (<rog>) o poziomie 0-5, karty Poszukiwacza (<see>) o poziomie 0-2, karty neutralne o poziomie 0-5.",
+      "story": "Wojciech Robak to milczący producent paprykarza ze Szczecina. Jego przetwórnia, położona na zdewastowanych nabrzeżach Odry, działa nocą, a dostawy surowca przypływają spoza map. Mieszkańcy portowego miasta mówią, że paprykarz Robaka ma \"specyficzny\" smak - taki, który śni się jeszcze długo po spożyciu. Nikt nie widział, by Robak spał. Nikt nie wie skąd pochodzi jego przepis, ale w mieście krąży pogłoska że ci zbyt wścibscy ubogacają kocioł z paprykarzem.",
+      "requirement": "Paprykarz, Paraliż Decyzyjny, 1 podstawowe osłabienie"
     }
   },
   "investigator_footer_type": "normal",
@@ -73,5 +75,5 @@
     "version": "v2",
     "script_id": "D6718105"
   },
-  "content_hash": "0b76174af490a863e2d9181be427a50c6812a4608c46ad90db98379d2fb2fb3d"
+  "content_hash": "21897e6dc78467b4a54fcbdc08e5b7b7e8bad643ef8ee50869556f5b17b556a0"
 }
