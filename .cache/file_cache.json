@@ -2,127 +2,143 @@
   "files": {
     "Karty Badaczy\\B\u00e1nh m\u00ec.card": {
       "card_type": "\u4e8b\u4ef6\u5361",
-      "mtime": 1765282933.0590584
+      "mtime": 1765873444.7463174
     },
     "Karty Badaczy\\Gomez Toksyczny.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1765282933.0645673
+      "mtime": 1765873444.7473316
     },
     "Karty Badaczy\\Konrad Kleszcz.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1765282933.0699227
+      "mtime": 1765873444.7493174
     },
     "Karty Badaczy\\Micha\u0142 z Barg\u0142owa token.card": {
       "card_type": "\u8c03\u67e5\u5458\u5c0f\u5361",
-      "mtime": 1765282933.0807323
+      "mtime": 1765873444.7603211
     },
     "Karty Badaczy\\Micha\u0142 z Barg\u0142owa.card": {
       "card_type": "\u8c03\u67e5\u5458",
-      "mtime": 1765282933.0931594
+      "mtime": 1765873444.7643144
     },
     "Karty Lokacji\\Ug\u00f3r.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765563694.1838853
+      "mtime": 1765873445.4375982
     },
     "Karty Scenariusza\\Korzenie.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1765284501.694333
+      "mtime": 1765873445.5567925
     },
     "Karty Spotka\u0144\\Kozi Pomiot.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1765282933.0943217
+      "mtime": 1765873445.5758402
     },
     "Karty Spotka\u0144\\Zb\u0142\u0105kany Kultywator.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1765563714.6349068
+      "mtime": 1765873445.6463258
     },
     "Karty Lokacji\\Kapliczka.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765563714.2078092
+      "mtime": 1765873444.9058993
     },
     "Karty Lokacji\\Pod Rogatym.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765563714.275535
+      "mtime": 1765873445.0620148
     },
     "Karty Lokacji\\Przybrze\u017cna rampa za\u0142adunkowa.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765563714.2965794
+      "mtime": 1765873445.1020179
     },
     "Karty Lokacji\\Stary magazyn zbo\u017cowy.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765563714.3614235
+      "mtime": 1765873445.2407384
     },
     "Karty Lokacji\\Targ Rybny.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765563714.447662
+      "mtime": 1765873445.419047
     },
     "Karty Lokacji\\Warsztat Kowalski.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765563714.465476
+      "mtime": 1765873445.4738913
     },
     "Karty Lokacji\\Warsztat Ko\u0142odzieja.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765563714.5351636
+      "mtime": 1765873445.5537906
     },
     "Karty Spotka\u0144\\Ciekawski Wie\u015bniak.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1765563714.551792
+      "mtime": 1765873445.5748396
     },
     "Karty Spotka\u0144\\Kultysta Traktorzysta.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1765563714.5906649
+      "mtime": 1765873445.6128716
     },
     "Karty Spotka\u0144\\Ojciec \u017berd\u017a.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1765563714.605702
+      "mtime": 1765873445.620854
     },
     "Karty Spotka\u0144\\Przekonany wyznawca.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1765563714.619742
+      "mtime": 1765873445.6298683
     },
     "Karty Lokacji\\Kapliczka 8.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765823226.1307175
+      "mtime": 1765873444.8818457
     },
     "Karty Lokacji\\Pod Rogatym 3.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765823226.1961033
+      "mtime": 1765873444.9844737
     },
     "Karty Lokacji\\Przybrze\u017cna rampa za\u0142adunkowa 7.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765823226.210872
+      "mtime": 1765873445.0820236
     },
     "Karty Lokacji\\Stary magazyn zbo\u017cowy 6.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765823226.2654388
+      "mtime": 1765873445.1768093
     },
     "Karty Lokacji\\Targ Rybny 1.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765823226.3419952
+      "mtime": 1765873445.32961
     },
     "Karty Lokacji\\Warsztat Kowalski 9.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765823226.3736892
+      "mtime": 1765873445.4641728
     },
     "Warsztat Kowalski 9.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765823226.3986735
+      "mtime": 1765873445.6523132
     },
     "Karty Lokacji\\Mleczarnia.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1765823226.138997
+      "mtime": 1765873444.907895
     },
     "Karty Badaczy\\Wojciech Robak.card": {
       "card_type": "\u8c03\u67e5\u5458",
-      "mtime": 1765837025.6820157
+      "mtime": 1765873444.8233178
     },
     "Karty Badaczy\\Wojciech Robak token card.card": {
       "card_type": "\u8c03\u67e5\u5458\u5c0f\u5361",
-      "mtime": 1765827460.0787206
+      "mtime": 1765873444.8113406
     },
     "Karty Badaczy\\Paprykarz.card": {
+      "card_type": "\u652f\u63f4\u5361",
+      "mtime": 1765873444.77834
+    },
+    "Karty Badaczy\\Parali\u017c decyzyjny.card": {
       "card_type": null,
-      "mtime": 1765837035.7236173
+      "mtime": 1765873444.77834
+    },
+    "Karty Lokacji\\scenariusz 2\\Przysta\u0144.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766411400.21691
+    },
+    "Karty Lokacji\\scenariusz 2\\Przysta\u0144_kor_15.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766411399.721338
+    },
+    "Karty Lokacji\\scenariusz 2\\Przysta\u0144_kor_9.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766405407.5522506
     }
   }
 }
