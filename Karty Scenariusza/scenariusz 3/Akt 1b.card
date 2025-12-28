@@ -1,0 +1,20 @@
+{
+  "type": "场景卡",
+  "name": "",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "场景卡",
+    "is_back": true
+  },
+  "encounter_group": "f",
+  "tts_config": {
+    "version": "v2",
+    "script_id": "EC466A58"
+  },
+  "content_hash": "59b635ab3724a83b55a13924677c270d1c2e62884bcb18847b6226b4c21b0bc2"
+}

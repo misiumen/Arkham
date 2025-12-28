@@ -1,0 +1,45 @@
+{
+  "type": "场景卡",
+  "name": "Czarna koza białe mleko daje",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "场景卡",
+    "is_back": true
+  },
+  "tts_config": {
+    "version": "v2",
+    "script_id": "2FD1CFB0"
+  },
+  "content_hash": "30c0ba4d860b58f1bc8a84ca753895647845ccf1341f6a243268167b6aa5ca2a",
+  "flavor": "Nikt nie reaguje na obecność barki, a ruch na nabrzeżu jest minimalny, jakby wszystko, co istotne, wydarzyło się wcześniej albo miało dopiero nadejść. Jeśli coś tu przenika do miasta, dzieje się to powoli i bez sprzeciwu.",
+  "serial_number": "2",
+  "encounter_group": "f",
+  "use_external_image": 0,
+  "external_image": "",
+  "picture_base64": "",
+  "picture_layout": {
+    "mode": "auto",
+    "offset": {
+      "x": -98,
+      "y": -10
+    },
+    "scale": 0.75,
+    "crop": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "rotation": 0,
+    "flip_horizontal": false,
+    "flip_vertical": false
+  },
+  "is_back": false,
+  "threshold": "2<调查员>",
+  "body": "<obj> Wydaj wymaganą liczbę żetonów wskazówek, aby spowodować postęp talii."
+}
