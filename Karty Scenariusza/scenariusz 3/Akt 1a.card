@@ -9,13 +9,17 @@
   "back": {
     "language": "pl",
     "type": "场景卡",
-    "is_back": true
+    "is_back": true,
+    "encounter_group": "f",
+    "serial_number": "1a",
+    "flavor": "Zbierając informacje, zauważacie powtarzalny schemat. Ruch na nabrzeżu jest ograniczony, ale regularny. Ludzie wykonują swoje zadania bez pytań i bez potrzeby nadzoru. Nikt nie sprawdza ładunków, nikt nie prowadzi ewidencji, nikt nie reaguje na nieprawidłowości.\n\nŚlady prowadzą do jednego zakładu, przez który przewija się większość lokalnego transportu. Jeśli coś trafia do miasta, to właśnie tam.\n",
+    "name": "Miasto złą sławą owiane"
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "fc6acaad5f623c0b2f1f27f2267dffcb4865d6992e7e1c6301b3490f68d5079f",
+  "content_hash": "94dc5199b6c0c11f7fc3d4b3583cf0d62ebe0b8c7b0113fda8a15a93122da725",
   "flavor": "Nikt nie reaguje na obecność barki, a ruch na nabrzeżu jest minimalny, jakby wszystko, co istotne, wydarzyło się wcześniej albo miało dopiero nadejść. Jeśli coś tu przenika do miasta, dzieje się to powoli i bez sprzeciwu.",
   "serial_number": "1a",
   "encounter_group": "f",

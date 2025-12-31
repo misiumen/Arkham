@@ -9,13 +9,14 @@
   "back": {
     "language": "pl",
     "type": "场景卡",
-    "is_back": true
+    "is_back": true,
+    "encounter_group": "f"
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "30c0ba4d860b58f1bc8a84ca753895647845ccf1341f6a243268167b6aa5ca2a",
+  "content_hash": "db090b63f51b3d6f34fee930abadcd2b9cda21bcaa83cdfc344fcae18309518c",
   "flavor": "Nikt nie reaguje na obecność barki, a ruch na nabrzeżu jest minimalny, jakby wszystko, co istotne, wydarzyło się wcześniej albo miało dopiero nadejść. Jeśli coś tu przenika do miasta, dzieje się to powoli i bez sprzeciwu.",
   "serial_number": "2",
   "encounter_group": "f",
@@ -40,6 +41,6 @@
     "flip_vertical": false
   },
   "is_back": false,
-  "threshold": "2<调查员>",
-  "body": "<obj> Wydaj wymaganą liczbę żetonów wskazówek, aby spowodować postęp talii."
+  "threshold": "-",
+  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii."
 }
