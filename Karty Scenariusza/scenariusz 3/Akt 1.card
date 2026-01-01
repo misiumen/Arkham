@@ -11,17 +11,18 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "serial_number": "1a",
+    "serial_number": "1",
     "flavor": "Zbierając informacje, zauważacie powtarzalny schemat. Ruch na nabrzeżu jest ograniczony, ale regularny. Ludzie wykonują swoje zadania bez pytań i bez potrzeby nadzoru. Nikt nie sprawdza ładunków, nikt nie prowadzi ewidencji, nikt nie reaguje na nieprawidłowości.\n\nŚlady prowadzą do jednego zakładu, przez który przewija się większość lokalnego transportu. Jeśli coś trafia do miasta, to właśnie tam.\n",
-    "name": "Miasto złą sławą owiane"
+    "name": "Miasto złą sławą owiane",
+    "body": "Z wybranej lokacji usuń 1 żeton chaosu."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "94dc5199b6c0c11f7fc3d4b3583cf0d62ebe0b8c7b0113fda8a15a93122da725",
+  "content_hash": "07c1d3bb7b2610879f32fd17f9edfdaa9a4c9b4bae28e3d11711309731e02030",
   "flavor": "Nikt nie reaguje na obecność barki, a ruch na nabrzeżu jest minimalny, jakby wszystko, co istotne, wydarzyło się wcześniej albo miało dopiero nadejść. Jeśli coś tu przenika do miasta, dzieje się to powoli i bez sprzeciwu.",
-  "serial_number": "1a",
+  "serial_number": "1",
   "encounter_group": "f",
   "use_external_image": 0,
   "external_image": "",

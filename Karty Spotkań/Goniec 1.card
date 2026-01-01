@@ -34,12 +34,12 @@
   "enemy_health": "3<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Cytadela\n<pat> (Mleczarnia Spółdzielcza), Powściągliwy\n",
+  "body": "<spa> Cytadela\n<pat> (Mleczarnia Spółdzielcza), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Mleczarnia Spółdzielcza, za każdy pozostały punkt wytrzymałości Gońca umieść 1 żeton chaosu na tej lokalizacji, a następnie odrzuć Gońca.",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "104647bf0d7285e55e9f19099f480c6bce78574bdaa4cd195b8d3eee2cb10812",
+  "content_hash": "11b7a4c2d4308eafe9e1bbe3ae844e62f9c1614312209056c280e37105c39823",
   "enemy_damage": 1,
   "traits": [
     "Dostawca"

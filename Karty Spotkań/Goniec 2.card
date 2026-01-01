@@ -34,12 +34,12 @@
   "enemy_health": "3<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Nadbrzeże Warty\n<pat> (Uniwersytet Adama Miskatonica), Powściągliwy\n",
+  "body": "<spa> Nadbrzeże Warty\n<pat> (Uniwersytet Adama Miskatonica), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Uniwersytet Adama Miskatonica, za każdy pozostały punkt wytrzymałości Gońca umieść 1 żeton chaosu na tej lokalizacji, a następnie odrzuć Gońca.\n",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "eba1aac4ce928a1624be36ae7d7c2fd555245ce72c6fb8f44942eb8cafea9f1d",
+  "content_hash": "accbae07e6b0463692ec5c6dd0f6fc126c391303006f9cb95b6648a65bd2688c",
   "enemy_damage": 1,
   "traits": [
     "Dostawca"
