@@ -1,6 +1,6 @@
 {
   "type": "场景卡",
-  "name": "Miasto złą sławą owiane",
+  "name": "Czarna koza białe mleko daje",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -11,18 +11,18 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "serial_number": "1",
-    "flavor": "Zbierając informacje, zauważacie powtarzalny schemat. Ruch na nabrzeżu jest ograniczony, ale regularny. Ludzie wykonują swoje zadania bez pytań i bez potrzeby nadzoru. Nikt nie sprawdza ładunków, nikt nie prowadzi ewidencji, nikt nie reaguje na nieprawidłowości.\n\nŚlady prowadzą do jednego zakładu, przez który przewija się większość lokalnego transportu. Jeśli coś trafia do miasta, to właśnie tam.\n",
-    "name": "Miasto złą sławą owiane",
-    "body": "Z wybranej lokacji zamień 1 żeton chaosu na wskazówkę."
+    "flavor": "Po serii rozmów i drobnych przysług napięcie w końcu opada. Pracownicy przestają unikać wzroku, a nazwiska, które wcześniej nic nie znaczyły, zaczynają otwierać drzwi. Nikt nie mówi wprost, ale daje do zrozumienia, że możecie zobaczyć więcej -- pod warunkiem, że nie będziecie zadawać złych pytań przy złych ludziach.\n\nDostęp do mleczarni nie jest już problemem. Prawdziwym pytaniem jest to, co zobaczycie na linii rozlewniczej, gdy zostaniecie tam wpuszczeni.",
+    "serial_number": "2",
+    "name": "Czarna koza białe mleko daje",
+    "body": "Z wybranej lokalizacji usuń 1 żeton chaosu."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "b457ffecab6ca09dc7fc50a10f4ffe78076f425141c50352cf77d41dc5270f9a",
-  "flavor": "Nikt nie reaguje na obecność barki, a ruch na nabrzeżu jest minimalny, jakby wszystko, co istotne, wydarzyło się wcześniej albo miało dopiero nadejść. Jeśli coś tu przenika do miasta, dzieje się to powoli i bez sprzeciwu.",
-  "serial_number": "1",
+  "content_hash": "441597d36935308e59f8a70775bb7cb903b0d8b3767eda7f52e635dd70f5fd5a",
+  "flavor": "Na Rynku Jeżyckim zatrzymuje was człowiek, którego widzieliście już wcześniej -- zmęczony, nerwowy, z dłoniami pachnącymi mlekiem i czymś jeszcze, metalicznym. Mówi półgłosem, że transporty idą dalej, mimo że „nie wszystko wraca z kadzi”. Wskazuje jedno miejsce i prosi, by tam zajrzeć, zanim znów ruszą poranne wozy.\nMleczarnia pracuje jak zawsze. Bramy są otwarte, strażnicy znudzeni, a w środku trwa rozlew. Jeśli coś skaża miasto, właśnie stąd się rozchodzi -- razem z każdą kolejną bańką wynoszoną na bruk.",
+  "serial_number": "3",
   "encounter_group": "f",
   "use_external_image": 0,
   "external_image": "",
@@ -30,8 +30,8 @@
   "picture_layout": {
     "mode": "custom",
     "offset": {
-      "x": -98,
-      "y": -10
+      "x": 42,
+      "y": 10
     },
     "scale": 0.75,
     "crop": {
@@ -45,6 +45,6 @@
     "flip_vertical": false
   },
   "is_back": false,
-  "threshold": "2<调查员>",
-  "body": "<obj> Wydaj wymaganą liczbę żetonów wskazówek, aby spowodować postęp talii."
+  "threshold": "-",
+  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii."
 }
