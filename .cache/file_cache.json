@@ -114,7 +114,7 @@
     },
     "Karty Badaczy\\Wojciech Robak.card": {
       "card_type": "\u8c03\u67e5\u5458",
-      "mtime": 1765831882.2337475
+      "mtime": 1766798546.5633352
     },
     "Karty Badaczy\\Wojciech Robak token card.card": {
       "card_type": "\u8c03\u67e5\u5458\u5c0f\u5361",
@@ -131,6 +131,54 @@
     "Karty Lokacji\\Scenariusz 2\\Przysta\u0144_kor_9.card": {
       "card_type": "\u5730\u70b9\u5361",
       "mtime": 1766418605.4638443
+    },
+    "Karty Lokacji\\Scenariusz 3\\Biblioteka Uniwersytecka.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798625.1436124
+    },
+    "Karty Lokacji\\Scenariusz 3\\Biblioteka Uniwersytecka_kor_9.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798640.2439837
+    },
+    "Karty Lokacji\\Scenariusz 3\\Cytadela.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798635.772222
+    },
+    "Karty Lokacji\\Scenariusz 3\\Dyrekcja Zak\u0142adu.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798645.1343107
+    },
+    "Karty Lokacji\\Scenariusz 3\\Dyrekcja Zak\u0142adu_kor_9.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798649.8886614
+    },
+    "Karty Lokacji\\Scenariusz 3\\Linia Rozlewnicza.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798655.2341866
+    },
+    "Karty Lokacji\\Scenariusz 3\\Mleczarnia Sp\u00f3\u0142dzielcza.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798666.3188171
+    },
+    "Karty Lokacji\\Scenariusz 3\\Nadbrze\u017ce Warty.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798672.8026056
+    },
+    "Karty Lokacji\\Scenariusz 3\\Stary Rynek.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798679.691725
+    },
+    "Karty Lokacji\\Scenariusz 3\\Tunele Forteczne.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798696.1703708
+    },
+    "Karty Lokacji\\Scenariusz 3\\UAM.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798707.6219993
+    },
+    "Karty Lokacji\\Scenariusz 3\\Zak\u0142ady Cegielskiego.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1766798714.9687722
     }
   }
 }
