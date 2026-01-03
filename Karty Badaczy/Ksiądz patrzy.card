@@ -1,0 +1,21 @@
+{
+  "type": "诡计卡",
+  "name": "Kolekta",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "遭遇卡背"
+  },
+  "class": "弱点",
+  "weakness_type": "弱点",
+  "body": "<for> Zamiast odrzucić tę kartę, wtasuj ją do swojej talii.\nUsuń wszystkie zasoby z Tacy Ofiarnej.",
+  "tts_config": {
+    "version": "v2",
+    "script_id": "67EBC41F"
+  },
+  "content_hash": "cf4c9fca0bc351cce748a7f875e56b643ae53d5c002e8f630d914cb48ff0955f"
+}
