@@ -114,15 +114,19 @@
     },
     "Karty Badaczy\\Wojciech Robak.card": {
       "card_type": "\u8c03\u67e5\u5458",
-      "mtime": 1765837025.6820157
+      "mtime": 1765916019.554743
     },
     "Karty Badaczy\\Wojciech Robak token card.card": {
       "card_type": "\u8c03\u67e5\u5458\u5c0f\u5361",
       "mtime": 1765827460.0787206
     },
     "Karty Badaczy\\Paprykarz.card": {
+      "card_type": "\u652f\u63f4\u5361",
+      "mtime": 1765839640.6419055
+    },
+    "Karty Badaczy\\Parali\u017c decyzyjny.card": {
       "card_type": null,
-      "mtime": 1765837035.7236173
+      "mtime": 1765839654.6770928
     }
   }
 }
