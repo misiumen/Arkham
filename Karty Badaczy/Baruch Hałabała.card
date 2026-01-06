@@ -58,12 +58,16 @@
     "flip_vertical": false
   },
   "flavor": "Uśmiech ma równie szczery co intencje.",
-  "body": "Rozpoczynasz grę z Taccą Ofiarną w grze.\n⚡Wydaj 2 zasoby z Tacy Ofiarnej i dodaj 1 🌑 do worka chaosu.\n⭐ Usuń 1 🌑 z worka chaosu albo wydaj dwa zasoby z Tacy Ofiarnej bez wrzucania żetonu 🌑 do worka chaosu.",
+  "body": "Rozpoczynasz grę z Tacą Ofiarną w grze.\n\nEfekt ⭐: +1. Usuń 1 🌑 z worka chaosu albo wydaj dwa zasoby z Tacy Ofiarnej bez wrzucania żetonu 🌑 do worka chaosu.",
   "tts_config": {
     "version": "v2",
     "script_id": "EA819F6E"
   },
-  "content_hash": "a272b2b1a1ab53ad69f19fc853befeca64ae43da827b1b3e9e025b152b8dd8de",
+  "content_hash": "14ea3c205fdcb05015cdf911b5baf11d35136230005c8e5794f0aeaab3d4e2b5",
   "health": 8,
-  "horror": 6
+  "horror": 6,
+  "traits": [
+    "Wyznawca",
+    "Asystent"
+  ]
 }

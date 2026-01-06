@@ -1,0 +1,21 @@
+{
+  "type": "规则小卡",
+  "name": "sfsdgfsdg",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "定制卡背"
+  },
+  "body": "hjbvhv 🏅 or <独特>",
+  "page_number": 1,
+  "encounter_group_number": "f",
+  "tts_config": {
+    "version": "v2",
+    "script_id": "3BDE22FE"
+  },
+  "content_hash": "04e3d5171045ef78ae63fa37fc37c84f47536d61d3192fb1be4303047e22179d"
+}
