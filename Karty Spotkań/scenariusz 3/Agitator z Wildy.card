@@ -34,12 +34,12 @@
   "enemy_health": "3",
   "evade": "3",
   "enemy_damage_horror": 0,
-  "body": "<spa> Badacz z największą liczbą wskazówek\n<for> Po tym, jak Agitator z Wildy wejdzie w zwarcie z badaczem: Ten badacz musi natychmiast przemieścić 1 wskazówkę do swojej aktualnej lokalizacji. Dopóki Agitator z Wildy znajduje się w lokalizacji z cechą Spaczona, otrzymuje +1 do Walki i +1 do Wymykania.",
+  "body": "<spa> Badacz z największą liczbą wskazówek\n<for> Po tym, jak Agitator z Wildy wejdzie w zwarcie z badaczem: Ten badacz musi natychmiast przemieścić 1 swoją wskazówkę do swojej lokalizacji. Dopóki Agitator z Wildy znajduje się w lokalizacji z cechą Spaczona, otrzymuje +1 do Walki i +1 do Wymykania.",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "f3d7d4f156dd7ecc411b37f50ad1404352accb6ffd7ba9fd105c51883c81c348",
+  "content_hash": "206e557fe5d6d6a31653b9e19efe9b65cf2493af2bbe4b6ccf079807725dfeba",
   "enemy_damage": 1,
   "traits": [],
   "quantity": 2,

@@ -20,7 +20,7 @@
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "eb6f106d6a7e642482fc12b1a982817c05106172d416da2e28b7ee13550922d4",
+  "content_hash": "7f03e65e4834860d1fbd35fdb6a3cf7388ef7cd6b4285a980a7974b869c615b2",
   "flavor": "Na Rynku Jeżyckim zatrzymuje was człowiek, którego widzieliście już wcześniej -- zmęczony, nerwowy, z dłoniami pachnącymi mlekiem i czymś jeszcze, metalicznym. Mówi półgłosem, że transporty idą dalej, mimo że „nie wszystko wraca z kadzi”. Wskazuje jedno miejsce i prosi, by tam zajrzeć, zanim znów ruszą poranne wozy.\nMleczarnia pracuje jak zawsze. Bramy są otwarte, strażnicy znudzeni, a w środku trwa rozlew. Jeśli coś skaża miasto, właśnie stąd się rozchodzi -- razem z każdą kolejną bańką wynoszoną na bruk.",
   "serial_number": "2",
   "encounter_group": "f",
@@ -46,5 +46,5 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii."
+  "body": "<obj> Usuń wszystkie wskazówki i żetony chaosu z lokalizacji Mleczarnia, aby spowodować postęp talii."
 }

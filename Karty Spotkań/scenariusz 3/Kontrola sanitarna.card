@@ -1,6 +1,6 @@
 {
   "type": "诡计卡",
-  "name": "Kontrola sanitarna",
+  "name": "Mini kurier",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -19,7 +19,7 @@
     "version": "v2",
     "script_id": "8E9AB3AE"
   },
-  "content_hash": "1677bdbaf620a502ec05daec58f83f56c7d42cc4341d2623fc9355cd4d5f6feb",
+  "content_hash": "96ad8a7dd7a9b73fb701d3e07766d8a45a43a9d777bffe3c904a5ecde4fc1c44",
   "picture_layout": {
     "mode": "custom",
     "offset": {
