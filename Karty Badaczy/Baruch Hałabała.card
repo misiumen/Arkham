@@ -26,7 +26,15 @@
       "rotation": 5,
       "flip_horizontal": false,
       "flip_vertical": false
-    }
+    },
+    "card_back": {
+      "size": 30,
+      "option": "karty Obrońcy (<Gua>) o poziomie 0--5, Błogosławiony o poziomie 0--5, Przeklęty o poziomie 0--5, karty neutralne o poziomie 0--5.",
+      "requirement": "Taca ofiarna,  Halabarda, Czas spowiedzi, 1 losowe podstawowe osłabienie.",
+      "other": "{{Dodatkowe przygotowanie:}} rozpoczynasz grę z Tacą Ofiarną w swoim obszarze."
+    },
+    "name": "Baruch Hałabała",
+    "subtitle": "Zastępca Ministranta"
   },
   "investigator_footer_type": "normal",
   "class": "守护者",
@@ -58,12 +66,12 @@
     "flip_vertical": false
   },
   "flavor": "Uśmiech ma równie szczery co intencje.",
-  "body": "Rozpoczynasz grę z Tacą Ofiarną w grze.\n\nEfekt ⭐: +1. Usuń 1 🌑 z worka chaosu albo wydaj dwa zasoby z Tacy Ofiarnej bez wrzucania żetonu 🌑 do worka chaosu.",
+  "body": "Rozpoczynasz grę z Tacą Ofiarną w grze.\n<for> Jeżeli w worku chaosu nie ma żetonów 🌑: lokalizacja w której się znajdujesz dostaje -1 do zasłony.\nEfekt ⭐: +1. Usuń 1 🌑 z worka chaosu albo wydaj dwa zasoby z Tacy Ofiarnej bez wrzucania żetonu 🌑 do worka chaosu.",
   "tts_config": {
     "version": "v2",
     "script_id": "EA819F6E"
   },
-  "content_hash": "14ea3c205fdcb05015cdf911b5baf11d35136230005c8e5794f0aeaab3d4e2b5",
+  "content_hash": "f6ed8e53fef998526fe31d353b8c0a5f383523e60777d22aa0005f8caad9b866",
   "health": 8,
   "horror": 6,
   "traits": [
