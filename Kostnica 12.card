@@ -25,7 +25,7 @@
       "青花"
     ],
     "victory": null,
-    "body": "Za każdym razem kiedy otrzymujesz w tej lokalizacji punkty przerażenia, zamiast tego otrzymujesz dodatkowy punkt przerażenia.\n\n⚡Jeśli w tej rundzie pokonałeś przeciwnika na tej lokalizacji, odkryj wskazówkę (limit raz na rundę)."
+    "body": "Za każdym razem kiedy otrzymujesz w tej lokalizacji punkty przerażenia, otrzymujesz dodatkowy punkt przerażenia.\n\n⚡Jeśli w tej rundzie pokonałeś przeciwnika na tej lokalizacji, odkryj wskazówkę (limit raz na rundę)."
   },
   "location_type": "未揭示",
   "shroud": "?",
@@ -46,5 +46,5 @@
     "version": "v2",
     "script_id": "856CEC5E"
   },
-  "content_hash": "3b8c6ee187bd65e7557d3bc297e87e5f154b340a6866c40fd603b94e1738b8e6"
+  "content_hash": "fb170684e33af9ace590cf0a2df1450c152d27fafc5168b285767ebeaf5bafc1"
 }
