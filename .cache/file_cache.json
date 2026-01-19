@@ -6,7 +6,7 @@
     },
     "Karty Badaczy\\Baruch Ha\u0142aba\u0142a.card": {
       "card_type": "\u8c03\u67e5\u5458",
-      "mtime": 1768599862.7316446
+      "mtime": 1768821717.8411489
     },
     "Karty Badaczy\\B\u00e1nh m\u00ec.card": {
       "card_type": "\u4e8b\u4ef6\u5361",
@@ -38,11 +38,11 @@
     },
     "Karty Badaczy\\Paprykarz.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1768755086.7737393
+      "mtime": 1768834456.6460972
     },
     "Karty Badaczy\\Parali\u017c decyzyjny.card": {
-      "card_type": null,
-      "mtime": 1768755086.7737393
+      "card_type": "\u652f\u63f4\u5361",
+      "mtime": 1768834456.4038205
     },
     "Karty Badaczy\\Taca Ofiarna.card": {
       "card_type": "\u652f\u63f4\u5361",
@@ -54,7 +54,7 @@
     },
     "Karty Badaczy\\Wojciech Robak.card": {
       "card_type": "\u8c03\u67e5\u5458",
-      "mtime": 1768755086.8228583
+      "mtime": 1768834865.92366
     },
     "Karty Scenariusza\\Korzenie.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -327,6 +327,14 @@
     "Karty Badaczy\\Baruch Ha\u0142aba\u0142a2.card": {
       "card_type": "\u8c03\u67e5\u5458",
       "mtime": 1768756076.7470412
+    },
+    "Wieczne Dylematy.card": {
+      "card_type": "\u652f\u63f4\u5361",
+      "mtime": 1768834794.3384368
+    },
+    "Karty Badaczy\\Wieczne Dylematy.card": {
+      "card_type": null,
+      "mtime": 1768755086.7737393
     }
   }
 }
