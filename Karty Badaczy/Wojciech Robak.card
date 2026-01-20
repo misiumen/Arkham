@@ -34,7 +34,7 @@
       "size": 30,
       "option": "Opcje tworzenia talii: karty Łotra (<rog>) o poziomie 0-5, karty Poszukiwacza (<see>) o poziomie 0-2, karty neutralne o poziomie 0-5.",
       "story": "Wojciech Robak to milczący producent paprykarza ze Szczecina. Jego przetwórnia, położona na zdewastowanych nabrzeżach Odry, działa nocą, a dostawy surowca przypływają spoza map. Mieszkańcy portowego miasta mówią, że paprykarz Robaka ma \"specyficzny\" smak - taki, który śni się jeszcze długo po spożyciu. Nikt nie widział, by Robak spał. Nikt nie wie skąd pochodzi jego przepis, ale w mieście krąży pogłoska że ci zbyt wścibscy ubogacają kocioł z paprykarzem.",
-      "requirement": "Paprykarz, Paraliż Decyzyjny, 1 podstawowe osłabienie"
+      "requirement": "Paprykarz, Wieczne Dylematy, 1 podstawowe osłabienie"
     }
   },
   "investigator_footer_type": "normal",
@@ -75,5 +75,9 @@
     "version": "v2",
     "script_id": "D6718105"
   },
-  "content_hash": "08bfb4a50f8382f4d1570f291d995f5a77f96764628af3369ea7d6797e8fceb9"
+  "content_hash": "6bd84ac2a1f36e27772c855aee78e7541da6f060346597d0c5da32be4313bf4b",
+  "traits": [
+    "Przestępca",
+    "Kombinator"
+  ]
 }
