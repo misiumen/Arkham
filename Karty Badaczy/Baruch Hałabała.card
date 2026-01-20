@@ -31,7 +31,8 @@
       "size": 30,
       "option": "karty Obrońcy (<Gua>) o poziomie 0--5, Błogosławiony o poziomie 0--5, Przeklęty o poziomie 0--5, karty neutralne o poziomie 0--5.",
       "requirement": "Taca ofiarna,  Halabarda, Czas spowiedzi, 1 losowe podstawowe osłabienie.",
-      "other": "{{Dodatkowe przygotowanie:}} rozpoczynasz grę z Tacą Ofiarną w swoim obszarze."
+      "other": "{{Dodatkowe przygotowanie:}} rozpoczynasz grę z Tacą Ofiarną w swoim obszarze.",
+      "story": "Baruch Hałabała wywodzi się z rodziny, która od pokoleń „pomagała” Gwardii Szwajcarskiej — głównie stojąc wystarczająco blisko, by coś kiedyś wynieść. Właśnie w ten sposób, w bliżej nieokreślonych i zdecydowanie podejrzanych okolicznościach, Hałabałowie stali się właścicielami starożytnej Halabardy, artefaktu tak świętego, jak bardzo nieudokumentowanego.\n\nJako Zastępca Ministranta Baruch ma dostęp do wszystkiego, co powinno być pod nadzorem: relikwii, zakrystii i Tacy Ofiarnej. Traktuje ją z należnym szacunkiem — najpierw liczy monety, potem zastanawia się, ilu z nich nikt nie zauważy. \n\nBaruch uchodzi za człowieka głęboko wierzącego. Zna modlitwy, symbole i gesty, a jego pobożność robi doskonałe wrażenie — zwłaszcza z bezpiecznej odległości. Wiara jednak nigdy nie stała mu na drodze do drobnych „korekt” zawartości Tacy Ofiarnej. W końcu, jak sam uważa, Opatrzność i tak oddaje swoje dobra w ręce tych, którzy potrafią je odpowiednio wykorzystać."
     },
     "name": "Baruch Hałabała",
     "subtitle": "Zastępca Ministranta"
@@ -71,7 +72,7 @@
     "version": "v2",
     "script_id": "EA819F6E"
   },
-  "content_hash": "f6ed8e53fef998526fe31d353b8c0a5f383523e60777d22aa0005f8caad9b866",
+  "content_hash": "3702b8eaf03bb1517ac814a2dee95d9b412b9dfcd6fd9d8e31db7807179fdc25",
   "health": 8,
   "horror": 6,
   "traits": [
