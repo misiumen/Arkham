@@ -1,0 +1,18 @@
+{
+  "type": "故事卡",
+  "name": "Godzina policyjna",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "遭遇卡背"
+  },
+  "tts_config": {
+    "version": "v2",
+    "script_id": "B0797DB9"
+  },
+  "content_hash": "13e10a027bdb72e5add804b15e6cc4a661ba4405cffad227bbd3cbd1054bf9d7"
+}
