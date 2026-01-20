@@ -67,12 +67,12 @@
     "flip_vertical": false
   },
   "flavor": "Uśmiech ma równie szczery co intencje.",
-  "body": "Rozpoczynasz grę z Tacą Ofiarną w grze.\n<for> Jeżeli w worku chaosu nie ma żetonów 🌑: lokalizacja w której się znajdujesz dostaje -1 do zasłony.\nEfekt ⭐: +1. Usuń 1 🌑 z worka chaosu albo wydaj dwa zasoby z Tacy Ofiarnej bez wrzucania żetonu 🌑 do worka chaosu.",
+  "body": "Rozpoczynasz grę z Tacą Ofiarną w grze.\n<for> Jeżeli w worku chaosu nie ma żetonów 🌑: lokalizacja w której się znajdujesz dostaje -1 do zasłony.\nEfekt ⭐: +1. Usuń 1 🌑 z worka chaosu albo wydaj dwa zasoby z Tacy Ofiarnej bez wrzucania żetonu 🌑 do worka chaosu.\n\n",
   "tts_config": {
     "version": "v2",
     "script_id": "EA819F6E"
   },
-  "content_hash": "3702b8eaf03bb1517ac814a2dee95d9b412b9dfcd6fd9d8e31db7807179fdc25",
+  "content_hash": "8771ad727f11535ca6dfe209911a0d7abc411b9a48d1b222a378d367626e0c0e",
   "health": 8,
   "horror": 6,
   "traits": [
