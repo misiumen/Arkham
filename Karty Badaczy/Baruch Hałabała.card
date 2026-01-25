@@ -26,7 +26,16 @@
       "rotation": 5,
       "flip_horizontal": false,
       "flip_vertical": false
-    }
+    },
+    "card_back": {
+      "size": 30,
+      "option": "karty Obrońcy (<Gua>) o poziomie 0--5, Błogosławiony o poziomie 0--5, Przeklęty o poziomie 0--5, karty neutralne o poziomie 0--5.",
+      "requirement": "Taca ofiarna,  Halabarda, Czas spowiedzi, 1 losowe podstawowe osłabienie.",
+      "other": "{{Dodatkowe przygotowanie:}} rozpoczynasz grę z Tacą Ofiarną w swoim obszarze.",
+      "story": "Baruch Hałabała wywodzi się z rodziny, która od pokoleń „pomagała” Gwardii Szwajcarskiej — głównie stojąc wystarczająco blisko, by coś kiedyś wynieść. Właśnie w ten sposób, w bliżej nieokreślonych i zdecydowanie podejrzanych okolicznościach, Hałabałowie stali się właścicielami starożytnej Halabardy, artefaktu tak świętego, jak bardzo nieudokumentowanego.\n\nJako Zastępca Ministranta Baruch ma dostęp do wszystkiego, co powinno być pod nadzorem: relikwii, zakrystii i Tacy Ofiarnej. Traktuje ją z należnym szacunkiem — najpierw liczy monety, potem zastanawia się, ilu z nich nikt nie zauważy. \n\nBaruch uchodzi za człowieka głęboko wierzącego. Zna modlitwy, symbole i gesty, a jego pobożność robi doskonałe wrażenie — zwłaszcza z bezpiecznej odległości. Wiara jednak nigdy nie stała mu na drodze do drobnych „korekt” zawartości Tacy Ofiarnej. W końcu, jak sam uważa, Opatrzność i tak oddaje swoje dobra w ręce tych, którzy potrafią je odpowiednio wykorzystać."
+    },
+    "name": "Baruch Hałabała",
+    "subtitle": "Zastępca Ministranta"
   },
   "investigator_footer_type": "normal",
   "class": "守护者",
@@ -58,12 +67,12 @@
     "flip_vertical": false
   },
   "flavor": "Uśmiech ma równie szczery co intencje.",
-  "body": "Rozpoczynasz grę z Tacą Ofiarną w grze.\n\nEfekt ⭐: +1. Usuń 1 🌑 z worka chaosu albo wydaj dwa zasoby z Tacy Ofiarnej bez wrzucania żetonu 🌑 do worka chaosu.",
+  "body": "Rozpoczynasz grę z Tacą Ofiarną w grze.\n<for> Jeżeli w worku chaosu nie ma żetonów 🌑: lokalizacja w której się znajdujesz dostaje -1 do zasłony.\nEfekt ⭐: +1. Usuń 1 🌑 z worka chaosu albo wydaj dwa zasoby z Tacy Ofiarnej bez wrzucania żetonu 🌑 do worka chaosu.\n\n",
   "tts_config": {
     "version": "v2",
     "script_id": "EA819F6E"
   },
-  "content_hash": "14ea3c205fdcb05015cdf911b5baf11d35136230005c8e5794f0aeaab3d4e2b5",
+  "content_hash": "8771ad727f11535ca6dfe209911a0d7abc411b9a48d1b222a378d367626e0c0e",
   "health": 8,
   "horror": 6,
   "traits": [
