@@ -310,7 +310,7 @@
     },
     "Warsztat Mechaniczny 11.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1768685400.577381
+      "mtime": 1768686597.6156695
     },
     "Karty Lokacji\\scenariusz 1\\Kostnica 12.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -318,7 +318,11 @@
     },
     "Kostnica 12.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1768686327.614497
+      "mtime": 1768686538.1622999
+    },
+    "Centrum wioski.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769016867.4174178
     }
   }
 }
