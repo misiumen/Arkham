@@ -39,10 +39,11 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "f253025d7937d392e71df6044a69030522f48171abd7c27478b0fc16dbf6b4d8",
+  "content_hash": "e89b4d331debed00d7b4950a58b78cc946ad3b4a296be06476f8b989dc7b57a8",
   "enemy_damage": 1,
   "traits": [
-    "Dostawca"
+    "Dostawca",
+    "Kultysta"
   ],
   "quantity": 2
 }

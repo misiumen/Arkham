@@ -14,5 +14,8 @@
     "version": "v2",
     "script_id": "B0797DB9"
   },
-  "content_hash": "13e10a027bdb72e5add804b15e6cc4a661ba4405cffad227bbd3cbd1054bf9d7"
+  "content_hash": "c3c970f7196e3c2212dcafc330ff4b1a6c4de09b8e514b5a0b6c04685d5ee629",
+  "use_external_image": 0,
+  "external_image": "",
+  "body": ""
 }
