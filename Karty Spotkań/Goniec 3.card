@@ -34,12 +34,12 @@
   "enemy_health": "3<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Cytadela\n<pat> (Zakłady Cegielskiego), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Cytadela, za każdy pozostały punkt wytrzymałości Gońca umieść 1 żeton chaosu na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań.\n",
+  "body": "<spa> Cytadela\n<pat> (Zakłady Cegielskiego), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Cytadela, za każdy pozostały punkt wytrzymałości Gońca umieść 1 żeton zagłady na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań.\n",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "3f3faf9803e414e5a3a2cb22274038cef2377fc694e87ddb0d94626d8faf6948",
+  "content_hash": "c331e4b7834460b9571e436531e2a3d8f7c435a678f1462c78190607d4e96493",
   "enemy_damage": 1,
   "traits": [
     "Dostawca",

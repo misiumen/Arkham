@@ -11,18 +11,18 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "flavor": "W stertach zakurzonych ksiąg i za zamkniętymi drzwiami gabinetów dyrekcji znaleźliście to, czego szukaliście. Rejestry dostaw nie pasują do ewidencji miejskiej. \"Mleko Matki\" płynie strumieniami do Mleczarni, a stamtąd do kadzi, których przeznaczenie jest co najmniej niepokojące. Co gorsza, w dokumentach uniwersyteckich znaleźliście wzmianki o kulcie, który niegdyś działał na wschodzie, a teraz, wykorzystując bolszewicki chaos, zapuszcza korzenie tutaj.",
+    "flavor": "Po serii rozmów i drobnych przysług napięcie w końcu opada. Pracownicy przestają unikać wzroku, a nazwiska, które wcześniej nic nie znaczyły, zaczynają otwierać drzwi. Nikt nie mówi wprost, ale daje do zrozumienia, że możecie zobaczyć więcej -- pod warunkiem, że nie będziecie zadawać złych pytań przy złych ludziach.\n\nDostęp do mleczarni nie jest już problemem. Prawdziwym pytaniem jest to, co zobaczycie na linii rozlewniczej, gdy zostaniecie tam wpuszczeni.",
     "serial_number": "2",
     "name": "Czarna koza białe mleko daje",
-    "body": "Każdy badacz odkrywa 1 dodatkową wskazówkę w swojej lokalizacji.\nUsuń 1 żeton zagłady z lokalizacji lub obecnej tajemnicy."
+    "body": "Z wybranej lokalizacji usuń 1 żeton chaosu."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "6daa09f7889fa628ba19889e361ecbce32309d32b22c5027f421a6aa14dbec91",
-  "flavor": "Poznań zdaje się pogrążać w sennym letargu, ale pod powierzchnią tętni nienaturalna gorliwość. Dyrekcja Zakładu milczy, zasłaniając się procedurami, a bibliotekarze odmawiają dostępu do archiwów, twierdząc, że dokumenty są \"w konserwacji\". Każda próba dowiedzenia się czegoś o transporcie z barki kończy się na urzędniczym murze. Musicie znaleźć dowody na to, że te instytucje są częścią czegoś większego.",
-  "serial_number": "2",
+  "content_hash": "441597d36935308e59f8a70775bb7cb903b0d8b3767eda7f52e635dd70f5fd5a",
+  "flavor": "Na Rynku Jeżyckim zatrzymuje was człowiek, którego widzieliście już wcześniej -- zmęczony, nerwowy, z dłoniami pachnącymi mlekiem i czymś jeszcze, metalicznym. Mówi półgłosem, że transporty idą dalej, mimo że „nie wszystko wraca z kadzi”. Wskazuje jedno miejsce i prosi, by tam zajrzeć, zanim znów ruszą poranne wozy.\nMleczarnia pracuje jak zawsze. Bramy są otwarte, strażnicy znudzeni, a w środku trwa rozlew. Jeśli coś skaża miasto, właśnie stąd się rozchodzi -- razem z każdą kolejną bańką wynoszoną na bruk.",
+  "serial_number": "3",
   "encounter_group": "f",
   "use_external_image": 0,
   "external_image": "",
@@ -46,5 +46,5 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Odkryj wszystkie wskazówki w lokalizajach Dyrekcja Zakładu oraz Biblioteka Uniwersytecka."
+  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii."
 }

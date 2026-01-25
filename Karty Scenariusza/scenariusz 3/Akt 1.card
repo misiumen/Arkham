@@ -14,13 +14,13 @@
     "serial_number": "1",
     "flavor": "Zbierając informacje, zauważacie powtarzalny schemat. Ruch na nabrzeżu jest ograniczony, ale regularny. Ludzie wykonują swoje zadania bez pytań i bez potrzeby nadzoru. Nikt nie sprawdza ładunków, nikt nie prowadzi ewidencji, nikt nie reaguje na nieprawidłowości.\n\nŚlady prowadzą do jednego zakładu, przez który przewija się większość lokalnego transportu. Jeśli coś trafia do miasta, to właśnie tam.\n",
     "name": "Miasto złą sławą owiane",
-    "body": "Z wybranej lokacji zamień 1 żeton chaosu na wskazówkę."
+    "body": "Z wybranej lokacji zamień 1 żeton zagłady na wskazówkę."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "b457ffecab6ca09dc7fc50a10f4ffe78076f425141c50352cf77d41dc5270f9a",
+  "content_hash": "e689ceff5ba33adccab26f2075f99de524763565d62a638f40e2b4363b8fe4b3",
   "flavor": "Nikt nie reaguje na obecność barki, a ruch na nabrzeżu jest minimalny, jakby wszystko, co istotne, wydarzyło się wcześniej albo miało dopiero nadejść. Jeśli coś tu przenika do miasta, dzieje się to powoli i bez sprzeciwu.",
   "serial_number": "1",
   "encounter_group": "f",

@@ -31,15 +31,15 @@
   "encounter_group": "f",
   "class": "",
   "attack": "3",
-  "enemy_health": "3<调查员>",
+  "enemy_health": "2<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Cytadela\n<pat> (Mleczarnia Spółdzielcza), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Mleczarnia Spółdzielcza, za każdy pozostały punkt wytrzymałości Gońca umieść 1 żeton chaosu na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań.",
+  "body": "<spa> Cytadela\n<pat> (Mleczarnia Spółdzielcza), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Mleczarnia Spółdzielcza, za każdy pozostały punkt wytrzymałości Gońca umieść 1 żeton zagłady na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań.",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "e89b4d331debed00d7b4950a58b78cc946ad3b4a296be06476f8b989dc7b57a8",
+  "content_hash": "780c67ec3564883fe310634a59a319eaab89e5b18a0ba580e3ec6af138bb7389",
   "enemy_damage": 1,
   "traits": [
     "Dostawca",

@@ -31,15 +31,15 @@
   "encounter_group": "f",
   "class": "",
   "attack": "3",
-  "enemy_health": "3<调查员>",
+  "enemy_health": "2<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Nadbrzeże Warty\n<pat> (Uniwersytet Adama Miskatonica), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Uniwersytet Adama Miskatonica, za każdy pozostały punkt wytrzymałości Gońca umieść 1 żeton chaosu na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań.\n",
+  "body": "<spa> Nadbrzeże Warty\n<pat> (Uniwersytet Adama Miskatonica), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Uniwersytet Adama Miskatonica, za każdy pozostały punkt wytrzymałości Gońca umieść 1 żeton zagłady na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań.\n",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "67c052699db2ed897c83d112bf237cfbad9380686b4a7e3396656853d26c7116",
+  "content_hash": "8fe264ee4c042ee8975e7a2e182ab568c44b05250717ce5b9855054b55e70b33",
   "enemy_damage": 1,
   "traits": [
     "Dostawca",
