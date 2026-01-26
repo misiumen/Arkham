@@ -9,7 +9,7 @@
   "back": {
     "language": "pl",
     "type": "地点卡",
-    "location_type": "未揭示",
+    "location_type": "已揭示",
     "card_number": "9",
     "encounter_group_number": "Zwyczajne miejsca",
     "illustrator": "Gemini",
@@ -17,10 +17,10 @@
     "picture_layout": {
       "mode": "custom",
       "offset": {
-        "x": 0,
-        "y": 0
+        "x": 6,
+        "y": -36
       },
-      "scale": 0.66,
+      "scale": 0.76,
       "crop": {
         "top": 0,
         "right": 0,
@@ -30,7 +30,17 @@
       "rotation": 0,
       "flip_horizontal": false,
       "flip_vertical": false
-    }
+    },
+    "shroud": "?",
+    "clues": "?",
+    "name": "Warsztat Kowalski",
+    "location_link": [
+      "深蓝T",
+      "橙心",
+      "青花"
+    ],
+    "encounter_group": "e",
+    "body": "➡️➡️Przeszukaj 6 wierzchnich kart twojej talii w poszukiwaniu karty z cechą 【Broń】 lub 【Narzędzie】 i dodaj ją na twoją rękę. Wtasuj pozostałe karty do twojej talii. (Limit raz na turę.)"
   },
   "shroud": "?",
   "clues": "?",
@@ -50,7 +60,7 @@
       "x": 6,
       "y": -36
     },
-    "scale": 0.66,
+    "scale": 0.76,
     "crop": {
       "top": 0,
       "right": 0,
@@ -65,5 +75,8 @@
     "version": "v2",
     "script_id": "A8EF41E4"
   },
-  "content_hash": "4258b37f0415d3b8fa29643f23ad24e4c1d95fd79d7f5e1cc4c700695eaf0358"
+  "content_hash": "2459bba57815f120655db56cded251ab348e0fe82a96b7535af6dc6072eb5ae5",
+  "encounter_group": "e",
+  "flavor": "\"W budynku czuć sadzą i capem.\"",
+  "body": ""
 }

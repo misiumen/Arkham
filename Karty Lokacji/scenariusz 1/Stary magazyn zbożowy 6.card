@@ -37,7 +37,7 @@
       "橙心",
       "青花"
     ],
-    "body": "<rev> dołóż jeden żeton zepsucia do worka chaosu.\n<for> za każdym razem, kiedy wyciągasz żeton zepsucia przy badaniu tej lokacji, otrzymujesz 1 punkt przerażenia.",
+    "body": "<rev> dołóż jeden żeton klątwy do worka chaosu.\n<for> za każdym razem, kiedy wyciągasz żeton klątwy przy badaniu tej lokacji, otrzymujesz 1 punkt przerażenia. Odłóż ten żeton z powrotem do worka chaosu.",
     "encounter_group": "e",
     "illustrator": "Gemini",
     "encounter_group_number": "Miejsca zwyczajne",
@@ -75,7 +75,7 @@
     "version": "v2",
     "script_id": "DD404073"
   },
-  "content_hash": "c9ae61ec8e587a653c42292f3a7d08a17841e627c28891e225c6e81119ba1fc1",
+  "content_hash": "db61b4598b9fdf6995022ce8c8031c9a1b1965b805562c12fa0072b102382fc3",
   "illustrator": "Gemini",
   "encounter_group_number": "Miejsca zwyczajne",
   "card_number": "6"

@@ -16,10 +16,10 @@
     "clues": "?",
     "shroud": "?",
     "flavor": "\"Tu montuje się na traktorach kolce, wnyki, kosy i inną broń. Bóg jeden wie dlaczego...\"",
-    "body": "<rev>Przeszukaj talię spotkań w poszukiwaniu karty 【Kultysta Traktorzysta】 i rozstaw ją w zwarciu z badaczem na tej lokalizacji. Do końca tury ma -2 do wymykania się.\n\n<for>Jeśli",
+    "body": "<rev> Przeszukaj talię spotkań w poszukiwaniu karty 【Kultysta Traktorzysta】 i rozstaw ją w zwarciu z badaczem na tej lokalizacji. Do końca tury ma -2 do wymykania się.\n\n<for> Jeśli 【Przekonany Wyznawca】 pojawi się na tej lokalizacji, wtasuj go do talii i przeszukaj talię spotkań w poszukiwaniu karty 【Kultysta Traktorzysta】 i rozstaw ją na tej lokalizacji.",
     "illustrator": "Gemini",
     "encounter_group_number": "Miejsca zwyczajne",
-    "card_number": " 1",
+    "card_number": " 11",
     "picture_layout": {
       "mode": "custom",
       "offset": {
@@ -49,8 +49,8 @@
     "version": "v2",
     "script_id": "EE5EB96F"
   },
-  "content_hash": "9c36765007447f9824159eb787e8ded905b49ce79c7133d86a2e99a493750e56",
-  "card_number": "1",
+  "content_hash": "b964094dcab4c38a8b0a2ea8bc6f85e9406f9498732518eba332b191cd1d437c",
+  "card_number": "11",
   "encounter_group_number": "Miejsca zwyczajne",
   "illustrator": "Gemini",
   "picture_layout": {
