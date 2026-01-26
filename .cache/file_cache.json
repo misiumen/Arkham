@@ -402,11 +402,19 @@
     },
     "\u015arodek wioski.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769441024.8695872
+      "mtime": 1769441341.015046
     },
     "Karty Lokacji\\scenariusz 1\\\u015arodek wioski.card": {
       "card_type": "\u5730\u70b9\u5361",
       "mtime": 1769435392.435624
+    },
+    "Ko\u015bci\u00f3\u0142.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769444075.5187235
+    },
+    "Zachrystia.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769446990.625898
     }
   }
 }
