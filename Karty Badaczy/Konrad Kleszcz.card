@@ -1,6 +1,6 @@
 {
   "type": "支援卡",
-  "name": "Konrad Kleszcz",
+  "name": "Kajetan Kleszcz",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -47,5 +47,5 @@
     "version": "v2",
     "script_id": "6E8971DB"
   },
-  "content_hash": "d31272f4fa3a7c8b155c1bd7eba13b663be2e478e112d3e061c78d3985d41a84"
+  "content_hash": "30ebb597179d680a98aef216d971d6634d694adfc1f042bf8c680e9831e6dddb"
 }
