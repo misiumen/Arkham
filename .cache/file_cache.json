@@ -54,7 +54,7 @@
     },
     "Karty Badaczy\\Konrad Kleszcz.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1768599862.7520142
+      "mtime": 1769447181.8318622
     },
     "Karty Badaczy\\Micha\u0142 z Barg\u0142owa token.card": {
       "card_type": "\u8c03\u67e5\u5458\u5c0f\u5361",
@@ -415,6 +415,74 @@
     "Zachrystia.card": {
       "card_type": "\u5730\u70b9\u5361",
       "mtime": 1769446990.625898
+    },
+    "Karty Lokacji\\scenariusz 1\\Kluczowe\\Ko\u015bci\u00f3\u0142.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769444075.5187235
+    },
+    "Karty Lokacji\\scenariusz 1\\Kluczowe\\Przybrze\u017cna rampa za\u0142adunkowa 7.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769435493.9971502
+    },
+    "Karty Lokacji\\scenariusz 1\\Kluczowe\\Zachrystia.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769446990.625898
+    },
+    "Karty Lokacji\\scenariusz 1\\Kluczowe\\\u015arodek wioski.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769441341.015046
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\9 Warsztat Kowalski.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769434542.066899
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Kapliczka 8.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769435043.2819037
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Kostnica 12.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1768686538.1622999
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Pod Rogatym 3.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1768599863.0212562
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Sk\u0142ad Drewna 10.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1768684032.1199195
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Stary magazyn zbo\u017cowy 6.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769434799.4510899
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Targ Rybny 1.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1768599863.3732066
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Kowalski 9.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1768599864.503322
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Ko\u0142odzieja.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1768599863.573697
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Mechaniczny 11.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769433945.4255176
+    },
+    "Karty Lokacji\\scenariusz 1\\Losowe\\W\u0119dzarnio-suszarnia 8.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1768682976.4539075
+    },
+    "Przera\u017cony Wikariusz.card": {
+      "card_type": "\u652f\u63f4\u5361",
+      "mtime": 1769451109.916778
+    },
+    "Karty Lokacji\\scenariusz 1\\Kluczowe\\Przera\u017cony Wikariusz.card": {
+      "card_type": "\u652f\u63f4\u5361",
+      "mtime": 1769451031.69213
     }
   }
 }
