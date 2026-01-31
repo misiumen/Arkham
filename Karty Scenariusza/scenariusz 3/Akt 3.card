@@ -11,7 +11,7 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "flavor": "Po serii rozmów i drobnych przysług napięcie w końcu opada. Pracownicy przestają unikać wzroku, a nazwiska, które wcześniej nic nie znaczyły, zaczynają otwierać drzwi. Nikt nie mówi wprost, ale daje do zrozumienia, że możecie zobaczyć więcej -- pod warunkiem, że nie będziecie zadawać złych pytań przy złych ludziach.\n\nDostęp do mleczarni nie jest już problemem. Prawdziwym pytaniem jest to, co zobaczycie na linii rozlewniczej, gdy zostaniecie tam wpuszczeni.",
+    "flavor": "Kleszcz wyjaśnia: \"To mleko Shub-Niggurath. Zmienia DNA. Oni chcą to rozlać do butelek i nakarmić tym miasto. Centrum dystrybucji to Mleczarnia na Ogrodowej\".",
     "serial_number": "2",
     "name": "Czarna koza białe mleko daje",
     "body": "Z wybranej lokalizacji usuń 1 żeton chaosu."
@@ -20,8 +20,8 @@
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "441597d36935308e59f8a70775bb7cb903b0d8b3767eda7f52e635dd70f5fd5a",
-  "flavor": "Na Rynku Jeżyckim zatrzymuje was człowiek, którego widzieliście już wcześniej -- zmęczony, nerwowy, z dłoniami pachnącymi mlekiem i czymś jeszcze, metalicznym. Mówi półgłosem, że transporty idą dalej, mimo że „nie wszystko wraca z kadzi”. Wskazuje jedno miejsce i prosi, by tam zajrzeć, zanim znów ruszą poranne wozy.\nMleczarnia pracuje jak zawsze. Bramy są otwarte, strażnicy znudzeni, a w środku trwa rozlew. Jeśli coś skaża miasto, właśnie stąd się rozchodzi -- razem z każdą kolejną bańką wynoszoną na bruk.",
+  "content_hash": "67b77db980f5be607dd6ed977f95b5bb3a3f048e67af1e7bbcc4ad1352ea9435",
+  "flavor": "Ślad prowadzi na Uniwersytet. Biblioteka jest zamknięta, a w Ogrodzie Botanicznym (połączonym z Sołaczem) panuje nienaturalny rozkwit. Rośliny w środku zimy kwitną i... krwawią białym sokiem. Prof. Kleszcz nie jest szalonym kultystą – jest przerażonym naukowcem, który zrozumiał, co odkrył, i ukrył się w szklarni, by szukać antidotum.",
   "serial_number": "3",
   "encounter_group": "f",
   "use_external_image": 0,

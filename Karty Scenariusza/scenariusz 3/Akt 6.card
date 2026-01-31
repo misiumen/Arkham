@@ -1,6 +1,6 @@
 {
   "type": "场景卡",
-  "name": "Miasto złą sławą owiane",
+  "name": "Excathedra",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -11,18 +11,18 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "serial_number": "1",
-    "flavor": "Zbierając informacje, zauważacie powtarzalny schemat. Ruch na nabrzeżu jest ograniczony, ale regularny. Ludzie wykonują swoje zadania bez pytań i bez potrzeby nadzoru. Nikt nie sprawdza ładunków, nikt nie prowadzi ewidencji, nikt nie reaguje na nieprawidłowości.\nW ładowni znajdujecie dokumenty przewozowe z pieczęcią „Zakładów Cegielskiego” oraz dziwne, organiczne kokony przyczepione do burt. Wygląda jak „ziarno”.",
-    "name": "Miasto złą sławą owiane",
-    "body": "Z wybranej lokacji zamień 1 żeton zagłady na wskazówkę."
+    "flavor": "Cielsko Czarnej Kozy pada na posadzkę z łoskotem, od którego pękają resztki witraży w Katedrze. Bestia wije się w agonii, ale nie wydaje z siebie dźwięku bólu. To... śmiech. Niski, wibrujący rechot, który wchodzi wam w kości.\n\nJej ciało nie zastyga. Rozpuszcza się w gęstą, mleczno-krwawą plazmę, która błyskawicznie wsiąka w szczeliny prastarej posadzki Ostrowa Tumskiego. Ziemia zaczyna pulsować. To nie trzęsienie ziemi – to bicie gigantycznego serca.\nKamienne filary Katedry zaczynają puszczać korzenie i zmieniać się w skamieniałe drzewa. Złota Kaplica zapada się, odsłaniając niebo, które nie jest już niebem nad Poznaniem. Jest fioletowe, duszne i pełne wirujących kształtów.\nArcybiskup Dalbor (jeśli żyje) upuszcza krucyfiks, patrząc w górę z obłędem w oczach: \"To nie był potwór... To był tylko klucz. Otworzyliście drzwi do Jej Lasu\".",
+    "serial_number": "2",
+    "name": "Excathedra",
+    "body": "Zapisz w Dzienniku Kampanii: \"Badacze uśmiercili Awatara, karmiąc ziemię jego krwią\". Każdy badacz otrzymuje 1 punkt Fizycznej Traumy (ziemia pod wami się zapada). Przejdźcie do Finału 【Z1】: \"Łono Tysiąca Młodych\"."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "1ece153890fb04a2bb63b841040b5cdfd439017ee48ee753813a66190d6eb463",
-  "flavor": "Barka osiadła na mieliźnie przy Nadbrzeżu Warty. Oficjalnie przewozi części maszyn z demobilu. Nieoficjalnie – z ładowni wycieka gęsta, biaława ciecz, która sprawia, że rzeczne ryby mutują, a biedota zbierająca węgiel nad rzeką zapada na dziwną „euforię”. Policja odmawia interwencji, twierdząc, że to teren pod jurysdykcją wojskową.",
-  "serial_number": "1",
+  "content_hash": "7711c4dfc0db30aaca40b7cbc2a14df22a163607b6d67d585e477007d761a4c1",
+  "flavor": "Arcybiskup Dalbor barykaduje się w Katedrze, próbując odprawić egzorcyzmy nad całym miastem. Ale zło nie przychodzi z zewnątrz – ono wychodzi z fundamentów, z najświętszego miejsca. Awatar Shub-Niggurath rodzi się w kryptach pierwszych władców Polski.",
+  "serial_number": "3",
   "encounter_group": "f",
   "use_external_image": 0,
   "external_image": "",
@@ -30,8 +30,8 @@
   "picture_layout": {
     "mode": "custom",
     "offset": {
-      "x": -98,
-      "y": -10
+      "x": 430,
+      "y": 10
     },
     "scale": 0.75,
     "crop": {
@@ -45,6 +45,6 @@
     "flip_vertical": false
   },
   "is_back": false,
-  "threshold": "3<调查员>",
-  "body": "<obj> Zbadaj wrak barki i zdobądź próbkę ładunku. Wydaj wymaganą liczbę żetonów wskazówek, aby spowodować postęp talii."
+  "threshold": "-",
+  "body": "<obj> Pokonaj \"Czarną Kozę z Ostrowa\" zanim Agenda dojdzie do końca (co oznacza wchłonięcie Poznania przez Las).\nMożesz poświęcić sojusznika (np. Kleszcza), aby usunąć 3 żetony zagłady (Heroiczna ofiara)."
 }

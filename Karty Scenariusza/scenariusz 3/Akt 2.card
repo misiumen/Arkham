@@ -1,6 +1,6 @@
 {
   "type": "场景卡",
-  "name": "Czarna koza białe mleko daje",
+  "name": "Żelazne Łono",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -11,17 +11,17 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "flavor": "W stertach zakurzonych ksiąg i za zamkniętymi drzwiami gabinetów dyrekcji znaleźliście to, czego szukaliście. Rejestry dostaw nie pasują do ewidencji miejskiej. \"Mleko Matki\" płynie strumieniami do Mleczarni, a stamtąd do kadzi, których przeznaczenie jest co najmniej niepokojące. Co gorsza, w dokumentach uniwersyteckich znaleźliście wzmianki o kulcie, który niegdyś działał na wschodzie, a teraz, wykorzystując bolszewicki chaos, zapuszcza korzenie tutaj.",
+    "flavor": "Plany są przerażające. Kadzie mają służyć do hodowli, nie przechowywania. Na dokumentach widnieje sygnatura konsultanta naukowego z UAM – prof. Konrada Kleszcza.",
     "serial_number": "2",
-    "name": "Czarna koza białe mleko daje",
+    "name": "Żelazne Łono",
     "body": "Każdy badacz odkrywa 1 dodatkową wskazówkę w swojej lokalizacji.\nUsuń 1 żeton zagłady z lokalizacji lub obecnej tajemnicy."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "6daa09f7889fa628ba19889e361ecbce32309d32b22c5027f421a6aa14dbec91",
-  "flavor": "Poznań zdaje się pogrążać w sennym letargu, ale pod powierzchnią tętni nienaturalna gorliwość. Dyrekcja Zakładu milczy, zasłaniając się procedurami, a bibliotekarze odmawiają dostępu do archiwów, twierdząc, że dokumenty są \"w konserwacji\". Każda próba dowiedzenia się czegoś o transporcie z barki kończy się na urzędniczym murze. Musicie znaleźć dowody na to, że te instytucje są częścią czegoś większego.",
+  "content_hash": "5d1c6eeb88287c938bb0b1b35964114fd52bf1ba3685e53e4d2779382f1943c2",
+  "flavor": "Poznań zdaje się pogrążać w sennym letargu, ale pod powierzchnią tętni nienaturalna gorliwość. Dyrekcja Zakładu milczy, zasłaniając się procedurami, a bibliotekarze odmawiają dostępu do archiwów, twierdząc, że dokumenty są \"w konserwacji\". \nWchodzicie na teren fabryki. Hale produkcyjne nie wytwarzają parowozów. Robotnicy spawają olbrzymie, hermetyczne kadzie o organicznych kształtach, przypominające metalowe żołądki. Dyrekcja Zakładu (złowroga, bezimienna rada nadzorcza) ukrywa się w biurach na piętrze, obserwując pracę przez przyciemniane szyby.",
   "serial_number": "2",
   "encounter_group": "f",
   "use_external_image": 0,
@@ -46,5 +46,5 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Odkryj wszystkie wskazówki w lokalizajach Dyrekcja Zakładu oraz Biblioteka Uniwersytecka."
+  "body": "<obj> Odkryj wszystkie wskazówki w lokalizacji Zakłady Cegielskiego. Znajdź plany konstrukcyjne „Projektu Matka”."
 }
