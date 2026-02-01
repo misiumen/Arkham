@@ -198,7 +198,7 @@
     },
     "Karty Lokacji\\scenariusz 2\\Przysta\u0144.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1768599863.5940511
+      "mtime": 1769459181.5646188
     },
     "Karty Lokacji\\scenariusz 2\\Przysta\u0144_kor_15.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -218,7 +218,7 @@
     },
     "Karty Lokacji\\scenariusz 2\\Zakole Warty.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1768599864.1946888
+      "mtime": 1769459181.7521863
     },
     "Karty Lokacji\\scenariusz 3\\Biblioteka Uniwersytecka.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -446,7 +446,7 @@
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Pod Rogatym 3.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1768599863.0212562
+      "mtime": 1769457280.4851682
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Sk\u0142ad Drewna 10.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -482,7 +482,35 @@
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Przera\u017cony Wikariusz.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1769451031.69213
+      "mtime": 1769451109.916778
+    },
+    "Karty Lokacji\\scenariusz 2\\Dworzec Puszczykowo.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769459181.255564
+    },
+    "Karty Lokacji\\scenariusz 2\\Pradawne D\u0119by.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769459181.5177617
+    },
+    "Karty Lokacji\\scenariusz 2\\\u0141\u0119gi Wierzbowe.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769459182.861444
+    },
+    "Karty Lokacji\\scenariusz 2\\archiwum\\Przysta\u0144_kor_15.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769459181.7919464
+    },
+    "Karty Lokacji\\scenariusz 2\\archiwum\\Przysta\u0144_kor_9.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769459181.8220253
+    },
+    "Karty Lokacji\\scenariusz 2\\archiwum\\Zakole Warty 15.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769459182.0145824
+    },
+    "Karty Lokacji\\scenariusz 2\\archiwum\\Zakole Warty 9.card": {
+      "card_type": "\u5730\u70b9\u5361",
+      "mtime": 1769459182.2682567
     }
   }
 }

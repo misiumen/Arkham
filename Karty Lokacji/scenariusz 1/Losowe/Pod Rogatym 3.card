@@ -25,7 +25,7 @@
         "x": 0,
         "y": 0
       },
-      "scale": 0.3,
+      "scale": 0.35,
       "crop": {
         "top": 0,
         "right": 0,
@@ -41,7 +41,10 @@
     "encounter_group_number": "Miejsca zwyczajne",
     "illustrator": "Gemini",
     "encounter_group": "e",
-    "card_number": "3"
+    "card_number": "3",
+    "traits": [
+      "Miejsce kultu"
+    ]
   },
   "location_type": "未揭示",
   "shroud": "?",
@@ -56,7 +59,7 @@
       "x": 0,
       "y": 0
     },
-    "scale": 0.3,
+    "scale": 0.35,
     "crop": {
       "top": 0,
       "right": 0,
@@ -78,5 +81,5 @@
     "version": "v2",
     "script_id": "CF58E3D2"
   },
-  "content_hash": "043b2d77a1c0ec67f527d002c4b3be64f92f393e24a968e68333bf7d5cd455a8"
+  "content_hash": "1b63553dd628e706f815d3907a89adf443f741845270579ae69faf93ef8d878b"
 }
