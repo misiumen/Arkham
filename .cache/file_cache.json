@@ -546,7 +546,7 @@
     },
     "Karty Lokacji\\scenariusz 2\\Zrujnowany Fort.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770054406.6418233
+      "mtime": 1770065029.3818908
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 1.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -603,6 +603,58 @@
     "Nieczysty chrzest.card": {
       "card_type": "\u8be1\u8ba1\u5361",
       "mtime": 1770063058.6102738
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karta Scenariusza.card": {
+      "card_type": "\u5192\u9669\u53c2\u8003\u5361",
+      "mtime": 1770065029.4574656
+    },
+    "Karty Spotka\u0144\\scenariusz 1\\Gorliwe Kazanie.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770064918.6218505
+    },
+    "Karty Spotka\u0144\\scenariusz 1\\Nieczysta komunia.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770064887.1025958
+    },
+    "Karty Spotka\u0144\\scenariusz 1\\Nieczysty chrzest.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770064903.1045642
+    },
+    "Karty Spotka\u0144\\scenariusz 1\\Wo\u0142anie.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770064957.5532117
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\G\u0105bczasta Naro\u015bl.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770065029.534163
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Kokon M\u0142odego.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770065029.5612936
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Krwawe Korzenie.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770065029.6372557
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Mi\u0119sne Pn\u0105cza.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770065029.7234056
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Nerwowy Splot.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770065029.7344968
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\\u015aciana Oczu.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770065030.0593922
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\\u015aluzowata B\u0142ona.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770065030.136453
+    },
+    "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\\u017br\u0105ca Grzybnia.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770065030.3162985
     }
   }
 }
