@@ -24,10 +24,10 @@
   "picture_layout": {
     "mode": "custom",
     "offset": {
-      "x": 160,
-      "y": -10
+      "x": 256,
+      "y": 0
     },
-    "scale": 1,
+    "scale": 0.97,
     "crop": {
       "top": 0,
       "right": 0,
@@ -42,5 +42,5 @@
     "version": "v2",
     "script_id": "47CEEE07"
   },
-  "content_hash": "812c0e8a4d5d4c8b5067af40af03ccd0e50e42ad626264fb4e8c3c2e85c540b0"
+  "content_hash": "c76632e3f48bcfaba85012e1e6013a35b9961e879bb0a7d56add8ba2a5510bf9"
 }
