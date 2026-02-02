@@ -422,7 +422,7 @@
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Przybrze\u017cna rampa za\u0142adunkowa 7.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769435493.9971502
+      "mtime": 1770068091.0386276
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Zachrystia.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -494,7 +494,7 @@
     },
     "Karty Lokacji\\scenariusz 2\\\u0141\u0119gi Wierzbowe.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769459182.861444
+      "mtime": 1770067769.8638153
     },
     "Karty Lokacji\\scenariusz 2\\archiwum\\Przysta\u0144_kor_15.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -546,11 +546,11 @@
     },
     "Karty Lokacji\\scenariusz 2\\Zrujnowany Fort.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770065029.3818908
+      "mtime": 1770067769.6563225
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 1.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1770054406.9979773
+      "mtime": 1770067769.8923495
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 2.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -558,7 +558,7 @@
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 3.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1770054407.0791888
+      "mtime": 1770067769.9097004
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 4 Wariant A.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -570,19 +570,19 @@
     },
     "Karty Scenariusza\\scenariusz 2\\Tajemnica 1.card": {
       "card_type": "\u5bc6\u8c0b\u5361",
-      "mtime": 1770054407.374585
+      "mtime": 1770067769.9493954
     },
     "Karty Scenariusza\\scenariusz 2\\Tajemnica 2.card": {
       "card_type": "\u5bc6\u8c0b\u5361",
-      "mtime": 1770054407.467338
+      "mtime": 1770067769.974918
     },
     "Karty Scenariusza\\scenariusz 2\\Tajemnica 3.card": {
       "card_type": "\u5bc6\u8c0b\u5361",
-      "mtime": 1770054407.467338
+      "mtime": 1770067770.0054777
     },
     "Karty Lokacji\\scenariusz 2\\Karty Barier\\Pruskie Miny Rzeczne.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1770054405.184479
+      "mtime": 1770067769.4936655
     },
     "Karty Lokacji\\scenariusz 2\\Karty Barier\\Toksyczny Ko\u017cuch.card": {
       "card_type": "\u652f\u63f4\u5361",
@@ -606,7 +606,7 @@
     },
     "Karty Scenariusza\\scenariusz 2\\Karta Scenariusza.card": {
       "card_type": "\u5192\u9669\u53c2\u8003\u5361",
-      "mtime": 1770065029.4574656
+      "mtime": 1770067769.9378903
     },
     "Karty Spotka\u0144\\scenariusz 1\\Gorliwe Kazanie.card": {
       "card_type": "\u8be1\u8ba1\u5361",
@@ -655,6 +655,10 @@
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\\u017br\u0105ca Grzybnia.card": {
       "card_type": "\u8be1\u8ba1\u5361",
       "mtime": 1770065030.3162985
+    },
+    "Karty Spotka\u0144\\scenariusz 1\\Brama z ga\u0142\u0119zi.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770067721.417104
     }
   }
 }
