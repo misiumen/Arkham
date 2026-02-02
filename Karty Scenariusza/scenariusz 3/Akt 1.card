@@ -12,7 +12,7 @@
     "is_back": true,
     "encounter_group": "f",
     "serial_number": "1",
-    "flavor": "Zbierając informacje, zauważacie powtarzalny schemat. Ruch na nabrzeżu jest ograniczony, ale regularny. Ludzie wykonują swoje zadania bez pytań i bez potrzeby nadzoru. Nikt nie sprawdza ładunków, nikt nie prowadzi ewidencji, nikt nie reaguje na nieprawidłowości.\n\nŚlady prowadzą do jednego zakładu, przez który przewija się większość lokalnego transportu. Jeśli coś trafia do miasta, to właśnie tam.\n",
+    "flavor": "Zbierając informacje, zauważacie powtarzalny schemat. Ruch na nabrzeżu jest ograniczony, ale regularny. Ludzie wykonują swoje zadania bez pytań i bez potrzeby nadzoru. Nikt nie sprawdza ładunków, nikt nie prowadzi ewidencji, nikt nie reaguje na nieprawidłowości.\nW ładowni znajdujecie dokumenty przewozowe z pieczęcią „Zakładów Cegielskiego” oraz dziwne, organiczne kokony przyczepione do burt. Wygląda jak „ziarno”.",
     "name": "Miasto złą sławą owiane",
     "body": "Z wybranej lokacji zamień 1 żeton zagłady na wskazówkę."
   },
@@ -20,8 +20,8 @@
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "e689ceff5ba33adccab26f2075f99de524763565d62a638f40e2b4363b8fe4b3",
-  "flavor": "Nikt nie reaguje na obecność barki, a ruch na nabrzeżu jest minimalny, jakby wszystko, co istotne, wydarzyło się wcześniej albo miało dopiero nadejść. Jeśli coś tu przenika do miasta, dzieje się to powoli i bez sprzeciwu.",
+  "content_hash": "1ece153890fb04a2bb63b841040b5cdfd439017ee48ee753813a66190d6eb463",
+  "flavor": "Barka osiadła na mieliźnie przy Nadbrzeżu Warty. Oficjalnie przewozi części maszyn z demobilu. Nieoficjalnie – z ładowni wycieka gęsta, biaława ciecz, która sprawia, że rzeczne ryby mutują, a biedota zbierająca węgiel nad rzeką zapada na dziwną „euforię”. Policja odmawia interwencji, twierdząc, że to teren pod jurysdykcją wojskową.",
   "serial_number": "1",
   "encounter_group": "f",
   "use_external_image": 0,
@@ -45,6 +45,6 @@
     "flip_vertical": false
   },
   "is_back": false,
-  "threshold": "2<调查员>",
-  "body": "<obj> Wydaj wymaganą liczbę żetonów wskazówek, aby spowodować postęp talii."
+  "threshold": "3<调查员>",
+  "body": "<obj> Zbadaj wrak barki i zdobądź próbkę ładunku. Wydaj wymaganą liczbę żetonów wskazówek, aby spowodować postęp talii."
 }

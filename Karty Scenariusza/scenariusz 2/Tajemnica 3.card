@@ -1,0 +1,27 @@
+{
+  "type": "密谋卡",
+  "name": "Ostateczna  Ofiara",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "密谋卡",
+    "is_back": true,
+    "name": "Ostateczna Ofiara",
+    "serial_number": "3b",
+    "flavor": "Woda wdziera się na pokład. Deski pękają jak zapałki. Warta pochłania wasze krzyki.",
+    "body": "Każdy badacz zostaje pokonany. Barka Jadwiga zatonęła wraz z załogą. (-> 【Z3】)"
+  },
+  "is_back": false,
+  "serial_number": "3a",
+  "threshold": "10",
+  "flavor": "Rzeka zmienia kolor na czarny. Niebo nad Poznaniem rozdziera nienaturalna burza. Czas się skończył.",
+  "tts_config": {
+    "version": "v2",
+    "script_id": "131EEEF6"
+  },
+  "content_hash": "a304a9bfe4dfc3007063f3d799be3daacfbb8b92ad53ed2225d5b4dcf866f36b"
+}

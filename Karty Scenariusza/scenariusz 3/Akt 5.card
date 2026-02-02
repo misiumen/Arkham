@@ -1,6 +1,6 @@
 {
   "type": "场景卡",
-  "name": "Czarna koza białe mleko daje",
+  "name": "W Bebechach Miasta",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -11,17 +11,17 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "flavor": "Po serii rozmów i drobnych przysług napięcie w końcu opada. Pracownicy przestają unikać wzroku, a nazwiska, które wcześniej nic nie znaczyły, zaczynają otwierać drzwi. Nikt nie mówi wprost, ale daje do zrozumienia, że możecie zobaczyć więcej -- pod warunkiem, że nie będziecie zadawać złych pytań przy złych ludziach.\n\nDostęp do mleczarni nie jest już problemem. Prawdziwym pytaniem jest to, co zobaczycie na linii rozlewniczej, gdy zostaniecie tam wpuszczeni.",
+    "flavor": "Wychodzicie na powierzchnię, ale jesteście po złej stronie rzeki, naprzeciw Katedry. Niebo nad Ostrowem Tumskim jest fioletowe. Rytuał się zaczął.",
     "serial_number": "2",
-    "name": "Czarna koza białe mleko daje",
+    "name": "W Bebechach Miasta",
     "body": "Z wybranej lokalizacji usuń 1 żeton chaosu."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "441597d36935308e59f8a70775bb7cb903b0d8b3767eda7f52e635dd70f5fd5a",
-  "flavor": "Na Rynku Jeżyckim zatrzymuje was człowiek, którego widzieliście już wcześniej -- zmęczony, nerwowy, z dłoniami pachnącymi mlekiem i czymś jeszcze, metalicznym. Mówi półgłosem, że transporty idą dalej, mimo że „nie wszystko wraca z kadzi”. Wskazuje jedno miejsce i prosi, by tam zajrzeć, zanim znów ruszą poranne wozy.\nMleczarnia pracuje jak zawsze. Bramy są otwarte, strażnicy znudzeni, a w środku trwa rozlew. Jeśli coś skaża miasto, właśnie stąd się rozchodzi -- razem z każdą kolejną bańką wynoszoną na bruk.",
+  "content_hash": "d60a916994b835df7b779d7c3b40c74d9d1dd72f705942dce7909a143f7550e4",
+  "flavor": "Pruskie fortyfikacje Cytadeli zostały przejęte przez bolszewickich niedobitków. Zmienili tunele w gniazdo. To tutaj „Mleko” spływa, by karmić armię hybryd ludzi i kóz. Musicie przebić się przez tunele, by znaleźć wyjście na Ostrów Tumski – jedyne miejsce, gdzie można zamknąć portal.",
   "serial_number": "3",
   "encounter_group": "f",
   "use_external_image": 0,
@@ -30,7 +30,7 @@
   "picture_layout": {
     "mode": "custom",
     "offset": {
-      "x": 42,
+      "x": 150,
       "y": 10
     },
     "scale": 0.75,
@@ -46,5 +46,5 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii."
+  "body": "<obj> Dostań się do fortu na Cytadeli, aby spowodować postęp talii."
 }
