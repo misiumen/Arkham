@@ -45,11 +45,11 @@
     "version": "v2",
     "script_id": "BA5D8080"
   },
-  "content_hash": "5d14b4d3be991e869e6afdeb3987606a15bd63355983e527fbf1f6534441f64c",
+  "content_hash": "ab612a1b33fbe9109b51a3f4a1553de780b1490de4dca59e04692ea23253e8d7",
   "level": -2,
   "cost": 3,
   "illustrator": "GeminiGPT",
   "encounter_group_number": "Wioska pośród drzew",
   "card_number": "5",
-  "body": "⚡Wyczerp Przerażonego Wikariusza: usuń spaczenie ze swojej lokalizacji. Połóż żeton przerażenia na tej karcie."
+  "body": "⚡Wyczerp Przerażonego Wikariusza: usuń Tkankę lub żeton zagłady ze swojej lokalizacji. Połóż żeton przerażenia na tej karcie."
 }
