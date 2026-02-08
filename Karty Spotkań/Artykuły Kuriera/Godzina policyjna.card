@@ -8,14 +8,16 @@
   "deck_options": [],
   "back": {
     "language": "pl",
-    "type": "遭遇卡背"
+    "type": "遭遇卡背",
+    "investigator_footer_type": "normal",
+    "encounter_group_number": "",
+    "encounter_group": "f"
   },
   "tts_config": {
     "version": "v2",
-    "script_id": "B0797DB9"
+    "script_id": "6A25EA53"
   },
-  "content_hash": "c3c970f7196e3c2212dcafc330ff4b1a6c4de09b8e514b5a0b6c04685d5ee629",
-  "use_external_image": 0,
-  "external_image": "",
-  "body": ""
+  "content_hash": "bce9150003887f0ce919be11fa1fdc4e67636d7edc5dd1f20f18b48400e1cb66",
+  "encounter_group": "f",
+  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, czwartek dnia 17. listopada 1921 | Nr 269<hr>\n<size \"\"><b>WPROWADZONO GODZINĘ POLICYJNĄ</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Na mocy decyzji władz porządkowych, wobec narastających zajść i niepokojących doniesień z ulic miasta, zarządzono ograniczenie ruchu po zmroku. Patrole wojskowe i policyjne legitymują przechodniów, a osoby bez stosownych zezwoleń kierowane są na posterunki. Miasto zapada w nienaturalną ciszę.</flavor>\n\n<for> Badacz wykonujący 【Ruch】 w lokalizacjach <b>Stary Rynek</b> i sąsiednich otrzymuje jeden punkt obrażenia.\n<for> Na koniec rundy odrzuć tę kartę.\n"
 }

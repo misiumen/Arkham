@@ -1,0 +1,56 @@
+{
+  "type": "故事卡",
+  "name": "Lo Kittay w Poznaniu",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "故事卡",
+    "investigator_footer_type": "normal",
+    "encounter_group_number": "",
+    "encounter_group": "f",
+    "flavor": "",
+    "body": "<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">„Eter drży, a w powietrzu materializują się strzępy wiadomości z innych światów. Umysł na chwilę wyrywa się z ram  miejsca i czasu…”</flavor>\n\n<upg> <b>Sukces o 0–1:</b> Przenieś się do sąsiadującej lokalizacji i wykonaj darmową akcję.\n<upg> <b>Sukces o 2 lub więcej:</b> Dodatkowo podejrzyj dwie wierzchnie karty swojej talii. Jedną odłóż na spód talii, a drugą odłóż na wierzch talii.\n",
+    "horror": 2,
+    "traits": [],
+    "name": "Lo Kittay w Poznaniu",
+    "picture_base64": "",
+    "level": -1,
+    "slots": "",
+    "subtitle": "",
+    "attack": "3",
+    "enemy_health": "2",
+    "evade": "2",
+    "enemy_damage": 0,
+    "enemy_damage_horror": 1,
+    "class": "中立",
+    "subclass": [],
+    "picture_layout": {
+      "mode": "custom",
+      "offset": {
+        "x": -80,
+        "y": 26
+      },
+      "scale": 0.7,
+      "crop": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "rotation": 0,
+      "flip_horizontal": false,
+      "flip_vertical": false
+    }
+  },
+  "tts_config": {
+    "version": "v2",
+    "script_id": "6A25EA53"
+  },
+  "content_hash": "69c713c5512e820316684029f2859a325a39c9c08c4c36b4048993e1a3da8141",
+  "encounter_group": "f",
+  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, poniedziałek dnia 9 kwietnia 1921 | Nr 248<hr>\n<size \"\"><b>WIECZÓR EKSPERYMENTALNY W DOMU EWANGELICKIM!</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Światowej sławy eksperymentator z dziedziny psychologji doświadczalnej, Lo Kittay zaprasza na seans. W Domu Ewangelickim wykona w programie cały szereg doświadczeń u nas dotąd nie widzianych jak: prawdziwy fakiryzm indyjski, telepatję jedynie bezjakiegokolwiek kontaktu, doświadczenia jasnowidzenia, wyczuwanie myśli na odległość, imaginację autosuggestywną, przekłuwanie ciała, wreszcie eksperymenty \"Gry wyobraźni\", w których osoby bez usypiania, zipełnie na jawie widzą najodelglejsze zakątki kuli ziemskiej, odbywają cudowne podróże, przeżywając jaknajmilsze przygody. Bilety w składzie cygar p. Szrejbowskiego, ul. Gwarna.</flavor>\n➡️ Badacze w lokalizacji <b>Uniwersytet Adama Miskatonica</b> mogą wydać 1 zasób, aby wykonać Test 🧠(3).<hr>\n<b>Jeśli test się udał:</b> \nOdwróć tę kartę i rozpatrz efekt z Rewersu na podstawie tego, <u>o ile</u> test został zdany.<hr>\n<b>W przeciwnym razie:</b> \nOtrzymujesz 1 punkt przerażenia."
+}

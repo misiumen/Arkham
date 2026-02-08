@@ -1,0 +1,23 @@
+{
+  "type": "故事卡",
+  "name": "Bimba wypada z szyn",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "遭遇卡背",
+    "investigator_footer_type": "normal",
+    "encounter_group_number": "",
+    "encounter_group": "f"
+  },
+  "tts_config": {
+    "version": "v2",
+    "script_id": "6A25EA53"
+  },
+  "content_hash": "6fdb6ca5ce15fd1d6e94eb4145adbacf5399b25f639affcbb9e22c20d8990438",
+  "encounter_group": "f",
+  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, wtorek dnia 23. sierpnia 1921 | Nr 191<hr>\n<size \"\"><b>BIMBA WYPADA Z SZYN!</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Katastrofa tramwajowa w sercu miasta! Wagon numer 2 uderzył w witrynę sklepową. Huk giętej stali i brzęk tłuczonego szkła sparaliżował ruch na głównej arterii. Motorniczy twierdzi, że zobaczył na torach postać o wielu kończynach, choć świadkowie widzieli tylko pustą ulicę. Służby porządkowe zablokowały przejazd.</flavor>\n<for> Akcja „Ruch” kosztuje 1 dodatkową akcję, jeśli badacz próbuje opuścić lub wejść do lokalizacji Stary Rynek lub sąsiednich.\n<for> Na koniec rundy odrzuć tę kartę"
+}
