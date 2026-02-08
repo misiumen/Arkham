@@ -32,7 +32,8 @@
     "name": "Ścieżka wśród krzaków",
     "shroud": "1",
     "clues": "4",
-    "body": "Nie możesz przejść do sąsiadującej ze Ścieżką Wśród Krzaków, nieokrytej lokalizacji.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację."
+    "body": "Nie możesz przejść do sąsiadującej ze Ścieżką Wśród Krzaków, nieokrytej lokalizacji.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
+    "flavor": "\"Ewidentnie przechodziło tędy wiele istot. Podążanie za tropem nie będzie trudne.\""
   },
   "location_type": "未揭示",
   "encounter_group": "i",
@@ -58,6 +59,7 @@
     "version": "v2",
     "script_id": "25E0C0B7"
   },
-  "content_hash": "cff6216c0ad496813722d6193d2f2d4f7c6653b8c6af56fe973b7be975f81188",
-  "body": ""
+  "content_hash": "1a4d3222635117769268587b0d457c2f4546d28da4017fd76ad8d57025ccf6ec",
+  "body": "",
+  "flavor": "\"Ewidentnie przechodziło tędy wiele istot. Podążanie za tropem nie będzie trudne.\""
 }
