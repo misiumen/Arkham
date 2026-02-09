@@ -1,0 +1,30 @@
+{
+  "type": "敌人卡",
+  "name": "Hierofanta Pnia",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "玩家卡背"
+  },
+  "health": 3,
+  "attack": "4",
+  "enemy_health": "3",
+  "evade": "2",
+  "enemy_damage": 1,
+  "enemy_damage_horror": 1,
+  "class": "",
+  "traits": [
+    "Mściwy"
+  ],
+  "body": "<for> Na koniec fazy Mitów: Umieść 1 żeton zagłady na tej karcie.\n<act> 【Pertraktacja 】(🧠 4). Jeśli odniesiesz sukces, usuń 1 żeton zagłady z Hierofanty Pnia i dobierz kartę z Talii Tkanki, dołączając ją do swojej lokalizacji.",
+  "flavor": "Z jego ust nie wydobywają się słowa, lecz gęsty, żółty dym. On już nie oddycha powietrzem.",
+  "tts_config": {
+    "version": "v2",
+    "script_id": "E017801C"
+  },
+  "content_hash": "8711d0d9a41475d0deccb02a99aa1a1fe0df6ce0ef9ddd6302d09905d6a2d8f1"
+}
