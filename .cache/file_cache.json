@@ -306,7 +306,7 @@
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Godzina policyjna.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1769433623.1593864
+      "mtime": 1770592897.5904684
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Zagini\u0119cie.card": {
       "card_type": "\u6545\u4e8b\u5361",
@@ -543,6 +543,70 @@
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\\u015acie\u017cka w\u015br\u00f3d krzak\u00f3w.card": {
       "card_type": "\u5730\u70b9\u5361",
       "mtime": 1770386766.8403707
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Bimba.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.579946
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Godzina policyjna 2.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.5904684
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Inflacja.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.6026313
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Seans 2.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.6141508
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Seans 3.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.6266654
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Seans 4.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.6266654
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Seans.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.6276648
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Spis Ludno\u015bci.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.6276648
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Strajk w Cegielskim.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.6666052
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Targi 2.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.6991682
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Targi.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.7340207
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Zagini\u0119cie_copy1.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.7455437
+    },
+    "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Znalezisko prof. Kostrzewskiego.card": {
+      "card_type": "\u6545\u4e8b\u5361",
+      "mtime": 1770592897.7838306
+    },
+    "Karty Spotka\u0144\\scenariusz 3\\Goniec 1.card": {
+      "card_type": "\u654c\u4eba\u5361",
+      "mtime": 1770592897.797209
+    },
+    "Karty Spotka\u0144\\scenariusz 3\\Goniec 2.card": {
+      "card_type": "\u654c\u4eba\u5361",
+      "mtime": 1770592897.8090484
+    },
+    "Karty Spotka\u0144\\scenariusz 3\\Goniec 3.card": {
+      "card_type": "\u654c\u4eba\u5361",
+      "mtime": 1770592897.8225648
     }
   }
 }
