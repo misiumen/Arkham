@@ -20,7 +20,7 @@
   ],
   "flavor": "Starzy rybacy mówili, że woda ma pamięć. Nie wspominali, że ma też macki.",
   "attack": "5",
-  "enemy_health": "6<调查员>",
+  "enemy_health": "3<调查员>",
   "evade": "1",
   "enemy_damage": 2,
   "enemy_damage_horror": 2,
@@ -42,10 +42,10 @@
     "flip_horizontal": false,
     "flip_vertical": false
   },
-  "body": "<for> Kiedy Lewiatan atakuje: Ten atak ignoruje wszystkie atuty typu Pancerz kontrolowane przez atakowanego badacza.\n<for> Kiedy Lewiatan miałby zostać pokonany: Zamiast tego anuluj wszystkie obrażenia mu zadane, wyczerp go i przemieść do najdalszej lokalizacji o ceše Rzeka (względem jego obecnej pozycji). ",
+  "body": "<for> Lewiatan wchodzi do gry wyczerpany, w zwarciu z atutem Barka \"Jadwiga\" (zamiast z badaczem). Dopóki Lewiatan jest gotowy (nie wyczerpany), Barka \"Jadwiga\" nie może się poruszać ani być użyta do akcji Rezygnacja.\n<for> Lewiatan atakuje każdego badacza w swojej lokalizacji ORAZ zadaje 2 obrażenia atutowi Barka \"Jadwiga\".\n<for> Kiedy Lewiatan miałby zostać pokonany: Zamiast tego anuluj wszystkie obrażenia mu zadane, wyczerp go i przemieść do najdalszej lokalizacji o cesze Rzeka (względem jego obecnej pozycji). ",
   "tts_config": {
     "version": "v2",
     "script_id": "F5F8F6B3"
   },
-  "content_hash": "003fb67ad12e187d0ff1d426d2bbd87bd4d1ca0133471f16acddddcf1e7c2230"
+  "content_hash": "4e03488c5737ff409e2ed45932877cadd0e6b625ce882f44307be2792e1a998a"
 }
