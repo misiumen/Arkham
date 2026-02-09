@@ -15,7 +15,6 @@
   "traits": [
     "Elitarny",
     "Masywny",
-    "Łowca",
     "Potwór"
   ],
   "flavor": "Starzy rybacy mówili, że woda ma pamięć. Nie wspominali, że ma też macki.",
@@ -29,9 +28,9 @@
     "mode": "custom",
     "offset": {
       "x": 12,
-      "y": 60
+      "y": 38
     },
-    "scale": 0.61,
+    "scale": 0.73,
     "crop": {
       "top": 0,
       "right": 0,
@@ -47,5 +46,6 @@
     "version": "v2",
     "script_id": "F5F8F6B3"
   },
-  "content_hash": "4e03488c5737ff409e2ed45932877cadd0e6b625ce882f44307be2792e1a998a"
+  "content_hash": "8a67181e584675237f854887b737319cce90fa6da64c4fdb0c247bb49b4b0be5",
+  "encounter_group": "c"
 }

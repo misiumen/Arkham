@@ -13,7 +13,8 @@
     "name": "Głosy z Brzegu",
     "serial_number": "2b",
     "flavor": "Wybuchają flary, oświetlając rzekę krwistą czerwienią. Kule zaczynają świszczeć wokół nadbudówki",
-    "body": "<for> Każdy badacz musi wykonać test 🦶 (3).\nPorażka: Badacz otrzymuje 1 obrażenie i 1 przerażenie.\nSukces: Badacz rzuca się na deski pokładu (brak negatywnych efektów). Jeśli Barka Jadwiga ma 4 lub więcej uszkodzeń, postępuj do 【Tajemnicy 3a】. W przeciwnym razie usuń wszystkie żetony zagłady, ale nie odwracaj tej karty (zostaje jako aktywny modyfikator: \"Trudność wszystkich testów na Barce wzrasta o 1\")."
+    "body": "<for> Każdy badacz musi wykonać test 🦶 (3).\nPorażka: Badacz otrzymuje 1 obrażenie i 1 przerażenie.\nSukces: Badacz rzuca się na deski pokładu (brak negatywnych efektów). Jeśli Barka Jadwiga ma 4 lub więcej uszkodzeń, postępuj do 【Tajemnicy 3a】. W przeciwnym razie usuń wszystkie żetony zagłady, ale nie odwracaj tej karty (zostaje jako aktywny modyfikator: \"Trudność wszystkich testów na Barce wzrasta o 1\").",
+    "encounter_group": "c"
   },
   "flavor": "Widzicie sylwetki przemykające między drzewami na brzegu. Obserwują was. Wiedzą, że płyniecie w pułapkę.",
   "serial_number": "2a",
@@ -41,5 +42,6 @@
     "version": "v2",
     "script_id": "A7D8D2E4"
   },
-  "content_hash": "94e8c4a43901b84fad12fee6b0c013974c2f9d17da1488e07172f0740cacff06"
+  "content_hash": "ef4b19f14d2d3b5cc0b1d44860403100c51c4b1498bb520d663b45c96e887dbb",
+  "encounter_group": "c"
 }

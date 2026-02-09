@@ -13,7 +13,8 @@
     "flavor": "Ciało kapłana bezwładnie osuwa się w toń, porywane przez spieniony nurt. Nienaturalna burza cichnie niemal natychmiast, jakby zdmuchnięta niewidzialną ręką. Rytuał został przerwany, lecz echo tych słów pozostanie w waszych umysłach na zawsze.",
     "name": "Świt nad Wartą",
     "serial_number": "4b",
-    "body": "Cisza, która zapada nad mostem, jest ogłuszająca. Woda wciąż jest brudna, ale nie wyczuwacie już w niej tego obcego, pulsującego zła. To koniec.\n\n🔵 (→【Z1】)"
+    "body": "Cisza, która zapada nad mostem, jest ogłuszająca. Woda wciąż jest brudna, ale nie wyczuwacie już w niej tego obcego, pulsującego zła. To koniec.\n\n🔵 (→【Z1】)",
+    "encounter_group": "c"
   },
   "serial_number": "4a",
   "is_back": false,
@@ -42,5 +43,6 @@
     "version": "v2",
     "script_id": "6C422365"
   },
-  "content_hash": "cff5da3d280f079cd29f6dd5601152f2fb0106efa784bfab97e9bf9d83bf4b40"
+  "content_hash": "f644aa84c4c5f34df5bdfde6164085ace9b82e5ec52403a219e533ae427796ed",
+  "encounter_group": "c"
 }
