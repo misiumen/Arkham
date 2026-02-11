@@ -13,7 +13,8 @@
     "name": "Ślad Toksyn",
     "serial_number": "1b",
     "flavor": "Powierzchnia wody marszczy się nienaturalnie, pokryta kożuchem żółci i ropy. Gryzący odór chemikaliów miesza się ze słodkawym smrodem rozkładu. Trop jest wyraźny, lecz prowadzi wprost w objęcia szaleństwa.",
-    "body": "🔵Odrzućcie wszystkie żetony wskazówek z lokacji Zakole Warty oraz Łęgi Wierzbowe.\n🔵 Umieśćcie na lokacji Skażony Nurt liczbę wskazówek równą: 1<per>\nPrzejdźcie do Aktu 2a."
+    "body": "🔵Odrzućcie wszystkie żetony wskazówek z lokacji Zakole Warty oraz Łęgi Wierzbowe.\n🔵 Umieśćcie na lokacji Skażony Nurt liczbę wskazówek równą: 1<per>\nPrzejdźcie do Aktu 2a.",
+    "encounter_group": "c"
   },
   "serial_number": "1a",
   "is_back": false,
@@ -42,5 +43,6 @@
     "version": "v2",
     "script_id": "47CEEE07"
   },
-  "content_hash": "c76632e3f48bcfaba85012e1e6013a35b9961e879bb0a7d56add8ba2a5510bf9"
+  "content_hash": "b2eb258c18db7d7849263afcebc494f70ff3284e0a35362e6ba374f35811b9f1",
+  "encounter_group": "c"
 }

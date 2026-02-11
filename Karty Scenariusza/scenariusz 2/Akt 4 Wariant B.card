@@ -13,7 +13,8 @@
     "name": "Ucieczka z Paszczy",
     "serial_number": "4b",
     "flavor": "Wskaźniki ciśnienia pękają, a ryk przegrzanego silnika zagłusza nawet burzę. Gdy zwalniacie blokadę, \"Jadwiga\" nie płynie – ona wystrzeliwuje do przodu niczym pocisk.\nUderzenie jest potworne. Zardzewiały dziób barki taranuje oślizgłe cielsko Lewiatana i z impetem wbija się w filary mostu. Konstrukcja jęczy, a potem pęka. Tysiące ton stali i betonu runie do wody z ogłuszającym hukiem, przygniatając bestię i spychając ją na dno.\nSilnik gaśnie, dławiąc się czarnym dymem, ale siła uderzenia wypchnęła was na czyste wody. Zostawiacie koszmar za sobą, niesieni szybkim nurtem ku ocaleniu.",
-    "body": "(-> 【Z2】: Badacze przetrwali)"
+    "body": "(-> 【Z2】: Badacze przetrwali)",
+    "encounter_group": "c"
   },
   "serial_number": "4a",
   "is_back": false,
@@ -42,5 +43,6 @@
     "version": "v2",
     "script_id": "9EAACEFF"
   },
-  "content_hash": "504e785ad7ad0d26059c10692606678b94eec8b4c9c0d0c5b1ac04557d1a81eb"
+  "content_hash": "ee0a9c5319a4ea7bc02c1903215f7d738211865f91cbaa9e863ac0164c1a1617",
+  "encounter_group": "c"
 }

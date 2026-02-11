@@ -13,7 +13,8 @@
     "name": "Ciche Wody",
     "serial_number": "1b",
     "flavor": "Nagle barką wstrząsa potężne uderzenie. To nie była kłoda. To coś chwyciło za kil.",
-    "body": "<for>Umieść 1 uszkodzenie na atucie Barka Jadwiga. \n<for> Odszukaj w talii spotkań lub stosie kart odrzuconych wroga Topielec z Warty i dobierz go (pojawia się w zwarciu z Badaczem o najniższej 🦶). Przetasuj stos kart odrzuconych spotkań z powrotem do talii."
+    "body": "<for>Umieść 1 uszkodzenie na atucie Barka Jadwiga. \n<for> Odszukaj w talii spotkań lub stosie kart odrzuconych wroga Topielec z Warty i dobierz go (pojawia się w zwarciu z Badaczem o najniższej 🦶). Przetasuj stos kart odrzuconych spotkań z powrotem do talii.",
+    "encounter_group": "c"
   },
   "serial_number": "1a",
   "is_back": false,
@@ -24,5 +25,6 @@
     "version": "v2",
     "script_id": "0EBBB6A6"
   },
-  "content_hash": "36c22c7b19bb1f2ef6099ea6318a6e209cf5d798af866ebae192c9cce3c1b7bd"
+  "content_hash": "a7d24f431bdad2672ca0e898bcc645d62f38800eac795848d4d52c0051fdf194",
+  "encounter_group": "c"
 }
