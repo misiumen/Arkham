@@ -34,12 +34,12 @@
   "enemy_health": "2<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Dołącz do swojej lokacji. Każdy badacz, który kończy tu turę, a nie wykonał w niej przynajmniej jednej akcji 【Ruchu】 lub 【Walki】, otrzymuje 1 punkt przerażenia.\n➡️ Wykonaj test 🧠 (3). Jeśli test się uda, odrzuć tę kartę.",
+  "body": "<spa> Dołącz do swojej lokacji. Każdy badacz, który kończy tu turę, a nie wykonał w niej przynajmniej jednej akcji 【Ruchu】 lub 【Walki】, otrzymuje 1 przerażenie.\n➡️ Wykonaj test 🧠 (3). Jeśli test się uda, odrzuć tę kartę.",
   "tts_config": {
     "version": "v2",
     "script_id": "8E9AB3AE"
   },
-  "content_hash": "1d27258b11df1a10f771ace595c53e6c163a9b748dd9cb4ca8370fa6f878eba3",
+  "content_hash": "bf8f3e120e38f77a659e8d8d1680943c27bbd73e2f13cd76c885806387c636f7",
   "enemy_damage": 1,
   "traits": [],
   "quantity": 2,

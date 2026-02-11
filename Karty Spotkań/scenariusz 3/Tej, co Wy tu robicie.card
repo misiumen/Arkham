@@ -19,7 +19,7 @@
     "version": "v2",
     "script_id": "8E9AB3AE"
   },
-  "content_hash": "15119960676a9493a0f8b03c50c5ea606a478413afff10457304644e1754cf6e",
+  "content_hash": "d19e7a75a3de25346faef3ea0a601c352ed1906d17e3d9b8c81da5898f75f5c8",
   "picture_layout": {
     "mode": "custom",
     "offset": {
@@ -36,5 +36,8 @@
     "rotation": 0,
     "flip_horizontal": false,
     "flip_vertical": false
-  }
+  },
+  "traits": [
+    "Niebezpieczeństwo"
+  ]
 }

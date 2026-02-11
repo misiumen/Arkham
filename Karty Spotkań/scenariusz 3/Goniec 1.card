@@ -39,9 +39,10 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "780c67ec3564883fe310634a59a319eaab89e5b18a0ba580e3ec6af138bb7389",
+  "content_hash": "adfd0314608f14cc75998cfb72a8f81847de2a98514982a9a05d719ce3bcc4ec",
   "enemy_damage": 1,
   "traits": [
+    "Humanoid",
     "Dostawca",
     "Kultysta"
   ],
