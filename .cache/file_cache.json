@@ -118,11 +118,11 @@
     },
     "Karty Lokacji\\scenariusz 2\\Most Chwaliszewski B.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770054405.807245
+      "mtime": 1770663521.7647104
     },
     "Karty Lokacji\\scenariusz 2\\Pradawne D\u0119by.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770054405.9464135
+      "mtime": 1770663521.9520996
     },
     "Karty Lokacji\\scenariusz 2\\Przysta\u0144.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -234,11 +234,11 @@
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 4 Wariant B.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1770054407.219897
+      "mtime": 1770663522.0554116
     },
     "Karty Scenariusza\\scenariusz 2\\Barka Jadwiga.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1770312258.367448
+      "mtime": 1770663522.1312985
     },
     "Karty Scenariusza\\scenariusz 2\\Karta Scenariusza.card": {
       "card_type": "\u5192\u9669\u53c2\u8003\u5361",
@@ -362,15 +362,15 @@
     },
     "Karty Spotka\u0144\\scenariusz 2\\Arcykap\u0142an Odrodzonej Warty.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1770312258.4981434
+      "mtime": 1770663522.2144632
     },
     "Karty Spotka\u0144\\scenariusz 2\\Faustyn Ferment.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1770312258.5457962
+      "mtime": 1770663522.3392098
     },
     "Karty Spotka\u0144\\scenariusz 2\\Lewiatan.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1770312258.6350987
+      "mtime": 1770663522.8376858
     },
     "Karty Spotka\u0144\\scenariusz 3\\Agitator z Wildy.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -607,6 +607,62 @@
     "Karty Spotka\u0144\\scenariusz 3\\Goniec 3.card": {
       "card_type": "\u654c\u4eba\u5361",
       "mtime": 1770592897.8225648
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Dar Czarnej Kozy.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770663522.3047156
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Gwa\u0142towny Rozkwit.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770663522.450117
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Hierofanta Tysi\u0105ca P\u0119d\u00f3w.card": {
+      "card_type": "\u654c\u4eba\u5361",
+      "mtime": 1770663522.712658
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Kozi Pomiot.card": {
+      "card_type": "\u654c\u4eba\u5361",
+      "mtime": 1770663522.8025477
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Niekontrolowany Rozrost.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770663522.990312
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Nosiciel Zarodnik\u00f3w.card": {
+      "card_type": "\u654c\u4eba\u5361",
+      "mtime": 1770663523.1217058
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Rytua\u0142 P\u0142odno\u015bci.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770663523.2599747
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Rzeczne M\u0142ode.card": {
+      "card_type": "\u654c\u4eba\u5361",
+      "mtime": 1770663523.2734468
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Skrzynia Dynamitu.card": {
+      "card_type": "\u652f\u63f4\u5361",
+      "mtime": 1770663523.4707022
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Twarze w Korze.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770663523.717443
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Zapach Feromon\u00f3w.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770663523.8211627
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Zmutowany Kierownik.card": {
+      "card_type": "\u654c\u4eba\u5361",
+      "mtime": 1770663523.917812
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\Zw\u0119glony Totem.card": {
+      "card_type": "\u652f\u63f4\u5361",
+      "mtime": 1770663524.0707045
+    },
+    "Karty Spotka\u0144\\scenariusz 2\\\u017bywy Nurt.card": {
+      "card_type": "\u8be1\u8ba1\u5361",
+      "mtime": 1770663524.7898521
     }
   }
 }
