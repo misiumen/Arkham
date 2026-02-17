@@ -34,14 +34,16 @@
   "enemy_health": "1<调查员>",
   "evade": "X",
   "enemy_damage_horror": 2,
-  "body": "Wykonaj test 🧠 (3). Jeśli test się nie udał, otrzymujesz jeden punkt przerażenia i nie możesz wykonywać akcji 【Badania 】do końca rundy. Jeśli znajdujesz się w lokacji 【Mleczarnia Spółdzielcza】lub 【Linia Rozlewnicza】, trudność testu wynosi (5).",
+  "body": "Wykonaj test 🧠 (3). Jeśli test zakończy się porażką, otrzymujesz 1 przerażenie i nie możesz wykonać akcji 【Badania】 do końca rundy. Jeśli znajdujesz się w lokalizacji 【Mleczarnia Spółdzielcza】 lub 【Linia Rozlewnicza】, trudność testu wynosi (5).",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "759066f35f353e24944e71e13f908791213439e9024deba148fc685aea9ba09e",
+  "content_hash": "c2bca9bfedc9305bf6ed1d9adffc5b8d9c82c58f91911b51a3dd364aff180867",
   "enemy_damage": 0,
-  "traits": [],
+  "traits": [
+    "Widmowy"
+  ],
   "quantity": 2,
   "flavor": "Bieda, brud, smród i ubóstwo\nDzisiaj na ulicy jest chłodno, ciemno, pusto"
 }

@@ -1,6 +1,6 @@
 {
   "type": "敌人卡",
-  "name": "Agitator z Wildy",
+  "name": "Wkurwiony Bamber",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -34,14 +34,17 @@
   "enemy_health": "3",
   "evade": "2",
   "enemy_damage_horror": 0,
-  "body": "<spa> Badacz z największą liczbą wskazówek.\n<for> Kiedy Wkurwiony Bamber wchodzi w zwarcie z badaczem, badacz ten musi natychmiast upuścić 1 posiadaną wskazówkę.",
+  "body": "<spa> Badacz z największą liczbą wskazówek.\n<for> Po tym, jak Wkurwiony Bamber zaatakuje: umieść 1 żeton zagłady na obecnej tajemnicy.\n➡️ Wydaj 4 żetony zasobów: 【Pertraktacje】. Odrzuć Wkurwionego Bambra.",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "4d00677dc94804538e70bc294e45a5ff19314dae04db6babcea9d6b0facf5e50",
+  "content_hash": "2b56a7b6ce529666522f1f543ec6d45c8d0d85d5effef0e29fcfbed33a408446",
   "enemy_damage": 1,
-  "traits": [],
+  "traits": [
+    "Humanoid",
+    "Kultysta"
+  ],
   "quantity": 2,
-  "flavor": "\"A taki był akuratny i w ancugu\""
+  "flavor": "A taki był akuratny i w ancugu"
 }

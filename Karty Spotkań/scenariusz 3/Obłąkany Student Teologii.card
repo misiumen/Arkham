@@ -31,19 +31,20 @@
   "encounter_group": "f",
   "class": "",
   "attack": "2",
-  "enemy_health": "2",
+  "enemy_health": "3",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Ostrów Tumski\n<pat> (Stary Rynek), Powściągliwy\n<for> Na koniec fazy Mitów: Jeśli ten wróg znajduje się na Starym Rynku, połóż na nim 1 żeton zagłady.\n",
+  "body": "<pre> Najmniejsza 📚.\n<spa> Ostrów Tumski\nPowściągliwy.\n<for> Na koniec fazy Mitów: Jeśli ten wróg jest w zwarciu z badaczem, połóż 1 żeton zagłady na aktualnej tajemnicy.\n",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "7e69adc771bb8cf5f884ddffea14b144199067fe5d27b69af2a93b5f4dd375dc",
+  "content_hash": "9f0a72fdac33e39736e922774b10aec33db322e9ea26939685b6c5d3c03a978d",
   "enemy_damage": 0,
   "traits": [
+    "Humanoid",
     "Kultysta"
   ],
   "quantity": 2,
-  "flavor": "Znalazł marginesy, których nikt nie powinien czytać"
+  "flavor": "Czytał przypisy, których nikt nie powinien czytać"
 }

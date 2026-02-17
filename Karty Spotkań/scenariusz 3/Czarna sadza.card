@@ -34,16 +34,15 @@
   "enemy_health": "2<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "Wykonaj test 🦶(2), jeżeli się nie udał otrzymujesz 1 punkt obrażenia. W swojej następnej turze musisz wykonać o jedną akcję mniej.",
+  "body": "Wykonaj test 🦶(2), jeżeli się nie udał otrzymujesz 1 obrażenie i tracisz 1 akcję.",
   "tts_config": {
     "version": "v2",
     "script_id": "8E9AB3AE"
   },
-  "content_hash": "e9266cff365710317a30b8feb45b3cef3fe228ae43c5364975a00a2a06691476",
+  "content_hash": "6b667e778ab4159c2fcf5e940af7ee0e1d03ae870c1aeced0538e52766f4c71f",
   "enemy_damage": 1,
   "traits": [
-    "Dostawca",
-    "Kultysta"
+    "Widmowy"
   ],
   "quantity": 2,
   "flavor": " Ciężki dym z fabryk i domów rozchodzi się po okolicy. "

@@ -39,9 +39,11 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "206e557fe5d6d6a31653b9e19efe9b65cf2493af2bbe4b6ccf079807725dfeba",
+  "content_hash": "7cc9ada5a1fb567e142fe8789caa4e31bbc96ee0678c810cb90acdb796e373bf",
   "enemy_damage": 1,
-  "traits": [],
+  "traits": [
+    "Humanoid"
+  ],
   "quantity": 2,
   "flavor": "„Nie słuchajcie ich! To oni chrzczą nasze mleko wapnem! To oni są winni!”"
 }
