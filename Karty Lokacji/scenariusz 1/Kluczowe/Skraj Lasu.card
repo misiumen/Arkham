@@ -20,7 +20,7 @@
       "mode": "custom",
       "offset": {
         "x": 82,
-        "y": 0
+        "y": -16
       },
       "scale": 0.65,
       "crop": {
@@ -47,12 +47,12 @@
     "version": "v2",
     "script_id": "09AB196F"
   },
-  "content_hash": "162494a205f0f681d31dbd3d4d4d9575839c1e345c1838c28d3130ab183fbdfc",
+  "content_hash": "c7923d313504f2f52de7fb27ba8f2d776a10f4f499fb0ad6cc072d916b2cc009",
   "picture_layout": {
     "mode": "custom",
     "offset": {
       "x": 82,
-      "y": 0
+      "y": -16
     },
     "scale": 0.65,
     "crop": {

@@ -21,7 +21,10 @@
     "flavor": "\"Wartą spływa wiele rzeczy: towary, ludzie, topielcy. Na wszystkim można zrobić pieniądz.\"",
     "location_link": [],
     "victory": null,
-    "body": "➡️: 【Zrezygnuj.】 Możemy tędy uciec!"
+    "body": "➡️: 【Zrezygnuj.】 Możemy tędy uciec!",
+    "traits": [
+      "Natura"
+    ]
   },
   "location_type": "未揭示",
   "shroud": "?",
@@ -38,5 +41,5 @@
     "version": "v2",
     "script_id": "856CEC5E"
   },
-  "content_hash": "a7b9cd52665931caa63ae919962eb25338c84a0e6c14db0a0edafe8f90576e03"
+  "content_hash": "822a91e4fc13e7fbc0699fcd856e62200d01c0454f6a4d09d03c6972f43833de"
 }

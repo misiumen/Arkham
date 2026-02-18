@@ -16,7 +16,7 @@
     "clues": "?",
     "shroud": "?",
     "flavor": "\"Płoć, szczupak, shoggoth, karaś, jesiotr...głównie to czuć tu w powietrzu\"",
-    "body": "➡️ Wydaj 1 zasób: dobierz 1 żeton z worka chaosu. Jeśli to żeton pozytywny, wylecz 1 obrażenie lub punkt przerażenia z twojej postaci. Jeśli to żeton negatywny, otrzymujesz 1 punkt przerażenia lub 1 obrażenie.",
+    "body": "⚡ Wydaj 1 zasób: dobierz 1 żeton z worka chaosu. Jeśli to żeton pozytywny, wylecz 1 obrażenie lub punkt przerażenia z twojej postaci. Jeśli to żeton negatywny, otrzymujesz 1 punkt przerażenia lub 1 obrażenie.",
     "illustrator": "Gemini",
     "encounter_group_number": "Miejsca zwyczajne",
     "card_number": " 1",
@@ -37,7 +37,7 @@
     "version": "v2",
     "script_id": "EE5EB96F"
   },
-  "content_hash": "ead5e9d14184e10142113c64caa7f49d80b2a7f6e58809484f889df27f70835b",
+  "content_hash": "9c5dfcea5e9ce080d872ee639cbc68f9830eabdf736f6d78f6d84385dd7ef95b",
   "location_link": [
     "深蓝T",
     "褐扭",

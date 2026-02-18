@@ -41,7 +41,10 @@
     "encounter_group": "e",
     "illustrator": "Gemini",
     "encounter_group_number": "Miejsca zwyczajne",
-    "card_number": "6"
+    "card_number": "6",
+    "traits": [
+      "Natura"
+    ]
   },
   "shroud": "?",
   "clues": "?",
@@ -75,7 +78,7 @@
     "version": "v2",
     "script_id": "DD404073"
   },
-  "content_hash": "15a72f64608466e711f3aa3c37b404675152016b11e6dc4c81e3927ebcdddf9c",
+  "content_hash": "8a4802ce733121aeb63439202e001f67f838954a85678306236824dde34fcf19",
   "illustrator": "Gemini",
   "encounter_group_number": "Miejsca zwyczajne",
   "card_number": "6"
