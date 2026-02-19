@@ -15,10 +15,10 @@
     "encounter_group": "i",
     "encounter_group_number": "Leśne zakamarki",
     "illustrator": "Gemini",
-    "body": "➡️: 【Badanie】. Zbadaj odkrytą sąsiadującą lokalizację używając zasłony tej lokalizacji.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
+    "body": "➡️: 【Badanie】. Zbadaj odkrytą sąsiadującą lokalizację używając zasłony tej lokalizacji.\n\nNie możesz przejść do sąsiadującej z Amboną, nieodkrytej lokalizacji.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
     "flavor": "\"Widać stąd zasięg kultu.\"",
     "shroud": "0",
-    "clues": "2",
+    "clues": "1",
     "traits": [
       "Natura"
     ],
@@ -46,7 +46,7 @@
     "version": "v2",
     "script_id": "729BE8A9"
   },
-  "content_hash": "a458aa63381667794a992ea900535f6f48846dd04915f5f7ec24e6f7d0df96f7",
+  "content_hash": "227b61903c69278911f81e4bd61e9c7ceb91b0168b57c9ca7f9d14c02f68fd36",
   "illustrator": "Gemini",
   "encounter_group_number": "Miejsca zwyczajne",
   "encounter_group": "i",

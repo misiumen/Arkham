@@ -34,7 +34,7 @@
   "traits": [
     "Powściągliwy"
   ],
-  "body": "【Rozstawienie】- lokacja z najmniejszą liczbą wskazówek.\nPowściągliwy.\nKażdy przeciwnik w lokacji ze Zbłąkanym Kultywatorem ma +1👊 i +1🦶.",
+  "body": "【Rozstawienie】- lokalizacja z największą liczbą wskazówek.\nPowściągliwy.\nKażdy przeciwnik w lokalizacji ze Zbłąkanym Kultywatorem ma +1👊 i +1🦶.",
   "evade": "1",
   "attack": "1",
   "flavor": "Wyznawcy kozicy lubią orać niewiernych.",
@@ -45,6 +45,6 @@
     "version": "v2",
     "script_id": "E467FFAA"
   },
-  "content_hash": "7cd718034ea17153b63e0453e77f83f088e25bbabf8de03b7c6697c1dba8627b",
+  "content_hash": "8f7069c135ef4b40f374db8ca8f5fb83259a1cd1c3782d6aa8ada530b3cf2feb",
   "encounter_group": "b"
 }

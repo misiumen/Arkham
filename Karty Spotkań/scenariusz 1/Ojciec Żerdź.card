@@ -1,6 +1,6 @@
 {
   "type": "敌人卡",
-  "name": "Ojciec Żerdź",
+  "name": "Żyrij Żerdź",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -38,7 +38,7 @@
     "version": "v2",
     "script_id": "509F5ABC"
   },
-  "content_hash": "b6a53c9137148f8d32370753db656c30af7aac90cdea36240bfc2e80664fbdad",
+  "content_hash": "1823bcedfa7ee279ca99624bf334906dd6db33359ce601e8036e29712b56a3bf",
   "encounter_group": "b",
   "attack": "3",
   "evade": "3",

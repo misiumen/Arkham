@@ -11,8 +11,8 @@
     "type": "地点卡",
     "location_type": "已揭示",
     "name": "Przybrzeżna rampa załadunkowa",
-    "shroud": "?",
-    "clues": "?",
+    "shroud": "0",
+    "clues": "0",
     "illustrator": "Gemini",
     "encounter_group_number": "Wioska wśród drzew",
     "card_number": "2",
@@ -41,5 +41,5 @@
     "version": "v2",
     "script_id": "856CEC5E"
   },
-  "content_hash": "822a91e4fc13e7fbc0699fcd856e62200d01c0454f6a4d09d03c6972f43833de"
+  "content_hash": "841f4728dd94fbd05e660d632a1e103ec80a30d09f129860460710f8e844a61e"
 }

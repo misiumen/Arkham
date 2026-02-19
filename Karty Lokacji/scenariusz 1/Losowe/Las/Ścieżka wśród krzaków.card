@@ -32,7 +32,7 @@
     "name": "Ścieżka wśród krzaków",
     "shroud": "1",
     "clues": "4",
-    "body": "Zadaj 1 bezpośrednie obrażenie twojemu badaczowi jeśli kończysz rundę na tej lokalizacji.\n\nNie możesz przejść do sąsiadującej ze Ścieżką Wśród Krzaków, nieodkrytej lokalizacji.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
+    "body": "Zadaj 1 bezpośredni punkt obrażeń twojemu badaczowi jeśli kończysz rundę na tej lokalizacji.\n\nNie możesz przejść do sąsiadującej ze Ścieżką Wśród Krzaków, nieodkrytej lokalizacji.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
     "flavor": "\"Ewidentnie przechodziło tędy wiele istot. Podążanie za tropem nie będzie trudne.\"",
     "traits": [
       "Natura"
@@ -62,7 +62,7 @@
     "version": "v2",
     "script_id": "25E0C0B7"
   },
-  "content_hash": "0306f314c877706bdb9565adf1a27d3c9da2449263d40dabda0bdc55088eee46",
+  "content_hash": "6f144e46e9de772e91c413c50c9a4b504d684c7eb7b31571aaa06b6ebf19549d",
   "body": "",
   "flavor": "\"Wszystko wygląda tu tak samo. Z oddali słychać jednak bicie bębnów.\"",
   "traits": [

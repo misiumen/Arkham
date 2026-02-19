@@ -33,7 +33,7 @@
       "flip_vertical": false
     },
     "encounter_group": "i",
-    "body": "<for> na koniec swojej tury, jeśli znajdujesz się w lokalizacji Grzęzawisko: (badacze na sąsiadujących lokalizacjach mogą dorzucać karty do testu) Test 🦶/👊(4):  otrzymaj 1 bezpośredni punkt przerażenia lub obrażeń.\n\nNie możesz przejść do sąsiadującej z Gęstym Lasem, nieodkrytej lokalizacji.\n\n➡️ Test 🦶/👊(5):  odkryj 1 nieodkrytą sąsiadującą lokalizację.",
+    "body": "➡️ Test 🦶/👊(5) (badacze na sąsiadujących lokalizacjach mogą dorzucać karty do testu):  odkryj 1 nieodkrytą sąsiadującą lokalizację.\n\n<for> jeśli nie zdasz dowolnego testu 🦶/👊 w tej lokalizacji: otrzymujesz 1 punkt obrażeń.\n\nNie możesz przejść do sąsiadującej z Grzęzawiskiem, nieodkrytej lokalizacji.",
     "traits": [
       "Natura"
     ]
@@ -63,7 +63,7 @@
     "version": "v2",
     "script_id": "9691D134"
   },
-  "content_hash": "8ce13316a6ed254ee57826ffbccfa938056ba4a88ab0baea191c07876b6a367a",
+  "content_hash": "0bc54b6cf319cf3aaaf4efe43fb30f467e82d8ff89e74f32e99ed98a9894185e",
   "traits": [
     "Natura"
   ]

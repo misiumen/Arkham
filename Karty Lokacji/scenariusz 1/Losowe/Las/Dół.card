@@ -15,7 +15,7 @@
     "encounter_group": "i",
     "encounter_group_number": "Leśne zakamarki",
     "illustrator": "Gemini",
-    "body": "<for> Badacze jako grupa mogą odrzucić <调查员>  wskazówek. Jeśli to zrobią, przeczytaj Akt 4las.\n\nWybierz jedno (limit raz na grę na badacza):\n\n🔵 Otrzymaj 1 punkt przerażenia/ 1 punkt obrażeń.\n\n🔵 ➡️ 【Zrezygnuj】\n\n🔵 Połóż na tej lokalizacji 2 żetony zagłady.\n\n➡️ odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
+    "body": "<obj> - Jeśli badacze wydadzą jako grupa 4<调查员> wskazówek : (→R3)\n\n<rev> Każdy badacz w sąsiadującej z Dołem lokalizacji musi wybrać:\n\n🔵 Otrzymaj 2 punkty przerażenia.\n\n🔵 【Zrezygnuj】\n\n🔵 Połóż na tej lokalizacji 2 żetony zagłady.\n\n🔵 Przeszukaj swoją talię i stos kart odrzuconych w poszukiwaniu dowolnej karty Słabości. Umieść ją w swoim obszarze zagrożeń, a następnie przetasuj talie.\n\nBadacze jako grupa mogą odrzucić 3<调查员>  wskazówek. Jeśli to zrobią, dodaj do dziennika kampanii \"Badacze zapewnili ofiarom pochówek.\".\n\nNie możesz przejść do sąsiadującej z Dołem, nieodkrytej lokalizacji.\n\n",
     "flavor": "\"Wokół ognia widać ludzkie kości, jednak ciepło tego płomienia daje nadzieję.\"",
     "shroud": "2",
     "clues": "1<调查员>",
@@ -46,7 +46,7 @@
     "version": "v2",
     "script_id": "729BE8A9"
   },
-  "content_hash": "d9428efacc8361a0c25b8aa0cda6f19e9c879a1e975a602748fdad0a930ec7fc",
+  "content_hash": "526714f9d73c018fd327b5fadfd3992af208616c93d66c93b587888fd7b68723",
   "illustrator": "Gemini",
   "encounter_group_number": "Miejsca zwyczajne",
   "encounter_group": "i",
