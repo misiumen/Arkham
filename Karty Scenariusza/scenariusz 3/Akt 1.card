@@ -46,5 +46,6 @@
   },
   "is_back": false,
   "threshold": "3<调查员>",
-  "body": "<obj> Zbadaj wrak barki i zdobądź próbkę ładunku. Wydaj wymaganą liczbę żetonów wskazówek, aby spowodować postęp talii."
+  "body": "<obj> Zbadaj wrak barki i zdobądź próbkę ładunku. Wydaj wymaganą liczbę żetonów wskazówek, aby spowodować postęp talii.",
+  "card_number": "2"
 }

@@ -78,5 +78,6 @@
     "红十"
   ],
   "encounter_group": "f",
-  "body": "Dopóki badacze badają tę lokację, otrzymuje ona +2 zasłony za każdego badacza w tej lokacji.\n<for> Na koniec fazy wrogów, jeśli na tej lokalizacji znajduje się 4 lub więcej żetonów zagłady, odwróć tę lokalizację na jej spaczoną stronę.\n"
+  "body": "Dopóki badacze badają tę lokację, otrzymuje ona +2 zasłony za każdego badacza w tej lokacji.\n<for> Na koniec fazy wrogów, jeśli na tej lokalizacji znajduje się 4 lub więcej żetonów zagłady, odwróć tę lokalizację na jej spaczoną stronę.\n",
+  "card_number": "19"
 }

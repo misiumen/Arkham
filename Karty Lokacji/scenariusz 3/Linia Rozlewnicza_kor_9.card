@@ -73,5 +73,6 @@
   ],
   "body": "<for> Linia Rozlewnicza jest niedostępna, dopóki na sąsiednich lokalizacjach znajdują się jakiekolwiek żetony wskazówek.",
   "flavor": "\n",
-  "encounter_group": "f"
+  "encounter_group": "f",
+  "card_number": "18"
 }

@@ -46,5 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii."
+  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii.",
+  "card_number": "4"
 }

@@ -76,5 +76,6 @@
   ],
   "victory": null,
   "encounter_group": "f",
-  "body": "<for> Na koniec fazy wrogów, jeśli na tej lokalizacji znajduje się 4 lub więcej żetonów zagłady, odwróć tę lokalizację na jej spaczoną stronę.\n<for> Na koniec rundy, jeśli na Sołaczu znajduje się wróg z cechą {Kultysta}, odwróć tę kartę na wersję Spaczoną.\n➡️ Odrzuć dwa żetony zasobów, aby usunąć żeton zagłady z wybranej lokalizacji.\n"
+  "body": "<for> Na koniec fazy wrogów, jeśli na tej lokalizacji znajduje się 4 lub więcej żetonów zagłady, odwróć tę lokalizację na jej spaczoną stronę.\n<for> Na koniec rundy, jeśli na Sołaczu znajduje się wróg z cechą {Kultysta}, odwróć tę kartę na wersję Spaczoną.\n➡️ Odrzuć dwa żetony zasobów, aby usunąć żeton zagłady z wybranej lokalizacji.\n",
+  "card_number": "24"
 }

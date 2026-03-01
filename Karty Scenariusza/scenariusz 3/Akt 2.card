@@ -46,5 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Odkryj wszystkie wskazówki w lokalizacji Zakłady Cegielskiego. Znajdź plany konstrukcyjne „Projektu Matka”."
+  "body": "<obj> Odkryj wszystkie wskazówki w lokalizacji Zakłady Cegielskiego. Znajdź plany konstrukcyjne „Projektu Matka”.",
+  "card_number": "3"
 }

@@ -76,5 +76,6 @@
   ],
   "encounter_group": "f",
   "body": "<for> Na koniec fazy wrogów, jeśli na tej lokalizacji znajduje się 4 lub więcej żetonów zagłady, odwróć tę lokalizację na jej spaczoną stronę.\n➡️Odrzuć kartę z ręki, aby usunąć żeton zagładyz wybranej lokalizacji. ",
-  "victory": null
+  "victory": null,
+  "card_number": "23"
 }
