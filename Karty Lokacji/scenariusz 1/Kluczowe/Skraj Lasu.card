@@ -34,7 +34,7 @@
       "flip_vertical": false
     },
     "flavor": "\"Coś dziwacznego dobiega z gęstwiny. Jakby bicie serca?\"",
-    "body": "<rev> Usuń z gry wszystkie odkryte lokalizacje Miejsce Kultu. Połóż każdego przeciwnika o nazwie Przekonany Wyznawca, Kultysta Traktorzysta i Kozi Pomiot z usuniętych lokalizacji na tej lokalizacji. Ci przeciwnicy są wyczerpani do następnej tury.\n\n<for> Kiedy dowolny badacz opuści tę lokalizację, usuń wszystkie lokalizacje bez cechy Natura z gry. Pozostałe lokalizacje ułóż tak, by sąsiadowały z lokalizacją Skraj Lasu. Ponadto odrzuć z gry karty o nazwie Nieczysty Chrzest, Nieczysta Komunia, Ciekawski Wieśniak i Zbłąkany Kultywator. Wtasuj odłożone na bok karty Przekonany wyznawca i Kozi Pomiot do talii spotkań.\n\n",
+    "body": "➡️Jako grupa wydaj 3B wskazówek żeby spowodować postęp talii aktów\n\n<rev> Usuń z gry wszystkie odkryte lokalizacje Miejsce Kultu. Połóż każdego przeciwnika o nazwie Przekonany Wyznawca, Kultysta Traktorzysta i Kozi Pomiot z usuniętych lokalizacji na tej lokalizacji. Ci przeciwnicy są wyczerpani do następnej tury.\n\n<for> Kiedy dowolny badacz opuści tę lokalizację, usuń wszystkie lokalizacje bez cechy Natura z gry. Pozostałe lokalizacje ułóż tak, by sąsiadowały z lokalizacją Skraj Lasu. Ponadto odrzuć z gry karty o nazwie Nieczysty Chrzest, Nieczysta Komunia, Ciekawski Wieśniak i Zbłąkany Kultywator. Wtasuj odłożone na bok karty Przekonany wyznawca i Kozi Pomiot do talii spotkań.\n\n",
     "traits": [
       "Natura"
     ]
@@ -47,7 +47,7 @@
     "version": "v2",
     "script_id": "09AB196F"
   },
-  "content_hash": "c7923d313504f2f52de7fb27ba8f2d776a10f4f499fb0ad6cc072d916b2cc009",
+  "content_hash": "4dc5a9f50be0388b5e2a8bbaf707c306bdc815ec260b5fe0f0af8355fc820855",
   "picture_layout": {
     "mode": "custom",
     "offset": {

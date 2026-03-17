@@ -33,7 +33,7 @@
       "flip_vertical": false
     },
     "encounter_group": "i",
-    "body": "<rev> przeszukaj talię spotkań w poszukiwaniu karty Przekonany Wyznawca i rozstaw na lokalizacji z badaczem, który odkrył tę lokalizację.\n\n➡️ Wybierz jedno (limit raz na grę):\n🔵 Każdy badacz na tej lokalizacji może wyleczyć 1 punkt obrażeń i 1 punkt przerażenia. Przeszukaj talię spotkań w poszukiwaniu karty Przekonany Wyznawca i rozstaw w tej lokalizacji.\n🔵 Każdy badacz na tej lokalizacji może wyleczyć 2 punkty obrażeń i 2 punkty przerażenia. Rozstaw w tej lokalizacji odłożonego na bok Koziegłowego Czempiona.\n\n<obj> - Jeśli badacze wydadzą jako grupa 4<调查员> wskazówek, dodaj lokalizację Opuszczona Posiadłość jako sąsiadującą z inną lokalizacją z cechą Natura : (→R4)\n\n\nNie możesz przejść do sąsiadującej z Obozem na mokradłach, nieodkrytej lokalizacji.\n\nJeżeli na tej lokalizacji został pokonany wróg:  odkryj 1 nieodkrytą sąsiadującą lokalizację.\n\n\n",
+    "body": "<rev> przeszukaj talię spotkań w poszukiwaniu karty Przekonany Wyznawca i rozstaw na lokalizacji z badaczem, który odkrył tę lokalizację.\n\n➡️ Wybierz jedno (limit raz na grę):\n🔵 Każdy badacz na tej lokalizacji może wyleczyć 1 punkt obrażeń i 1 punkt przerażenia. Przeszukaj talię spotkań w poszukiwaniu karty Przekonany Wyznawca i rozstaw w tej lokalizacji.\n🔵 Każdy badacz na tej lokalizacji może wyleczyć 2 punkty obrażeń i 2 punkty przerażenia. Rozstaw w tej lokalizacji odłożonego na bok Czempiona Koziegłowych.\n\n<obj> - Jeśli badacze wydadzą jako grupa 4<调查员> wskazówek, dodaj lokalizację Opuszczona Posiadłość jako sąsiadującą z inną lokalizacją z cechą Natura : (→R4)\n\n\nNie możesz przejść do sąsiadującej z Obozem na mokradłach, nieodkrytej lokalizacji.\n\nJeżeli na tej lokalizacji został pokonany wróg:  odkryj 1 nieodkrytą sąsiadującą lokalizację.\n\n\n",
     "traits": [
       "Natura"
     ],
@@ -64,7 +64,7 @@
     "version": "v2",
     "script_id": "9691D134"
   },
-  "content_hash": "aaeafaf9557c285e9cf764ba635aa1f71e8f1adaf8441fb39f673994b91f1079",
+  "content_hash": "55c26ac8335bc048912d71f1cbdac900a28f0e987aa8d0328ff2d9b44feab54b",
   "traits": [
     "Natura"
   ]
