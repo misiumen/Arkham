@@ -1,0 +1,26 @@
+{
+  "type": "故事卡",
+  "name": "Sensacyjne Morderstwo",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "language": "pl",
+    "type": "故事卡",
+    "investigator_footer_type": "normal",
+    "encounter_group_number": "",
+    "encounter_group": "f",
+    "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Wydanie Wieczorne | Archiwum Policyjne<hr>\n<size \"\"><b>ROZSTRZYGNIĘCIE ŚLEDZTWA</b></p>\n<upg> <b>Jeżeli na karcie znajduje się „Dowód w sprawie”</b> (Sprawa rozwiązana):\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">„Zawadzki przyznał się do winy. Przy zamordowanej znaleziono pocztówkę: 'Drodzy moi! Umieram z własnej woli!'. To tragiczny koniec nieszczęśliwego romansu, a nie zapowiedź większego zła. Miasto oddycha z ulgą”.</flavor>\n<for> Badacz, który rozwiązał sprawę, dobiera 2 karty. Usuń 1 żeton zagłady z bieżącej Tajemnicy.\n\n<upg> <b>Jeżeli na karcie nie ma „Dowodu w sprawie” </b>(Panika w mieście):\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">„Morderca milczy, a na ulicach szepcze się o rytualnym uboju i białej mazi na narzędziu zbrodni. Portier zaginął. Strach paraliżuje mieszkańców, którzy widzą w tym zapowiedź końca świata”.</flavor>\n<for> Wyciągnij żeton z worka chaosu. Jeśli to symbol 💀, 👤, 📜, 👹 lub 🐙 dołóż 1 żeton zagłady do Tajemnicy, główny badacz otrzymuje 1 przerażenie. W przeciwnym razie dołóż do worka chaosu dodatkowy żeton 👤 do końca tego scenariusza.",
+    "name": "Sensacyjne Morderstwo rozwiązane"
+  },
+  "tts_config": {
+    "version": "v2",
+    "script_id": "6A25EA53"
+  },
+  "content_hash": "3361bf85887c8be13f19effc8ca80983ba982dd252743762f82158912ee4ea2a",
+  "encounter_group": "f",
+  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, czwartek dnia 3. maja 1921 | Nr 101<hr>\n<size \"\"><b>SENSACYJNE MORDERSTWO W PEDAGOGIUM</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">„Wczoraj rano zażgał nożem właściciel pedagogium przy Alejach Marcinkowskiego 25, Bolesław Zawadzki, nauczycielkę Lebensonównę. Portjer zwrócił uwagę, że Zawadzki dziwnie zdenerwowany przechadza się po podwórzu. Gdy ofiara usiadła na otomanie, by odpocząć, pchnął ją nożem w pierś, mówiąc: 'Kochanie, ja Ciebie uspokoję'”.</flavor>\n\n<spa> Połóż tę kartę w lokalizacji Stary Rynek lub sąsiedniej. Badacze mogą wejść do tej lokalizacji i wykonać test:\n【Badanie: 】Test 📚 (4). Sukces: Połóż na tej karcie 1 Wskazówkę z puli ogólnej jako „Dowód w sprawie”.\n<for> Na koniec rundy: Rozpatrz efekt rewersu tej karty.",
+  "card_number": "45"
+}
