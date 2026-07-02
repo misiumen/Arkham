@@ -346,7 +346,7 @@
     },
     "Karty Spotka\u0144\\scenariusz 1\\Ojciec \u017berd\u017a.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1773881674.1614015
+      "mtime": 1773881691.7439415
     },
     "Karty Spotka\u0144\\scenariusz 1\\Przekonany wyznawca.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -630,7 +630,7 @@
     },
     "Karty Spotka\u0144\\scenariusz 2\\Nosiciel Zarodnik\u00f3w.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1770769774.5030324
+      "mtime": 1773881718.295674
     },
     "Karty Spotka\u0144\\scenariusz 2\\Rytua\u0142 P\u0142odno\u015bci.card": {
       "card_type": "\u8be1\u8ba1\u5361",
@@ -718,7 +718,7 @@
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Ob\u00f3z na mokrad\u0142ach.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1771533494.590003
+      "mtime": 1782772530.1555161
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Polana_copy1.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -759,6 +759,14 @@
     "Karty Scenariusza\\scenariusz 1\\Karta scenariusza.card": {
       "card_type": "\u5192\u9669\u53c2\u8003\u5361",
       "mtime": 1771505456.5934677
+    },
+    "Karty Scenariusza\\scenariusz 1\\Akt 1.card": {
+      "card_type": "\u573a\u666f\u5361",
+      "mtime": 1782775032.6735616
+    },
+    "Karty Scenariusza\\scenariusz 1\\Akt 2.card": {
+      "card_type": "\u573a\u666f\u5361",
+      "mtime": 1782775170.8597252
     }
   }
 }
