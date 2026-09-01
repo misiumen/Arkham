@@ -37,7 +37,7 @@
       "红十"
     ],
     "location_icon": "橙心",
-    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n➡️ Przekonaj mleczarzy. Wykonaj test 🧠 (3). Za każdy punkt, o który test się udał, zamień 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.",
+    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n<act> Przekonaj mleczarzy. Wykonaj test <wil> (3). Za każdy punkt, o który test się udał, zamień 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.",
     "encounter_group": "f",
     "traits": [
       "Spaczona"

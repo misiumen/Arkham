@@ -36,7 +36,7 @@
     "encounter_group_number": "Wioska wśród drzew",
     "card_number": "4",
     "flavor": "\"Wnętrze zakrystii było duszne i ciężkie od zapachu starych ksiąg, stęchłych szat liturgicznych i wosku. Zimne światło z wąskiego okna walczyło z migoczącymi płomieniami świec na zniszczonym stole, oświetlając kurz tańczący w powietrzu. Pośród stosów modlitewników i rozrzuconych kartek, leżały otwarte zapiski wikarego. Jego pismo, zwykle schludne, teraz było pospieszne i chaotyczne.\"",
-    "body": "➡️: Test 📚(3) aby przeszukać zapiski wikarego. Jeśli się powiedzie, spowoduj postęp talii Aktów (limit raz na grę). "
+    "body": "<act>: Test <int>(3) aby przeszukać zapiski wikarego. Jeśli się powiedzie, spowoduj postęp talii Aktów (limit raz na grę)."
   },
   "location_type": "未揭示",
   "illustrator": "Gemini",

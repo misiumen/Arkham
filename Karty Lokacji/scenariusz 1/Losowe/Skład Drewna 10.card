@@ -37,7 +37,7 @@
       "橙心",
       "青花"
     ],
-    "body": "Jeśli na tej lokalizacji nie ma żadnej wskazówki, Nie-【Elitarni】 wrogowie, nie mogą poruszać się do tej lokalizacji ani być w niej rozstawiani. Za każdym razem, kiedy wróg miałby zostać rozstawiony w tej lokalizacji, zamiast tego rozstaw go w połączonej lokalizacji, jeśli to możliwe.",
+    "body": "Jeśli na tej lokalizacji nie ma żadnej wskazówki, wrogowie bez cechy <t>Elitarny</t> nie mogą poruszać się do tej lokalizacji ani być w niej rozstawiani. Za każdym razem, kiedy wróg miałby zostać rozstawiony w tej lokalizacji, zamiast tego rozstaw go w połączonej lokalizacji, jeśli to możliwe.",
     "encounter_group": "e",
     "illustrator": "Gemini",
     "encounter_group_number": "Miejsca zwyczajne",

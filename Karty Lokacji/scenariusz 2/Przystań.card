@@ -17,7 +17,7 @@
       "绿菱"
     ],
     "name": "Stara Przystań",
-    "body": "<act> Wykonaj test <int>(3). Jeśli test zakończy się sukcesem, wybierz jedno: wylecz 2 uszkodzenia z atutu Barka Jadwiga albo dobierz atut Zapas Paliwa (z poza gry).\n\n<for> Jeśli 【Tkanka】 jest obecna: nie można leczyć uszkodzeń atutu Barka Jadwiga w tej lokacji.",
+    "body": "<act> Wykonaj test <int>(3). Jeśli test zakończy się sukcesem, wybierz jedno: wylecz 2 uszkodzenia z atutu Barka Jadwiga albo dobierz atut Zapas Paliwa (z poza gry).\n\n<for> Jeśli <t>Tkanka</t> jest obecna: nie można leczyć uszkodzeń atutu Barka Jadwiga w tej lokacji.",
     "shroud": "2",
     "clues": "1<调查员>",
     "traits": [

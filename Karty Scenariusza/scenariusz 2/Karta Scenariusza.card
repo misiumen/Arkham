@@ -20,9 +20,9 @@
     },
     "encounter_group": "c"
   },
-  "body": "💀 -X. X to liczba kart Mutacji w twojej lokacji minus 1.\n\n👤 -2. Jeśli test zakończy się porażką, a w twojej lokacji znajduje się mniej niż 2 karty Mutacji, dobierz wierzchnią kartę z Talii Mutacji i dołącz ją do swojej lokacji.\n\n📜 -3. Jeśli test zakończy się porażką, otrzymujesz 1 obrażenie (zgnilizna wdziera się w rany).\n\n👹 -4. Jeśli w grze znajduje się Arcykapłan lub Lewiatan, ten test automatycznie kończy się porażką w przypadku remisu.",
+  "body": "<sku> -X. X to liczba kart Mutacji w twojej lokacji minus 1.\n\n👤 -2. Jeśli test zakończy się porażką, a w twojej lokacji znajduje się mniej niż 2 karty Mutacji, dobierz wierzchnią kartę z Talii Mutacji i dołącz ją do swojej lokacji.\n\n📜 -3. Jeśli test zakończy się porażką, otrzymujesz 1 obrażenie (zgnilizna wdziera się w rany).\n\n👹 -4. Jeśli w grze znajduje się Arcykapłan lub Lewiatan, ten test automatycznie kończy się porażką w przypadku remisu.",
   "scenario_card": {
-    "skull": "-X. X to liczba kart Tkanki w twojej lokacji minus 1. ",
+    "skull": "-X. X to liczba kart Tkanki w twojej lokacji minus 1.",
     "cultist": "-2. Jeśli test zakończy się porażką, a w twojej lokacji znajduje się mniej niż 2 karty Tkanki, dobierz wierzchnią kartę z Talii Tkanek i dołącz ją do swojej lokacji.",
     "tablet": "-3. Jeśli test zakończy się porażką, otrzymujesz 1 obrażenie.",
     "elder_thing": "-4. Jeśli w grze znajduje się Arcykapłan lub Lewiatan, ten test automatycznie kończy się porażką w przypadku remisu."

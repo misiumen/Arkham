@@ -33,7 +33,7 @@
     "flip_horizontal": false,
     "flip_vertical": false
   },
-  "body": "<rev> Wykonaj test 📚(3). Jeśli się nie powiedzie, musisz odrzucić wszystkie swoje zasoby lub wybrany atut 【Sprzymierzeniec】, który kontrolujesz.",
+  "body": "<rev> Wykonaj test <int>(3). Jeśli się nie powiedzie, musisz odrzucić wszystkie swoje zasoby lub wybrany atut <t>Sprzymierzeniec</t>, który kontrolujesz.",
   "tts_config": {
     "version": "v2",
     "script_id": "38F44BC1"

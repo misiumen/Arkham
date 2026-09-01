@@ -37,7 +37,7 @@
     ],
     "victory": 1,
     "encounter_group": "f",
-    "body": "➡️ Jeżeli w Dyrekcji Zakładu nie ma żetonów wskazówek: Dobierz kartę i usuń żeton zagłady z aktualnej tajemnicy (Limit grupowy raz na grę)."
+    "body": "<act> Jeżeli w Dyrekcji Zakładu nie ma żetonów wskazówek: Dobierz kartę i usuń żeton zagłady z aktualnej tajemnicy (Limit grupowy raz na grę)."
   },
   "tts_config": {
     "version": "v2",

@@ -23,7 +23,7 @@
     "location_link": [
       "绿菱"
     ],
-    "body": "<act> Wykonaj test <int>(3). Jeśli test zakończy się sukcesem, wybierz jedno: wylecz 2 uszkodzenia z atutu Barka Jadwiga albo dobierz atut Zapas Paliwa (pod kontrolę badacza).\n\n【Wymuszony】 - Na koniec rundy: Każdy badacz w tej lokacji musi odrzucić 1 losową kartę z ręki albo otrzymać 1 obrażenie."
+    "body": "<act> Wykonaj test <int>(3). Jeśli test zakończy się sukcesem, wybierz jedno: wylecz 2 uszkodzenia z atutu Barka Jadwiga albo dobierz atut Zapas Paliwa (pod kontrolę badacza).\n\n<for> Na koniec rundy: Każdy badacz w tej lokacji musi odrzucić 1 losową kartę z ręki albo otrzymać 1 obrażenie."
   },
   "tts_config": {
     "version": "v2",

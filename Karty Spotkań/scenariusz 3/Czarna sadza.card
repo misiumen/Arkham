@@ -34,7 +34,7 @@
   "enemy_health": "2<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "Wykonaj test 🦶(2), jeżeli się nie udał otrzymujesz 1 obrażenie i tracisz 1 akcję.",
+  "body": "Wykonaj test <agi>(2), jeżeli się nie udał otrzymujesz 1 obrażenie i tracisz 1 akcję.",
   "tts_config": {
     "version": "v2",
     "script_id": "8E9AB3AE"
@@ -45,5 +45,5 @@
     "Widmowy"
   ],
   "quantity": 2,
-  "flavor": " Ciężki dym z fabryk i domów rozchodzi się po okolicy. "
+  "flavor": "Ciężki dym z fabryk i domów rozchodzi się po okolicy."
 }

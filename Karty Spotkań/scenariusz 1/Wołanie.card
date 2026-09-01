@@ -33,7 +33,7 @@
     "flip_horizontal": false,
     "flip_vertical": false
   },
-  "body": "<rev> Połóż Wołanie w grze w twoim obszarze zagrożenia.\n\n<for> Na koniec tury, jeśli nie znajdujesz się w lokalizacji z cechą 【Miejsce Kultu】, otrzymujesz 1 punkt przerażenia.\n➡️: Test 🧠(3). Jeśli się powiódł, odrzuć Wołanie.",
+  "body": "<rev> Połóż Wołanie w grze w twoim obszarze zagrożenia.\n\n<for> Na koniec tury, jeśli nie znajdujesz się w lokalizacji z cechą <t>Miejsce Kultu</t>, otrzymujesz 1 punkt przerażenia.\n<act>: Test <wil>(3). Jeśli się powiódł, odrzuć Wołanie.",
   "flavor": "\"Chcesz posłuchać co mają do powiedzenia. Bardzo chcesz. Może mają rację?\"",
   "tts_config": {
     "version": "v2",

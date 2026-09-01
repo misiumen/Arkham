@@ -10,7 +10,7 @@
     "language": "pl",
     "type": "地点卡",
     "location_type": "已揭示",
-    "flavor": "\"Kościół wygląda na świeżo zdewastowany. Ławki poprzewracano, dewocjonalia zniszczono, a kosztowności zrabowano. Co się dzieje w tym miasteczku?\" ",
+    "flavor": "\"Kościół wygląda na świeżo zdewastowany. Ławki poprzewracano, dewocjonalia zniszczono, a kosztowności zrabowano. Co się dzieje w tym miasteczku?\"",
     "name": "Kościół",
     "shroud": "2",
     "clues": "2<调查员>",
@@ -38,7 +38,7 @@
     "encounter_group": "l",
     "body": "<rev> rozstaw odłożoną na bok kartę Przerażony Wikariusz na lokalizacji Przybrzeżna rampa załadunkowa.\nJeśli na tej lokalizacji nie ma żadnych wskazówek, dobierz odłożony na bok przedmiot Klucz do zachrystii.",
     "traits": [
-      "Miejsce kultu"
+      "Miejsce Kultu"
     ]
   },
   "location_type": "未揭示",
@@ -69,6 +69,6 @@
     "flip_vertical": false
   },
   "encounter_group": "l",
-  "flavor": "\"Kościół wygląda na świeżo zdewastowany. Ławki poprzewracano, dewocjonalia zniszczono, a kosztowności zrabowano. Co się dzieje w tym miasteczku?\" ",
+  "flavor": "\"Kościół wygląda na świeżo zdewastowany. Ławki poprzewracano, dewocjonalia zniszczono, a kosztowności zrabowano. Co się dzieje w tym miasteczku?\"",
   "traits": []
 }

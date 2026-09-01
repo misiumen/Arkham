@@ -36,7 +36,7 @@
       "暗红漏斗"
     ],
     "encounter_group": "f",
-    "body": "<for> Po tym jak wejdziesz do Biblioteki: Odrzuć 3 wierzchnie karty ze swojej talii. Za każdą odrzuconą w ten sposób kartę z cechą {Przedmiot}, otrzymaj 1 punkt przerażenia.\n<for> Gdy w Bibliotece nie ma żetonów wskazówek: ➡️ Spal tajemne księgi. Zamień tę lokalizację na nie spaczoną.",
+    "body": "<for> Po tym jak wejdziesz do Biblioteki: Odrzuć 3 wierzchnie karty ze swojej talii. Za każdą odrzuconą w ten sposób kartę z cechą {Przedmiot}, otrzymaj 1 punkt przerażenia.\n<for> Gdy w Bibliotece nie ma żetonów wskazówek: <act> Spal tajemne księgi. Zamień tę lokalizację na nie spaczoną.",
     "traits": [
       "Spaczona"
     ]

@@ -68,7 +68,7 @@
     },
     "encounter_group": "f",
     "name": "Stary Rynek",
-    "body": "<for> Zamień żetony wskazówek na tej lokalizacji na żetony zagłady.\n<for> Po tym, jak wejdziesz na Stary Rynek: wykonaj Test 🧠 (X). Gdzie X to liczba lokalizacji w grze z cechą {Spaczona}.\n<hau> Wybierz i odrzuć kartę z twojej ręki.\n⚡Otrzymaj punkt przerażenia: 【Ruch】. Porusz się do połączonej lokalizacji z cechą {Spaczona}.\n\n",
+    "body": "<for> Zamień żetony wskazówek na tej lokalizacji na żetony zagłady.\n<for> Po tym, jak wejdziesz na Stary Rynek: wykonaj Test <wil> (X). Gdzie X to liczba lokalizacji w grze z cechą {Spaczona}.\n<hau> Wybierz i odrzuć kartę z twojej ręki.\n⚡Otrzymaj punkt przerażenia: 【Ruch】. Porusz się do połączonej lokalizacji z cechą {Spaczona}.\n\n",
     "traits": [
       "Spaczona"
     ],

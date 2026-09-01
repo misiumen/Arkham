@@ -39,12 +39,12 @@
     "Niewinny"
   ],
   "class": "",
-  "body": "Powściągliwy. <pat> (lokalizacja z największą liczbą wskazówek)\n<for> Na koniec Fazy wrogów, jeśli Ciekawski wieśniak jest w lokalizacji 【Miejsce Kultu】: Usuń go z gry i w jego miejsce połóż odłożonego na bok Przekonanego wyznawcę.\n➡️: 【Pertraktacje】. Test 🧠 lub 👊 (3). Jeśli się powiedzie, odrzuć Ciekawskiego wieśniaka.",
+  "body": "Powściągliwy. <pat> (lokalizacja z największą liczbą wskazówek)\n<for> Na koniec Fazy wrogów, jeśli Ciekawski wieśniak jest w lokalizacji <t>Miejsce Kultu</t>: Usuń go z gry i w jego miejsce połóż odłożonego na bok Przekonanego wyznawcę.\n<act>: 【Pertraktacje】. Test <wil> lub <com> (3). Jeśli się powiedzie, odrzuć Ciekawskiego wieśniaka.",
   "victory": 0,
   "flavor": "„Przyszedł tylko posłuchać. Wyszedł z jedną nową doktryną i trzema nowymi naroślami.”",
   "illustrator": "Gemini",
   "encounter_group_number": "Ciemne chaty, puste pola",
-  "card_number": " 2",
+  "card_number": "2",
   "tts_config": {
     "version": "v2",
     "script_id": "BB73A953"

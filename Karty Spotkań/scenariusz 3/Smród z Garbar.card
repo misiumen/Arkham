@@ -34,7 +34,7 @@
   "enemy_health": "1<调查员>",
   "evade": "X",
   "enemy_damage_horror": 2,
-  "body": "Wykonaj test 🧠 (3). Jeśli test zakończy się porażką, otrzymujesz 1 przerażenie i nie możesz wykonać akcji 【Badania】 do końca rundy. Jeśli znajdujesz się w lokalizacji 【Mleczarnia Spółdzielcza】 lub 【Linia Rozlewnicza】, trudność testu wynosi (5).",
+  "body": "Wykonaj test <wil> (3). Jeśli test zakończy się porażką, otrzymujesz 1 przerażenie i nie możesz wykonać akcji Badania do końca rundy. Jeśli znajdujesz się w lokalizacji Mleczarnia Spółdzielcza lub Linia Rozlewnicza, trudność testu wynosi (5).",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"

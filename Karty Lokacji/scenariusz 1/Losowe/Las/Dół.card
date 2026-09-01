@@ -15,7 +15,7 @@
     "encounter_group": "i",
     "encounter_group_number": "Leśne zakamarki",
     "illustrator": "Gemini",
-    "body": "<obj> - Jeśli badacze wydadzą jako grupa 4<调查员> wskazówek : (→R3)\n\n<rev> Każdy badacz w sąsiadującej z Dołem lokalizacji musi wybrać:\n\n🔵 Otrzymaj 2 punkty przerażenia.\n\n🔵 【Rezygnacja】\n\n🔵 Połóż na tej lokalizacji 2 żetony zagłady.\n\n🔵 Przeszukaj swoją talię i stos kart odrzuconych w poszukiwaniu dowolnej karty Słabości. Umieść ją w swoim obszarze zagrożeń, a następnie przetasuj talie.\n\nBadacze jako grupa mogą odrzucić 3<调查员>  wskazówek. Jeśli to zrobią, dodaj do dziennika kampanii \"Badacze zapewnili ofiarom pochówek.\".\n\nNie możesz przejść do sąsiadującej z Dołem, nieodkrytej lokalizacji.\n\n",
+    "body": "<obj> - Jeśli badacze wydadzą jako grupa 4<调查员> wskazówek: (→R3)\n\n<rev> Każdy badacz w sąsiadującej z Dołem lokalizacji musi wybrać:\n\n<bul> Otrzymaj 2 punkty przerażenia.\n\n<bul> 【Rezygnacja】\n\n<bul> Połóż na tej lokalizacji 2 żetony zagłady.\n\n<bul> Przeszukaj swoją talię i stos kart odrzuconych w poszukiwaniu dowolnej karty Słabości. Umieść ją w swoim obszarze zagrożeń, a następnie przetasuj talie.\n\nBadacze jako grupa mogą odrzucić 3<调查员> wskazówek. Jeśli to zrobią, dodaj do dziennika kampanii \"Badacze zapewnili ofiarom pochówek.\".\n\nNie możesz przejść do sąsiadującej z Dołem, nieodkrytej lokalizacji.\n\n",
     "flavor": "\"Wokół ognia widać ludzkie kości, jednak ciepło tego płomienia daje nadzieję.\"",
     "shroud": "2",
     "clues": "1<调查员>",

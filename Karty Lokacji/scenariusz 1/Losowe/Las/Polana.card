@@ -15,7 +15,7 @@
     "encounter_group": "i",
     "encounter_group_number": "Leśne zakamarki",
     "illustrator": "Gemini",
-    "body": "Nie możesz przejść do sąsiadującej z Polaną, nieodkrytej lokalizacji.\n\n➡️ wydaj 2 zasoby: wylecz 1 żeton przerażenia lub obrażenia z twojego badacza.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
+    "body": "Nie możesz przejść do sąsiadującej z Polaną, nieodkrytej lokalizacji.\n\n<act> wydaj 2 zasoby: wylecz 1 żeton przerażenia lub obrażenia z twojego badacza.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
     "flavor": "\"Wokół ognia widać ludzkie kości, jednak ciepło tego płomienia daje nadzieję.\"",
     "shroud": "2",
     "clues": "1<调查员>",

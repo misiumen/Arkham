@@ -40,7 +40,7 @@
       "青花"
     ],
     "encounter_group": "e",
-    "body": "➡️➡️Przeszukaj 6 wierzchnich kart twojej talii w poszukiwaniu karty z cechą 【Broń】 lub 【Narzędzie】 i dodaj ją na twoją rękę. Wtasuj pozostałe karty do twojej talii. (Limit raz na turę.)"
+    "body": "<act><act>Przeszukaj 6 wierzchnich kart twojej talii w poszukiwaniu karty z cechą <t>Broń</t> lub <t>Narzędzie</t> i dodaj ją na twoją rękę. Wtasuj pozostałe karty do twojej talii. (Limit raz na turę.)"
   },
   "shroud": "?",
   "clues": "?",

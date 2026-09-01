@@ -51,17 +51,37 @@ Karty dwustronne (lokacje, akty, tajemnice, badacze) trzymaja tresc w `back` —
 zaslona, wskazowki, tekst zasad lokacji sa na rewersie (`已揭示` = odkryta,
 `未揭示` = nieodkryta). `location_link` = symbole polaczen, `location_icon` = wlasny symbol.
 
-Tagi w tekscie: `<for>` Wymuszony, `<rev>` Odkrycie, `<act>` Akcja, `<rea>` Reakcja,
-`<obj>` cel aktu, `<upg>` punktor progu, `<wil>/<int>/<com>/<agi>` ikony umiejetnosci,
-`<eld>` Przedwieczny, `<badacz>` (oryginalnie `<调查员>`) mnoznik "na badacza".
-Formatowanie: `<b>`, `<u>`, `<size "N">`, `<hr>`, `<p>`, `<flavor ...>`.
+Slowa kluczowe (tag sam rysuje pogrubione slowo RAZEM z myslnikiem, wiec nie dopisuj go):
+`<for>` → **Wymuszony** –, `<rev>` → **Odkrycie** –, `<obj>` → **Cel** –,
+`<spa>` → **Rozstawienie** –, `<pre>` → **Polowanie** –, `<pat>` → Wedrujacy.
+`【tekst】` to po prostu pogrubienie, wiec `【Walka】` = pogrubiona nazwa akcji — zostawiaj.
 
-# Konwencje repo (dominujaca praktyka, nie dogmat)
+Ikony (emoji i tag daja ten sam glif czcionki arkham-icons, zrodlo:
+`rich_text_render/RichTextRenderer.py` w github.com/xziying44/arkham-homebrew):
 
-- Slowa kluczowe przez tagi (`<for>` 116x), nie recznie w `【】` ani `{{}}`.
-- Ikony przez tagi, nie emoji (🧠 👊 🦶 ⚡ 📚 🌑 ➡ sa rozsiane po kartach — to niespojnosc).
+| ikona | tag | emoji |
+|---|---|---|
+| wola | `<wil>` | 🧠 |
+| intelekt | `<int>` | 📚 |
+| walka | `<com>` | 👊 |
+| zrecznosc | `<agi>` | 🦶 |
+| akcja | `<act>` | ➡️ |
+| reakcja | `<rea>` | ⭕ |
+| wolna akcja | `<fre>` (ZEPSUTY w edytorze) | ⚡ ← uzywaj emoji |
+| czaszka / klatwa / blogoslawienstwo / Starszy Znak | `<sku>` `<cur>` `<ble>` `<eld>` | 💀 🌑 🌟 ⭐ |
+| punktor listy | `<bul>` | 🔵 |
+| symbol badacza | `<per>` | 🕵️ |
+| unikat | tylko `<独特>` | 🏅 ← uzywaj emoji |
+
+`<badacz>` w wypisie skryptu to `<调查员>` z pliku — mnoznik "na badacza".
+Formatowanie: `<b>`, `<u>`, `<size "N">`, `<hr>`, `<p>`, `<flavor ...>`, `<upg>` (kwadracik progu).
+
+# Konwencje repo
+
+- Slowa kluczowe i ikony przez tagi, nie recznie i nie emoji — poza ⚡ i 🏅 (patrz tabela).
 - `【】` bywa uzywane naprzemiennie do nazw kart, cech i akcji — rozstrzygaj, ktore znaczenie,
   i zglaszaj mieszanie.
+- Nazwy akcji po polsku: Walka, Unik, Ruch, Badanie, Pertraktacje, Rezygnacja.
 - Skalowanie na liczbe graczy: `1<badacz>`, `2<badacz>` w polach `clues`, `enemy_health`, `threshold`.
 
 # Cztery osie oceny

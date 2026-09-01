@@ -13,7 +13,7 @@
     "name": "U Wrót Miasta",
     "serial_number": "3b",
     "flavor": "Z oparów wyłania się Most Chwaliszewski – stalowy szkielet spinający dwa brzegi niczym klatka piersiowa olbrzyma. To tutaj rzeka kończy swój bieg. Coś czeka na was w cieniu przęseł.",
-    "body": "🔵 Jeśli gracie Wariant A (Rytuał): Przejdźcie do Aktu 4a (Wariant A).\n\n\n🔵 Jeśli gracie Wariant B (Ucieczka): Przejdźcie do Aktu 4a (Wariant B).",
+    "body": "<bul> Jeśli gracie Wariant A (Rytuał): Przejdźcie do Aktu 4a (Wariant A).\n\n\n<bul> Jeśli gracie Wariant B (Ucieczka): Przejdźcie do Aktu 4a (Wariant B).",
     "encounter_group": "c"
   },
   "is_back": false,

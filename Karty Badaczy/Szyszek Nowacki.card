@@ -41,7 +41,7 @@
   },
   "class": "生存者",
   "weakness_type": "弱点",
-  "body": "⭕ Raz na rundę, po tym jak odrzucisz co najmniej 1 kartę z ręki lub z gry, możesz zyskać 1 zasób albo wyleczyć 1 punkt obrażeń (limit raz na rundę).\n⭐ efekt: (+1). Możesz wziąć na rękę 1 kartę ze swojego stosu kart odrzuconych. Jeśli to zrobisz, koszt następnej karty, którą zagrasz w tej rundzie zostaje obniżony o 1.",
+  "body": "<rea> Raz na rundę, po tym jak odrzucisz co najmniej 1 kartę z ręki lub z gry, możesz zyskać 1 zasób albo wyleczyć 1 punkt obrażeń (limit raz na rundę).\n<eld> efekt: (+1). Możesz wziąć na rękę 1 kartę ze swojego stosu kart odrzuconych. Jeśli to zrobisz, koszt następnej karty, którą zagrasz w tej rundzie zostaje obniżony o 1.",
   "traits": [
     "Włóczęga",
     "Paranoik"

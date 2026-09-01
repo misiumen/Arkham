@@ -38,7 +38,7 @@
       "暗红漏斗"
     ],
     "encounter_group": "f",
-    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n➡️ Przekonaj robotników. Wykonaj test 🧠 (3), aby zamienić 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n<hau> Odrzuć żeton zasobu, który kontrolujesz.",
+    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n<act> Przekonaj robotników. Wykonaj test <wil> (3), aby zamienić 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n<hau> Odrzuć żeton zasobu, który kontrolujesz.",
     "traits": [
       "Spaczona"
     ]

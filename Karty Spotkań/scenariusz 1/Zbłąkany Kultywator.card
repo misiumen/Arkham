@@ -34,12 +34,12 @@
   "traits": [
     "Powściągliwy"
   ],
-  "body": "【Rozstawienie】- lokalizacja z największą liczbą wskazówek.\nPowściągliwy.\nKażdy przeciwnik w lokalizacji ze Zbłąkanym Kultywatorem ma +1👊 i +1🦶.",
+  "body": "<spa> lokalizacja z największą liczbą wskazówek.\nPowściągliwy.\nKażdy przeciwnik w lokalizacji ze Zbłąkanym Kultywatorem ma +1<com> i +1<agi>.",
   "evade": "1",
   "attack": "1",
   "flavor": "Wyznawcy kozicy lubią orać niewiernych.",
   "illustrator": "Gemini",
-  "card_number": " 4",
+  "card_number": "4",
   "encounter_group_number": "Ciemne chaty, puste pola",
   "tts_config": {
     "version": "v2",

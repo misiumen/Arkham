@@ -32,7 +32,7 @@
   },
   "cost": 3,
   "slots": "双手",
-  "body": "Tylko talia Barucha Hałabały.\n<for> Gdy Halabarda wchodzi do gry, zamień wszystkie 🌑 z worka chaosu na 🌟.\n➡️: 【Walka】. Do tego ataku dostajesz -1 👊 i zadajesz +1 obrażenie.\n➡️➡️: 【Walka】. Do tego ataku dostajesz +1 👊 i zadajesz +2 obrażenia.",
+  "body": "Tylko talia Barucha Hałabały.\n<for> Gdy Halabarda wchodzi do gry, zamień wszystkie <cur> z worka chaosu na <ble>.\n<act>: 【Walka】. Do tego ataku dostajesz -1 <com> i zadajesz +1 obrażenie.\n<act><act>: 【Walka】. Do tego ataku dostajesz +1 <com> i zadajesz +2 obrażenia.",
   "flavor": "Broń święta. Pochodzenie grzeszne.",
   "tts_config": {
     "version": "v2",

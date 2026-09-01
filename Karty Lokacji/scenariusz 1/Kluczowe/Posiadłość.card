@@ -38,7 +38,7 @@
     "encounter_group": "l",
     "body": "<rev> Rozstaw odłożonego na bok Żyrija Żerdźa w tej lokalizacji w zwarciu z badaczem, który odkrył tę lokalizację. Przemieść wszystkich rozstawionych Przekonanych Wyznawców na lokalizacje najbliższe do Posiadłości (1 na lokalizację).",
     "traits": [
-      "Miejsce kultu"
+      "Miejsce Kultu"
     ]
   },
   "location_type": "未揭示",
@@ -69,6 +69,6 @@
     "flip_vertical": false
   },
   "encounter_group": "l",
-  "flavor": "\"Czy dziesiątki wiernych zgromadzonych wokół tej rogatej postaci przybyły tu z własnej woli?\" ",
+  "flavor": "\"Czy dziesiątki wiernych zgromadzonych wokół tej rogatej postaci przybyły tu z własnej woli?\"",
   "traits": []
 }

@@ -15,7 +15,7 @@
     "encounter_group": "i",
     "encounter_group_number": "Leśne zakamarki",
     "illustrator": "Gemini",
-    "body": "<for> na koniec swojej tury, jeśli znajdujesz się w lokalizacji Nory: zadaj swojemu badaczowi 1 bezpośredni punkt przerażenia.\n\nJeśli na tej lokalizacji nie ma żadnych wskazówek - traktuj ją tak, jakby była połączona ze wszystkimi lokalizacjami z cechą 【Natura】.\n\nNie możesz przejść do sąsiadującej z Norami, nieodkrytej lokalizacji.\n\n⚡odrzuć 4 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.\n\n\n\n",
+    "body": "<for> na koniec swojej tury, jeśli znajdujesz się w lokalizacji Nory: zadaj swojemu badaczowi 1 bezpośredni punkt przerażenia.\n\nJeśli na tej lokalizacji nie ma żadnych wskazówek - traktuj ją tak, jakby była połączona ze wszystkimi lokalizacjami z cechą <t>Natura</t>.\n\nNie możesz przejść do sąsiadującej z Norami, nieodkrytej lokalizacji.\n\n⚡odrzuć 4 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.\n\n\n\n",
     "flavor": "\"Te tunele ciągną się głębiej, niż myślałem.\"",
     "shroud": "4",
     "clues": "1<调查员>",
@@ -73,5 +73,5 @@
     "flip_horizontal": false,
     "flip_vertical": false
   },
-  "body": "➡️Pertraktacje 📚(4): uzyskaj informacje na temat miejsca rytuału. Rozstaw lokalizację Posiadłość na wybranej lokalizacji z cechą Natura bez żadnych wskazówek."
+  "body": "<act>Pertraktacje <int>(4): uzyskaj informacje na temat miejsca rytuału. Rozstaw lokalizację Posiadłość na wybranej lokalizacji z cechą Natura bez żadnych wskazówek."
 }

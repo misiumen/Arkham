@@ -21,7 +21,7 @@
     "flavor": "\"Wartą spływa wiele rzeczy: towary, ludzie, topielcy. Na wszystkim można zrobić pieniądz.\"",
     "location_link": [],
     "victory": null,
-    "body": "➡️: 【Rezygnacja】. Możemy tędy uciec!",
+    "body": "<act>: 【Rezygnacja】. Możemy tędy uciec!",
     "traits": [
       "Natura"
     ]

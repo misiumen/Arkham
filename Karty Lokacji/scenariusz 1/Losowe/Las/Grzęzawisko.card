@@ -33,7 +33,7 @@
       "flip_vertical": false
     },
     "encounter_group": "i",
-    "body": "➡️ Test 🦶/👊(5) (badacze na sąsiadujących lokalizacjach mogą dorzucać karty do testu):  odkryj 1 nieodkrytą sąsiadującą lokalizację.\n\n<for> jeśli nie zdasz dowolnego testu 🦶/👊 w tej lokalizacji: otrzymujesz 1 punkt obrażeń.\n\nNie możesz przejść do sąsiadującej z Grzęzawiskiem, nieodkrytej lokalizacji.",
+    "body": "<act> Test <agi>/<com>(5) (badacze na sąsiadujących lokalizacjach mogą dorzucać karty do testu): odkryj 1 nieodkrytą sąsiadującą lokalizację.\n\n<for> jeśli nie zdasz dowolnego testu <agi>/<com> w tej lokalizacji: otrzymujesz 1 punkt obrażeń.\n\nNie możesz przejść do sąsiadującej z Grzęzawiskiem, nieodkrytej lokalizacji.",
     "traits": [
       "Natura"
     ]

@@ -36,7 +36,7 @@
       "flip_vertical": false
     },
     "flavor": "\"Wygląda jakby ktoś domalował węglem małe różki postaci na krzyżu.\"",
-    "body": "Jeśli jakakolwiek liczba żetonów przerażenia miałaby być położona na badaczu w tej lokalizacji, zmniejsz tę liczbę o 1.\n➡️ wylecz jeden żeton przerażenia z twojego badacza.\n\n"
+    "body": "Jeśli jakakolwiek liczba żetonów przerażenia miałaby być położona na badaczu w tej lokalizacji, zmniejsz tę liczbę o 1.\n<act> wylecz jeden żeton przerażenia z twojego badacza.\n\n"
   },
   "location_type": "未揭示",
   "shroud": "?",

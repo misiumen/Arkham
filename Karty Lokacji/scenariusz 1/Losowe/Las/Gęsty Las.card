@@ -33,7 +33,7 @@
       "flip_vertical": false
     },
     "encounter_group": "i",
-    "body": "<for> na koniec swojej tury, jeśli znajdujesz się w lokalizacji Gęsty Las: odrzuć jeden losowy atut wyposażony przez swojego badacza.\n\nNie możesz przejść do sąsiadującej z Gęstym Lasem, nieodkrytej lokalizacji.\n\nTest 🧠(5):  odkryj 1 nieodkrytą sąsiadującą lokalizację.",
+    "body": "<for> na koniec swojej tury, jeśli znajdujesz się w lokalizacji Gęsty Las: odrzuć jeden losowy atut wyposażony przez swojego badacza.\n\nNie możesz przejść do sąsiadującej z Gęstym Lasem, nieodkrytej lokalizacji.\n\nTest <wil>(5): odkryj 1 nieodkrytą sąsiadującą lokalizację.",
     "traits": [
       "Natura"
     ]

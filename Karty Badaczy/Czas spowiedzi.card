@@ -12,7 +12,7 @@
   },
   "class": "弱点",
   "weakness_type": "弱点",
-  "body": "<rev>Usuń wszystkie zasoby z Tacy Ofiarnej. Za każdy żeton 🌑 w worku chaosu otrzymujesz 1 punkt przerażenia. Następnie wtasuj Czas Spowiedzi do swojej talii.",
+  "body": "<rev>Usuń wszystkie zasoby z Tacy Ofiarnej. Za każdy żeton <cur> w worku chaosu otrzymujesz 1 punkt przerażenia. Następnie wtasuj Czas Spowiedzi do swojej talii.",
   "tts_config": {
     "version": "v2",
     "script_id": "67EBC41F"

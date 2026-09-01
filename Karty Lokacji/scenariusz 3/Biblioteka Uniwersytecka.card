@@ -37,7 +37,7 @@
     "location_icon": "青花",
     "encounter_group": "f",
     "victory": 1,
-    "body": "➡️ Dopóki w Bibliotece Uniwersyteckiej są żetony wskazówek: Wykonaj test 📚 (3). Jeśli się powiedzie, odkryj 1 wskazówkę i odrzuć 1 żeton zagłady z bieżącej tajemnicy.\n➡️ Jeżeli w Bibliotece nie ma wskazówek: Dobierz kartę i otrzymaj 1 zasób."
+    "body": "<act> Dopóki w Bibliotece Uniwersyteckiej są żetony wskazówek: Wykonaj test <int> (3). Jeśli się powiedzie, odkryj 1 wskazówkę i odrzuć 1 żeton zagłady z bieżącej tajemnicy.\n<act> Jeżeli w Bibliotece nie ma wskazówek: Dobierz kartę i otrzymaj 1 zasób."
   },
   "tts_config": {
     "version": "v2",

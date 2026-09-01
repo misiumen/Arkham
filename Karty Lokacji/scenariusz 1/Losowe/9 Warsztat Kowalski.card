@@ -34,7 +34,7 @@
     "name": "Warsztat Kowalski",
     "shroud": "1",
     "clues": "1<调查员>",
-    "body": "Każdy badacz, który przebywa na tej lokalizacji na początku Fazy Utrzymania dobiera w niej dodatkowy zasób.\n\n⚡Wykonaj test 👊(3); jeśli się powiedzie, zadaj 2 obrażenia wybranemu wrogowi na tej lokalizacji (limit raz na rundę).",
+    "body": "Każdy badacz, który przebywa na tej lokalizacji na początku Fazy Utrzymania dobiera w niej dodatkowy zasób.\n\n⚡Wykonaj test <com>(3); jeśli się powiedzie, zadaj 2 obrażenia wybranemu wrogowi na tej lokalizacji (limit raz na rundę).",
     "flavor": "\"Kiedyś bito tu podkowy dla koni. Teraz bije się podkowy dla...kóz?\"",
     "encounter_group": "e"
   },

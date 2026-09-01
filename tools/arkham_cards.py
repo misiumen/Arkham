@@ -40,19 +40,51 @@ ICON = {
 ENUMS = {**TYPE, **CLASS, **MISC, **ICON}
 
 DROP = ("picture_base64", "tts_config", "content_hash", "picture_layout", "external_image")
-# ikony umiejetnosci/zetonow wstawiane jako emoji zamiast tagow JiM
+# Emoji i tagi to dla renderera to samo - obie formy trafiaja na ten sam glif
+# czcionki arkham-icons. Zrodlo: rich_text_render/RichTextRenderer.py w
+# github.com/xziying44/arkham-homebrew (preprocessing_rules).
 EMOJI_ICON = {
-    "\U0001f9e0": "<int>", "\U0001f44a": "<com>", "\U0001f9b6": "<agi>", "⚡": "<wil>",
-    "\U0001f4da": "<int>", "\U0001f311": "<eld>", "\U0001f480": "<sku>", "⭐": "<ble>",
-    "\U0001f31f": "<ble>", "⭕": "<cur>", "\U0001f3c5": "?", "\U0001f575": "<badacz>",
-    "\U0001f535": "punktor listy", "➡": "<act>",
+    "\U0001f9e0": "<wil>",   # mozg -> wola (脑)
+    "\U0001f4da": "<int>",   # ksiazki -> intelekt (书)
+    "\U0001f44a": "<com>",   # piesc -> walka (拳)
+    "\U0001f9b6": "<agi>",   # stopa -> zrecznosc (脚)
+    "➡": "<act>",            # strzalka -> akcja (启动)
+    "⭕": "<rea>",            # kolo -> reakcja (反应)
+    "\U0001f480": "<sku>",   # czaszka (骷髅)
+    "⭐": "<eld>",            # gwiazda -> Starszy Znak (旧印)
+    "\U0001f31f": "<ble>",   # blyszczaca gwiazda -> blogoslawienstwo (祝福)
+    "\U0001f311": "<cur>",   # ciemny ksiezyc -> klatwa (诅咒)
+    "\U0001f535": "<bul>",   # niebieskie kolo -> punktor (点)
+    "\U0001f575": "<per>",   # detektyw -> symbol badacza (调查员)
 }
-KEYWORD_TAGS = {  # tagi JiM najczesciej uzywane w tym repo
-    "for": "Wymuszony", "rev": "Odkrycie", "act": "Akcja", "rea": "Reakcja",
-    "obj": "Cel", "upg": "punktor progu", "spa": "Spontaniczny", "pat": "Patrol",
-    "hau": "Nawiedzony", "fre": "Wolna akcja", "eld": "Przedwieczny",
-    "wil": "wola", "int": "intelekt", "com": "walka", "agi": "zrecznosc",
+# Tu emoji jest FORMA PEWNIEJSZA niz tag - nie zamieniac:
+# ⚡ : regex edytora to '⚡|<免费>|<fre>️' - po <fre> stoi selektor wariantu,
+#     wiec samo '<fre>' sie nie dopasuje i zostaloby wypisane doslownie.
+# 🏅 : ma tylko chinski odpowiednik <独特>, brak aliasu ASCII.
+EMOJI_KEEP = {
+    "⚡": "wolna akcja - zostaw emoji, tag <fre> jest w edytorze zepsuty",
+    "\U0001f3c5": "unikat - tag istnieje tylko jako <独特>",
 }
+KEYWORD_TAGS = {  # slowa kluczowe, ktore tag renderuje sam (pogrubione + myslnik)
+    "for": "Wymuszony", "rev": "Odkrycie", "rea": "Reakcja", "spa": "Rozstawienie",
+    "obj": "Cel", "pre": "Polowanie",
+}
+# Cechy pisane w tekscie jako 【】 (pogrubienie) - w AH cechy ida kursywa, czyli <t>.
+# Lista pochodzi z pol "traits" kart w tym repo.
+TRAITS_IN_TEXT = ["Tkanka", "Miejsce Kultu", "Pomiot Kozicy", "Natura", "Broń",
+                  "Sprzymierzeniec", "Narzędzie"]
+# Nazwy kart cytowane w tekscie - w AH nie sa pogrubiane.
+CARD_NAMES_IN_TEXT = ["Kultysta Traktorzysta", "Przekonany Wyznawca", "Ciekawski Wieśniak",
+                      "Ciekawskiego Wieśniaka", "Kozi Pomiot", "Słonia z Targów",
+                      "Mleczarnia Spółdzielcza", "Linia Rozlewnicza", "Tajemnicy 3a"]
+# Odmienione nazwy akcji w srodku zdania - to nie jest znacznik akcji, tylko rzeczownik.
+ACTIONS_INLINE = ["Ruchu", "Walki", "Badania"]
+# ikony umiejetnosci i inne tagi tresci - NIE sa zamiennikami dla nazw akcji
+# (【Walka】 to akcja walki, a nie ikona pieci)
+ICON_TAGS = {"wil": "wola", "int": "intelekt", "com": "walka", "agi": "zrecznosc",
+             "eld": "Przedwieczny", "act": "Akcja", "obj": "Cel", "upg": "punktor progu",
+             "spa": "Spontaniczny", "pat": "Patrol", "hau": "Nawiedzony", "fre": "Wolna akcja"}
+KEYWORD_BY_NAME = {v: k for k, v in KEYWORD_TAGS.items()}
 SEVERITY = {"BLOKER": 0, "BLAD": 1, "SPOJNOSC": 2, "BALANS": 3, "NIT": 4}
 # oficjalne polskie nazwy akcji (Galakta) - wariant -> forma kanoniczna
 CANON = {
@@ -60,6 +92,9 @@ CANON = {
     "rezygnacja": "Rezygnacja", "zrezygnuj": "Rezygnacja",
     "badanie": "Badanie", "ruch": "Ruch", "walka": "Walka", "unik": "Unik",
 }
+# Pogrubienie 【】 jest tu poprawne: nazwa akcji po strzalce albo slowo kluczowe
+# bez wlasnego tagu w edytorze.
+BOLD_OK = set(CANON.values()) | {"Zablokowana", "Regeneracja", "Mroczna Fala"}
 STOPWORDS = {"jesli", "jezeli", "kazdy", "gdy", "kiedy", "nastepnie", "wykonaj", "umiesc",
              "rozstaw", "odrzuc", "badacz", "badacze", "wybierz", "ten", "ta", "to",
              "przeszukaj", "poloz", "dobierz", "za", "nie", "po", "przed"}
@@ -263,7 +298,7 @@ def lint_findings(paths):
                     add(path, loc, "SPOJNOSC",
                         "'%s' zapisane recznie - w repo dominuje tag <%s>" % (m.group(0), key))
             # ikony jako emoji (zbiorczo dla calej karty)
-            for ch in EMOJI_ICON:
+            for ch in EMOJI_ICON:  # EMOJI_KEEP to forma poprawna, nie zglaszamy
                 if ch in v:
                     emoji_here[ch] += v.count(ch)
             # test umiejetnosci bez podanej trudnosci
@@ -288,19 +323,20 @@ def lint_findings(paths):
                 if score >= 0.7:
                     add(path, loc, "SPOJNOSC",
                         "odwolanie '%s' ~ karta '%s' - ujednolic nazwe" % (cand, best))
-                elif m.group(1):
+                elif m.group(1) and cand not in BOLD_OK:
                     unmatched.setdefault(cand, []).append(path)
 
         if emoji_here:
-            add(path, "tekst", "SPOJNOSC", "ikony wpisane jako emoji zamiast tagow JiM: %s"
-                % ", ".join("%s->%s (%dx)" % (ch, EMOJI_ICON[ch], n)
-                            for ch, n in emoji_here.most_common()))
+            add(path, "tekst", "SPOJNOSC", "emoji zamiast tagow JiM: %s" % ", ".join(
+                "%s->%s (%dx)" % (ch, EMOJI_ICON[ch], n)
+                for ch, n in emoji_here.most_common()))
 
         # sanity pol
-        if c.get("cost") == -1:
-            add(path, "cost", "BLAD", "koszt = -1 (pole niewypelnione)")
-        if c.get("level") == -1 and typ in ("atut", "wydarzenie"):
-            add(path, "level", "SPOJNOSC", "poziom = -1")
+        # podstep i oslabienie nie maja kosztu ani poziomu - -1 znaczy "puste"
+        if c.get("cost") == -1 and typ not in ("podstep",) and c.get("class") != "Oslabienie":
+            add(path, "cost", "SPOJNOSC", "koszt = -1 (puste) - celowe czy przeoczenie?")
+        if c.get("level") == -1 and typ in ("atut", "wydarzenie") and c.get("class") != "Oslabienie":
+            add(path, "level", "SPOJNOSC", "poziom = -1 (puste)")
         if typ in ("przeciwnik", "podstep", "lokacja", "akt", "tajemnica", "karta fabularna"):
             if not any(f == "body" for _, f, _ in texts(c)):
                 add(path, "body", "BLAD", "karta bez tekstu zasad")
@@ -312,8 +348,16 @@ def lint_findings(paths):
         for key in ("shroud", "clues", "threshold", "enemy_health", "attack", "evade"):
             for side, s in sides(c):
                 v = s.get(key)
-                if isinstance(v, str) and v.strip() and not re.fullmatch(
-                        r"[\dX?]+\s*(\+\s*\d+)?\s*(<badacz>)?", v.strip()):
+                if not (isinstance(v, str) and v.strip()):
+                    continue
+                if re.fullmatch(r"[\dX?]+\s*(\+\s*\d+)?\s*(<badacz>)?", v.strip()):
+                    continue
+                if v.strip() == "-":
+                    # akt bez progu wskazowek postepuje przez cel - to normalne
+                    if not (typ == "akt" and key == "threshold"):
+                        add(path, "%s.%s" % (side, key), "BLAD",
+                            "wartosc '-' zamiast liczby - pole niewypelnione")
+                else:
                     add(path, "%s.%s" % (side, key), "BLAD", "nietypowa wartosc '%s'" % v)
 
     # rozjazd notacji w skali repo
@@ -403,6 +447,28 @@ def selftest():
     assert normalize_labels("【Pertraktacja 】(4)") == "【Pertraktacje】(4)"
     assert normalize_labels("【Zrezygnuj.】 X") == "【Rezygnacja】. X"
     assert normalize_labels("【Ruchu】") == "【Ruchu】", "odmiany nie ruszamy"
+    assert keywords_to_tags("{{Wymuszony}} – Na koncu") == "<for> Na koncu"
+    assert keywords_to_tags("【Wymuszony】- Kiedy") == "<for> Kiedy"
+    assert keywords_to_tags("{{Odkrycie}} — Umiesc") == "<rev> Umiesc"
+    assert keywords_to_tags("➡: 【Walka】.") == "➡: 【Walka】.", "nazwa akcji zostaje"
+    assert keywords_to_tags("{{Sztuczka}}") == "{{Sztuczka}}", "cechy zostaja"
+    t = tidy_whitespace('{"name": " Banh mi ", "body": "a  b :  c \n", "cost": 3}')
+    assert t == '{"name": "Banh mi", "body": "a b: c\n", "cost": 3}', t
+    keep = '{"picture_base64": "AAA  BBB", "shroud": "2  "}'
+    assert emoji_to_tags('{"body": "test 🧠 lub 👊"}') == '{"body": "test <wil> lub <com>"}'
+    assert emoji_to_tags('{"body": "➡️: X"}') == '{"body": "<act>: X"}', "selektor wariantu"
+    assert emoji_to_tags('{"body": "⚡ X"}') == '{"body": "⚡ X"}', "blyskawica zostaje"
+    e = lambda t: tidy_whitespace(keywords_to_tags(editorial(
+        '{"body": "%s"}' % t)))[10:-2]
+    assert e("karta 【Tkanka】 X") == "karta <t>Tkanka</t> X"
+    assert e("z Talii 【Tkanki】i dolacz") == "z Talii Tkanek i dolacz"
+    assert e("znajduje sie karta 【Tkanki】, X") == "znajduje sie karta z cechą <t>Tkanka</t>, X"
+    assert e("rozstaw 【Kozi Pomiot】") == "rozstaw Kozi Pomiot"
+    assert e("akcji 【Ruchu】 lub 【Walki】") == "akcji Ruchu lub Walki"
+    assert e("<act>: 【Walka】.") == "<act>: 【Walka】.", "akcja po strzalce zostaje"
+    assert e("【Rozstawienie】- lokalizacja") == "<spa> lokalizacja"
+    assert editorial('{"traits": ["Miejsce kultu"]}') == '{"traits": ["Miejsce Kultu"]}'
+    assert tidy_whitespace(keep) == keep, "obce pola nietkniete"
     c = {"type": "lokacja", "name": "Las", "back": {"type": "lokacja", "body": "a",
                                                     "name": "Grzezawisko", "flavor": "f"}}
     assert name_of(c) == "Grzezawisko", "lokacja: nazwa po odkryciu"
@@ -434,6 +500,88 @@ def normalize_labels(text):
     return re.sub(r"(】[.,;:])(?=[^\s\\])", r"\1 ", out)
 
 
+def keywords_to_tags(text):
+    """Slowa kluczowe pisane recznie -> tagi JiM.
+
+    Tag sam renderuje pogrubione slowo razem z myslnikiem ('<for> X' daje
+    '**Wymuszony** – X'), wiec myslnik po etykiecie tez znika.
+    Nazwy akcji (Walka, Badanie, Ruch, Pertraktacje, Rezygnacja) zostaja tekstem -
+    to nie sa te same rzeczy co ikony umiejetnosci.
+    """
+    names = "|".join(KEYWORD_BY_NAME)
+    return re.sub(r"(?:\{\{|【)\s*(%s)\s*(?:\}\}|】)[ \t]*[-–—]?[ \t]*" % names,
+                  lambda m: "<%s> " % KEYWORD_BY_NAME[m.group(1)], text)
+
+
+# Poprawki redakcyjne uzgodnione z autorem: cechy kursywa, nazwy kart bez pogrubienia,
+# odmienione nazwy akcji jako zwykly tekst. Kolejnosc ma znaczenie - najpierw wyjatki.
+EDITORIAL = [
+    # zdanie do przepisania: 'Nie-【Elitarni】 wrogowie, nie mogą'
+    (r"Nie-【Elitarni】 wrogowie, nie mogą", "wrogowie bez cechy <t>Elitarny</t> nie mogą"),
+    # decyzja autora: Mroczna Fala to slowo kluczowe, nie cecha
+    (r"Zyskuje cechę\s*【Mroczna Fala】", "Zyskuje słowo kluczowe 【Mroczna Fala】"),
+    # 'Talia Tkanki' to nazwa talii, a 'karta Tkanki' to odwolanie do cechy
+    (r"Talii\s*【Tkanki】\s*", "Talii Tkanek "),
+    (r"karcie\s*【Tkanki】", "karcie Tkanki"),
+    (r"kart([aęy])\s*【Tkanki】\s*", r"kart\1 z cechą <t>Tkanka</t> "),
+    (r"wykonujący\s*【Ruch】", "wykonujący Ruch"),
+]
+EDITORIAL += [(r"【%s】" % re.escape(t), "<t>%s</t>" % t) for t in TRAITS_IN_TEXT]
+EDITORIAL += [(r"【%s】" % re.escape(n), n) for n in CARD_NAMES_IN_TEXT + ACTIONS_INLINE]
+
+
+def editorial(text):
+    """Stosuje EDITORIAL w polach tekstowych karty."""
+    def clean(m):
+        v = m.group("v")
+        for pat, repl in EDITORIAL:
+            v = re.sub(pat, repl, v)
+        return '"%s": "%s"' % (m.group("k"), v)
+
+    # cecha na kartach zapisana mala litera - ujednolicenie z tekstem
+    text = text.replace('"Miejsce kultu"', '"Miejsce Kultu"')
+    return FIELD_RE.sub(clean, text)
+
+
+TIDY_KEYS = ("name|subtitle|body|flavor|victory_text|illustrator|card_number|"
+             "encounter_group_number|story|other|option|requirement|"
+             "skull|cultist|tablet|elder_thing")
+# wartosc pola tekstowego w surowym JSON-ie (z escape'ami), bez base64 i liczb
+FIELD_RE = re.compile(r'"(?P<k>%s)":\s*"(?P<v>(?:[^"\\]|\\.)*)"' % TIDY_KEYS)
+
+
+def tidy_whitespace(text):
+    """Porzadkuje biale znaki w tekstowych polach karty (nie rusza base64 ani liczb).
+
+    Dziala na surowym JSON-ie, tylko wewnatrz wartosci wypisanych kluczy, wiec
+    wciecia pliku i obraz zostaja nietkniete. '\\n' to w tym miejscu dwa znaki.
+    """
+    def clean(m):
+        v = m.group("v")
+        v = re.sub(r"[ \t]{2,}", " ", v)          # podwojne spacje
+        v = re.sub(r"[ \t]+(?=\\n)", "", v)       # spacja na koncu linii
+        v = re.sub(r"[ \t]+([.,;:!?])", r"\1", v)  # spacja przed interpunkcja
+        v = re.sub(r"^[ \t]+|[ \t]+$", "", v)     # spacje na brzegach pola
+        return '"%s": "%s"' % (m.group("k"), v)
+
+    return FIELD_RE.sub(clean, text)
+
+
+def emoji_to_tags(text):
+    """Emoji ikon -> tagi JiM, w tych samych polach co tidy_whitespace.
+
+    Renderer traktuje obie formy identycznie, ale tag jest odporny na zgubiony
+    selektor wariantu (U+FE0F) i czytelny w diffie. ⚡ i 🏅 zostaja - patrz EMOJI_KEEP.
+    """
+    def clean(m):
+        v = m.group("v")
+        for ch, tag in EMOJI_ICON.items():
+            v = re.sub(re.escape(ch) + "️?", tag, v)
+        return '"%s": "%s"' % (m.group("k"), v)
+
+    return FIELD_RE.sub(clean, text)
+
+
 def m_fix(paths):
     """Podglad zmian; z --apply zapisuje pliki. Tekst .card ruszany jest surowo,
     zeby nie przepisywac obrazu base64 ani formatowania JSON."""
@@ -444,16 +592,26 @@ def m_fix(paths):
     for f in files:
         with io.open(f, encoding="utf-8", newline="") as fh:
             raw = fh.read()
-        new = normalize_labels(raw)
+        new = tidy_whitespace(emoji_to_tags(keywords_to_tags(
+            editorial(normalize_labels(raw)))))
         if new == raw:
             continue
         changed += 1
         rel = os.path.relpath(f, ROOT).replace("\\", "/")
-        olds = re.findall(r"【[^】]*】[.,;:]?", raw)
-        news = re.findall(r"【[^】]*】[.,;:]?", new)
-        for a, b in zip(olds, news):
-            if a != b:
-                print("%s: %s  ->  %s" % (rel, a, b))
+        frag = (r"【[^】]*】[.,;:]?|\{\{[^}]*\}\}[ \t]*[-–—]?|<(?:for|rev|rea)> |"
+                + "|".join(re.escape(ch) + "\ufe0f?" for ch in EMOJI_ICON)
+                + "|" + "|".join(re.escape(t) for t in EMOJI_ICON.values()))
+        del frag  # listy fragmentow rozjezdzaja sie, gdy podmiana wprowadza nowy tag
+        for om, nm in zip(FIELD_RE.finditer(raw), FIELD_RE.finditer(new)):
+            o, n = om.group("v"), nm.group("v")
+            if o == n:
+                continue
+            for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, o, n).get_opcodes():
+                if tag == "equal":
+                    continue
+                print("%s [%s]: %s  ->  %s"
+                      % (rel, om.group("k"),
+                         repr(o[max(0, i1 - 16):i2 + 16]), repr(n[max(0, j1 - 16):j2 + 16])))
         if apply:
             with io.open(f, "w", encoding="utf-8", newline="") as fh:
                 fh.write(new)

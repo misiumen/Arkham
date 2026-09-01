@@ -34,7 +34,7 @@
     "flip_horizontal": false,
     "flip_vertical": false
   },
-  "body": "Umieść tę kartę pomiędzy twoją lokalizacją i lokalizacją po jej prawej stronie.\nPrzejście pomiędzy tymi lokalizacjami jest możliwe tylko wtedy, jeśli (wystarczy 1 warunek):\n🔵 lokalizacja Skład Drewna nie ma wskazówek;\n🔵 na tej albo sąsiadującej lokalizacji jest Przekonany Wyznawca;\n🔵 jeśli w grze jest obecna Tajemnica 3a lub 4a;\n🔵 jeśli zbadano wszystkie wskazówki z jednej z sąsiadujących z Bramą z Gałęzi lokalizacji.",
+  "body": "Umieść tę kartę pomiędzy twoją lokalizacją i lokalizacją po jej prawej stronie.\nPrzejście pomiędzy tymi lokalizacjami jest możliwe tylko wtedy, jeśli (wystarczy 1 warunek):\n<bul> lokalizacja Skład Drewna nie ma wskazówek;\n<bul> na tej albo sąsiadującej lokalizacji jest Przekonany Wyznawca;\n<bul> jeśli w grze jest obecna Tajemnica 3a lub 4a;\n<bul> jeśli zbadano wszystkie wskazówki z jednej z sąsiadujących z Bramą z Gałęzi lokalizacji.",
   "tts_config": {
     "version": "v2",
     "script_id": "F908D610"

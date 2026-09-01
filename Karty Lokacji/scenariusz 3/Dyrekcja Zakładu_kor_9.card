@@ -36,7 +36,7 @@
       "黄圆"
     ],
     "encounter_group": "f",
-    "body": "<for> Po tym jak wejdziesz do Dyrekcji: Odrzuć 3 wierzchnie karty ze swojej talii. Za każdą odrzuconą w ten sposób kartę z cechą {Zaklęcie}, otrzymaj 1 punkt przerażenia.\n<for> Jeżeli w Dyrekcji nie ma żetonów wskazówek: ➡️ Wykreślasz z ksiąg podejrzanych dostawców. Zamień tę lokalizację na nie spaczoną.",
+    "body": "<for> Po tym jak wejdziesz do Dyrekcji: Odrzuć 3 wierzchnie karty ze swojej talii. Za każdą odrzuconą w ten sposób kartę z cechą {Zaklęcie}, otrzymaj 1 punkt przerażenia.\n<for> Jeżeli w Dyrekcji nie ma żetonów wskazówek: <act> Wykreślasz z ksiąg podejrzanych dostawców. Zamień tę lokalizację na nie spaczoną.",
     "flavor": "Na biurku wciąż paruje herbata, ale w dokumentach technicznych ktoś nakreślił setki razy słowo: Karmić"
   },
   "tts_config": {

@@ -20,7 +20,7 @@
     "意志",
     "敏捷"
   ],
-  "body": "⭕ Gdy wróg lub efekt karty miałby wejść z tobą w interakcję, wyczerp Znikanie Bez Śladu i odrzuć 1 kartę z ręki: przemieść się do połączonej lokalizacji i uniknij tego efektu.",
+  "body": "<rea> Gdy wróg lub efekt karty miałby wejść z tobą w interakcję, wyczerp Znikanie Bez Śladu i odrzuć 1 kartę z ręki: przemieść się do połączonej lokalizacji i uniknij tego efektu.",
   "tts_config": {
     "version": "v2",
     "script_id": "9DBE2E40"
