@@ -15,7 +15,7 @@
     "encounter_group": "i",
     "encounter_group_number": "Leśne zakamarki",
     "illustrator": "Gemini",
-    "body": "<act>Pertraktacje <int>(4): uzyskaj informacje na temat miejsca rytuału. Rozstaw lokalizację Posiadłość na wybranej lokalizacji z cechą Natura bez żadnych wskazówek.\n\n<act><act><act>: Odprowadź ocalałych do wioski. Przenieś swojego badacza do lokalizacji Przybrzeżna Rampa Załadunkowa. Zanotuj w dzienniku kampanii \"Wieśniacy zostali uratowani.\".\n\nNie możesz przejść do sąsiadującej z Obozem ocalałych, nieodkrytej lokalizacji.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
+    "body": "<act>Pertraktacje <int>(4): uzyskaj informacje na temat miejsca rytuału. Rozstaw lokalizację Posiadłość obok wybranej lokalizacji z cechą Natura bez żadnych wskazówek.\n\n<act><act><act>: Odprowadź ocalałych do wioski. Przenieś swojego badacza do lokalizacji Przybrzeżna Rampa Załadunkowa. Zanotuj w dzienniku kampanii \"Wieśniacy zostali uratowani.\".\n\nNie możesz przejść do sąsiadującej z Obozem ocalałych, nieodkrytej lokalizacji.\n\n⚡odrzuć 2 wskazówki: odkryj 1 nieodkrytą sąsiadującą lokalizację.",
     "flavor": "\"Zmęczeni, ranni, wygłodzeni. Ci ludzie przeżyli piekło. Jedynie wiara pozwoliła im znaleźć wytchnienie.\"",
     "shroud": "0",
     "clues": "2",
@@ -46,7 +46,7 @@
     "version": "v2",
     "script_id": "729BE8A9"
   },
-  "content_hash": "fe440c18b3b2401c9393d0e5777aa31d5146aaa3ec7354938d098f8f4ffc6884",
+  "content_hash": "541c8117386c224fb49c653c7806812ff4d37021159a34df419ab031ff730939",
   "illustrator": "Gemini",
   "encounter_group_number": "Miejsca zwyczajne",
   "encounter_group": "i",
