@@ -10,7 +10,7 @@
     },
     "Karty Badaczy\\Baruch Ha\u0142aba\u0142a.card": {
       "card_type": "\u8c03\u67e5\u5458",
-      "mtime": 1788271374.683764
+      "mtime": 1788272315.389221
     },
     "Karty Badaczy\\B\u00e1nh m\u00ec.card": {
       "card_type": "\u4e8b\u4ef6\u5361",
@@ -18,7 +18,7 @@
     },
     "Karty Badaczy\\Czas spowiedzi.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1768755086.7488978
+      "mtime": 1788272315.4554617
     },
     "Karty Badaczy\\Dawny Wsp\u00f3lnik.card": {
       "card_type": "\u652f\u63f4\u5361",
@@ -34,7 +34,7 @@
     },
     "Karty Badaczy\\Halabarda.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1768755086.7508974
+      "mtime": 1788272315.5069323
     },
     "Karty Badaczy\\Konrad Kleszcz.card": {
       "card_type": "\u652f\u63f4\u5361",
@@ -54,15 +54,15 @@
     },
     "Karty Badaczy\\Szyszek Nowacki.card": {
       "card_type": "\u8c03\u67e5\u5458",
-      "mtime": 1768948233.833019
+      "mtime": 1788272315.7272284
     },
     "Karty Badaczy\\Taca Ofiarna.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1768756076.7540455
+      "mtime": 1788272315.7367435
     },
     "Karty Badaczy\\Wieczne Dylematy.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1768944354.252527
+      "mtime": 1788272316.0889895
     },
     "Karty Badaczy\\Wojciech Robak token card.card": {
       "card_type": "\u8c03\u67e5\u5458\u5c0f\u5361",
@@ -74,7 +74,7 @@
     },
     "Karty Badaczy\\Znikanie Bez \u015aladu.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1768948233.8512044
+      "mtime": 1788272316.2929306
     },
     "Karty Scenariusza\\Korzenie.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -106,7 +106,7 @@
     },
     "Karty Lokacji\\scenariusz 2\\Dworzec Puszczykowo.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770667679.9999177
+      "mtime": 1788273186.131414
     },
     "Karty Lokacji\\scenariusz 2\\Fabryka Dro\u017cd\u017cy.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -118,7 +118,7 @@
     },
     "Karty Lokacji\\scenariusz 2\\Most Chwaliszewski B.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770667690.4637456
+      "mtime": 1788272322.4802122
     },
     "Karty Lokacji\\scenariusz 2\\Pradawne D\u0119by.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -126,51 +126,51 @@
     },
     "Karty Lokacji\\scenariusz 2\\Przysta\u0144.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770667693.5092068
+      "mtime": 1788273187.8655574
     },
     "Karty Lokacji\\scenariusz 2\\Rozlewiska D\u0119biny.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770667979.431651
+      "mtime": 1788273188.2663198
     },
     "Karty Lokacji\\scenariusz 2\\Ska\u017cony Nurt.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770668035.36621
+      "mtime": 1788273188.6662047
     },
     "Karty Lokacji\\scenariusz 2\\Zakole Warty.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788270983.1371017
+      "mtime": 1788273188.9032757
     },
     "Karty Lokacji\\scenariusz 2\\Zrujnowany Fort.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271378.9387772
+      "mtime": 1788273189.1036541
     },
     "Karty Lokacji\\scenariusz 2\\\u0141\u0119gi Wierzbowe.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1770668052.7778294
+      "mtime": 1788273189.8412974
     },
     "Karty Lokacji\\scenariusz 3\\Biblioteka Uniwersytecka.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769970207.8305602
+      "mtime": 1788272324.1920183
     },
     "Karty Lokacji\\scenariusz 3\\Biblioteka Uniwersytecka_kor_9.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769441882.0198963
+      "mtime": 1788272324.2516203
     },
     "Karty Lokacji\\scenariusz 3\\Cytadela.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769441882.0198963
+      "mtime": 1788272324.2671332
     },
     "Karty Lokacji\\scenariusz 3\\Dyrekcja Zak\u0142adu.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769441882.02849
+      "mtime": 1788272324.28112
     },
     "Karty Lokacji\\scenariusz 3\\Dyrekcja Zak\u0142adu_kor_9.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775998.1405795
+      "mtime": 1788272324.2913802
     },
     "Karty Lokacji\\scenariusz 3\\Linia Rozlewnicza.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775998.1425788
+      "mtime": 1788272324.3046572
     },
     "Karty Lokacji\\scenariusz 3\\Linia Rozlewnicza_kor_9.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -178,7 +178,7 @@
     },
     "Karty Lokacji\\scenariusz 3\\Mleczarnia Sp\u00f3\u0142dzielcza.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769441882.043264
+      "mtime": 1788272324.318996
     },
     "Karty Lokacji\\scenariusz 3\\Nadbrze\u017ce Warty.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -186,39 +186,39 @@
     },
     "Karty Lokacji\\scenariusz 3\\Ogr\u00f3d Botaniczny.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769441882.0715415
+      "mtime": 1788272324.4299111
     },
     "Karty Lokacji\\scenariusz 3\\Ostr\u00f3w Tumski.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769957471.9069357
+      "mtime": 1788272324.5997846
     },
     "Karty Lokacji\\scenariusz 3\\Rynek Je\u017cycki.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271379.6291702
+      "mtime": 1788272324.707965
     },
     "Karty Lokacji\\scenariusz 3\\So\u0142acz.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769957471.9432962
+      "mtime": 1788272324.910402
     },
     "Karty Lokacji\\scenariusz 3\\Stary Rynek.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769957471.9601524
+      "mtime": 1788272325.009937
     },
     "Karty Lokacji\\scenariusz 3\\Tunele Forteczne.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788270596.2647989
+      "mtime": 1788272325.0235395
     },
     "Karty Lokacji\\scenariusz 3\\UAM.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769957471.9675527
+      "mtime": 1788272325.0340745
     },
     "Karty Lokacji\\scenariusz 3\\Zak\u0142ady Cegielskiego.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769441882.1630235
+      "mtime": 1788272325.0443273
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 1.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1770667762.7264798
+      "mtime": 1788272325.2964194
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 2.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -226,11 +226,11 @@
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 3.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1770667797.2711766
+      "mtime": 1788272325.6208282
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 4 Wariant A.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1770667784.5963802
+      "mtime": 1788272325.9665306
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 4 Wariant B.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -238,19 +238,19 @@
     },
     "Karty Scenariusza\\scenariusz 2\\Barka Jadwiga.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1788271380.103385
+      "mtime": 1788272326.1369598
     },
     "Karty Scenariusza\\scenariusz 2\\Karta Scenariusza.card": {
       "card_type": "\u5192\u9669\u53c2\u8003\u5361",
-      "mtime": 1788271380.1049423
+      "mtime": 1788272326.1384685
     },
     "Karty Scenariusza\\scenariusz 2\\Tajemnica 1.card": {
       "card_type": "\u5bc6\u8c0b\u5361",
-      "mtime": 1788271381.008245
+      "mtime": 1788272327.8347676
     },
     "Karty Scenariusza\\scenariusz 2\\Tajemnica 2.card": {
       "card_type": "\u5bc6\u8c0b\u5361",
-      "mtime": 1770667876.3182623
+      "mtime": 1788273191.2323694
     },
     "Karty Scenariusza\\scenariusz 2\\Tajemnica 3.card": {
       "card_type": "\u5bc6\u8c0b\u5361",
@@ -306,7 +306,7 @@
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Godzina policyjna.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1770628755.038942
+      "mtime": 1788273191.466943
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Zagini\u0119cie.card": {
       "card_type": "\u6545\u4e8b\u5361",
@@ -318,15 +318,15 @@
     },
     "Karty Spotka\u0144\\scenariusz 1\\Brama z ga\u0142\u0119zi.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1773775998.1445796
+      "mtime": 1788272328.6297429
     },
     "Karty Spotka\u0144\\scenariusz 1\\Ciekawski Wie\u015bniak.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1788271381.4164727
+      "mtime": 1788273191.6729133
     },
     "Karty Spotka\u0144\\scenariusz 1\\Gorliwe Kazanie.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1770065213.8751879
+      "mtime": 1788273191.6949813
     },
     "Karty Spotka\u0144\\scenariusz 1\\Kozi Pomiot.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -338,11 +338,11 @@
     },
     "Karty Spotka\u0144\\scenariusz 1\\Nieczysta komunia.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1770065213.891386
+      "mtime": 1788273191.7721515
     },
     "Karty Spotka\u0144\\scenariusz 1\\Nieczysty chrzest.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1770065213.9070716
+      "mtime": 1788273191.794538
     },
     "Karty Spotka\u0144\\scenariusz 1\\Ojciec \u017berd\u017a.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -354,19 +354,19 @@
     },
     "Karty Spotka\u0144\\scenariusz 1\\Wo\u0142anie.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1770065213.9222314
+      "mtime": 1788273191.8612883
     },
     "Karty Spotka\u0144\\scenariusz 1\\Zb\u0142\u0105kany Kultywator.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1788271381.6647766
+      "mtime": 1788273191.8805137
     },
     "Karty Spotka\u0144\\scenariusz 2\\Arcykap\u0142an Odrodzonej Warty.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1788271381.8135624
+      "mtime": 1788272329.511665
     },
     "Karty Spotka\u0144\\scenariusz 2\\Faustyn Ferment.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1770667664.1795218
+      "mtime": 1788272330.0356338
     },
     "Karty Spotka\u0144\\scenariusz 2\\Lewiatan.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -382,7 +382,7 @@
     },
     "Karty Spotka\u0144\\scenariusz 3\\Kryzys Aprowizacyjny.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1773775998.2186015
+      "mtime": 1788272333.347565
     },
     "Karty Spotka\u0144\\scenariusz 3\\Strajk.card": {
       "card_type": "\u8be1\u8ba1\u5361",
@@ -390,7 +390,7 @@
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Ko\u015bci\u00f3\u0142.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271375.117307
+      "mtime": 1788273184.2961206
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Przera\u017cony Wikariusz.card": {
       "card_type": "\u652f\u63f4\u5361",
@@ -398,35 +398,35 @@
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Przybrze\u017cna rampa za\u0142adunkowa 7.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788270594.717412
+      "mtime": 1788272316.492543
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Zachrystia.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271375.309709
+      "mtime": 1788272316.7855818
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\\u015arodek wioski.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769452767.5092044
+      "mtime": 1788273184.5668359
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\9 Warsztat Kowalski.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775997.668747
+      "mtime": 1788272316.947083
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Kapliczka 8.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769452767.5417273
+      "mtime": 1788272317.0628333
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Kostnica 12.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775997.7022684
+      "mtime": 1788273184.6804943
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Pod Rogatym 3.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788270594.9632857
+      "mtime": 1788273185.263114
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Sk\u0142ad Drewna 10.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775998.0137084
+      "mtime": 1788273185.3306024
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Stary magazyn zbo\u017cowy 6.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -438,7 +438,7 @@
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Kowalski 9.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1769452767.7830122
+      "mtime": 1788273185.6322317
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Ko\u0142odzieja.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -446,7 +446,7 @@
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Mechaniczny 11.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271376.5248144
+      "mtime": 1788273185.8064198
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\W\u0119dzarnio-suszarnia 8.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -470,11 +470,11 @@
     },
     "Karty Lokacji\\scenariusz 2\\Karty Barier\\Pruskie Miny Rzeczne.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1770667658.5789213
+      "mtime": 1788272320.1118124
     },
     "Karty Lokacji\\scenariusz 2\\Karty Barier\\Toksyczny Ko\u017cuch.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1770667657.4710045
+      "mtime": 1788272320.7278113
     },
     "Karty Lokacji\\scenariusz 2\\Karty Barier\\\u017byj\u0105cy Zator.card": {
       "card_type": "\u8be1\u8ba1\u5361",
@@ -482,11 +482,11 @@
     },
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\G\u0105bczasta Naro\u015bl.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271380.2633903
+      "mtime": 1788272326.4647024
     },
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Kokon M\u0142odego.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271380.3224578
+      "mtime": 1788272326.585955
     },
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Krwawe Korzenie.card": {
       "card_type": "\u8be1\u8ba1\u5361",
@@ -494,23 +494,23 @@
     },
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Mi\u0119sne Pn\u0105cza.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271380.6146984
+      "mtime": 1788272327.0100605
     },
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Nerwowy Splot.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271380.6213143
+      "mtime": 1788272327.0201533
     },
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\\u015aciana Oczu.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271380.7810824
+      "mtime": 1788272327.3623
     },
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\\u015aluzowata B\u0142ona.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271380.9554915
+      "mtime": 1788272327.7282367
     },
     "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\\u017br\u0105ca Grzybnia.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271381.0067363
+      "mtime": 1788272327.8312204
     },
     "Polana.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -526,19 +526,19 @@
     },
     "Karty Spotka\u0144\\Scenariusz 4\\Awatar Kozicy.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1770628755.1613207
+      "mtime": 1788273191.642212
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Skraj Lasu.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773784298.1415799
+      "mtime": 1788272316.6633852
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\G\u0119sty Las.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271375.6752765
+      "mtime": 1788272317.6838415
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Polana.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775997.9271245
+      "mtime": 1788272318.3319182
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\\u015acie\u017cka w\u015br\u00f3d krzak\u00f3w.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -550,43 +550,43 @@
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Godzina policyjna 2.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1770628755.038942
+      "mtime": 1788273191.4654338
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Inflacja.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1788271381.241718
+      "mtime": 1788272328.1035554
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Seans 2.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1788271381.242229
+      "mtime": 1788272328.104067
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Seans 3.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1788271381.242229
+      "mtime": 1788272328.1045823
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Seans 4.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1788271381.243234
+      "mtime": 1788272328.1045823
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Seans.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1788271381.2437365
+      "mtime": 1788272328.1060991
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Spis Ludno\u015bci.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1788271381.2437365
+      "mtime": 1788272328.1060991
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Strajk w Cegielskim.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1770628755.0782573
+      "mtime": 1788272328.2190855
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Targi 2.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1770628755.0971158
+      "mtime": 1788273191.5434864
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Targi.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1770628755.1146054
+      "mtime": 1788272328.4344962
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Zagini\u0119cie_copy1.card": {
       "card_type": "\u6545\u4e8b\u5361",
@@ -594,7 +594,7 @@
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\Znalezisko prof. Kostrzewskiego.card": {
       "card_type": "\u6545\u4e8b\u5361",
-      "mtime": 1770628755.144951
+      "mtime": 1788272328.5418832
     },
     "Karty Spotka\u0144\\scenariusz 3\\Goniec 1.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -610,15 +610,15 @@
     },
     "Karty Spotka\u0144\\scenariusz 2\\Dar Czarnej Kozy.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271382.0023792
+      "mtime": 1788273192.1187425
     },
     "Karty Spotka\u0144\\scenariusz 2\\Gwa\u0142towny Rozkwit.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1770667666.1008606
+      "mtime": 1788273192.3497777
     },
     "Karty Spotka\u0144\\scenariusz 2\\Hierofanta Tysi\u0105ca P\u0119d\u00f3w.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1788270596.8913486
+      "mtime": 1788272330.7791233
     },
     "Karty Spotka\u0144\\scenariusz 2\\Kozi Pomiot.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -626,19 +626,19 @@
     },
     "Karty Spotka\u0144\\scenariusz 2\\Niekontrolowany Rozrost.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788270596.9918647
+      "mtime": 1788273192.6478124
     },
     "Karty Spotka\u0144\\scenariusz 2\\Nosiciel Zarodnik\u00f3w.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1773849216.8075695
+      "mtime": 1788273192.6862671
     },
     "Karty Spotka\u0144\\scenariusz 2\\Rytua\u0142 P\u0142odno\u015bci.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1770667670.8417294
+      "mtime": 1788273192.84297
     },
     "Karty Spotka\u0144\\scenariusz 2\\Rzeczne M\u0142ode.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1788270597.0551567
+      "mtime": 1788273616.3320508
     },
     "Karty Spotka\u0144\\scenariusz 2\\Skrzynia Dynamitu.card": {
       "card_type": "\u652f\u63f4\u5361",
@@ -646,11 +646,11 @@
     },
     "Karty Spotka\u0144\\scenariusz 2\\Twarze w Korze.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788270597.1394668
+      "mtime": 1788273193.122352
     },
     "Karty Spotka\u0144\\scenariusz 2\\Zapach Feromon\u00f3w.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271382.9547303
+      "mtime": 1788273193.2600853
     },
     "Karty Spotka\u0144\\scenariusz 2\\Zmutowany Kierownik.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -658,11 +658,11 @@
     },
     "Karty Spotka\u0144\\scenariusz 2\\Zw\u0119glony Totem.card": {
       "card_type": "\u652f\u63f4\u5361",
-      "mtime": 1770667676.3521934
+      "mtime": 1788272333.107476
     },
     "Karty Spotka\u0144\\scenariusz 2\\\u017bywy Nurt.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788270597.295523
+      "mtime": 1788273193.502028
     },
     "Cie\u0144 z Je\u017cyc.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -678,7 +678,7 @@
     },
     "Karty Spotka\u0144\\scenariusz 3\\Czarna sadza.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271383.206222
+      "mtime": 1788272333.3314111
     },
     "Karty Spotka\u0144\\scenariusz 3\\Mleczarz.card": {
       "card_type": "\u8be1\u8ba1\u5361",
@@ -686,7 +686,7 @@
     },
     "Karty Spotka\u0144\\scenariusz 3\\Ob\u0142\u0105kany Student Teologii.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1773775998.2341173
+      "mtime": 1788272333.4955904
     },
     "Karty Spotka\u0144\\scenariusz 3\\Pa\u0144stwowa Cenzura.card": {
       "card_type": "\u8be1\u8ba1\u5361",
@@ -694,19 +694,19 @@
     },
     "Karty Spotka\u0144\\scenariusz 3\\Smr\u00f3d z Garbar.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1773775998.2621334
+      "mtime": 1788273193.6613038
     },
     "Karty Spotka\u0144\\scenariusz 3\\Tej, co Wy tu robicie.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1788271383.349373
+      "mtime": 1788272333.8002071
     },
     "Karty Spotka\u0144\\scenariusz 3\\Trauma Pruskiego Drylu.card": {
       "card_type": "\u8be1\u8ba1\u5361",
-      "mtime": 1773775998.293657
+      "mtime": 1788273193.7321608
     },
     "Karty Spotka\u0144\\scenariusz 3\\Wkurwiony Bamber.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1773775998.3109322
+      "mtime": 1788272334.024057
     },
     "Karty Spotka\u0144\\scenariusz 3\\\u015awie\u017ca Dostawa.card": {
       "card_type": "\u8be1\u8ba1\u5361",
@@ -726,35 +726,35 @@
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Ambona.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775997.7362442
+      "mtime": 1788272317.233971
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Grz\u0119zawisko.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271375.6017132
+      "mtime": 1788272317.5227876
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\D\u00f3\u0142.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271375.5291033
+      "mtime": 1788272317.3719327
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Ob\u00f3z na Mokrad\u0142ach.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271375.7981632
+      "mtime": 1788272318.0172677
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Nory.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775997.8480659
+      "mtime": 1788273184.9265735
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Ob\u00f3z ocala\u0142ych.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1773775997.9011147
+      "mtime": 1788272318.1684525
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Posiad\u0142o\u015b\u0107.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788271375.1824536
+      "mtime": 1788273184.3558266
     },
     "Karty Spotka\u0144\\scenariusz 1\\Kozio\u0142ek.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1788271381.49033
+      "mtime": 1788273191.7238133
     },
     "Karty Scenariusza\\scenariusz 1\\Karta scenariusza.card": {
       "card_type": "\u5192\u9669\u53c2\u8003\u5361",
@@ -762,11 +762,11 @@
     },
     "Karty Scenariusza\\scenariusz 1\\Akt 1.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1788264798.43008
+      "mtime": 1788272325.1288579
     },
     "Karty Scenariusza\\scenariusz 1\\Akt 2.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1788271379.7752893
+      "mtime": 1788272325.216873
     }
   }
 }
