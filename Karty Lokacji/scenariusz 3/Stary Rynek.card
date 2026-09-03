@@ -78,5 +78,6 @@
   "body": "<for> Na koniec fazy wrogów, jeżeli w obszarze gry znajduje się 3 lub więcej lokalizacji z cechą {Spaczona} odwróć tę kartę na jej spaczoną stronę.\n⚡Wydaj 2 żetony zasobów: 【Ruch】. Porusz się do połączonej lokalizacji.\n",
   "encounter_group": "f",
   "shroud": "2",
-  "clues": "2<调查员>"
+  "clues": "2<调查员>",
+  "card_number": "25"
 }

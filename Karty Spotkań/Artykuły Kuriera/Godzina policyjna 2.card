@@ -19,5 +19,6 @@
   },
   "content_hash": "1f21c8130cbff390e2fc08c26de0b6a52629fdd0a28dddc495e388eee3619e90",
   "encounter_group": "f",
-  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, czwartek dnia 17. listopada 1921 | Nr 269<hr>\n<size \"\"><b>WPROWADZONO GODZINĘ POLICYJNĄ</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Na mocy decyzji władz porządkowych, wobec narastających zajść i niepokojących doniesień z ulic miasta, zarządzono ograniczenie ruchu po zmroku. Patrole wojskowe i policyjne legitymują przechodniów, a osoby bez stosownych zezwoleń kierowane są na posterunki. Miasto zapada w nienaturalną ciszę.</flavor>\n\n<for> Akcja Ruchu kosztuje 1 dodatkową akcję w lokalizacjach <b>Stary Rynek</b> i sąsiednich.\n<for> Na koniec rundy odrzuć tę kartę.\n"
+  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, czwartek dnia 17. listopada 1921 | Nr 269<hr>\n<size \"\"><b>WPROWADZONO GODZINĘ POLICYJNĄ</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Na mocy decyzji władz porządkowych, wobec narastających zajść i niepokojących doniesień z ulic miasta, zarządzono ograniczenie ruchu po zmroku. Patrole wojskowe i policyjne legitymują przechodniów, a osoby bez stosownych zezwoleń kierowane są na posterunki. Miasto zapada w nienaturalną ciszę.</flavor>\n\n<for> Akcja 【Ruchu】 kosztuje 1 dodatkową akcję w lokalizacjach <b>Stary Rynek</b> i sąsiednich.\n<for> Na koniec rundy odrzuć tę kartę.\n",
+  "card_number": "46"
 }

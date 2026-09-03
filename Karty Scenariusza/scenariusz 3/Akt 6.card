@@ -46,5 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Pokonaj \"Czarną Kozę z Ostrowa\" zanim Agenda dojdzie do końca (co oznacza wchłonięcie Poznania przez Las).\nMożesz poświęcić sojusznika (np. Kleszcza), aby usunąć 3 żetony zagłady (Heroiczna ofiara)."
+  "body": "<obj> Pokonaj \"Czarną Kozę z Ostrowa\" zanim Agenda dojdzie do końca (co oznacza wchłonięcie Poznania przez Las).\nMożesz poświęcić sojusznika (np. Kleszcza), aby usunąć 3 żetony zagłady (Heroiczna ofiara).",
+  "card_number": "7"
 }

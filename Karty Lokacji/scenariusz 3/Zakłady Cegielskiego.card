@@ -78,5 +78,6 @@
     "暗红漏斗"
   ],
   "body": "Nie możesz badać Zakładów Cegielskiego, dopóki masz 3 lub mniej zasobów.\n<for> Na koniec fazy wrogów, jeśli na tej lokalizacji znajduje się 4 lub więcej żetonów zagłady, odwróć tę lokalizację na jej spaczoną stronę.\n",
-  "encounter_group": "f"
+  "encounter_group": "f",
+  "card_number": "28"
 }

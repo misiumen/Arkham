@@ -43,5 +43,6 @@
   "enemy_damage": 1,
   "traits": [],
   "quantity": 2,
-  "flavor": "Porzóndek musi być! Żodnego bezczynnego stania, brać się do roboty!"
+  "flavor": "Porzóndek musi być! Żodnego bezczynnego stania, brać się do roboty!",
+  "card_number": "43"
 }

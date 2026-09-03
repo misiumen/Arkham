@@ -13,7 +13,7 @@
     "encounter_group_number": "",
     "encounter_group": "f",
     "flavor": "Lornetka",
-    "body": "<act> Wyczerp Lornetkę: Wykonaj 【Badanie】 w połączonej lokalizacji.\n<for> Jeśli w połączonej lokalizacji znajduje się wróg, otrzymujesz 1 punkt przerażenia.",
+    "body": "➡️ Wyczerp Lornetkę: Wykonaj 【Badanie】 w połączonej lokalizacji.\n<for> Jeśli w połączonej lokalizacji znajduje się wróg, otrzymujesz 1 punkt przerażenia.",
     "horror": 2,
     "traits": [
       "Przedmiot"
@@ -30,5 +30,6 @@
   },
   "content_hash": "af1be2572d6426b81a1adf19bc01bf4425864317a27a945243dd785f7d312143",
   "encounter_group": "f",
-  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, sobota dnia 28. maja 1921 | Nr 119<hr>\n<size \"\"><b>ŚWIAT NA TARGACH W POZNANIU!</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Tłumy na otwarciu Targów Poznańskich! Miasto gości kupców z całego świata. Język polski miesza się z francuskim i angielskim, a pawilony uginają się od jakościowych towarów. Policja apeluje o czujność – w takim ścisku nietrudno o złodziei kieszonkowych.</flavor>\nKażdy badacz otrzymuje +1<int> do podczas akcji badania\n<for> Jeśli badacz wyda łącznie 5 zasobów w jednej rundzie - odwróć tę kartę. W przeciwnym razie na koniec rundy odrzuć tę kartę."
+  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, sobota dnia 28. maja 1921 | Nr 119<hr>\n<size \"\"><b>ŚWIAT NA TARGACH W POZNANIU!</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Tłumy na otwarciu Targów Poznańskich! Miasto gości kupców z całego świata. Język polski miesza się z francuskim i angielskim, a pawilony uginają się od jakościowych towarów. Policja apeluje o czujność – w takim ścisku nietrudno o złodziei kieszonkowych.</flavor>\nKażdy badacz otrzymuje +1📚 do podczas akcji badania\n<for> Jeśli badacz wyda łącznie 5 zasobów w jednej rundzie - odwróć tę kartę. W przeciwnym razie na koniec rundy odrzuć tę kartę.",
+  "card_number": "56"
 }

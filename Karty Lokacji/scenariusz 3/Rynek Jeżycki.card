@@ -37,7 +37,7 @@
     "location_icon": "青花",
     "encounter_group": "f",
     "victory": null,
-    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n<act> Przekonaj handlarzy. Wykonaj test <wil> (3), aby zamienić 1 żeton zagładyw tej lokalizacji na 1 żeton wskazówki.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n<hau> Każda z twoich kart posiadająca zdrowie otrzymuje 1 bezpośrednie obrażenie.",
+    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n➡️ Przekonaj handlarzy. Wykonaj test 🧠 (3), aby zamienić 1 żeton zagładyw tej lokalizacji na 1 żeton wskazówki.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n<hau> Każda z twoich kart posiadająca zdrowie otrzymuje 1 bezpośrednie obrażenie.",
     "traits": [
       "Spaczona"
     ]
@@ -75,6 +75,7 @@
     "暗红漏斗"
   ],
   "encounter_group": "f",
-  "body": "<for> Na koniec fazy wrogów, jeśli na tej lokalizacji znajduje się 4 lub więcej żetonów zagłady, odwróć tę lokalizację na jej spaczoną stronę.\n<act>Odrzuć kartę z ręki, aby usunąć żeton zagładyz wybranej lokalizacji.",
-  "victory": null
+  "body": "<for> Na koniec fazy wrogów, jeśli na tej lokalizacji znajduje się 4 lub więcej żetonów zagłady, odwróć tę lokalizację na jej spaczoną stronę.\n➡️Odrzuć kartę z ręki, aby usunąć żeton zagładyz wybranej lokalizacji. ",
+  "victory": null,
+  "card_number": "23"
 }

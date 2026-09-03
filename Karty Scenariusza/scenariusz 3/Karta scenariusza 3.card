@@ -32,5 +32,6 @@
     "skull": "--1",
     "elder_thing": "--1 (zamiast tego --3, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})"
   },
-  "subtitle": "ŁATWY / STANDARDOWY"
+  "subtitle": "ŁATWY / STANDARDOWY",
+  "card_number": "1"
 }

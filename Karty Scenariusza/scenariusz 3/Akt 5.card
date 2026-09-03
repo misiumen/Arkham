@@ -46,5 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Dostań się do fortu na Cytadeli, aby spowodować postęp talii."
+  "body": "<obj> Dostań się do fortu na Cytadeli, aby spowodować postęp talii.",
+  "card_number": "6"
 }
