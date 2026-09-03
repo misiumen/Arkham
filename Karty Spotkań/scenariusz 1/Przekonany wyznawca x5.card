@@ -36,7 +36,7 @@
     "version": "v2",
     "script_id": "77739FE7"
   },
-  "content_hash": "9eed9ad2dce7d4978022512585b262b62846daebefb3b97bc3459a8b6756bb49",
+  "content_hash": "433eefcf1b511210fb19179eb7453c866b20c091f5de2ef28b4b0e212679120f",
   "attack": "3",
   "enemy_health": "3",
   "evade": "3",
@@ -50,5 +50,6 @@
   "footer_icon_path": "",
   "victory": null,
   "class": "",
-  "encounter_group": "b"
+  "encounter_group": "b",
+  "quantity": 5
 }

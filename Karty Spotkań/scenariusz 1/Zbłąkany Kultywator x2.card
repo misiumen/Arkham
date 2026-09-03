@@ -45,6 +45,7 @@
     "version": "v2",
     "script_id": "E467FFAA"
   },
-  "content_hash": "8f7069c135ef4b40f374db8ca8f5fb83259a1cd1c3782d6aa8ada530b3cf2feb",
-  "encounter_group": "b"
+  "content_hash": "46ba6beb5953cda204e3c556684140abcea99dc4b73ed10afa76b470d5f6f98e",
+  "encounter_group": "b",
+  "quantity": 2
 }
