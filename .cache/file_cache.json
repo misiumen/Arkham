@@ -530,7 +530,7 @@
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Skraj Lasu.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788359904.8134942
+      "mtime": 1788430517.6629374
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\G\u0119sty Las.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -734,11 +734,11 @@
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\D\u00f3\u0142.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788359906.2914448
+      "mtime": 1788428745.118532
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Ob\u00f3z na Mokrad\u0142ach.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788359906.889912
+      "mtime": 1788428522.026007
     },
     "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Nory.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -750,7 +750,7 @@
     },
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Posiad\u0142o\u015b\u0107.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788359904.3342443
+      "mtime": 1788430658.99759
     },
     "Karty Spotka\u0144\\scenariusz 1\\Kozio\u0142ek.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -762,15 +762,35 @@
     },
     "Karty Scenariusza\\scenariusz 1\\Akt 1.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1788359918.6116345
+      "mtime": 1788424169.1380703
     },
     "Karty Scenariusza\\scenariusz 1\\Akt 2.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1788359918.6622293
+      "mtime": 1788430589.9522276
     },
     "Karty Scenariusza\\scenariusz 1\\Tajemnica 1.card": {
       "card_type": "\u5bc6\u8c0b\u5361",
-      "mtime": 1788366941.1463494
+      "mtime": 1788427187.6460998
+    },
+    "Karty Scenariusza\\scenariusz 1\\Tajemnica 2.card": {
+      "card_type": "\u5bc6\u8c0b\u5361",
+      "mtime": 1788427546.890035
+    },
+    "Karty Scenariusza\\scenariusz 1\\Tajemnica 3.card": {
+      "card_type": "\u5bc6\u8c0b\u5361",
+      "mtime": 1788427924.524587
+    },
+    "Karty Scenariusza\\scenariusz 1\\Akt 2_copy1.card": {
+      "card_type": "\u573a\u666f\u5361",
+      "mtime": 1788424775.9436784
+    },
+    "Karty Scenariusza\\scenariusz 1\\Akt 3.card": {
+      "card_type": "\u573a\u666f\u5361",
+      "mtime": 1788428292.6335015
+    },
+    "Karty Scenariusza\\scenariusz 1\\Tajemnica 4.card": {
+      "card_type": "\u5bc6\u8c0b\u5361",
+      "mtime": 1788428272.428913
     }
   }
 }
