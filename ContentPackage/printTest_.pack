@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "code": "ccbbda93-88fc-44d9-9c42-00935af9c8f9",
+    "name": "printTest_",
+    "description": "test",
+    "author": "Andrzej Prukowski",
+    "language": "en",
+    "banner_url": "",
+    "types": [
+      "campaign"
+    ],
+    "status": "final",
+    "date_updated": "2026-02-20T14:46:22.688Z",
+    "generator": "Arkham Card Maker v3.4",
+    "external_link": ""
+  },
+  "banner_base64": "",
+  "cards": [
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Biblioteka Uniwersytecka.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Biblioteka Uniwersytecka_kor_9.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Cytadela.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Dyrekcja Zakładu.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Dyrekcja Zakładu_kor_9.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Linia Rozlewnicza.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Linia Rozlewnicza_kor_9.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Mleczarnia Spółdzielcza.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Nadbrzeże Warty.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Ogród Botaniczny.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Ostrów Tumski.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Rynek Jeżycki.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Sołacz.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Stary Rynek.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Tunele Forteczne.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\UAM.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Zakłady Cegielskiego.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 4.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 5.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 6.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Karta scenariusza 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Tajemnica 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Tajemnica 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Tajemnica 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Tajemnica 4.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Bimba.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Godzina policyjna 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Godzina policyjna.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Inflacja.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Seans 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Seans 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Seans 4.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Seans.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Spis Ludności.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Strajk w Cegielskim.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Targi 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Targi.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Zaginięcie_copy1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Znalezisko prof. Kostrzewskiego.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Kozi Pomiot.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Agitator z Wildy.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Cień z Jeżyc.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Czarna sadza.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Goniec 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Goniec 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Goniec 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Kryzys Aprowizacyjny.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Obłąkany Student Teologii.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Państwowa Cenzura.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Smród z Garbar.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Strajk.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Tej, co wy tu robicie.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Trauma Pruskiego Drylu.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Wkurwiony Bamber.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Świeża Dostawa.card",
+      "version": "2.0"
+    }
+  ],
+  "encounter_sets": []
+}

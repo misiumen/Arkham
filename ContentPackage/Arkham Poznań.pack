@@ -1,0 +1,573 @@
+{
+  "meta": {
+    "code": "cf3f2bc2-ea6e-4e2f-abf4-b3fe138ff835",
+    "name": "Arkham Poznań",
+    "description": "campaign in Poznań",
+    "author": "Colab",
+    "language": "en",
+    "banner_url": "",
+    "types": [
+      "campaign"
+    ],
+    "status": "final",
+    "date_updated": "2026-09-01T09:37:31.808Z",
+    "generator": "Arkham Card Maker v3.4",
+    "external_link": ""
+  },
+  "banner_base64": "",
+  "cards": [
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Bimba.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Godzina policyjna 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Godzina policyjna.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Inflacja.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Seans 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Seans 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Seans 4.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Seans.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Sensacyjne Morderstwo.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Spis Ludności.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Strajk w Cegielskim.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Targi 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Targi.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Zaginięcie_copy1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\Artykuły Kuriera\\Znalezisko prof. Kostrzewskiego.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Brama z gałęzi.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Ciekawski Wieśniak.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Gorliwe Kazanie.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Kozi Pomiot.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Kultysta Traktorzysta.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Nieczysta komunia.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Nieczysty chrzest.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Ojciec Żerdź.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Przekonany wyznawca.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Wołanie.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 1\\Zbłąkany Kultywator.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Arcykapłan Odrodzonej Warty.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Dar Czarnej Kozy.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Faustyn Ferment.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Gwałtowny Rozkwit.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Hierofanta Tysiąca Pędów.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Kozi Pomiot.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Lewiatan.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Niekontrolowany Rozrost.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Nosiciel Zarodników.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Rytuał Płodności.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Rzeczne Młode.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Skrzynia Dynamitu.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Twarze w Korze.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Zapach Feromonów.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Zmutowany Kierownik.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Zwęglony Totem.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 2\\Żywy Nurt.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Agitator z Wildy.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Cień z Jeżyc.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Czarna sadza.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Goniec 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Goniec 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Goniec 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Kryzys Aprowizacyjny.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Obłąkany Student Teologii.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Państwowa Cenzura.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Smród z Garbar.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Strajk.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Tej, co wy tu robicie.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Trauma Pruskiego Drylu.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Wkurwiony Bamber.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Spotkań\\scenariusz 3\\Świeża Dostawa.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Gąbczasta Narośl.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Kokon Młodego.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Krwawe Korzenie.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Mięsne Pnącza.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Nerwowy Splot.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Ściana Oczu.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Śluzowata Błona.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karty Tkanek\\Żrąca Grzybnia.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Akt 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Akt 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Akt 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Akt 4 Wariant A.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Akt 4 Wariant B.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Barka Jadwiga.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Karta Scenariusza.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Tajemnica 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Tajemnica 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 2\\Tajemnica 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 4.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 5.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Akt 6.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Karta scenariusza 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Tajemnica 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Tajemnica 2.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Tajemnica 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Scenariusza\\scenariusz 3\\Tajemnica 4.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Biblioteka Uniwersytecka.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Biblioteka Uniwersytecka_kor_9.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Cytadela.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Dyrekcja Zakładu.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Dyrekcja Zakładu_kor_9.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Linia Rozlewnicza.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Linia Rozlewnicza_kor_9.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Mleczarnia Spółdzielcza.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Nadbrzeże Warty.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Ogród Botaniczny.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Ostrów Tumski.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Rynek Jeżycki.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Sołacz.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Stary Rynek.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Tunele Forteczne.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\UAM.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 3\\Zakłady Cegielskiego.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Dworzec Puszczykowo.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Fabryka Drożdży.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Most Chwaliszewski A.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Most Chwaliszewski B.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Pradawne Dęby.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Przystań.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Rozlewiska Dębiny.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Skażony Nurt.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Zakole Warty.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Zrujnowany Fort.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Łęgi Wierzbowe.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Karty Barier\\Pruskie Miny Rzeczne.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Karty Barier\\Toksyczny Kożuch.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 2\\Karty Barier\\Żyjący Zator.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\9 Warsztat Kowalski.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Kapliczka 8.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Kostnica 12.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Pod Rogatym 3.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Skład Drewna 10.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Stary magazyn zbożowy 6.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Targ Rybny 1.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Kowalski 9.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Kołodzieja.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Warsztat Mechaniczny 11.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Wędzarnio-suszarnia 8.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Gęsty Las.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Polana.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Losowe\\Las\\Ścieżka wśród krzaków.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Kluczowe\\Kościół.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Kluczowe\\Przerażony Wikariusz.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Kluczowe\\Przybrzeżna rampa załadunkowa 7.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Kluczowe\\Skraj Lasu.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Kluczowe\\Zachrystia.card",
+      "version": "2.0"
+    },
+    {
+      "filename": "Karty Lokacji\\scenariusz 1\\Kluczowe\\Środek wioski.card",
+      "version": "2.0"
+    }
+  ],
+  "encounter_sets": []
+}
