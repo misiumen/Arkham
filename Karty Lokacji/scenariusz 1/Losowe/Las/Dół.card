@@ -15,8 +15,8 @@
     "encounter_group": "i",
     "encounter_group_number": "Leśne zakamarki",
     "illustrator": "Gemini",
-    "body": "<obj> - Jeśli badacze wydadzą jako grupa 4<调查员> wskazówek: (→R3)\n\n<rev> Każdy badacz w sąsiadującej z Dołem lokalizacji musi wybrać:\n\n<bul> Otrzymaj 2 punkty przerażenia.\n\n<bul> 【Rezygnacja】\n\n<bul> Połóż na tej lokalizacji 2 żetony zagłady.\n\n<bul> Przeszukaj swoją talię i stos kart odrzuconych w poszukiwaniu dowolnej karty Słabości. Umieść ją w swoim obszarze zagrożeń, a następnie przetasuj talie.\n\nBadacze jako grupa mogą odrzucić 3<调查员> wskazówek. Jeśli to zrobią, dodaj do dziennika kampanii \"Badacze zapewnili ofiarom pochówek.\".\n\nNie możesz przejść do sąsiadującej z Dołem, nieodkrytej lokalizacji.\n\n",
-    "flavor": "\"Wokół ognia widać ludzkie kości, jednak ciepło tego płomienia daje nadzieję.\"",
+    "body": "<rev> Każdy badacz w sąsiadującej z Dołem lokalizacji musi wybrać:\n\n<bul> Otrzymaj 2 punkty przerażenia.\n\n<bul> 【Rezygnacja】\n\n<bul> Połóż na tej lokalizacji 2 żetony zagłady.\n\n<bul> Przeszukaj swoją talię i stos kart odrzuconych w poszukiwaniu dowolnej karty Słabości. Umieść ją w swoim obszarze zagrożeń, a następnie przetasuj talie.\n\nBadacze jako grupa mogą odrzucić 2<调查员> wskazówek. Jeśli to zrobią, dodaj do dziennika kampanii \"Badacze zapewnili ofiarom pochówek.\".\n\nNie możesz przejść do sąsiadującej z Dołem, nieodkrytej lokalizacji.\n\n",
+    "flavor": "\"Dół pełen jest zmasakrowanych ciał. To się dzieje, jeśli nie chcesz być częścią kultu.\"",
     "shroud": "2",
     "clues": "1<调查员>",
     "traits": [
@@ -46,7 +46,7 @@
     "version": "v2",
     "script_id": "729BE8A9"
   },
-  "content_hash": "8fd3dd80209243b8fa2cdeb8dd85cd570a5dd26aa92ef22719d3977bd84c8214",
+  "content_hash": "1bde061c36998943ddb1a4ad2d0ac838bb4dd10a2c85c1135e4cd45bf77be440",
   "illustrator": "Gemini",
   "encounter_group_number": "Miejsca zwyczajne",
   "encounter_group": "i",
