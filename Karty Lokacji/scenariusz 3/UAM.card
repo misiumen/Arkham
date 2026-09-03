@@ -41,7 +41,7 @@
     "traits": [
       "Spaczona"
     ],
-    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n➡️ Przekonaj wykładowców. Wykonaj test 📚 (3), aby zamienić 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n"
+    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n<act> Przekonaj wykładowców. Wykonaj test <int> (3), aby zamienić 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n"
   },
   "tts_config": {
     "version": "v2",

@@ -1,0 +1,25 @@
+{
+  "type": "冒险参考卡",
+  "name": "Wioska wśród drzew",
+  "id": "",
+  "created_at": "",
+  "version": "2.0",
+  "language": "pl",
+  "deck_options": [],
+  "back": {
+    "type": "冒险参考卡",
+    "language": "pl"
+  },
+  "tts_config": {
+    "version": "v2",
+    "script_id": "8E138D76"
+  },
+  "content_hash": "6eee4a747ae4f0e8a90497b2d33f875782a63443d1e94fa9b35b015de37df2a1",
+  "scenario_type": 0,
+  "scenario_card": {
+    "skull": "-X. X jest liczbą przeciwników z cechą humanoid w grze.",
+    "cultist": "-2. Jeśli test się nie powiedzie, rozstaw Przekonanego wyznawcę w sąsiadującej lokalizacji.",
+    "elder_thing": "",
+    "tablet": "-X. X jest liczbą odłożonych na bok kart z cechą Zwycięstwo 0."
+  }
+}

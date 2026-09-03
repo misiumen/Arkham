@@ -37,7 +37,7 @@
     "location_icon": "粉桃",
     "encounter_group": "f",
     "victory": null,
-    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n<for> Jeżeli poruszasz się na lub wychodzisz z tej lokalizacji: Wykonaj test 🦶 (3). Jeśli test zakończy się porażką nie możesz opuścić tej lokalizacji – pnącza Cię trzymają.\n➡️ Karczuj: Wykonaj test 👊 (3), aby zamienić 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.",
+    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n<for> Jeżeli poruszasz się na lub wychodzisz z tej lokalizacji: Wykonaj test <agi> (3). Jeśli test zakończy się porażką nie możesz opuścić tej lokalizacji – pnącza Cię trzymają.\n<act> Karczuj: Wykonaj test <com> (3), aby zamienić 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.",
     "traits": [
       "Spaczona"
     ]

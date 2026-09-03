@@ -15,7 +15,7 @@
     "location_link": [
       "紫月"
     ],
-    "body": "<act> Wyważ drzwi  <com>(4). Jeśli test zakończy się sukcesem, dobierz atut Skrzynia Dynamitu (z poza gry).\n<for> Jeśli 【Tkanka】 jest obecna: Lokacja jest 【Zablokowana】. Badacze nie mogą opuścić tej lokacji, dopóki dołączona karta Tkanki nie zostanie odrzucona.",
+    "body": "<act> Wyważ drzwi <com>(4). Jeśli test zakończy się sukcesem, dobierz atut Skrzynia Dynamitu (z poza gry).\n<for> Jeśli <t>Tkanka</t> jest obecna: Lokacja jest 【Zablokowana】. Badacze nie mogą opuścić tej lokacji, dopóki dołączona karta Tkanki nie zostanie odrzucona.",
     "clues": "2<调查员>",
     "shroud": "5",
     "traits": [

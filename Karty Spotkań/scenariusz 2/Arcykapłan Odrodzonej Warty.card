@@ -11,7 +11,7 @@
     "type": "遭遇卡背"
   },
   "flavor": "Rzeka go słucha. Nie uderza z furią, lecz z nieustępliwą siłą nurtu. Wie, że wasz statek nie wytrzyma długo, a każda chwila zwłoki działa na jego korzyść.",
-  "body": "<for> Arcykapłan Odrodzonej Warty otrzymuje +1 do 👊 i +1 do 🦶 za każdą kartę Bariery pozostającą w grze. \n<for> Na koniec fazy wrogów: Jeśli Arcykapłan Odrodzonej Warty znajduje się w tej samej lokalizacji co atut Barka \"Jadwiga\", wykonuje atak przeciwko temu atutowi (zamiast przeciwko badaczowi). Ten atak zadaje zawsze dokładnie 2 obrażenia.",
+  "body": "<for> Arcykapłan Odrodzonej Warty otrzymuje +1 do <com> i +1 do <agi> za każdą kartę Bariery pozostającą w grze.\n<for> Na koniec fazy wrogów: Jeśli Arcykapłan Odrodzonej Warty znajduje się w tej samej lokalizacji co atut Barka \"Jadwiga\", wykonuje atak przeciwko temu atutowi (zamiast przeciwko badaczowi). Ten atak zadaje zawsze dokładnie 2 obrażenia.",
   "attack": "3",
   "enemy_health": "3<调查员>",
   "evade": "3",

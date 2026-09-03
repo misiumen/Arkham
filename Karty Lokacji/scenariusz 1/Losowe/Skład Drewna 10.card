@@ -37,11 +37,14 @@
       "橙心",
       "青花"
     ],
-    "body": "Jeśli na tej lokalizacji nie ma żadnej wskazówki, Nie-【Elitarni】 wrogowie, nie mogą poruszać się do tej lokalizacji ani być w niej rozstawiani. Za każdym razem, kiedy wróg miałby zostać rozstawiony w tej lokalizacji, zamiast tego rozstaw go w połączonej lokalizacji, jeśli to możliwe.",
+    "body": "Jeśli na tej lokalizacji nie ma żadnej wskazówki, wrogowie bez cechy <t>Elitarny</t> nie mogą poruszać się do tej lokalizacji ani być w niej rozstawiani. Za każdym razem, kiedy wróg miałby zostać rozstawiony w tej lokalizacji, zamiast tego rozstaw go w połączonej lokalizacji, jeśli to możliwe.",
     "encounter_group": "e",
     "illustrator": "Gemini",
     "encounter_group_number": "Miejsca zwyczajne",
-    "card_number": "6"
+    "card_number": "6",
+    "traits": [
+      "Natura"
+    ]
   },
   "shroud": "?",
   "clues": "?",
@@ -75,7 +78,7 @@
     "version": "v2",
     "script_id": "DD404073"
   },
-  "content_hash": "15a72f64608466e711f3aa3c37b404675152016b11e6dc4c81e3927ebcdddf9c",
+  "content_hash": "775de9362527ecbaaab22e4c19427f4e693abb484992800079168a26e3458e19",
   "illustrator": "Gemini",
   "encounter_group_number": "Miejsca zwyczajne",
   "card_number": "6"

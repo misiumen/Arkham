@@ -38,7 +38,7 @@
     "location_icon": "红十",
     "encounter_group": "f",
     "victory": null,
-    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n➡️ Przekonaj duchownych. Wykonaj test 🧠 (2), aby zamienić 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.\n<for> Kiedy twój test na Ostrowie Tumskim zakończy się porażką: otrzymujesz 1 przerażenie.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n",
+    "body": "<for> Zamień wszystkie żetony wskazówek znajdujące się w tej lokalizacji na żetony zagłady.\n<act> Przekonaj duchownych. Wykonaj test <wil> (2), aby zamienić 1 żeton zagłady w tej lokalizacji na 1 żeton wskazówki.\n<for> Kiedy twój test na Ostrowie Tumskim zakończy się porażką: otrzymujesz 1 przerażenie.\n<for> Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę.\n",
     "traits": [
       "Spaczona"
     ]

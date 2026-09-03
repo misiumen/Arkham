@@ -35,7 +35,7 @@
     "location_link": [
       "橙心"
     ],
-    "body": "Badacze w tej lokacji nie dobierają kart ani nie otrzymują zasobów podczas fazy utrzymania.\n<for> Na koniec tury, każdy badacz w lokalizacji Linia Rozlewnicza otrzymuje 1 obrażenie.\n<obj> ➡️: Jeśli na Lini Rozlewniczej nie ma żetonów wskazówek, zatrzymaj linię. Dobierz kartę z talii spotkań: zapamiętaj, że „zatrzymaliście produkcje\"\n",
+    "body": "Badacze w tej lokacji nie dobierają kart ani nie otrzymują zasobów podczas fazy utrzymania.\n<for> Na koniec tury, każdy badacz w lokalizacji Linia Rozlewnicza otrzymuje 1 obrażenie.\n<obj> <act>: Jeśli na Lini Rozlewniczej nie ma żetonów wskazówek, zatrzymaj linię. Dobierz kartę z talii spotkań: zapamiętaj, że „zatrzymaliście produkcje\"\n",
     "encounter_group": "f",
     "victory": 1,
     "flavor": "Butelki drżą na taśmie, jakby ich zawartość za wszelką cenę próbowała wydostać się na zewnątrz"

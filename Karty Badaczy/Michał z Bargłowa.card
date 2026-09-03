@@ -13,7 +13,7 @@
       "story": "Michał przez lata pracował na zapleczu taniej knajpy z pho, w miejscu tak wilgotnym, że nawet pleśń miała tam pleśń. Każdego dnia mieszał gigantyczny gar sosu rybnego, który bulgotał jakby w środku coś żyło — a czasem naprawdę wyglądało, jakby próbowało uciec. W powietrzu wisiał zapach tak potężny, że lokalne szczury omijały kuchnię szerokim łukiem, a dostawcy towaru celowo zostawiali paczki pod drzwiami i uciekali bez pokwitowania. Michał nabrał odporności na zapachy, bodźce i większość znanych postaci grozy. Widział za dużo. I wie o kuchni więcej, niż chciałby przyznać. Jednej nocy odkrył, że właściciel zamierza „użyć” pewnego zabiedzonego psa w nowej „specjalnej zupie dnia”. Michał, kierowany odruchem serca (i lekko podchmielony alkoholem ryżowym, który potem regularnie mu podkradał), ukradł psa i uciekł tylnym wyjściem. Tak poznał Gomeza — jedyną istotę, która wytrzymała zapach jego marynaty i która od tamtej pory towarzyszy mu w każdej katastrofie.\n\nTeraz, gdy Arkham tonie w koszmarach, Michał jest spokojny. W końcu widział rzeczy gorsze — na przykład poniedziałkową dostawę kalmarów.",
       "size": 30,
       "option": "karty Mistyka (<mys>) o poziomie 0-5, karty neutralne o poziomie 0-5.",
-      "requirement": "Toksyczny Gomez,  Bánh Mì z ziemi, 1 losowe podstawowe osłabienie",
+      "requirement": "Toksyczny Gomez, Bánh Mì z ziemi, 1 losowe podstawowe osłabienie",
       "other": "{{Dodatkowe przygotowanie:}} rozpoczynasz grę z Toksycznym Gomezem w swoim obszarze zagrożenia."
     },
     "class": "潜修者",
@@ -47,7 +47,7 @@
   "footer_copyright": "© 2025 Wrocław Edition",
   "card_number": "1",
   "illustrator": "",
-  "body": "Rozpoczynasz grę z Toksycznym Gomezem w grze. \n<fre> Gdy wykonujesz test, otrzymujesz +X do tego testu, gdzie X to liczba kart w twoim obszarze zagrożeń. (Limit raz na fazę).\nEfekt <eld>: +1. Możesz odrzucić dowolne osłabienie. Następnie dobierz 1 kartę.",
+  "body": "Rozpoczynasz grę z Toksycznym Gomezem w grze.\n<fre> Gdy wykonujesz test, otrzymujesz +X do tego testu, gdzie X to liczba kart w twoim obszarze zagrożeń. (Limit raz na fazę).\nEfekt <eld>: +1. Możesz odrzucić dowolne osłabienie. Następnie dobierz 1 kartę.",
   "picture_layout": {
     "mode": "auto",
     "offset": {

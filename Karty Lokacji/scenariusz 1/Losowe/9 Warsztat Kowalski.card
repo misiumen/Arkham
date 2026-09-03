@@ -32,9 +32,9 @@
       "flip_vertical": false
     },
     "name": "Warsztat Kowalski",
-    "shroud": "?",
-    "clues": "?",
-    "body": "Każdy badacz, który przebywa na tej lokalizacji na początku Fazy Utrzymania dobiera w niej dodatkowy zasób.\n\n⚡Wykonaj test 👊(3); jeśli się powiedzie, zadaj 2 obrażenia wybranemu wrogowi na tej lokalizacji (limit raz na rundę).",
+    "shroud": "1",
+    "clues": "1<调查员>",
+    "body": "Każdy badacz, który przebywa na tej lokalizacji na początku Fazy Utrzymania dobiera w niej dodatkowy zasób.\n\n⚡Wykonaj test <com>(3); jeśli się powiedzie, zadaj 2 obrażenia wybranemu wrogowi na tej lokalizacji (limit raz na rundę).",
     "flavor": "\"Kiedyś bito tu podkowy dla koni. Teraz bije się podkowy dla...kóz?\"",
     "encounter_group": "e"
   },
@@ -71,7 +71,7 @@
     "version": "v2",
     "script_id": "A8EF41E4"
   },
-  "content_hash": "3961a8ca66772a71a84122bbaa0b2a1f242b4c1b0caa4ffba5ce0edf19c706af",
+  "content_hash": "bbd38f9cf4921dcf0e13a895be3b577068fb2b508840786c1f03e6819a758377",
   "encounter_group": "e",
   "flavor": "\"Kiedyś bito tu podkowy dla koni. Teraz bije się podkowy dla...kóz?\""
 }

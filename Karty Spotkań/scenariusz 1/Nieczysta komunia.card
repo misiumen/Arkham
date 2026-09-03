@@ -33,7 +33,7 @@
   "traits": [
     "Rytuał"
   ],
-  "body": "<rev> Jeśli na Twojej lub sąsiedniej lokalizacji znajduje się 【Ciekawski Wieśniak】, wtasuj go do talii i przeszukaj talię spotkań w poszukiwaniu karty 【Przekonany Wyznawca】. Połóż go w miejsce wtasowanej wcześniej karty.\n\nW przeciwnym wypadku każdy badacz na Twojej i sąsiedniej lokalizacji wykonuje Test 🧠(3). Jeśli test został zdany, leczy 1 punkt obrażeń, jeśli nie - otrzymuje 1 punkt przerażenia.",
+  "body": "<rev> Jeśli na Twojej lub sąsiedniej lokalizacji znajduje się Ciekawski Wieśniak, wtasuj go do talii i przeszukaj talię spotkań w poszukiwaniu karty Przekonany Wyznawca. Połóż go w miejsce wtasowanej wcześniej karty.\n\nW przeciwnym wypadku każdy badacz na Twojej i sąsiedniej lokalizacji wykonuje Test <wil>(3). Jeśli test został zdany, leczy 1 punkt obrażeń, jeśli nie - otrzymuje 1 punkt przerażenia.",
   "tts_config": {
     "version": "v2",
     "script_id": "D57AA707"

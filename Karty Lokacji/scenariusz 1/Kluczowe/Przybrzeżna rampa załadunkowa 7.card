@@ -11,8 +11,8 @@
     "type": "地点卡",
     "location_type": "已揭示",
     "name": "Przybrzeżna rampa załadunkowa",
-    "shroud": "?",
-    "clues": "?",
+    "shroud": "0",
+    "clues": "0",
     "illustrator": "Gemini",
     "encounter_group_number": "Wioska wśród drzew",
     "card_number": "2",
@@ -21,7 +21,10 @@
     "flavor": "\"Wartą spływa wiele rzeczy: towary, ludzie, topielcy. Na wszystkim można zrobić pieniądz.\"",
     "location_link": [],
     "victory": null,
-    "body": "➡️: 【Zrezygnuj.】 Możemy tędy uciec!"
+    "body": "<act>: 【Rezygnacja】. Możemy tędy uciec!",
+    "traits": [
+      "Natura"
+    ]
   },
   "location_type": "未揭示",
   "shroud": "?",
@@ -38,5 +41,5 @@
     "version": "v2",
     "script_id": "856CEC5E"
   },
-  "content_hash": "a7b9cd52665931caa63ae919962eb25338c84a0e6c14db0a0edafe8f90576e03"
+  "content_hash": "841f4728dd94fbd05e660d632a1e103ec80a30d09f129860460710f8e844a61e"
 }

@@ -34,7 +34,7 @@
   "enemy_health": "10<调查员>",
   "enemy_damage": 2,
   "enemy_damage_horror": 2,
-  "body": "Masywny. Powściągliwy.\n\nZa każdym razem, gdy na innej karcie z cechą 【Pomiot Kozicy】 zostaje położony żeton obrażeń, połóż żeton obrażeń na tej karcie.\n\n⭕Gdy jakikolwiek przeciwnik z cechą 【Pomiot Kozicy】 zadaje obrażenia badaczowi, użyj wartości z karty Awatar Shub-Niggurath (jeśli są większe).",
+  "body": "Masywny. Powściągliwy.\n\nZa każdym razem, gdy na innej karcie z cechą <t>Pomiot Kozicy</t> zostaje położony żeton obrażeń, połóż żeton obrażeń na tej karcie.\n\n<rea>Gdy jakikolwiek przeciwnik z cechą <t>Pomiot Kozicy</t> zadaje obrażenia badaczowi, użyj wartości z karty Awatar Shub-Niggurath (jeśli są większe).",
   "tts_config": {
     "version": "v2",
     "script_id": "D9BC2A52"

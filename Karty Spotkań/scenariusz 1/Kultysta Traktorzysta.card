@@ -31,7 +31,7 @@
   },
   "illustrator": "Gemini",
   "encounter_group_number": "Ciemne chaty, puste pola",
-  "card_number": " 5",
+  "card_number": "5",
   "attack": "4",
   "enemy_health": "5",
   "evade": "3",
@@ -41,12 +41,13 @@
     "version": "v2",
     "script_id": "53221910"
   },
-  "content_hash": "0d6505438c8f4dae53cd68db365598d7191c43f19a7ffd17df3acf478352c2bb",
+  "content_hash": "73a5f4267c1ef4cf03df0908efe9f4f8ea8f357737d18c0c9cd4fe013faaf76f",
   "class": "",
   "traits": [
     "Humanoid",
     "Kultysta",
     "Maszyna"
   ],
-  "subtitle": "Maszyna orania niewiernych"
+  "subtitle": "Maszyna orania niewiernych",
+  "body": "Łowca.\n\nJeśli Kultysta Traktorzysta rozstawi się na lokalizacji z badaczem, zadaj mu obrażenia rozpisane na karcie Kultysty Traktorzysty."
 }

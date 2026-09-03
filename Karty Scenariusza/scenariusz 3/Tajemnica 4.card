@@ -14,7 +14,7 @@
     "name": "Miasto pod presją",
     "encounter_group": "f",
     "flavor": "Kult przychodzi po was bez ostrzeżenia. W zaułkach i piwnicach Poznania ludzie znikają całymi grupami -- rozbierani na części, przerabiani na surowiec, wrzucani do kadzi razem z mlekiem, które bulgocze od czegoś, co nie powinno żyć.\n\nTłum nie stawia oporu. Jedni uciekają, inni pomagają, jeszcze inni patrzą, jakby to była kolejna noc w tym mieście. Gdy was znajdują, los jest już ustalony -- ciała trafiają tam, gdzie trafili pozostali, a wasze krzyki giną w zapachu kwaśnej śmietany i krwi.\n\nPoznań milknie. Kult wygrywa. Badacze giną w sposób, którego nikt nie opisze w gazetach.",
-    "body": " (→【Z3】)"
+    "body": "(→【Z3】)"
   },
   "is_back": false,
   "serial_number": "4",

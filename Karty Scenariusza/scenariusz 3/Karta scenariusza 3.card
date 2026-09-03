@@ -12,8 +12,8 @@
     "name": "Miasto nad Rzeką",
     "scenario_card": {
       "skull": "--3",
-      "cultist": "--X. X to liczba lokalizacji z cechą {Spaczona}. ",
-      "tablet": "--X. X to liczba lokalizacji z cechą {Spaczona}. ",
+      "cultist": "--X. X to liczba lokalizacji z cechą {Spaczona}.",
+      "tablet": "--X. X to liczba lokalizacji z cechą {Spaczona}.",
       "elder_thing": "--3 (zamiast tego --4, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})"
     },
     "encounter_group": "f",
@@ -27,8 +27,8 @@
   "scenario_type": 0,
   "encounter_group": "f",
   "scenario_card": {
-    "cultist": "--X. X to liczba lokalizacji z cechą {Spaczona}. ",
-    "tablet": "--X. X to liczba lokalizacji z cechą {Spaczona}. ",
+    "cultist": "--X. X to liczba lokalizacji z cechą {Spaczona}.",
+    "tablet": "--X. X to liczba lokalizacji z cechą {Spaczona}.",
     "skull": "--1",
     "elder_thing": "--1 (zamiast tego --3, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})"
   },

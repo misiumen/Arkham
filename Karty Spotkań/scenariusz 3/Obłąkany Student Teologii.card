@@ -34,7 +34,7 @@
   "enemy_health": "3",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<pre> Najmniejsza 📚.\n<spa> Ostrów Tumski\nPowściągliwy.\n<for> Na koniec fazy Mitów: Jeśli ten wróg jest w zwarciu z badaczem, połóż 1 żeton zagłady na aktualnej tajemnicy.\n",
+  "body": "<pre> Najmniejsza <int>.\n<spa> Ostrów Tumski\nPowściągliwy.\n<for> Na koniec fazy Mitów: Jeśli ten wróg jest w zwarciu z badaczem, połóż 1 żeton zagłady na aktualnej tajemnicy.\n",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"

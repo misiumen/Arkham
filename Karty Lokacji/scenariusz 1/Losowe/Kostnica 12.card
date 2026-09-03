@@ -25,7 +25,10 @@
       "青花"
     ],
     "victory": null,
-    "body": "Za każdym razem kiedy otrzymujesz w tej lokalizacji punkty przerażenia, otrzymujesz dodatkowy punkt przerażenia.\n\n⚡Jeśli w tej rundzie pokonałeś przeciwnika na tej lokalizacji, odkryj wskazówkę (limit raz na rundę)."
+    "body": "Za każdym razem kiedy otrzymujesz w tej lokalizacji punkty przerażenia, otrzymujesz dodatkowy punkt przerażenia.\n\n⚡Jeśli w tej rundzie pokonałeś przeciwnika na tej lokalizacji, odkryj wskazówkę (limit raz na rundę).",
+    "traits": [
+      "Miejsce Kultu"
+    ]
   },
   "location_type": "未揭示",
   "shroud": "?",
@@ -46,5 +49,5 @@
     "version": "v2",
     "script_id": "856CEC5E"
   },
-  "content_hash": "fb170684e33af9ace590cf0a2df1450c152d27fafc5168b285767ebeaf5bafc1"
+  "content_hash": "2bc0bec78f15b03aead20fc23f8ee28a43db0a63b5e00f53be98aabcd28ca5c9"
 }
