@@ -12,7 +12,7 @@
     "is_back": true,
     "encounter_group": "f",
     "flavor": "Butelki dzwoniły o siebie w wesołym rytmie, który kontrastował z tym, co do nich wlewano. To nie było mleko. To była esencja życia, tak gęsta, że zdawała się pulsować własnym tętnem. A na etykietach widniał uśmiechnięty bobas i napis: 'Dla przyszłości Narodu'. Ktoś tutaj miał bardzo specyficzne poczucie humoru... albo w ogóle nie był człowiekiem.\nLinia staje, ale rury odpływowe pękają pod ciśnieniem. Widzicie, że główny rurociąg nie prowadzi do miasta, ale tłoczy „nadmiar” pod ziemię... w stronę starej Cytadeli i Fortów. Tam karmią coś znacznie większego.",
-    "serial_number": "2",
+    "serial_number": "4",
     "name": "Linia Życia, Linia Śmierci",
     "body": "Z wybranej lokalizacji usuń 1 żeton chaosu."
   },
@@ -20,9 +20,9 @@
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "4b5686a33f16d3dcd0329d767b8f63d90a9b07aee35006f74b8f3cd7da50e540",
+  "content_hash": "86daef6e2666b59bd8f31de3d604d9726a240c38d05f7a75b9c23ec197c28f41",
   "flavor": "Na Rynku Jeżyckim trwa promocja – darmowe mleko dla każdego dziecka. Ludzie piją chciwie. Musicie wedrzeć się do Mleczarni. W środku, na Linii Rozlewniczej, zamiast krów podłączone są bezkształtne, pulsujące masy tkanki, które przywieziono z barki i wyhodowano w kadziach Cegielskiego.",
-  "serial_number": "3",
+  "serial_number": "4",
   "encounter_group": "f",
   "use_external_image": 0,
   "external_image": "",
@@ -46,6 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii.",
+  "body": "<obj> Usuń wszystkie wskazówki i żetony spaczenia z lokalizacji Mleczarnia, aby spowodować postęp talii.",
   "card_number": "5"
 }

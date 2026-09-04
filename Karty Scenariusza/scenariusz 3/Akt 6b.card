@@ -12,7 +12,7 @@
     "is_back": true,
     "encounter_group": "f",
     "flavor": "Cielsko Czarnej Kozy pada na posadzkę z łoskotem, od którego pękają resztki witraży w Katedrze. Bestia wije się w agonii, ale nie wydaje z siebie dźwięku bólu. To... śmiech. Niski, wibrujący rechot, który wchodzi wam w kości.\n\nJej ciało nie zastyga. Rozpuszcza się w gęstą, mleczno-krwawą plazmę, która błyskawicznie wsiąka w szczeliny prastarej posadzki Ostrowa Tumskiego. Ziemia zaczyna pulsować. To nie trzęsienie ziemi – to bicie gigantycznego serca.\nKamienne filary Katedry zaczynają puszczać korzenie i zmieniać się w skamieniałe drzewa. Złota Kaplica zapada się, odsłaniając niebo, które nie jest już niebem nad Poznaniem. Jest fioletowe, duszne i pełne wirujących kształtów.\nArcybiskup Dalbor (jeśli żyje) upuszcza krucyfiks, patrząc w górę z obłędem w oczach: \"To nie był potwór... To był tylko klucz. Otworzyliście drzwi do Jej Lasu\".",
-    "serial_number": "2",
+    "serial_number": "6a",
     "name": "Excathedra",
     "body": "Zapisz w Dzienniku Kampanii: \"Badacze uśmiercili Awatara, karmiąc ziemię jego krwią\". Każdy badacz otrzymuje 1 punkt Fizycznej Traumy (ziemia pod wami się zapada). Przejdźcie do Finału 【Z1】: \"Łono Tysiąca Młodych\"."
   },
@@ -20,9 +20,9 @@
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "7711c4dfc0db30aaca40b7cbc2a14df22a163607b6d67d585e477007d761a4c1",
-  "flavor": "Arcybiskup Dalbor barykaduje się w Katedrze, próbując odprawić egzorcyzmy nad całym miastem. Ale zło nie przychodzi z zewnątrz – ono wychodzi z fundamentów, z najświętszego miejsca. Awatar Shub-Niggurath rodzi się w kryptach pierwszych władców Polski.",
-  "serial_number": "3",
+  "content_hash": "2dcd26a890f24b6146eae9e023c1bcbd40c49ac4b6678c176381da2f1059ede8",
+  "flavor": "Rytuał osiągnął swój punkt kulminacyjny. Posadzka katedry pęka, a z głębin wyłania się monumentalny, ociekający mazią kształt. To ona – Czarna Koza z Ostrowa, gotowa pochłonąć całe miasto.",
+  "serial_number": "6a",
   "encounter_group": "f",
   "use_external_image": 0,
   "external_image": "",
@@ -46,6 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Pokonaj \"Czarną Kozę z Ostrowa\" zanim Agenda dojdzie do końca (co oznacza wchłonięcie Poznania przez Las).\nMożesz poświęcić sojusznika (np. Kleszcza), aby usunąć 3 żetony zagłady (Heroiczna ofiara).",
+  "body": "<obj> Pokonaj \"Czarną Kozę z Ostrowa\" zanim Agenda dojdzie do końca.\nMożesz poświęcić sojusznika (np. Kleszcza), aby usunąć 3 żetony zagłady (Heroiczna ofiara).",
   "card_number": "7"
 }

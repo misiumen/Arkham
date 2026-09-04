@@ -1,6 +1,6 @@
 {
   "type": "场景卡",
-  "name": "W Bebechach Miasta",
+  "name": "Excathedra",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -11,18 +11,18 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "flavor": "Wychodzicie na powierzchnię wprost w mroczne serce Katedry. Rytuał dawno się zaczął, a posadzka pęka pod naporem nienarodzonego koszmaru. Wśród spaczonych zgliszcz stoi Dalbor – jego ciało drży, a wzrok zachodzi bielmem. Ostatkiem nadludzkiej woli blokuje on przejście, stawiając opór potwornej sile napierającej z głębin.",
-    "serial_number": "5",
-    "name": "W Bebechach Miasta",
-    "body": "Z wybranej lokalizacji usuń 2 żetony zagłady.\nWybrany badacz otrzymuje sojusznika Edmund Dalbor.\nW lokalizacji Ostrów Tumski umieść w grze wroga Czarna Koza. Wróg ten wchodzi do gry wyczerpany."
+    "flavor": "Cielsko Czarnej Kozy pada na posadzkę z łoskotem, od którego pękają resztki witraży w Katedrze. Bestia wije się w agonii, ale nie wydaje z siebie dźwięku bólu. To... śmiech. Niski, wibrujący rechot, który wchodzi wam w kości.\n\nJej ciało nie zastyga. Rozpuszcza się w gęstą, mleczno-krwawą plazmę, która błyskawicznie wsiąka w szczeliny prastarej posadzki Ostrowa Tumskiego. Ziemia zaczyna pulsować. To nie trzęsienie ziemi – to bicie gigantycznego serca.\nKamienne filary Katedry zaczynają puszczać korzenie i zmieniać się w skamieniałe drzewa. Złota Kaplica zapada się, odsłaniając niebo, które nie jest już niebem nad Poznaniem. Jest fioletowe, duszne i pełne wirujących kształtów.\nArcybiskup Dalbor (jeśli żyje) upuszcza krucyfiks, patrząc w górę z obłędem w oczach: \"To nie diabeł.. To był tylko klucz. Otworzyliście drzwi do Jej Lasu\".",
+    "serial_number": "6a",
+    "name": "Excathedra",
+    "body": "Zapisz w Dzienniku Kampanii: \"Badacze uśmiercili Awatara, karmiąc ziemię jego krwią\". Każdy badacz otrzymuje 1 punkt Fizycznej Traumy (ziemia pod wami się zapada). Przejdźcie do Finału 【Z1】: \"Łono Tysiąca Młodych\"."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "cd6b58523f5676ed6bfbf10e3e71e4931b04b115089f0a2de0e3f6519263f548",
-  "flavor": "Pruskie fortyfikacje Cytadeli zostały przejęte przez bolszewickich niedobitków. Zmienili tunele w gniazdo. To tutaj „Mleko” spływa, by karmić armię ludzi... ale czy to nadal ludzie? Musicie znaleźć źródło, z którego płynie zepsucie.",
-  "serial_number": "5",
+  "content_hash": "67111a4c5ae7c0cd9e7f754bb0245c8be107a6e0c30af11e6c7e27e6b40532e7",
+  "flavor": "Rytuał osiągnął swój punkt kulminacyjny. Posadzka katedry pęka, a z głębin wyłania się monumentalny, ociekający mazią kształt. To ona – Czarna Koza z Ostrowa, gotowa pochłonąć całe miasto.",
+  "serial_number": "6a",
   "encounter_group": "f",
   "use_external_image": 0,
   "external_image": "",
@@ -30,7 +30,7 @@
   "picture_layout": {
     "mode": "custom",
     "offset": {
-      "x": 150,
+      "x": 430,
       "y": 10
     },
     "scale": 0.75,
@@ -46,6 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Tunele Forteczne, aby spowodować postęp talii.\nLokalizacja Tunele Forteczne jest dostępna.",
-  "card_number": "6"
+  "body": "<obj> Pokonaj Czarną Kozę.\nMożesz poświęcić sojusznika (np. Kleszcza), aby usunąć 3 żetony zagłady (Heroiczna ofiara).",
+  "card_number": "7"
 }
