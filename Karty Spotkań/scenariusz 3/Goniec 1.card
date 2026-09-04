@@ -39,13 +39,13 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "adfd0314608f14cc75998cfb72a8f81847de2a98514982a9a05d719ce3bcc4ec",
+  "content_hash": "b2f04cd14572f784348bb988e123d508f0c66571f405e0b6756bbd20af817280",
   "enemy_damage": 1,
   "traits": [
     "Humanoid",
     "Dostawca",
     "Kultysta"
   ],
-  "quantity": 2,
+  "quantity": 1,
   "card_number": "32"
 }
