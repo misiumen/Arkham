@@ -30,8 +30,8 @@
       "flip_vertical": false
     },
     "name": "Skład Drewna",
-    "shroud": "?",
-    "clues": "?",
+    "shroud": "3",
+    "clues": "4",
     "location_link": [
       "深蓝T",
       "橙心",
@@ -40,8 +40,8 @@
     "body": "Jeśli na tej lokalizacji nie ma żadnej wskazówki, wrogowie bez cechy <t>Elitarny</t> nie mogą poruszać się do tej lokalizacji ani być w niej rozstawiani. Za każdym razem, kiedy wróg miałby zostać rozstawiony w tej lokalizacji, zamiast tego rozstaw go w połączonej lokalizacji, jeśli to możliwe.",
     "encounter_group": "e",
     "illustrator": "Gemini",
-    "encounter_group_number": "Miejsca zwyczajne",
-    "card_number": "6",
+    "encounter_group_number": "Zwyczajne miejsca",
+    "card_number": "5",
     "traits": [
       "Natura"
     ]
@@ -78,8 +78,8 @@
     "version": "v2",
     "script_id": "DD404073"
   },
-  "content_hash": "775de9362527ecbaaab22e4c19427f4e693abb484992800079168a26e3458e19",
+  "content_hash": "8ec2fea1e6dfd5b560e24668fe5014295e9b3b683ccf805397911bfb8149e989",
   "illustrator": "Gemini",
-  "encounter_group_number": "Miejsca zwyczajne",
-  "card_number": "6"
+  "encounter_group_number": "Zwyczajne miejsca",
+  "card_number": "5"
 }

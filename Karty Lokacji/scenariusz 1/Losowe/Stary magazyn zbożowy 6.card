@@ -30,8 +30,8 @@
       "flip_vertical": false
     },
     "name": "Stary magazyn zbożowy",
-    "shroud": "?",
-    "clues": "?",
+    "shroud": "2",
+    "clues": "2",
     "location_link": [
       "深蓝T",
       "橙心",
@@ -40,7 +40,7 @@
     "body": "<rev> dołóż jeden żeton klątwy do worka chaosu.\n<for> za każdym razem, kiedy wyciągasz żeton klątwy przy badaniu tej lokacji, otrzymujesz 1 punkt przerażenia. Odłóż ten żeton z powrotem do worka chaosu.",
     "encounter_group": "e",
     "illustrator": "Gemini",
-    "encounter_group_number": "Miejsca zwyczajne",
+    "encounter_group_number": "Zwyczajne miejsca",
     "card_number": "6"
   },
   "shroud": "?",
@@ -75,8 +75,8 @@
     "version": "v2",
     "script_id": "DD404073"
   },
-  "content_hash": "db61b4598b9fdf6995022ce8c8031c9a1b1965b805562c12fa0072b102382fc3",
+  "content_hash": "499e0df8aff488eacf31595e885160a03bfd6bdee7ae5cbb3be698db803a02c8",
   "illustrator": "Gemini",
-  "encounter_group_number": "Miejsca zwyczajne",
+  "encounter_group_number": "Zwyczajne miejsca",
   "card_number": "6"
 }

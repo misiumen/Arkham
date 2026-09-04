@@ -15,7 +15,7 @@
     "version": "v2",
     "script_id": "F213A160"
   },
-  "content_hash": "4fd64469701fc44f73915f0e6e2a16837b678eca9c1eab22e594fdb2f32abd41",
+  "content_hash": "3e5769217dd51928b600cf3a795417ff06fee52ce21a090f5325403d05dd1109",
   "traits": [
     "Rytuał"
   ],
@@ -25,5 +25,6 @@
   "flavor": "Jeśli te istoty z maskami kozy wybiorą Ciebie do chrztu, lepiej daj z siebie wszystko, by do tego chrztu nie doszło. Chyba nie chcesz chrzcić razem z nimi?",
   "illustrator": "Gemini",
   "encounter_group_number": "Mroczne sprawki",
-  "card_number": "2"
+  "card_number": "2",
+  "quantity": 2
 }

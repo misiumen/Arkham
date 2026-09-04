@@ -39,8 +39,9 @@
     "version": "v2",
     "script_id": "93AAD643"
   },
-  "content_hash": "283fe1fa9a4d681d2774cc9f5a4e1a16cbdf563d1b0e8c59f8476419b266b351",
+  "content_hash": "98e899f408cc7b9eca8560512cb2f0997c0fa3d0720bab8049209c1f75a989fc",
   "illustrator": "Gemini",
   "encounter_group_number": "Mroczne sprawki",
-  "card_number": "4"
+  "card_number": "4",
+  "quantity": 2
 }

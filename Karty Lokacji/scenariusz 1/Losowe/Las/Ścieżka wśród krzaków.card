@@ -36,7 +36,9 @@
     "flavor": "\"Ewidentnie przechodziło tędy wiele istot. Podążanie za tropem nie będzie trudne.\"",
     "traits": [
       "Natura"
-    ]
+    ],
+    "encounter_group_number": "Leśne zakamarki",
+    "card_number": "9"
   },
   "location_type": "未揭示",
   "encounter_group": "i",
@@ -62,10 +64,12 @@
     "version": "v2",
     "script_id": "25E0C0B7"
   },
-  "content_hash": "6f144e46e9de772e91c413c50c9a4b504d684c7eb7b31571aaa06b6ebf19549d",
+  "content_hash": "a22a8425c426972119de3dadf63a960d0736dbc9b01064a6318366e0ca239789",
   "body": "",
   "flavor": "\"Wszystko wygląda tu tak samo. Z oddali słychać jednak bicie bębnów.\"",
   "traits": [
     "Natura"
-  ]
+  ],
+  "encounter_group_number": "Leśne zakamarki",
+  "card_number": "9"
 }

@@ -38,7 +38,7 @@
     "version": "v2",
     "script_id": "509F5ABC"
   },
-  "content_hash": "487057566f0555d86cd72744fa76c37b41663f5bd7dd5a829a4552eafea33dd0",
+  "content_hash": "d86224a520c1c1ff057a893b0f2dfe9079c346eccb7ea44e643d3d443b851bac",
   "encounter_group": "b",
   "attack": "3",
   "evade": "3",
@@ -49,5 +49,6 @@
   "illustrator": "Gemini",
   "body": "Za każdym razem, kiedy zadajesz Ojcu Żerdź jeden lub więcej punktów obrażeń, usuń z gry najbliższego Ciekawskiego Wieśniaka i w jego miejsce połóż odłożonego na bok Przekonanego Wyznawcę.\n<for>Po tym jak Ojciec Żerdź cię zaatakuje: odrzuć losową kartę z ręki.",
   "victory": 1,
-  "flavor": "Gdy Matka rodzi, ziemia drży.\nGdy Matka się złości - drżycie wy."
+  "flavor": "Gdy Matka rodzi, ziemia drży.\nGdy Matka się złości - drżycie wy.",
+  "enemy_damage": 1
 }

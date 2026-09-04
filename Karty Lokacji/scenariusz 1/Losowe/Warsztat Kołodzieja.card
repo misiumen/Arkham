@@ -15,8 +15,8 @@
     "flavor": "„Koło, które dobrze leży w dłoniach, będzie dobrze leżało na drodze.”",
     "body": "⚡Wydaj 2 zasoby aby wykonać dodatkową akcję (limit raz na fazę).",
     "name": "Warsztat Kołodzieja",
-    "shroud": "?",
-    "clues": "?",
+    "shroud": "1",
+    "clues": "2",
     "location_link": [
       "深蓝T",
       "橙心",
@@ -24,7 +24,7 @@
     ],
     "illustrator": "Gemini",
     "encounter_group_number": "Zwyczajne miejsca",
-    "card_number": "9"
+    "card_number": "8"
   },
   "location_type": "未揭示",
   "shroud": "?",
@@ -58,8 +58,8 @@
     "version": "v2",
     "script_id": "6B9BEFE0"
   },
-  "content_hash": "60068199da8d4512f3711a99092f5ccfb55df73c1cbebfa873ef8e0fdb9bd988",
+  "content_hash": "33fde954cedeae89546c005dd037d762a6564d1122f276b910c22ccff22cf93c",
   "illustrator": "Gemini",
   "encounter_group_number": "Zwyczajne miejsca",
-  "card_number": "9"
+  "card_number": "8"
 }

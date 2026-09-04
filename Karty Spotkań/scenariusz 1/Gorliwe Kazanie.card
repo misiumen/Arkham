@@ -38,9 +38,10 @@
     "version": "v2",
     "script_id": "38F44BC1"
   },
-  "content_hash": "3c3c164492849dfd8f08e3e11c8c3ecdb085e8495530f3a3799e866fedac25c8",
+  "content_hash": "125f3db4371a4d8baa5dd72fbb74a3af5ee4e647a462688d8ae8a71ab23c1079",
   "flavor": "\"Nawet tych najbardziej oczytanych da się przekonać. Mnie przekonają wszystkie twoje pieniądze...\"",
   "illustrator": "Gemini",
   "encounter_group_number": "Mroczne sprawki",
-  "card_number": "3"
+  "card_number": "3",
+  "quantity": 2
 }

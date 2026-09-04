@@ -38,9 +38,10 @@
     "version": "v2",
     "script_id": "D57AA707"
   },
-  "content_hash": "e009f1becd6a86c81186016d017501b1b613afa412e5277b744baabb8d8be919",
+  "content_hash": "33b7d684123c494dd86452f09f9c20d2827a5d220d95eb9cbfecacb20287eb73",
   "flavor": "Nikt nie pyta czy chcesz napić się tego mleka. MUSISZ to zrobić.",
   "illustrator": "Gemini",
   "encounter_group_number": "Mroczne sprawki",
-  "card_number": "1"
+  "card_number": "1",
+  "quantity": 2
 }
