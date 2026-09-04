@@ -20,7 +20,7 @@
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "67b77db980f5be607dd6ed977f95b5bb3a3f048e67af1e7bbcc4ad1352ea9435",
+  "content_hash": "f84bc952942c720619d27da74acdceaa769b95e157f6e514fe31b9534c6cdfdc",
   "flavor": "Ślad prowadzi na Uniwersytet. Biblioteka jest zamknięta, a w Ogrodzie Botanicznym (połączonym z Sołaczem) panuje nienaturalny rozkwit. Rośliny w środku zimy kwitną i... krwawią białym sokiem. Prof. Kleszcz nie jest szalonym kultystą – jest przerażonym naukowcem, który zrozumiał, co odkrył, i ukrył się w szklarni, by szukać antidotum.",
   "serial_number": "3",
   "encounter_group": "f",
@@ -46,6 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Mleczarnia, aby spowodować postęp talii.",
+  "body": "<obj> Usuń wszystkie wskazówki z lokalizacji Uniwesytet Adama Miskatonica, aby spowodować postęp talii.",
   "card_number": "4"
 }

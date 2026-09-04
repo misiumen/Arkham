@@ -20,7 +20,7 @@
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "d60a916994b835df7b779d7c3b40c74d9d1dd72f705942dce7909a143f7550e4",
+  "content_hash": "af8e4ead0939da430ef44c3d01403bff0d663df31d69303f4031aa546eabc324",
   "flavor": "Pruskie fortyfikacje Cytadeli zostały przejęte przez bolszewickich niedobitków. Zmienili tunele w gniazdo. To tutaj „Mleko” spływa, by karmić armię hybryd ludzi i kóz. Musicie przebić się przez tunele, by znaleźć wyjście na Ostrów Tumski – jedyne miejsce, gdzie można zamknąć portal.",
   "serial_number": "3",
   "encounter_group": "f",
@@ -46,6 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Dostań się do fortu na Cytadeli, aby spowodować postęp talii.",
+  "body": "<obj> Dostań się do fortu na Cytadeli, aby spowodować postęp talii.\nLokalizacja Tunele Forteczne jest dostępna.",
   "card_number": "6"
 }
