@@ -1,0 +1,588 @@
+<title>Playtest Czarnej Krwi Warty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #EDEBE3; --surface: #F7F6F0; --surface-2: #E2E0D5;
+  --line: #CBC8BB; --line-soft: #DEDCD1;
+  --ink: #191C16; --muted: #5A5F52; --accent: #3C5A43;
+  --bloker: #7B2B21; --blad: #8F550F; --spojnosc: #3C5A43; --ok: #43724E;
+  --bar-track: #DEDCD1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111309; --surface: #1A1D14; --surface-2: #23271B;
+    --line: #343829; --line-soft: #2A2E21;
+    --ink: #E8E7DC; --muted: #9CA192; --accent: #8FB593;
+    --bloker: #DC7A70; --blad: #DFA45B; --spojnosc: #8FB593; --ok: #8FC79A;
+    --bar-track: #2A2E21;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111309; --surface: #1A1D14; --surface-2: #23271B;
+  --line: #343829; --line-soft: #2A2E21;
+  --ink: #E8E7DC; --muted: #9CA192; --accent: #8FB593;
+  --bloker: #DC7A70; --blad: #DFA45B; --spojnosc: #8FB593; --ok: #8FC79A;
+  --bar-track: #2A2E21;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 28px 120px; }
+
+.masthead { padding: 56px 0 22px; border-bottom: 3px double var(--line); display: flex; flex-direction: column; gap: 12px; }
+.eyebrow { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: "Bodoni Moda", "Times New Roman", serif; font-weight: 700; font-size: clamp(34px, 6vw, 58px); line-height: 1.0; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+.subtitle { font-size: 20px; color: var(--muted); max-width: 62ch; margin: 0; font-style: italic; }
+.byline { display: flex; flex-wrap: wrap; gap: 6px 20px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 4px; }
+
+.verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; margin: 32px 0 0; }
+.verdict { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--v-color); padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; }
+.verdict h2 { font-family: "Bodoni Moda", "Times New Roman", serif; font-size: 23px; font-weight: 500; margin: 0; line-height: 1.15; }
+.verdict h2 span { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+.rate { display: flex; align-items: baseline; gap: 9px; }
+.rate b { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 40px; font-weight: 500; line-height: 1; color: var(--v-color); font-variant-numeric: tabular-nums; }
+.rate small { color: var(--muted); font-size: 13.5px; }
+.facts { border-top: 1px solid var(--line-soft); margin: 0; }
+.facts div { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--line-soft); font-size: 14.5px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; }
+.verdict p { margin: 0; font-size: 15px; }
+
+h2.section { font-family: "Bodoni Moda", "Times New Roman", serif; font-size: 30px; font-weight: 500; margin: 56px 0 6px; padding-bottom: 8px; border-bottom: 3px double var(--line); text-wrap: balance; }
+h3 { font-family: "Bodoni Moda", "Times New Roman", serif; font-size: 21px; font-weight: 500; margin: 32px 0 8px; }
+h4 { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 26px 0 8px; }
+p { margin: 0 0 15px; max-width: 68ch; }
+ul, ol { margin: 0 0 16px; padding-left: 22px; max-width: 70ch; }
+li { margin-bottom: 8px; }
+code, .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.84em; background: var(--surface-2); padding: 1px 5px; border-radius: 2px; }
+a { color: var(--accent); }
+
+.toolbar { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 0; margin: 36px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.toolbar .label { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.chip { appearance: none; font: inherit; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: 0.08em; cursor: pointer; background: transparent; color: var(--c, var(--muted)); border: 1px solid var(--c, var(--line)); padding: 4px 11px; transition: background 120ms ease; }
+.chip:hover { background: var(--surface-2); }
+.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chip[aria-pressed="true"] { background: var(--c); color: var(--surface); border-color: var(--c); }
+.chip-count { margin-left: auto; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.findings { display: flex; flex-direction: column; margin: 6px 0 8px; }
+.finding { display: grid; grid-template-columns: 108px 1fr; gap: 4px 18px; padding: 13px 0 13px 14px; border-bottom: 1px solid var(--line-soft); border-left: 3px solid var(--f-color); }
+.finding .sev { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; font-weight: 600; color: var(--f-color); padding-top: 3px; }
+.finding .where { grid-column: 2; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--muted); word-break: break-word; }
+.finding .what { grid-column: 2; margin: 0; font-size: 16px; max-width: 66ch; }
+.finding[hidden] { display: none; }
+
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); margin: 0 0 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 14px; border-bottom: 1px solid var(--line-soft); }
+th { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--surface-2); white-space: nowrap; }
+td.num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+
+.gauge { background: var(--surface); border: 1px solid var(--line); padding: 18px 20px; margin: 0 0 20px; display: flex; flex-direction: column; gap: 13px; }
+.gauge .cap { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
+.bar { display: grid; grid-template-columns: 210px 1fr 78px; gap: 12px; align-items: center; }
+.bar .name { font-size: 14.5px; }
+.bar .track { height: 15px; background: var(--bar-track); }
+.bar .fill { display: block; height: 100%; background: var(--b-color, var(--accent)); }
+.bar .val { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; color: var(--muted); }
+.note { font-size: 14.5px; color: var(--muted); max-width: 68ch; margin: 0; }
+
+.priority { counter-reset: pri; display: flex; flex-direction: column; margin: 8px 0 20px; }
+.pri { display: grid; grid-template-columns: 44px 1fr; gap: 4px 16px; padding: 15px 0; border-bottom: 1px solid var(--line-soft); }
+.pri::before { counter-increment: pri; content: counter(pri); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 22px; color: var(--accent); line-height: 1; padding-top: 3px; }
+.pri h5 { margin: 0; font-family: "Alegreya Sans", sans-serif; font-size: 17px; font-weight: 700; }
+.pri p { grid-column: 2; margin: 3px 0 0; font-size: 15.5px; }
+.pri .tag { grid-column: 2; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--muted); margin-top: 5px; }
+
+.callout { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 0 0 20px; }
+.callout.warn { border-left-color: var(--blad); }
+.callout p:last-child { margin-bottom: 0; }
+
+footer { margin-top: 64px; border-top: 3px double var(--line); padding-top: 20px; color: var(--muted); font-size: 14.5px; display: flex; flex-direction: column; gap: 10px; }
+footer p { max-width: 72ch; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print { .toolbar { display: none; } body { background: #fff; color: #000; font-size: 11pt; } .verdict, .tablewrap, .gauge, .callout { break-inside: avoid; } }
+@media (max-width: 620px) {
+  .finding { grid-template-columns: 1fr; }
+  .finding .sev, .finding .where, .finding .what { grid-column: 1; }
+  .bar { grid-template-columns: 1fr; }
+  .bar .val { text-align: left; }
+}
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Czarna Krew Warty · playtest kampanii</div>
+    <h1>Playtest Czarnej Krwi&nbsp;Warty</h1>
+    <p class="subtitle">Trzy scenariusze rozegrane pod rząd, z przenoszeniem doświadczenia i traum. Pierwsze dwa działają, scenariusz 2 po czterech turach strojenia. Trzeci nie ma jak się skończyć — i doświadczenie tego nie naprawi.</p>
+    <div class="byline">
+      <span>4 września 2026</span>
+      <span>4 badaczy · talie 0 XP z arkhamdb</span>
+      <span>worek Standard</span>
+      <span>400 pełnych kampanii + 700–1500 partii na scenariusz</span>
+      <span>bez zmian w kartach</span>
+    </div>
+  </header>
+
+  <section class="verdicts">
+    <article class="verdict" style="--v-color: var(--ok)">
+      <h2><span>Scenariusz 1</span>Wioska wśród drzew</h2>
+      <div class="rate"><b>75%</b><small>przy 0 XP · mediana 7 rund</small></div>
+      <dl class="facts">
+        <div><dt>W kampanii</dt><dd>77%</dd></div>
+        <div><dt>Główna porażka</dt><dd>wybicie grupy</dd></div>
+        <div><dt>Porażka przez zagładę</dt><dd>0%</dd></div>
+        <div><dt>Osiągnięta tajemnica</dt><dd>3 i 4: nigdy</dd></div>
+      </dl>
+      <p>Grywalny, ale <b>bez zegara</b>: 25 zagłady przy tempie 1 na rundę, gra trwa 7. Tajemnice 3 i 4 to martwa treść.</p>
+    </article>
+    <article class="verdict" style="--v-color: var(--ok)">
+      <h2><span>Scenariusz 2</span>Nurt Szaleństwa</h2>
+      <div class="rate"><b>45/44%</b><small>wariant A / B przy 0 XP</small></div>
+      <dl class="facts">
+        <div><dt>W kampanii (z XP)</dt><dd>A 55% · B 61%</dd></div>
+        <div><dt>Mediana rund</dt><dd>A 12 · B 8</dd></div>
+        <div><dt>XP ze scenariusza</dt><dd>A 8 · B 6</dd></div>
+        <div><dt>Ścieżka bojowa w B</dt><dd>64% zwycięstw</dd></div>
+      </dl>
+      <p>Najlepiej wystrojony z trójki. Warianty zrównane, a w B odpychanie Lewiatana jest teraz <b>realną alternatywą</b> dla grup bojowych.</p>
+    </article>
+    <article class="verdict" style="--v-color: var(--bloker)">
+      <h2><span>Scenariusz 3</span>Czarny Port</h2>
+      <div class="rate"><b>0%</b><small>mediana 11 rund</small></div>
+      <dl class="facts">
+        <div><dt>Przy 20 XP</dt><dd>nadal 5%</dd></div>
+        <div><dt>Główna porażka</dt><dd>zakleszczenie 74%</dd></div>
+        <div><dt>Osiągnięty akt</dt><dd>3 z 6</dd></div>
+        <div><dt>Goniec zrzuca zagłady</dt><dd>8 · próg 4</dd></div>
+      </dl>
+      <p>Spaczenie lokacji jest szybsze niż odzyskiwanie. Do tego <b>Czarna Koza z Ostrowa — cel Aktu 6 — nie istnieje jako karta</b>.</p>
+    </article>
+    <article class="verdict" style="--v-color: var(--blad)">
+      <h2><span>Kampania</span>Trzy scenariusze pod rząd</h2>
+      <div class="rate"><b>0,5–1,5%</b><small>3 zwycięstwa z 3</small></div>
+      <dl class="facts">
+        <div><dt>XP przed scen. 3</dt><dd>9,2–9,6</dd></div>
+        <div><dt>Maksimum z kart</dt><dd>18 XP</dd></div>
+        <div><dt>Norma FFG</dt><dd>15–25 XP</dd></div>
+        <div><dt>Traumy przed scen. 3</dt><dd>1,6–1,8 na badacza</dd></div>
+      </dl>
+      <p>Po dosypaniu doświadczenia w scenariuszu 2 kampania mieści się już w dolnej granicy normy FFG. Wąskim gardłem został wyłącznie <b>scenariusz 3</b>.</p>
+    </article>
+  </section>
+
+  <div class="callout warn" style="margin-top: 28px">
+    <p><b>Sprostowanie do poprzedniej wersji raportu.</b> Wcześniejsza wersja opierała teksty lokacji scenariusza 1 na odczycie sprzed waszych ostatnich zmian. Dwa znaleziska były nieaktualne i zostały usunięte: literówka <code>3B wskazówek</code> na Skraju Lasu (linia została skasowana) i brak karty <b>Czempion Koziegłowych</b> (Obóz na Mokradłach odsyła teraz do Przekonanego Wyznawcy i Koziego Pomiota). Doszła też zmiana na plus: <b>Posiadłość powoduje postęp talii aktów</b>, więc Akt 2 ma wreszcie mechanizm. Ten raport powstał na pełnym, świeżym odczycie wszystkich 89 kart trzech scenariuszy z 4 września.</p>
+  </div>
+
+  <div class="callout">
+    <p><b>Jak czytać te liczby.</b> Pochodzą z modelu, nie z prawdziwych partii. Talie graczy są sprowadzone do profili liczbowych, efekty spotkań do skrótów, a decyzje graczy do listy priorytetów. Traktujcie je jako rząd wielkości i kierunek. Znaleziska z sekcji „Kompletność" pochodzą wprost z kart i są od modelu niezależne.</p>
+  </div>
+
+  <!-- ======================= KAMPANIA I XP ======================= -->
+  <h2 class="section">Progresja doświadczenia</h2>
+
+  <p>Model rozgrywa scenariusze pod rząd i przenosi między nimi doświadczenie, traumy i wpisy w dzienniku kampanii. Doświadczenie liczone jest tak, jak mówią karty i Fabuła: punkty zwycięstwa z pól <code>victory</code> plus premie z rozwiązań.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Scenariusz</th><th>Punkty zwycięstwa na kartach</th><th>Premia za przetrwanie</th><th class="num">Maks XP</th><th class="num">Realnie (model)</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Wioska</td><td>3 — Nory, Obóz na mokradłach, Żyrij</td><td>+4 (zwycięstwo) / +2 (porażka)</td><td class="num">7</td><td class="num">4,3</td></tr>
+        <tr><td>2 · Nurt</td><td>6 — trzy Bariery, Zmutowany Kierownik, Arcykapłan</td><td>+2 (oraz +2 za Lewiatana w wariancie B)</td><td class="num">8</td><td class="num">+4,9 (A) / +4,4 (B)</td></tr>
+        <tr><td>3 · Port</td><td>3 — Biblioteka, Dyrekcja, Linia Rozlewnicza</td><td class="num">—</td><td class="num">3</td><td class="num">+0,4</td></tr>
+        <tr><td><b>Razem</b></td><td colspan="2"></td><td class="num"><b>18</b></td><td class="num"><b>9,4</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gauge">
+    <div class="cap">Doświadczenie badacza po trzech scenariuszach</div>
+    <div class="bar" style="--b-color: var(--muted)">
+      <span class="name">Norma oficjalnych kampanii FFG</span>
+      <span class="track"><span class="fill" style="width: 100%"></span></span>
+      <span class="val">15–25 XP</span>
+    </div>
+    <div class="bar" style="--b-color: var(--ok)">
+      <span class="name">Maksimum możliwe w tej kampanii</span>
+      <span class="track"><span class="fill" style="width: 72%"></span></span>
+      <span class="val">18 XP</span>
+    </div>
+    <div class="bar" style="--b-color: var(--blad)">
+      <span class="name">Realnie osiągane (400 kampanii)</span>
+      <span class="track"><span class="fill" style="width: 38%"></span></span>
+      <span class="val">9,4 XP</span>
+    </div>
+    <p class="note">Po zmianach w scenariuszu 2 (premia za ukończenie, punkty zwycięstwa na Kierowniku i Arcykapłanie) grupa wchodzi do scenariusza 3 z ~9,4 PD zamiast 6,3. Zostaje scenariusz 3: w 82% partii kończy się z zerowym dorobkiem, bo jego trzy punkty zwycięstwa leżą na lokacjach, do których grupa zwykle nie dociera.</p>
+  </div>
+
+  <h3>Ile doświadczenie faktycznie daje</h3>
+  <p>Ta tabela odpowiada na pytanie, czy scenariusze da się „przerosnąć" doświadczeniem. Każdy wiersz to 400 partii tą samą grupą z podbitymi statystykami.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th class="num">XP</th><th class="num">Scenariusz 1</th><th class="num">Scen. 2 wariant A</th><th class="num">Scen. 2 wariant B</th><th class="num">Scenariusz 3</th></tr></thead>
+      <tbody>
+        <tr><td class="num">0</td><td class="num">75,0%</td><td class="num">46,5%</td><td class="num">59,8%</td><td class="num">0,0%</td></tr>
+        <tr><td class="num">5</td><td class="num">80,5%</td><td class="num">64,2%</td><td class="num">75,2%</td><td class="num">0,0%</td></tr>
+        <tr><td class="num">10</td><td class="num">95,0%</td><td class="num">86,8%</td><td class="num">96,8%</td><td class="num">2,8%</td></tr>
+        <tr><td class="num">15</td><td class="num">99,8%</td><td class="num">87,8%</td><td class="num">97,5%</td><td class="num">5,0%</td></tr>
+        <tr><td class="num">20</td><td class="num">99,8%</td><td class="num">87,8%</td><td class="num">97,5%</td><td class="num">5,0%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Trzy wnioski. Po pierwsze, <b>scenariusze 1 i 2 reagują na doświadczenie bardzo mocno</b> — między 5 a 10 XP wariant A skacze o 22 punkty procentowe. Po drugie, <b>kampania nie dostarcza tego doświadczenia</b>: realny stan przed scenariuszem 2 to ~4 XP, przed trzecim ~6. Grupa siedzi dokładnie w najtrudniejszym paśmie. Po trzecie, <b>scenariusza 3 nie da się przerosnąć</b> — nawet przy 20 XP wygrywa 5% partii, bo blokada jest strukturalna, a nie siłowa.</p>
+
+  <h3>Wypłata wariantów w scenariuszu 2 — wyrównana</h3>
+  <p>Przed poprawką wariant B (Ucieczka) był łatwiejszy o 16 punktów procentowych i płacił <b>1 XP zamiast 3</b>, bo punkty zwycięstwa leżały wyłącznie na Barierach usuniętych przedmiotem, a w B opłacało się iść drogą tańszą. Po przeniesieniu części punktów na cele wspólne (Zmutowany Kierownik) i po dołożeniu premii za ukończenie obu ścieżkom, różnica spadła do <b>6 punktów procentowych i 0,5 PD</b> — B jest szybszy i nieco łatwiejszy, A dłuższy i nieco bogatszy. To akceptowalny kompromis, a nie kara za ostrożność.</p>
+
+  <div class="toolbar">
+    <span class="label">Pokaż</span>
+    <button class="chip" data-sev="BLOKER" aria-pressed="false" style="--c: var(--bloker)">BLOKER</button>
+    <button class="chip" data-sev="BŁĄD" aria-pressed="false" style="--c: var(--blad)">BŁĄD</button>
+    <button class="chip" data-sev="SPÓJNOŚĆ" aria-pressed="false" style="--c: var(--spojnosc)">SPÓJNOŚĆ</button>
+    <span class="chip-count" id="count">25 znalezisk</span>
+  </div>
+
+  <!-- ======================= SCENARIUSZ 1 ======================= -->
+  <h2 class="section">Scenariusz 1 · Wioska wśród drzew</h2>
+
+  <p>Łańcuch aktów jest teraz spójny: opróżnienie Kościoła daje Klucz do zachrystii, Klucz otwiera Zachrystię, test <code>&lt;int&gt;</code>(3) w Zachrystii przesuwa Akt 1&nbsp;→&nbsp;2, Pertraktacje <code>&lt;int&gt;</code>(4) w Norach lub Obozie ocalałych stawiają Posiadłość, a Posiadłość przesuwa Akt 2&nbsp;→&nbsp;3 i wystawia Żyrija. Jedna rzecz w tym łańcuchu nie istnieje.</p>
+
+  <h3>Kompletność</h3>
+  <div class="findings">
+    <div class="finding" data-sev="BLOKER" style="--f-color: var(--bloker)">
+      <div class="sev">BLOKER</div>
+      <div class="where">Kościół.card · Zachrystia.card</div>
+      <p class="what"><b>Klucz do zachrystii nie istnieje jako karta.</b> Kościół każe „dobrać odłożony na bok przedmiot Klucz do zachrystii", a Zachrystia bez niego jest zamknięta. To jedyne wejście do Aktu 2 — poza obejściem „jeśli w grze jest Tajemnica 3a lub 4a", którego grupa nigdy nie zobaczy, bo gra kończy się na tajemnicy 1 albo 2.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Ojciec Żerdź.card</div>
+      <p class="what">Boss ma <b>puste pole obrażeń</b> — zadaje 0 obrażeń, tylko 1 przerażenie. Przy 3<code>&lt;badacz&gt;</code> = 12 zdrowia to przeciwnik, którego można bić bez ryzyka fizycznego.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Posiadłość.card</div>
+      <p class="what"><code>&lt;for&gt; spowoduj postęp talii aktów</code> — <b>Wymuszony bez wyzwalacza</b>. Nie wiadomo, czy to dzieje się przy odkryciu lokacji, przy wejściu badacza, czy co rundę. Ta sama klasa błędu, którą poprawiliśmy na Lewiatanie.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Tajemnica 1 · Tajemnica 2 · Tajemnica 3</div>
+      <p class="what">Tajemnice 1 i 2 każą wtasować <b>Bramę z gałęzi i Kultystę Traktorzystę</b>, Tajemnica 3 wtasowuje Traktorzystę po raz trzeci. Kopii jest odpowiednio 2 i <b>1</b>. Nie wiadomo, co zrobić przy drugim i trzecim poleceniu.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Tajemnica 1 vs Nieczysta Komunia</div>
+      <p class="what">Tajemnica mówi o <b>„odłożonym na bok"</b> Przekonanym wyznawcy, Nieczysta Komunia każe go <b>„przeszukać w talii spotkań"</b>. Od tego zależy skład talii startowej: 13 kart albo 8.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Fabuła · przygotowanie scenariusza</div>
+      <p class="what">Przygotowanie <b>nie mówi, które karty spotkań są odkładane na bok</b>. Wynika to dopiero z rewersów tajemnic, czyli w trakcie gry. Bez tej listy nie da się zbudować talii startowej.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Tajemnice 1–3 · Obóz na Mokradłach</div>
+      <p class="what">Cztery karty mówią „wtasuj do <b>talii mitów</b>" i „przeszukaj <b>talię mitów</b>". W Horrorze w Arkham talia nazywa się <b>talią spotkań</b>; talia mitów nie istnieje.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">9 lokacji wioski</div>
+      <p class="what">Zasłona i wskazówki <b>niewypełnione</b> (<code>?</code> po obu stronach): Przybrzeżna rampa, Środek wioski, Kapliczka, Kostnica, Pod Rogatym, Skład Drewna, Stary magazyn, oba Warsztaty Kowalskie, Warsztat Kołodzieja, Wędzarnio-suszarnia. Targ Rybny i Warsztat Mechaniczny mają zasłonę <code>X</code> i brak wskazówek.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Warsztat Kowalski · dwa pliki</div>
+      <p class="what"><code>9 Warsztat Kowalski.card</code> i <code>Warsztat Kowalski 9.card</code> — ta sama nazwa i numer, <b>różne zdolności</b> (zasób plus test walki kontra przeszukanie 6 kart talii). Jedna wersja jest nieaktualna.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">grupy spotkań i nazwy lokacji</div>
+      <p class="what">Trzy nazwy grup w jednym scenariuszu: „Ciemne chaty, puste pola", „Mroczne sprawki", „g" — a Kozi Pomiot nie ma żadnej. Lokacje: „Wioska wśród drzew" kontra „Wioska pośród drzew", „Miejsca zwyczajne" kontra „Zwyczajne miejsca".</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">mapa · wszystkie 26 lokacji</div>
+      <p class="what">Żadna lokacja nie ma symbolu <code>location_icon</code>, a w połączeniach występują 4 symbole. Przygotowanie odsyła do „schematu z instrukcji", którego w repo nie ma.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Grzęzawisko.card · Skraj Lasu.card</div>
+      <p class="what">Grzęzawisko ma wskazówki zapisane jako <code>2 &lt;badacz&gt;</code> ze spacją, inaczej niż wszystkie pozostałe karty. Skraj Lasu ma 4 wskazówki i zasłonę 2, ale po usunięciu akcji postępu aktów <b>nic tych wskazówek nie potrzebuje</b>.</p>
+    </div>
+  </div>
+
+  <h3>Balans</h3>
+  <div class="gauge">
+    <div class="cap">Zegar kontra rzeczywisty czas gry — rundy</div>
+    <div class="bar" style="--b-color: var(--muted)">
+      <span class="name">Zagłada na tajemnicach</span>
+      <span class="track"><span class="fill" style="width: 100%"></span></span>
+      <span class="val">25 rund</span>
+    </div>
+    <div class="bar" style="--b-color: var(--blad)">
+      <span class="name">Mediana partii</span>
+      <span class="track"><span class="fill" style="width: 28%"></span></span>
+      <span class="val">7 rund</span>
+    </div>
+    <p class="note">7 + 7 + 7 + 4 = 25 zagłady, tempo 1 na rundę, w talii spotkań nie ma żadnego dodatkowego źródła zagłady. Tajemnica 4 („Tryumf Kozicy", przegrana) jest nieosiągalna, a Tajemnica 3 nie wchodzi do gry ani razu na 800 partii.</p>
+  </div>
+
+  <ul>
+    <li><b>Cała eskalacja jest niewidoczna.</b> Brama z Gałęzi, Kultysta Traktorzysta i Kozi Pomiot ×2 wchodzą do talii dopiero z tajemnicami 1–3. W praktyce grupa gra przez całą partię tymi samymi 13 kartami startowymi.</li>
+    <li><b>Talia startowa to 12 wrogów na 13 kart.</b> Przy 4 graczach wyczerpuje się po ~3 rundach, więc ci sami wrogowie wracają dwa–trzy razy. Stąd 24% wybić mimo braku zegara.</li>
+    <li><b>Przekonany wyznawca ×5</b> — Łowca z Polowaniem na badacza z największą liczbą wskazówek. Pięć kopii poluje na tę samą osobę: badacza od wskazówek, czyli tego, który prowadzi akty.</li>
+    <li><b>Zbłąkany Kultywator ×2</b> — Powściągliwy, 1/5/1, buffuje sąsiadów. Nikt go nie atakuje (5 zdrowia za brak nagrody), więc bufuje bezkarnie.</li>
+  </ul>
+
+  <!-- ======================= SCENARIUSZ 2 ======================= -->
+  <h2 class="section">Scenariusz 2 · Nurt Szaleństwa</h2>
+
+  <p>Ten scenariusz przeszedł już trzy tury poprawek (osobny raport), więc traktujcie tę sekcję jako kontrolę stanu po nich. Jest w najlepszej formie z całej trójki: dwie ścieżki, czytelne sposoby przegrania, zegar który ma znaczenie ale nie dominuje.</p>
+
+  <h3>Kompletność</h3>
+  <div class="findings">
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">archiwum/Zakole Warty 15.card</div>
+      <p class="what">Karta w folderze <code>archiwum/</code> odsyła do wroga <b>Oślizgła Macka</b>, którego nie ma w repo. Jeśli archiwum to nieużywane wersje, warto je usunąć — dziś zaśmiecają kontrolę kompletności.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">archiwum/ · cztery pliki</div>
+      <p class="what">Folder <code>archiwum/</code> trzyma nieaktualne wersje Przystani i Zakola Warty. Jeśli to materiał odłożony, warto go wynieść poza repo — dziś każda kontrola kompletności musi go pomijać ręcznie.</p>
+    </div>
+  </div>
+
+  <h3>Balans</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Miara</th><th class="num">Wariant A · Rytuał</th><th class="num">Wariant B · Ucieczka</th></tr></thead>
+      <tbody>
+        <tr><td>Zwycięstwa przy 0 XP</td><td class="num">44,9%</td><td class="num">43,9%</td></tr>
+        <tr><td>Zwycięstwa w kampanii (z XP)</td><td class="num">54,8%</td><td class="num">61,0%</td></tr>
+        <tr><td>Mediana rund</td><td class="num">12</td><td class="num">8</td></tr>
+        <tr><td>Dominująca porażka</td><td class="num">wybicie grupy</td><td class="num">barka zatopiona</td></tr>
+        <tr><td>Średnie XP ze scenariusza</td><td class="num">4,9</td><td class="num">4,4</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul>
+    <li><b>Odpychanie Lewiatana jest teraz drugą drogą do zwycięstwa w wariancie B.</b> Przy 2<code>&lt;badacz&gt;</code> zdrowia i nagrodzie 2 znaczników Ciśnienia korzysta z niej <b>64% wygrywających grup</b> — ale nie jest obowiązkowa, bo próg <code>&lt;badacz&gt;</code>+1 da się też zebrać samymi testami „Cała naprzód". Lewiatan dostał Łowcę, więc wraca po rundzie: odepchnięcie to postęp, a nie wyłączenie bossa.</li>
+    <li><b>Bonus Ciśnienia za Bariery został zdjęty.</b> Dawał wariantowi B równo 10 punktów procentowych przewagi — po usunięciu obie ścieżki startują z tego samego poziomu.</li>
+    <li><b>Talia 22 kart, 8 wrogów</b> — po redukcji quantity gęstość jest w normie; wybicie grupy przestało być dominującą porażką w wariancie B.</li>
+    <li><b>Doświadczenie</b>: 8 PD przy komplecie (3 Bariery przedmiotem, Kierownik, Arcykapłan, premia za ukończenie) wobec 3 przed poprawką.</li>
+  </ul>
+
+  <!-- ======================= SCENARIUSZ 3 ======================= -->
+  <h2 class="section">Scenariusz 3 · Czarny Port</h2>
+
+  <h3>Kompletność</h3>
+  <div class="findings">
+    <div class="finding" data-sev="BLOKER" style="--f-color: var(--bloker)">
+      <div class="sev">BLOKER</div>
+      <div class="where">Akt 6.card</div>
+      <p class="what">Cel aktu: „Pokonaj <b>Czarną Kozę z Ostrowa</b>". <b>Karty nie ma w repo</b> — scenariusza nie da się wygrać.</p>
+    </div>
+    <div class="finding" data-sev="BLOKER" style="--f-color: var(--bloker)">
+      <div class="sev">BLOKER</div>
+      <div class="where">Fabuła · Akt 5 · Tunele Forteczne</div>
+      <p class="what">Przygotowanie odkłada na bok lokację <b>Stary Fort Pruski</b> („zostanie wprowadzona w kulminacyjnym momencie") — karty nie ma i <b>nic jej nie wprowadza</b>. Akt 5 każe „dostać się do fortu na Cytadeli", a Tunele Forteczne są „niedostępne, chyba że wynika to z karty scenariusza" — i żadna karta tego nie odblokowuje.</p>
+    </div>
+    <div class="finding" data-sev="BLOKER" style="--f-color: var(--bloker)">
+      <div class="sev">BLOKER</div>
+      <div class="where">Akt 3.card · Akt 4.card</div>
+      <p class="what"><b>Identyczny cel</b> na obu kartach: „Usuń wszystkie wskazówki z lokalizacji Mleczarnia". Po zaliczeniu Aktu 3 Akt 4 jest albo natychmiast spełniony, albo nie da się go spełnić drugi raz.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Goniec 1 · Goniec 2 · Goniec 3</div>
+      <p class="what">Trzy karty o <b>tej samej nazwie</b> i różnych celach patrolu (Mleczarnia, UAM, Cytadela) — przy stole nie da się ich odróżnić. Goniec 3 ma dodatkowo 3<code>&lt;badacz&gt;</code> zdrowia zamiast 2<code>&lt;badacz&gt;</code>.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Czarna Sadza · Smród z Garbar · Trauma Pruskiego Drylu</div>
+      <p class="what">To <b>podstępy z wypełnionymi statystykami wroga</b> (atak 3, zdrowie 2<code>&lt;badacz&gt;</code>, unik 3, obrażenia 1). Wyrenderują się z paskami walki jak przeciwnicy.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">10 lokacji · rewersy</div>
+      <p class="what">Zasłona i wskazówki mają wartość <code>-</code> zamiast liczby: Mleczarnia, Nadbrzeże Warty, Ogród Botaniczny, Ostrów Tumski, Rynek Jeżycki, Sołacz, Stary Rynek, Tunele Forteczne, UAM, Zakłady Cegielskiego.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Cień z Jeżyc.card</div>
+      <p class="what">Atak i unik to <code>X</code>, a karta definiuje X tylko raz („X to liczba lokalizacji z cechą Spaczona"). <b>Przy zerze Spaczonych ma atak 0 i unik 0.</b></p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Fabuła · przygotowanie lokacji</div>
+      <p class="what">Wymienia <b>Szpital Kliniczny</b> wśród lokacji do rozłożenia — karty nie ma. Odsyła też do „mapy powiązań kampanii", której w repo nie ma.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">warianty <code>_kor_9</code></div>
+      <p class="what">Biblioteka Uniwersytecka, Dyrekcja Zakładu i Linia Rozlewnicza mają po dwa pliki o tej samej nazwie karty. To strony Spaczone, ale nic tego nie mówi — wyglądają jak duplikaty. Linia Rozlewnicza ma przy tym dwie różne cechy: „Mdła" i „Smrodliwa", nieużywane nigdzie indziej.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Biblioteka · Dyrekcja · Linia Rozlewnicza</div>
+      <p class="what">Warunek „niedostępna, dopóki na <b>sąsiednich</b> lokalizacjach są wskazówki" na trzech kartach naraz, przy braku mapy połączeń, może zamknąć pół planszy.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Biblioteka · Cytadela · Rynek Jeżycki · Sołacz · Ogród Botaniczny</div>
+      <p class="what">Używają emoji ➡️ 📚 👊 🧠 zamiast tagów, mimo że reszta repo została ujednolicona na tagi.</p>
+    </div>
+  </div>
+
+  <h3>Balans</h3>
+  <div class="gauge">
+    <div class="cap">Arytmetyka spaczenia — żetony zagłady na lokacji</div>
+    <div class="bar" style="--b-color: var(--bloker)">
+      <span class="name">Goniec zrzuca (2<span class="mono">&lt;badacz&gt;</span> zdrowia)</span>
+      <span class="track"><span class="fill" style="width: 100%"></span></span>
+      <span class="val">8</span>
+    </div>
+    <div class="bar" style="--b-color: var(--blad)">
+      <span class="name">Próg spaczenia lokacji</span>
+      <span class="track"><span class="fill" style="width: 50%"></span></span>
+      <span class="val">4</span>
+    </div>
+    <div class="bar" style="--b-color: var(--accent)">
+      <span class="name">Odzyskiwanie na akcję</span>
+      <span class="track"><span class="fill" style="width: 6%"></span></span>
+      <span class="val">~0,5</span>
+    </div>
+    <p class="note">Jeden Goniec, który dojdzie do celu nietknięty, spacza lokację z <b>dwukrotnym zapasem</b>. Spaczenie zamienia wszystkie wskazówki na lokacji w zagładę, a odzyskiwanie idzie testem <code>&lt;wil&gt;</code>(3) po jednym żetonie przy 43% skuteczności. W talii jest <b>6 Gońców</b> na 25 kart, a Goniec jest Powściągliwy — nie wchodzi w zwarcie, trzeba go świadomie ścigać i zdjąć 8 punktów zdrowia, zanim dojdzie.</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th class="num">Runda</th><th>Co się stało w śledzonej partii (seed 4)</th></tr></thead>
+      <tbody>
+        <tr><td class="num">2</td><td>Cytadela i UAM spaczone</td></tr>
+        <tr><td class="num">6</td><td>Mleczarnia Spółdzielcza spaczona — a jest celem dwóch aktów</td></tr>
+        <tr><td class="num">10</td><td>Akt 1 zaliczony (z sześciu)</td></tr>
+        <tr><td class="num">17</td><td>Grupa pada przy trzech trwale spaczonych lokacjach</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul>
+    <li><b>Karta scenariusza: <code>−X</code> bez limitu.</b> Kultysta i tablica dają minus tyle, ile jest Spaczonych lokacji. Pętla dodatniego sprzężenia: więcej spaczenia → gorsze testy → mniej odzyskiwania → więcej spaczenia.</li>
+    <li><b>Mleczarnia Spółdzielcza:</b> „+2 zasłony za <b>każdego badacza w tej lokacji</b>" przy bazowej 2 — czterech badaczy robi z niej zasłonę 10. A jest celem Aktów 3 i 4.</li>
+    <li><b>Zagłada jako zegar to tylko 10% porażek.</b> Prawdziwym zegarem jest spaczenie, ale nigdzie nie jest opisane jako zagrożenie — gracze zobaczą 38 zagłady na tajemnicach i uznają, że mają czas.</li>
+    <li><b>Nadbrzeże Warty</b> — jedyna lokacja, która nie może się spaczyć, zasłona 1, darmowy ruch po zbadaniu. Bezpieczna baza, w której nic się nie dzieje.</li>
+  </ul>
+
+  <!-- ======================= PRIORYTETY ======================= -->
+  <h2 class="section">Co naprawić najpierw</h2>
+  <p>Kolejność jest istotna: każdy kolejny punkt ma sens dopiero, gdy poprzedni jest zrobiony. Pierwsze trzy odblokowują rozgrywkę, kolejne stroją, ostatnie porządkują.</p>
+
+  <div class="priority">
+    <div class="pri">
+      <h5>Dodać trzy brakujące karty</h5>
+      <p><b>Klucz do zachrystii</b> (scen. 1 — bez niego Akt 1 nie ma jak postąpić), <b>Czarna Koza z Ostrowa</b> i <b>Stary Fort Pruski</b> (scen. 3 — bez nich scenariusz nie ma jak się skończyć).</p>
+      <div class="tag">BLOKER · 3 nowe karty</div>
+    </div>
+    <div class="pri">
+      <h5>Rozdzielić cele Aktów 3 i 4 w scenariuszu 3</h5>
+      <p>Oba mówią „usuń wszystkie wskazówki z Mleczarni". Naturalny kandydat na Akt 4 to Linia Rozlewnicza — ma własny tekst o zatrzymaniu produkcji, który dziś nigdzie nie jest używany.</p>
+      <div class="tag">BLOKER · 1 karta</div>
+    </div>
+    <div class="pri">
+      <h5>Przeliczyć zagładę Gońca</h5>
+      <p>Zrzut 1–2 żetonów zamiast „tyle, ile zostało zdrowia", albo próg spaczenia 6–8. To jedna liczba, która odblokowuje scenariusz 3 — przy obecnej 0% partii kończy się zwycięstwem nawet przy 20 XP.</p>
+      <div class="tag">BALANS · 3 karty Gońca albo karta scenariusza</div>
+    </div>
+    <div class="pri">
+      <h5>Podnieść doświadczenie w scenariuszu 3</h5>
+      <p>Scenariusz 2 dostał już premię za ukończenie i punkty zwycięstwa na Kierowniku oraz Arcykapłanie (3 → 8 PD). Scenariusz 3 nadal daje maksymalnie 3 PD i zero premii, a jego punkty leżą na lokacjach, do których grupa zwykle nie dociera.</p>
+      <div class="tag">XP · Fabuła + pola victory</div>
+    </div>
+    <div class="pri">
+      <h5>Skrócić zegar scenariusza 1</h5>
+      <p>Z 25 zagłady do ~12–14 (np. 4 / 4 / 3 / 3) albo dodać źródła zagłady do talii spotkań. Bez tego trzy czwarte projektu tajemnic pozostaje niewidoczne, a Tajemnica 4 jest tylko dekoracją.</p>
+      <div class="tag">BALANS · 4 karty tajemnic</div>
+    </div>
+    <div class="pri">
+      <h5>Ograniczyć spiralę spaczenia</h5>
+      <p>Limit <code>−3</code> na karcie scenariusza 3 i „spaczenie zostawia połowę wskazówek" zamiast kasowania wszystkich. Dziś jedno zdarzenie kasuje pracę całej rundy.</p>
+      <div class="tag">BALANS · karta scenariusza + 10 lokacji</div>
+    </div>
+    <div class="pri">
+      <h5>Wpisać Żyrijowi obrażenia i domknąć Wymuszone bez wyzwalacza</h5>
+      <p>Żyrij zadaje dziś 0 obrażeń. Posiadłość ma „Wymuszony: spowoduj postęp talii aktów" bez wskazania, kiedy to następuje.</p>
+      <div class="tag">BŁĄD · 2 karty</div>
+    </div>
+    <div class="pri">
+      <h5>Uzupełnić puste pola i nazewnictwo</h5>
+      <p>11 lokacji wioski (<code>?</code> i <code>X</code>) oraz 10 rewersów w scenariuszu 3 (<code>-</code>). Usunąć statystyki wroga z trzech podstępów, rozróżnić nazwy trzech Gońców, zamienić „talię mitów" na „talię spotkań", ujednolicić nazwy grup spotkań, usunąć duplikat Warsztatu Kowalskiego.</p>
+      <div class="tag">BŁĄD / SPÓJNOŚĆ · ~26 kart</div>
+    </div>
+  </div>
+
+  <!-- ======================= METODA ======================= -->
+  <h2 class="section">Metoda i założenia</h2>
+
+  <p>Modele: <code>tools/scenario13_model.py</code> (scenariusze 1 i 3), <code>tools/scenario2_model.py</code> (scenariusz 2), <code>tools/campaign_model.py</code> (trzy pod rząd, z XP i traumami). Profile badaczy z czterech popularnych talii 0 XP z arkhamdb — <b>Marie Lambeau</b> (Mistyk), <b>Carolyn Fern</b> (Poszukiwacz), <b>André Patel</b> (Włóczęga), <b>Tommy Muldoon</b> (Obrońca). Worek chaosu: Standard z instrukcji podstawki.</p>
+
+  <p><b>Przelicznik doświadczenia na moc</b> (jawnie arbitralny): co 5 XP daje +1 do kolejnej najlepszej statystyki badacza, maksymalnie +3; 8 XP dokłada +1 obrażeń z broni; 12 XP podnosi średnią ikon w talii o 0,2. Trauma fizyczna to −1 zdrowia, psychiczna −1 poczytalności, na stałe. Badacz, którego trauma zrówna się z bazowym zdrowiem lub poczytalnością, ginie i wchodzi nowy z 0 XP.</p>
+
+  <p><b>Czego model nie robi.</b> Nie jest silnikiem zasad. Talia gracza to liczby: średnie ikony na kartę deklarowane, gdy przewaga poniżej 2; broń lub zaklęcie w grze to +1 do umiejętności walki; narzędzia poszukiwacza +1 do intelektu; sojusznik +1 zdrowia i poczytalności. Ruch kosztuje 1–3 akcje (siatki około 3×3, dystans losowany). Nie modelowane: konkretne karty gracza, ataki okazyjne, zasoby, mapa połączeń, Brama z Gałęzi jako blokada, warunki „niedostępna, dopóki sąsiedzi mają wskazówki".</p>
+
+  <p><b>Scenariusz 1:</b> jedenaście lokacji wioski ma puste pola, więc przyjęto zasłonę 2 i 1<code>&lt;badacz&gt;</code> wskazówek. Łańcuch aktów zamodelowany zgodnie z kartami: Kościół → Klucz → Zachrystia <code>&lt;int&gt;</code>(3) → Akt 2; Pertraktacje <code>&lt;int&gt;</code>(4) w Norach lub Obozie ocalałych → Posiadłość → Akt 3 → Żyrij. Talia startowa: Ciekawski ×5, Przekonany ×5, Zbłąkany ×2, Wołanie.</p>
+
+  <p><b>Scenariusz 3:</b> 13 lokacji, wskazówki 1–3<code>&lt;badacz&gt;</code>. Goniec patroluje do celu i zrzuca zagładę równą zdrowiu. Spaczenie przy 4 żetonach zamienia wskazówki na zagładę; odzyskiwanie testem <code>&lt;wil&gt;</code>(3). Boss zamodelowany jako 4<code>&lt;badacz&gt;</code> zdrowia, mimo że karty nie ma. „Zakleszczenie" to 40 akcji z rzędu bez postępu — przy stole byłoby to po prostu przegrane tempo.</p>
+
+  <footer>
+    <p><b>Playtest Czarnej Krwi Warty</b> — raport z rozgrywek modelowych scenariuszy 1, 2 i 3 oraz pełnej kampanii. Żadna karta nie została zmieniona przy tworzeniu tego raportu; wszystkie propozycje są do decyzji autorów.</p>
+    <p>Narzędzia w repo: <code>tools/campaign_model.py run</code>, <code>tools/scenario13_model.py sim 1|3</code>, <code>tools/scenario2_model.py sim</code>, profile talii z <code>tools/arkhamdb.py</code>, kontrola kompletności z <code>tools/arkham_cards.py lint</code>. Osobny, szczegółowy raport dotyczy scenariusza 2 i historii wprowadzonych w nim poprawek.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var findings = Array.prototype.slice.call(document.querySelectorAll(".finding"));
+  var count = document.getElementById("count");
+  var active = null;
+
+  function apply() {
+    var shown = 0;
+    findings.forEach(function (f) {
+      var ok = !active || f.dataset.sev === active;
+      f.hidden = !ok;
+      if (ok) shown++;
+    });
+    count.textContent = shown === findings.length
+      ? findings.length + " znalezisk"
+      : shown + " z " + findings.length + " znalezisk";
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      active = active === c.dataset.sev ? null : c.dataset.sev;
+      chips.forEach(function (o) {
+        o.setAttribute("aria-pressed", String(o.dataset.sev === active));
+      });
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>

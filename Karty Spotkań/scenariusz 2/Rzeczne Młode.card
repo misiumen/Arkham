@@ -1,6 +1,7 @@
 {
   "type": "敌人卡",
   "name": "Rzeczne Młode",
+  "quantity": 2,
   "id": "",
   "created_at": "",
   "version": "2.0",

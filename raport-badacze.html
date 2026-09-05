@@ -1,0 +1,511 @@
+<title>Badacze Czarnej Krwi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #EDEBE3; --surface: #F7F6F0; --surface-2: #E2E0D5;
+  --line: #CBC8BB; --line-soft: #DEDCD1;
+  --ink: #191C16; --muted: #5A5F52; --accent: #3C5A43;
+  --bloker: #7B2B21; --blad: #8F550F; --spojnosc: #3C5A43; --balans: #3A5570; --ok: #43724E;
+  --bar-track: #DEDCD1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111309; --surface: #1A1D14; --surface-2: #23271B;
+    --line: #343829; --line-soft: #2A2E21;
+    --ink: #E8E7DC; --muted: #9CA192; --accent: #8FB593;
+    --bloker: #DC7A70; --blad: #DFA45B; --spojnosc: #8FB593; --balans: #90AECC; --ok: #8FC79A;
+    --bar-track: #2A2E21;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111309; --surface: #1A1D14; --surface-2: #23271B;
+  --line: #343829; --line-soft: #2A2E21;
+  --ink: #E8E7DC; --muted: #9CA192; --accent: #8FB593;
+  --bloker: #DC7A70; --blad: #DFA45B; --spojnosc: #8FB593; --balans: #90AECC; --ok: #8FC79A;
+  --bar-track: #2A2E21;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Alegreya Sans", "Segoe UI", system-ui, sans-serif; font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 28px 120px; }
+
+.masthead { padding: 56px 0 22px; border-bottom: 3px double var(--line); display: flex; flex-direction: column; gap: 12px; }
+.eyebrow { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: "Bodoni Moda", "Times New Roman", serif; font-weight: 700; font-size: clamp(34px, 6vw, 58px); line-height: 1.0; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+.subtitle { font-size: 20px; color: var(--muted); max-width: 62ch; margin: 0; font-style: italic; }
+.byline { display: flex; flex-wrap: wrap; gap: 6px 20px; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 4px; }
+
+.verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; margin: 32px 0 0; }
+.verdict { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--v-color); padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; }
+.verdict h2 { font-family: "Bodoni Moda", "Times New Roman", serif; font-size: 22px; font-weight: 500; margin: 0; line-height: 1.15; }
+.verdict h2 span { display: block; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+.statline { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 22px; color: var(--v-color); font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+.statline small { display: block; font-family: "Alegreya Sans", sans-serif; font-size: 13px; letter-spacing: 0; color: var(--muted); margin-top: 3px; }
+.facts { border-top: 1px solid var(--line-soft); margin: 0; }
+.facts div { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--line-soft); font-size: 14.5px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; }
+.verdict p { margin: 0; font-size: 15px; }
+
+h2.section { font-family: "Bodoni Moda", "Times New Roman", serif; font-size: 30px; font-weight: 500; margin: 56px 0 6px; padding-bottom: 8px; border-bottom: 3px double var(--line); text-wrap: balance; }
+h3 { font-family: "Bodoni Moda", "Times New Roman", serif; font-size: 21px; font-weight: 500; margin: 32px 0 8px; }
+p { margin: 0 0 15px; max-width: 68ch; }
+ul, ol { margin: 0 0 16px; padding-left: 22px; max-width: 70ch; }
+li { margin-bottom: 8px; }
+code, .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.84em; background: var(--surface-2); padding: 1px 5px; border-radius: 2px; }
+a { color: var(--accent); }
+
+.toolbar { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 0; margin: 36px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.toolbar .label { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.chip { appearance: none; font: inherit; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: 0.08em; cursor: pointer; background: transparent; color: var(--c, var(--muted)); border: 1px solid var(--c, var(--line)); padding: 4px 11px; transition: background 120ms ease; }
+.chip:hover { background: var(--surface-2); }
+.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chip[aria-pressed="true"] { background: var(--c); color: var(--surface); border-color: var(--c); }
+.chip-count { margin-left: auto; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.findings { display: flex; flex-direction: column; margin: 6px 0 8px; }
+.finding { display: grid; grid-template-columns: 108px 1fr; gap: 4px 18px; padding: 13px 0 13px 14px; border-bottom: 1px solid var(--line-soft); border-left: 3px solid var(--f-color); }
+.finding .sev { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; font-weight: 600; color: var(--f-color); padding-top: 3px; }
+.finding .where { grid-column: 2; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--muted); word-break: break-word; }
+.finding .what { grid-column: 2; margin: 0; font-size: 16px; max-width: 66ch; }
+.finding[hidden] { display: none; }
+
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); margin: 0 0 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 14px; border-bottom: 1px solid var(--line-soft); }
+th { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--surface-2); white-space: nowrap; }
+td.num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.warn { color: var(--blad); font-weight: 700; }
+tr:last-child td { border-bottom: 0; }
+
+.gauge { background: var(--surface); border: 1px solid var(--line); padding: 18px 20px; margin: 0 0 20px; display: flex; flex-direction: column; gap: 13px; }
+.gauge .cap { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); }
+.bar { display: grid; grid-template-columns: 230px 1fr 60px; gap: 12px; align-items: center; }
+.bar .name { font-size: 14.5px; }
+.bar .track { height: 15px; background: var(--bar-track); }
+.bar .fill { display: block; height: 100%; background: var(--b-color, var(--accent)); }
+.bar .val { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; color: var(--muted); }
+.note { font-size: 14.5px; color: var(--muted); max-width: 68ch; margin: 0; }
+
+.proposal { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 0 0 18px; }
+.proposal h4 { font-family: "Alegreya Sans", sans-serif; font-size: 17px; font-weight: 700; margin: 0 0 4px; }
+.proposal .meta { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 10px; }
+.proposal .now, .proposal .next { margin: 0 0 8px; font-size: 15.5px; }
+.proposal .tag { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.proposal .card-text { font-size: 15.5px; border-left: 2px solid var(--line); padding-left: 12px; margin: 4px 0 12px; white-space: pre-line; }
+.proposal .card-text.old { color: var(--muted); }
+.proposal p:last-child { margin-bottom: 0; }
+
+.priority { counter-reset: pri; display: flex; flex-direction: column; margin: 8px 0 20px; }
+.pri { display: grid; grid-template-columns: 44px 1fr; gap: 4px 16px; padding: 15px 0; border-bottom: 1px solid var(--line-soft); }
+.pri::before { counter-increment: pri; content: counter(pri); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 22px; color: var(--accent); line-height: 1; padding-top: 3px; }
+.pri h5 { margin: 0; font-family: "Alegreya Sans", sans-serif; font-size: 17px; font-weight: 700; }
+.pri p { grid-column: 2; margin: 3px 0 0; font-size: 15.5px; }
+.pri .tag { grid-column: 2; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--muted); margin-top: 5px; }
+
+.callout { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 0 0 20px; }
+.callout p:last-child { margin-bottom: 0; }
+
+footer { margin-top: 64px; border-top: 3px double var(--line); padding-top: 20px; color: var(--muted); font-size: 14.5px; display: flex; flex-direction: column; gap: 10px; }
+footer p { max-width: 72ch; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print { .toolbar { display: none; } body { background: #fff; color: #000; font-size: 11pt; } .verdict, .tablewrap, .gauge, .proposal { break-inside: avoid; } }
+@media (max-width: 620px) {
+  .finding { grid-template-columns: 1fr; }
+  .finding .sev, .finding .where, .finding .what { grid-column: 1; }
+  .bar { grid-template-columns: 1fr; }
+  .bar .val { text-align: left; }
+}
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Czarna Krew Warty · przegląd kart badaczy</div>
+    <h1>Badacze Czarnej&nbsp;Krwi</h1>
+    <p class="subtitle">Czterech badaczy i jedenaście kart sygnaturowych, zmierzonych względem 97 oficjalnych badaczy. Dwie karty są poza skalą, dwóch badaczy nosi statystyki innej klasy niż ich własna.</p>
+    <div class="byline">
+      <span>4 września 2026</span>
+      <span>15 kart z folderu Karty Badaczy</span>
+      <span>norma: 97 badaczy z arkhamdb</span>
+      <span>bez zmian w kartach</span>
+    </div>
+  </header>
+
+  <section class="verdicts">
+    <article class="verdict" style="--v-color: var(--ok)">
+      <h2><span>Obrońca</span>Baruch Hałabała</h2>
+      <div class="statline">4 / 2 / 4 / 2<small>suma 12 ✓ · 8 zdrowia + 6 poczytalności ✓</small></div>
+      <dl class="facts">
+        <div><dt>Statystyki</dt><dd>w normie</dd></div>
+        <div><dt>Zdolność</dt><dd>−1 zasłony bez klątw</dd></div>
+        <div><dt>Karty własne</dt><dd>3 (Taca, Halabarda, Czas Spowiedzi)</dd></div>
+      </dl>
+      <p>Najspójniejszy z czwórki. Jedyny problem to <b>Halabarda</b>, która jednym zagraniem włącza jego zdolność i wyłącza jego słabość.</p>
+    </article>
+    <article class="verdict" style="--v-color: var(--blad)">
+      <h2><span>Mistyk</span>Michał z Bargłowa</h2>
+      <div class="statline">2 / <b>5</b> / 4 / 2<small>suma <b>13</b> — norma to 12 · 6 + 8 ✓</small></div>
+      <dl class="facts">
+        <div><dt>Statystyki</dt><dd>o 1 punkt za dużo</dd></div>
+        <div><dt>Wola mistyka</dt><dd>2 przy medianie 4</dd></div>
+        <div><dt>Zdolność</dt><dd>+X raz na <b>fazę</b></dd></div>
+      </dl>
+      <p>Statystyki Poszukiwacza-wojownika w klasie Mistyka. Talia mistyka to zaklęcia testujące <b>wolę</b>, której on nie ma.</p>
+    </article>
+    <article class="verdict" style="--v-color: var(--ok)">
+      <h2><span>Ocalały</span>Szyszka Nowiczok</h2>
+      <div class="statline">3 / 4 / 3 / 2<small>suma 12 ✓ · 8 + 6 ✓</small></div>
+      <dl class="facts">
+        <div><dt>Statystyki</dt><dd>w normie</dd></div>
+        <div><dt>Zdolność</dt><dd>nagroda za odrzucanie</dd></div>
+        <div><dt>Karta własna</dt><dd>Znikanie Bez Śladu</dd></div>
+      </dl>
+      <p>Badacz w porządku, ale jego sygnaturowe <b>Znikanie Bez Śladu</b> anuluje „dowolny efekt", co nie jest terminem z zasad.</p>
+    </article>
+    <article class="verdict" style="--v-color: var(--blad)">
+      <h2><span>Włóczęga</span>Wojciech Robak</h2>
+      <div class="statline">2 / 4 / 3 / <b>3</b><small>suma 12 ✓ · 6 + 8 ✓ · zręczność poniżej klasy</small></div>
+      <dl class="facts">
+        <div><dt>Zręczność</dt><dd>3 przy medianie 4</dd></div>
+        <div><dt>Zdolność</dt><dd>sukces <b>dokładnie o 1</b></dd></div>
+        <div><dt>Karta własna</dt><dd>Paprykarz</dd></div>
+      </dl>
+      <p>Zdolność premiuje precyzję, a cała klasa Włóczęgi premiuje przesadzanie o 2 i więcej. Do tego <b>Paprykarz</b> daje nielimitowane dodatkowe akcje.</p>
+    </article>
+  </section>
+
+  <div class="callout" style="margin-top: 28px">
+    <p><b>Skąd norma.</b> Wszystkie porównania pochodzą ze zrzutu kart gracza z arkhamdb (1983 karty, w tym 97 badaczy), pobranego lokalnie przez <code>tools/arkhamdb.py</code>. To nie jest opinia o „duchu gry" — to rozkład liczb, które FFG faktycznie wydrukowało przez dziewięć lat.</p>
+  </div>
+
+  <!-- ======================= NORMA ======================= -->
+  <h2 class="section">Jak zbudowany jest oficjalny badacz</h2>
+
+  <div class="gauge">
+    <div class="cap">Suma czterech statystyk — 97 oficjalnych badaczy</div>
+    <div class="bar" style="--b-color: var(--accent)">
+      <span class="name">Dokładnie 12 punktów</span>
+      <span class="track"><span class="fill" style="width: 100%"></span></span>
+      <span class="val">78</span>
+    </div>
+    <div class="bar" style="--b-color: var(--blad)">
+      <span class="name">13 punktów (jak Michał)</span>
+      <span class="track"><span class="fill" style="width: 5%"></span></span>
+      <span class="val">4</span>
+    </div>
+    <div class="bar" style="--b-color: var(--muted)">
+      <span class="name">14 punktów</span>
+      <span class="track"><span class="fill" style="width: 3%"></span></span>
+      <span class="val">2</span>
+    </div>
+    <div class="bar" style="--b-color: var(--muted)">
+      <span class="name">Mniej niż 12 (badacze z haczykiem)</span>
+      <span class="track"><span class="fill" style="width: 17%"></span></span>
+      <span class="val">13</span>
+    </div>
+    <p class="note">Zdrowie plus poczytalność: 14 u 65 badaczy, 15 u 18, 12 u ośmiu. Wszyscy czterej homebrew mają 14 — to jest w porządku. Rozjeżdża się wyłącznie suma statystyk u Michała.</p>
+  </div>
+
+  <h3>Mediany statystyk według klasy</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Klasa</th><th class="num">n</th><th class="num">wola</th><th class="num">intelekt</th><th class="num">walka</th><th class="num">zręczność</th><th>Nasz badacz</th></tr></thead>
+      <tbody>
+        <tr><td>Obrońca</td><td class="num">17</td><td class="num">3</td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td>Baruch 4/2/4/2 — zgodne</td></tr>
+        <tr><td>Poszukiwacz</td><td class="num">18</td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td class="num">2</td><td>—</td></tr>
+        <tr><td>Włóczęga</td><td class="num">18</td><td class="num">2</td><td class="num">3</td><td class="num">2,5</td><td class="num">4</td><td class="warn">Wojciech 2/4/3/3 — zręczność o 1 za mało</td></tr>
+        <tr><td>Mistyk</td><td class="num">21</td><td class="num">4</td><td class="num">3</td><td class="num">2</td><td class="num">3</td><td class="warn">Michał 2/5/4/2 — trzy statystyki poza profilem</td></tr>
+        <tr><td>Ocalały</td><td class="num">19</td><td class="num">3</td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td>Szyszka 3/4/3/2 — akceptowalne</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Dwie liczby, które warto znać przy Michale: <b>intelekt 5 mają wyłącznie Poszukiwacze</b> (Norman Withers, Mandy Thompson, Harvey Walters, Daisy Walker, Carolyn Fern) plus jeden Ocalały, Darrell Simmons. A <b>wolę 2 lub niższą ma dwóch mistyków na 21</b> — i obaj budują talię wokół tego braku. Michał ma jedno i drugie naraz, plus walkę 4 przy medianie mistyka 2.</p>
+
+  <div class="toolbar">
+    <span class="label">Pokaż</span>
+    <button class="chip" data-sev="BALANS" aria-pressed="false" style="--c: var(--balans)">BALANS</button>
+    <button class="chip" data-sev="BŁĄD" aria-pressed="false" style="--c: var(--blad)">BŁĄD</button>
+    <button class="chip" data-sev="SPÓJNOŚĆ" aria-pressed="false" style="--c: var(--spojnosc)">SPÓJNOŚĆ</button>
+    <span class="chip-count" id="count">16 znalezisk</span>
+  </div>
+
+  <!-- ======================= ZNALEZISKA ======================= -->
+  <h2 class="section">Znaleziska</h2>
+
+  <div class="findings">
+    <div class="finding" data-sev="BALANS" style="--f-color: var(--balans)">
+      <div class="sev">BALANS</div>
+      <div class="where">Paprykarz.card · koszt 3 · poziom 0</div>
+      <p class="what"><code>&lt;rea&gt; Wydaj 1 zasób, wykonaj dodatkową akcję.</code> — <b>bez limitu, bez wyzwalacza, bez wyczerpania</b>. Przy pięciu zasobach to pięć dodatkowych akcji w jednej turze. Dla porównania <b>Leo De Luca</b> (Włóczęga, poziom 0) kosztuje <b>6</b> i daje jedną dodatkową akcję na turę, a <b>Quick Thinking</b> wymaga sukcesu o 2 lub więcej.</p>
+    </div>
+    <div class="finding" data-sev="BALANS" style="--f-color: var(--balans)">
+      <div class="sev">BALANS</div>
+      <div class="where">Paprykarz.card · druga zdolność</div>
+      <p class="what">Akcja plus ładunek plus test woli(3) celu, żeby wyleczyć 1 obrażenie — a przy porażce cel dostaje przerażenie. <b>Pierwsza Pomoc</b> (Obrońca, koszt 2, 3 ładunki) leczy 1 obrażenie <b>albo</b> przerażenie bez żadnego testu. Ta zdolność jest wyraźnie słabsza od podstawowej karty za 2 zasoby.</p>
+    </div>
+    <div class="finding" data-sev="BALANS" style="--f-color: var(--balans)">
+      <div class="sev">BALANS</div>
+      <div class="where">Znikanie Bez Śladu.card · koszt 3 · poziom 0</div>
+      <p class="what">„Gdy wróg lub <b>efekt karty miałby wejść z tobą w interakcję</b>" — „interakcja" nie jest terminem w zasadach AH. Czytane dosłownie: anulowanie dowolnego efektu, wielokrotnie, za 1 kartę z ręki. <b>Ward of Protection</b> (poziom 0, koszt 1) anuluje jeden efekt spotkania, jest wydarzeniem i dokłada 1 przerażenie. <b>Elusive</b> (koszt 2) to jednorazowa ucieczka bez anulowania.</p>
+    </div>
+    <div class="finding" data-sev="BALANS" style="--f-color: var(--balans)">
+      <div class="sev">BALANS</div>
+      <div class="where">Halabarda.card + zdolność Barucha + Czas Spowiedzi</div>
+      <p class="what">„Gdy Halabarda wchodzi do gry, zamień <b>wszystkie</b> <code>&lt;cur&gt;</code> z worka na <code>&lt;ble&gt;</code>" — bez „raz na grę". Jedno zagranie za 3 zasoby: <b>włącza</b> stałe −1 do zasłony (zdolność Barucha działa, gdy w worku nie ma klątw) i <b>wyłącza</b> jego słabość (Czas Spowiedzi liczy przerażenie za klątwy). Kartę można odrzucić i zagrać ponownie, żeby wyczyścić worek jeszcze raz.</p>
+    </div>
+    <div class="finding" data-sev="BALANS" style="--f-color: var(--balans)">
+      <div class="sev">BALANS</div>
+      <div class="where">Michał z Bargłowa.card · statystyki</div>
+      <p class="what"><b>13 punktów zamiast 12.</b> Tylko 4 z 97 oficjalnych badaczy ma 13 — i wszyscy płacą za to gdzie indziej (niższe zdrowie, węższa talia, cięższa słabość). Michał ma standardowe 6+8 i normalne opcje talii.</p>
+    </div>
+    <div class="finding" data-sev="BALANS" style="--f-color: var(--balans)">
+      <div class="sev">BALANS</div>
+      <div class="where">Michał z Bargłowa.card · zdolność</div>
+      <p class="what">„+X do testu, gdzie X to liczba kart w twoim obszarze zagrożeń, <b>limit raz na fazę</b>" — faz w rundzie są cztery, a X nie ma górnej granicy. Oficjalne odpowiedniki są „raz na rundę". Przy dwóch–trzech słabościach to +2/+3 do dowolnego testu, kilka razy w rundzie.</p>
+    </div>
+    <div class="finding" data-sev="BALANS" style="--f-color: var(--balans)">
+      <div class="sev">BALANS</div>
+      <div class="where">Wojciech Robak.card · klasa i zdolność</div>
+      <p class="what">Włóczęga ze zręcznością <b>3</b> przy medianie klasy 4 i intelektem 4, czyli statystyką Poszukiwacza. Zdolność nagradza sukces <b>dokładnie o 1</b>, podczas gdy cała klasa Włóczęgi premiuje przesadzanie o <b>2 lub więcej</b> (Lucky Cigarette Case, Quick Thinking). Karty jego własnej klasy psują warunek jego zdolności — a marginesu i tak nie kontrolujesz, bo żeton jest losowy.</p>
+    </div>
+
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Baruch Hałabała.card · Szyszek Nowacki.card</div>
+      <p class="what">Tagi <code>&lt;Gua&gt;</code> i <code>&lt;Sur&gt;</code> w liniach opcji talii <b>nie wyrenderują się</b>. Sprawdzone w źródle edytora: podmiana idzie przez <code>re.sub(pattern, replacement, text)</code> <b>bez</b> <code>IGNORECASE</code>, a wzorce to <code>&lt;gua&gt;</code> i <code>&lt;sur&gt;</code> małymi literami. Na kartach pojawi się dosłowny tekst.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Wieczne Dylematy.card</div>
+      <p class="what">„<b>możesz</b> usunąć 1 żeton wątpliwości, <b>w przeciwnym razie test kończy się porażką</b>" — „możesz" sugeruje wybór, którego nie ma. Do tego karta odpala się przy <b>każdym</b> teście, więc znika po trzech: to jednorazowy podatek 3 × (przerażenie albo −1), a nie trwała słabość.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Dawny Wspólnik.card</div>
+      <p class="what">„Za każdy punkt <b>kosztu wystawienia</b>, którego nie możesz pokryć, otrzymujesz 1 przerażenie" — karta nie mówi wprost, że masz zapłacić te 2 zasoby. Gracz nie wie, czy płaci, czy tylko sprawdza, ile ma.</p>
+    </div>
+    <div class="finding" data-sev="BŁĄD" style="--f-color: var(--blad)">
+      <div class="sev">BŁĄD</div>
+      <div class="where">Gomez Toksyczny.card</div>
+      <p class="what">Atut umieszczany „na twoim <b>obszarze zagrożenia</b>". W zasadach AH obszar zagrożeń trzyma wrogów i podstępy; atuty-słabości leżą w obszarze gry. Zdolność Michała liczy „karty w obszarze zagrożeń", więc obie karty są ze sobą spójne — ale nie z regułami.</p>
+    </div>
+
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Baruch Hałabała.card</div>
+      <p class="what">Instrukcja przygotowania jest zdublowana i niezgodna: awers mówi „rozpoczynasz grę z Tacą Ofiarną <b>w grze</b>", rewers „…<b>w swoim obszarze</b>". Powinna zostać wyłącznie na rewersie, w sekcji Dodatkowe przygotowanie.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Szyszek Nowacki.card</div>
+      <p class="what">„<b>Raz na rundę</b>, po tym jak odrzucisz… możesz zyskać 1 zasób albo wyleczyć 1 obrażenie (<b>limit raz na rundę</b>)" — ten sam limit zapisany dwa razy w jednym zdaniu.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Bánh mì.card</div>
+      <p class="what">Wydarzenie, którego nigdy się nie zagrywa: dobierasz, opcjonalnie płacisz zasób za 1 leczenie, wtasowujesz z powrotem. Netto to <b>karta gorsza niż puste miejsce w talii</b> — zajmuje dobranie i kosztuje zasób. Sygnaturowa karta powinna być powodem, żeby grać tym badaczem.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">Paprykarz.card · Znikanie Bez Śladu.card</div>
+      <p class="what">Oba atuty <b>nie zajmują żadnego slotu</b>, mimo że jeden to jedzenie noszone przy sobie, a drugi zestaw sztuczek. Halabarda ma prawidłowo „Obie ręce". Slot to jedyny naturalny koszt alternatywny na poziomie 0 — warto go świadomie przypisać albo świadomie zostawić pusty.</p>
+    </div>
+    <div class="finding" data-sev="SPÓJNOŚĆ" style="--f-color: var(--spojnosc)">
+      <div class="sev">SPÓJNOŚĆ</div>
+      <div class="where">folder Karty Badaczy</div>
+      <p class="what">Michał i Wojciech mają mini-karty badacza, <b>Baruch i Szyszka nie</b>. Mini-karty są potrzebne do dziennika kampanii i do Tabletop Simulatora.</p>
+    </div>
+  </div>
+
+  <!-- ======================= PROPOZYCJE ======================= -->
+  <h2 class="section">Proponowane brzmienia</h2>
+  <p>Poniżej konkretne teksty do zatwierdzenia albo odrzucenia. Nic z tego nie zostało wprowadzone do kart.</p>
+
+  <div class="proposal">
+    <h4>Paprykarz</h4>
+    <p class="meta">atut · Włóczęga · koszt 3 · Ręka · Zużywalny (3 posiłki)</p>
+    <p class="tag">jest</p>
+    <div class="card-text old">&lt;act&gt; Zaproponuj badaczowi w twojej lokacji smaczny posiłek. Wykonuje on test &lt;wil&gt;(3). Jeśli odniesie sukces, leczy 1 obrażenie. W przypadku porażki otrzymuje 1 przerażenie.
+&lt;rea&gt; Wydaj 1 zasób, wykonaj dodatkową akcję.</div>
+    <p class="tag">propozycja</p>
+    <div class="card-text">Zużywalny (3 posiłki).
+&lt;act&gt; Wydaj 1 posiłek: badacz w twojej lokacji leczy 1 obrażenie albo 1 przerażenie.
+&lt;rea&gt; Wyczerp Paprykarz i wydaj 1 posiłek: badacz w twojej lokacji wykonuje dodatkową akcję. (Limit raz na rundę.)</div>
+    <p>Leczenie zrównane z Pierwszą Pomocą, dodatkowa akcja ograniczona ładunkami i wyczerpaniem — trzy w całej grze, po jednej na rundę. Przy koszcie 3 to nadal mocna karta, ale w skali Leo De Luki za 6, a nie poza nią. Slot Ręki daje koszt alternatywny.</p>
+  </div>
+
+  <div class="proposal">
+    <h4>Znikanie Bez Śladu</h4>
+    <p class="meta">atut · Ocalały · koszt 3 · Taktyka</p>
+    <p class="tag">jest</p>
+    <div class="card-text old">&lt;rea&gt; Gdy wróg lub efekt karty miałby wejść z tobą w interakcję, wyczerp Znikanie Bez Śladu i odrzuć 1 kartę z ręki: przemieść się do połączonej lokalizacji i uniknij tego efektu.</div>
+    <p class="tag">propozycja</p>
+    <div class="card-text">&lt;rea&gt; Gdy wróg wchodzi z tobą w zwarcie, wyczerp Znikanie Bez Śladu i odrzuć 1 kartę z ręki: wymknij się każdemu wrogowi w zwarciu z tobą i przemieść się do połączonej lokacji.</div>
+    <p>To powtarzalna wersja Elusive (koszt 2, jednorazowe) — mocna, ale z określonym oknem i bez anulowania efektów. Jeśli chcecie zachować anulowanie, powinno być osobną kartą-wydarzeniem w cenie Ward of Protection, czyli 1 zasób i koszt uboczny.</p>
+  </div>
+
+  <div class="proposal">
+    <h4>Halabarda</h4>
+    <p class="meta">atut · Neutralna · koszt 3 · Obie ręce · tylko Baruch</p>
+    <p class="tag">jest</p>
+    <div class="card-text old">&lt;for&gt; Gdy Halabarda wchodzi do gry, zamień wszystkie &lt;cur&gt; z worka chaosu na &lt;ble&gt;.</div>
+    <p class="tag">propozycja</p>
+    <div class="card-text">&lt;for&gt; Gdy Halabarda wchodzi do gry, zamień do 2 żetonów &lt;cur&gt; z worka chaosu na &lt;ble&gt;. (Limit raz na grę.)</div>
+    <p>Dwie linie ataku zostają bez zmian — są w skali Machete (koszt 3, +1 walki, +1 obrażenia warunkowo). Zmiana dotyczy tylko czyszczenia worka, żeby Baruch musiał wybierać między zdolnością a zasobami z Tacy, zamiast dostawać jedno i drugie za jedno zagranie.</p>
+  </div>
+
+  <div class="proposal">
+    <h4>Michał z Bargłowa</h4>
+    <p class="meta">badacz · Mistyk · 6 zdrowia / 8 poczytalności</p>
+    <p class="tag">wariant A — zostaje Mistykiem</p>
+    <div class="card-text">wola 4 · intelekt 3 · walka 3 · zręczność 2   (suma 12)
+&lt;fre&gt; Gdy wykonujesz test, otrzymujesz +X do tego testu, gdzie X to liczba kart w twoim obszarze zagrożeń (maksymalnie 2). (Limit raz na rundę.)</div>
+    <p class="tag">wariant B — zostają statystyki, zmienia się klasa</p>
+    <div class="card-text">klasa: Poszukiwacz · intelekt 5 · wola 2 · walka 4 · zręczność 1   (suma 12)
+opcje talii: karty Poszukiwacza 0–5, karty Mistyka 0–2, karty neutralne 0–5</div>
+    <p>Wariant A ratuje koncepcję mistyka-kucharza i sprowadza sumę do normy. Wariant B zachowuje jego charakter — mocny intelekt i walka, zero zręczności — ale przenosi go tam, gdzie jego statystyki mają sens mechaniczny. Wybór jest fabularny, obie wersje są w normie liczbowej.</p>
+  </div>
+
+  <div class="proposal">
+    <h4>Wojciech Robak</h4>
+    <p class="meta">badacz · Włóczęga · 6 zdrowia / 8 poczytalności</p>
+    <p class="tag">jest</p>
+    <div class="card-text old">wola 2 · intelekt 4 · walka 3 · zręczność 3
+&lt;rea&gt; Raz na rundę, po udanym teście umiejętności zakończonym wynikiem dokładnie o 1 wyższym niż poziom trudności, możesz dobrać 1 kartę albo zyskać 1 zasób.</div>
+    <p class="tag">propozycja</p>
+    <div class="card-text">wola 2 · intelekt 3 · walka 3 · zręczność 4
+&lt;rea&gt; Po udanym teście umiejętności o 2 lub więcej możesz dobrać 1 kartę albo zyskać 1 zasób. (Limit raz na rundę.)</div>
+    <p>Zręczność 4 to statystyka, która definiuje Włóczęgę — bez niej jego własna klasa (uniki, przemieszczanie, Elusive) nie działa. „O 2 lub więcej" to idiom tej klasy, ten sam, na którym stoi Lucky Cigarette Case za 2 zasoby. Jeśli chcecie zatrzymać „dokładnie o 1", to jest zdolność Ocalałego — działa tam, gdzie testy przechodzi się rzutem na styk.</p>
+  </div>
+
+  <div class="proposal">
+    <h4>Wieczne Dylematy</h4>
+    <p class="meta">słabość · atut · Skaza, Szaleństwo · tylko Wojciech</p>
+    <p class="tag">jest</p>
+    <div class="card-text old">&lt;rev&gt; Umieść 3 żetony wątpliwości na tej karcie.
+&lt;for&gt; Gdy wykonujesz test umiejętności, możesz usunąć 1 żeton wątpliwości, w przeciwnym razie test kończy się porażką. Jeśli to zrobisz, wybierz: otrzymaj 1 horror, lub obniż wynik testu o 1.
+Odrzuć tę kartę, gdy na karcie nie ma już żetonów wątpliwości.</div>
+    <p class="tag">propozycja</p>
+    <div class="card-text">&lt;rev&gt; Umieść 3 żetony wątpliwości na Wiecznych Dylematach.
+Gdy wykonujesz test umiejętności, wybierz: obniż wynik tego testu o 1 albo otrzymaj 1 przerażenie.
+&lt;act&gt; Wykonaj test &lt;wil&gt;(2). Jeśli test się powiedzie, usuń 1 żeton wątpliwości z Wiecznych Dylematów.
+Odrzuć Wieczne Dylematy, gdy nie ma na nich żetonów wątpliwości.</div>
+    <p>Teraz to prawdziwa słabość: kara trwa, dopóki karta jest w grze, a pozbycie się jej kosztuje trzy akcje i trzy testy. W obecnej wersji znika sama po trzech dowolnych testach i przez większość partii nie istnieje.</p>
+  </div>
+
+  <div class="proposal">
+    <h4>Bánh Mì z ziemi</h4>
+    <p class="meta">wydarzenie · tylko Michał</p>
+    <p class="tag">jest</p>
+    <div class="card-text old">&lt;for&gt; Po tym, jak dobierzesz: możesz zapłacić jeden zasób, aby wyleczyć 1 obrażenie lub 1 punkt przerażenia. Następnie wtasuj tę kartę do talii.</div>
+    <p class="tag">propozycja</p>
+    <div class="card-text">&lt;for&gt; Po tym, jak dobierzesz Bánh Mì z ziemi: wylecz 1 obrażenie i 1 przerażenie ze swojego badacza. Następnie wtasuj tę kartę do talii.</div>
+    <p>Bez kosztu i z dwoma punktami leczenia karta staje się małą, ale realną nagrodą za granie Michałem. W obecnej wersji jest gorsza niż puste miejsce w talii — zajmuje dobranie i każe za nią zapłacić.</p>
+  </div>
+
+  <div class="proposal">
+    <h4>Dawny Wspólnik</h4>
+    <p class="meta">słabość · atut · Sprzymierzeniec · tylko Szyszka</p>
+    <p class="tag">propozycja — pierwsza linia</p>
+    <div class="card-text">&lt;rev&gt; Umieść Dawnego Wspólnika w grze, pod swoją kontrolą (zajmuje slot Sojusznika). Zapłać 2 zasoby; za każdy niezapłacony zasób otrzymujesz 1 przerażenie.</div>
+    <p>Reszta karty zostaje bez zmian — drenaż zasobów i Pertraktacje wil(2) z rosnącą trudnością są dobrze wyważone. Zmiana dotyczy tylko tego, żeby gracz wiedział, że faktycznie płaci. Slot Sojusznika warto nazwać wprost: blokowanie sojusznika to realna, dobra kara.</p>
+  </div>
+
+  <!-- ======================= PRIORYTETY ======================= -->
+  <h2 class="section">Kolejność</h2>
+  <div class="priority">
+    <div class="pri">
+      <h5>Paprykarz — dodatkowa akcja</h5>
+      <p>Nielimitowane akcje za 1 zasób psują grę mocniej niż cokolwiek innego w tym folderze. Jedna karta, jedna linia tekstu.</p>
+      <div class="tag">BALANS · 1 karta</div>
+    </div>
+    <div class="pri">
+      <h5>Znikanie Bez Śladu — określić okno</h5>
+      <p>„Interakcja" nie jest terminem z zasad; przy stole każdy stół rozstrzygnie to inaczej.</p>
+      <div class="tag">BALANS · 1 karta</div>
+    </div>
+    <div class="pri">
+      <h5>Michał — 13 → 12 punktów i uzgodnić klasę</h5>
+      <p>Decyzja fabularna: mistyk z wolą 4 albo poszukiwacz z intelektem 5. Obie wersje są w normie, obecna nie.</p>
+      <div class="tag">BALANS · 1 karta</div>
+    </div>
+    <div class="pri">
+      <h5>Wojciech — zręczność 4 i „o 2 lub więcej"</h5>
+      <p>Bez tego Włóczęga nie może grać kartami Włóczęgi, a jego zdolność walczy z jego własną klasą.</p>
+      <div class="tag">BALANS · 1 karta</div>
+    </div>
+    <div class="pri">
+      <h5>Halabarda — „raz na grę" i limit 2 żetonów</h5>
+      <p>Rozcina pętlę, w której jedna karta włącza zdolność Barucha i wyłącza jego słabość.</p>
+      <div class="tag">BALANS · 1 karta</div>
+    </div>
+    <div class="pri">
+      <h5><code>&lt;Gua&gt;</code> i <code>&lt;Sur&gt;</code> małymi literami</h5>
+      <p>Dwa znaki, inaczej na wydruku zostanie surowy tag zamiast ikony klasy.</p>
+      <div class="tag">BŁĄD · 2 karty</div>
+    </div>
+    <div class="pri">
+      <h5>Sformułowania</h5>
+      <p>Wieczne Dylematy, Dawny Wspólnik, Bánh Mì, zdublowana instrukcja Barucha, podwójny limit u Szyszki, obszar zagrożeń Gomeza.</p>
+      <div class="tag">BŁĄD / SPÓJNOŚĆ · 6 kart</div>
+    </div>
+    <div class="pri">
+      <h5>Sloty i mini-karty</h5>
+      <p>Slot dla Paprykarza i decyzja o Znikaniu; mini-karty badacza dla Barucha i Szyszki.</p>
+      <div class="tag">SPÓJNOŚĆ</div>
+    </div>
+  </div>
+
+  <!-- ======================= METODA ======================= -->
+  <h2 class="section">Metoda</h2>
+  <p>Wszystkie karty odczytane bezpośrednio z plików <code>.card</code> przez <code>tools/arkham_cards.py text</code> — stan na 4 września 2026. Kolejność pól <code>attribute</code> (wola, intelekt, walka, zręczność) potwierdzona w źródle edytora: <code>bin/card2arkhamdb.py</code> mapuje je kolejno na <code>skill_willpower</code>, <code>skill_intellect</code>, <code>skill_combat</code>, <code>skill_agility</code>.</p>
+
+  <p>Normy pochodzą ze zrzutu <code>arkhamdb.com/api/public/cards/?encounter=0</code> (1983 karty gracza, 97 unikalnych badaczy), pobranego przez <code>tools/arkhamdb.py</code> i trzymanego w <code>.cache/arkhamdb/</code>. Porównania kosztów dotyczą kart poziomu 0: Leo De Luca (6), Ward of Protection (1), Elusive (2), Lucky Cigarette Case (2), First Aid (2), Machete (3), Quick Thinking (0).</p>
+
+  <p>Błąd renderowania tagów zweryfikowany w <code>rich_text_render/RichTextRenderer.py</code> z repozytorium edytora — podmiana ikon idzie przez <code>re.sub</code> bez flagi <code>IGNORECASE</code>, a wszystkie wzorce klas są zapisane małymi literami.</p>
+
+  <p>Kajetan Kleszcz i Edmund Dalbor zostały pominięte na wasze życzenie. Ten przegląd nie obejmuje symulacji — badacze nie zostali przepuszczeni przez model scenariuszy, bo model sprowadza talię do profilu liczbowego i nie odczytałby z niego zdolności specjalnych.</p>
+
+  <footer>
+    <p><b>Badacze Czarnej Krwi</b> — przegląd balansu kart badaczy kampanii „Czarna Krew Warty". Żadna karta nie została zmieniona; wszystkie propozycje są do decyzji autorów.</p>
+    <p>Osobne raporty obejmują scenariusze 1 i 3, scenariusz 2 oraz usterki notacji we wszystkich 173 kartach repozytorium.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
+  var findings = Array.prototype.slice.call(document.querySelectorAll(".finding"));
+  var count = document.getElementById("count");
+  var active = null;
+
+  function apply() {
+    var shown = 0;
+    findings.forEach(function (f) {
+      var ok = !active || f.dataset.sev === active;
+      f.hidden = !ok;
+      if (ok) shown++;
+    });
+    count.textContent = shown === findings.length
+      ? findings.length + " znalezisk"
+      : shown + " z " + findings.length + " znalezisk";
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      active = active === c.dataset.sev ? null : c.dataset.sev;
+      chips.forEach(function (o) {
+        o.setAttribute("aria-pressed", String(o.dataset.sev === active));
+      });
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>

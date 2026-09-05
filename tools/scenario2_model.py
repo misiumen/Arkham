@@ -32,10 +32,10 @@ RIVER = ["Stara Przystan", "Zakole Warty", "Legi Wierzbowe", "Skazony Nurt",
          "Rozlewiska Debiny", "Most Chwaliszewski"]
 SHROUD = {"Stara Przystan": 2, "Zakole Warty": 3, "Legi Wierzbowe": 2, "Skazony Nurt": 4,
           "Rozlewiska Debiny": 4, "Most Chwaliszewski": 4,
-          "Dworzec Puszczykowo": 3, "Pradawne Deby": 4, "Fabryka Drozdzy": 3, "Zrujnowany Fort": 5}
+          "Dworzec Puszczykowo": 3, "Pradawne Deby": 3, "Fabryka Drozdzy": 3, "Zrujnowany Fort": 5}
 CLUES_PER_INV = {"Stara Przystan": 1, "Zakole Warty": 1, "Legi Wierzbowe": 1, "Skazony Nurt": 0,
                  "Rozlewiska Debiny": 0, "Most Chwaliszewski": 0, "Dworzec Puszczykowo": 1,
-                 "Pradawne Deby": 2, "Fabryka Drozdzy": 1, "Zrujnowany Fort": 2}
+                 "Pradawne Deby": 1, "Fabryka Drozdzy": 1, "Zrujnowany Fort": 2}
 # uproszczenie: karty nie mowia, ktore Pobrzeze lezy przy ktorym wezle rzeki
 # ("zgodnie z mapa powiazan" - mapy nie ma w repo). Przypisanie tak, by przedmiot
 # na bariere byl osiagalny PRZED ta bariera.
@@ -48,7 +48,10 @@ BARRIERS = {
     "Most Chwaliszewski": ("Pruskie Miny", "dynamit", "test agi(4), porazka = 3 uszkodzenia barki"),
 }
 AGENDA = [6, 8, 10]          # progi zaglady; 2. przechodzi dalej tylko przy >=4 uszkodzeniach barki
-BARGE_HP = 8
+BARGE_HP = 10
+KOZUCH_DIFF = 5   # karta 4 IX: test jednego badacza com(5), kazdy inny w lokacji deklaruje 1 karte
+MINY_DMG = 2
+POMIOT_HORROR = 0   # 1 = stara wersja: kazdy badacz 1 przerazenia po pokonaniu
 PLAYERS = 4
 
 # Talia spotkan: plik -> skrot. Liczba kopii z pola `quantity` karty; karty scenariusza 2
@@ -92,10 +95,10 @@ LEWIATAN_RETURNS = 1          # karta: wraca do lokacji barki na koniec nastepne
 LEWIATAN_EVADE = 0            # karta: "Lewiatana nie mozna Unikac"; 1 = stara luka (Masywny, unik 1)
 LEWIATAN_HP_MULT = 2          # zdrowie 2<badacz>
 PUSH_PRESSURE = 2             # odepchniecie Lewiatana = 2 znaczniki Cisnienia
-LEWIATAN_BARGE = 2            # obrazenia barki za atak Lewiatana (karta: 2)
-PRESSURE_FAIL_DMG = 1         # nieudane "Cala naprzod!" = uszkodzenie barki (karta: 1)
+LEWIATAN_BARGE = 1            # obrazenia barki za atak Lewiatana (karta po dopiskach: 1)
+PRESSURE_FAIL_DMG = 0         # nieudane "Cala naprzod!" = brak efektu (karta po dopiskach)
 RETURN_EXHAUSTED = 0          # 1 = Lewiatan wraca wyczerpany (jeszcze jedna runda spokoju)
-LEWIATAN_AOE = 1              # karta: atakuje kazdego badacza w lokacji; 0 = tylko jednego (losowego)
+LEWIATAN_AOE = 0              # karta po dopiskach: atakuje sterujacego; 1 = kazdego badacza w lokacji
 # Wrogowie: (walka=trudnosc testu com, zdrowie, unik, obrazenia, przerazenie, lowca)
 ENEMY = {
     "pomiot": dict(atk=3, hp=3, ev=2, dmg=1, hor=0, hunter=True, name="Kozi Pomiot"),
@@ -222,7 +225,7 @@ class Game:
             inv["hand"] -= 1
         difficulty += len([t for t in self.tissues[loc] if t == "gabczasta"])
         if loc == "Skazony Nurt" and self.tissues[loc]:
-            difficulty += 2
+            difficulty += 1
         tok = self.draw_token()
         v = token_value(tok, self.ctx(loc))
         rec = self.tests[name or skill]
@@ -414,10 +417,10 @@ class Game:
             return
         self.enemies.remove(enemy)
         self.log["pokonany: " + enemy["name"]] += 1
-        if enemy["kind"] == "pomiot":
+        if enemy["kind"] == "pomiot" and POMIOT_HORROR:
             for i in self.at(enemy["loc"]):
                 self.hurt(i, 0, 1, "Kozi Pomiot (pokonany)")
-        if enemy["kind"] == "nosiciel":
+        if enemy["kind"] == "nosiciel" and not self.tissues[enemy["loc"]]:
             self.attach_tissue(enemy["loc"])
         if enemy["kind"] == "kierownik":
             self.kierownik_done = True
@@ -489,15 +492,16 @@ class Game:
                 return True
             return False
         if nxt == "Rozlewiska Debiny":
-            # test grupowy: suma com zalogi + po 1 karcie z reki kazdego (uproszczenie)
-            group = sum(i["com"] + (round(i["icons"]["combat"]) if i["hand"] else 0) for i in crew)
-            if p_success(group, 10) < 0.45 and not self.ferment_gone():
-                return False   # nie ma sensu placic obrazeniami za 1% szansy - czekaj na Fermenta
+            # karta: najlepszy wojownik testuje com(5), kazdy inny w lokacji deklaruje 1 karte (srednie ikony)
+            best = self.best("com", self.barge_loc) or inv
+            group = best["com"] + sum(round(i["icons"]["combat"]) for i in crew if i is not best and i["hand"])
+            if p_success(group, KOZUCH_DIFF) < 0.45 and not self.ferment_gone():
+                return False   # czekaj na Fermenta
             for i in crew:
-                if i["hand"]:
+                if i is not best and i["hand"]:
                     i["hand"] -= 1
-            ok, _ = self.test(inv, "com", 10 - (group - inv["com"]), name="Kozuch: test grupowy com(10)",
-                              commit=False)
+            inv = best
+            ok, _ = self.test(inv, "com", KOZUCH_DIFF - (group - inv["com"]), name="Kozuch: com(%d)+karty" % KOZUCH_DIFF)
             for i in crew:
                 self.hurt(i, 1, 0, "Kozuch (test grupowy)")
             if ok:
@@ -510,8 +514,8 @@ class Game:
                 self.barrier_method[nxt] = "test agi"
                 self._pass(nxt, crew)
             else:
-                self.barge_hp -= 3
-                self.log["obrazenia barki: Miny"] += 3
+                self.barge_hp -= MINY_DMG
+                self.log["obrazenia barki: Miny"] += MINY_DMG
             return ok
         return False
 
@@ -541,7 +545,9 @@ class Game:
         if item in self.items:
             return None
         if nxt == "Legi Wierzbowe":
-            return None   # 4 wskazowki w Zakolu sa tansze niz 8 wskazowek w Debach (zaslona 4)
+            # Deby po zmianie: 4 wskazowki przy zaslonie 3 = ten sam koszt co Zakole, ale Totem zdejmuje
+            # bariere (Arcykaplan bez +1, 1 PD). Polityka: idz po Totem, gdy barka stoi w Zakolu.
+            return ("Pradawne Deby", "totem") if self.barge_loc == "Zakole Warty" else None
         if nxt == "Rozlewiska Debiny":
             if self.barge_loc == "Skazony Nurt" and not self.kierownik_done:
                 return ("Fabryka Drozdzy", "kierownik")
@@ -619,14 +625,23 @@ class Game:
         if plan:
             shore, task = plan
             if loc == self.barge_loc:
-                if inv is self.best("com"):
+                if inv is self.best("int" if task == "totem" else "com"):
                     inv["loc"] = shore; self.log["wyprawa na pobrzeze"] += 1
                     if task == "kierownik" and not any(e["kind"] == "kierownik" for e in self.enemies):
                         self.spawn("kierownik", shore, engaged=inv)
                     return
             elif loc == shore:
+                if task == "totem":
+                    if self.clues["Pradawne Deby"] > 0:
+                        ok, _ = self.test(inv, "int", SHROUD["Pradawne Deby"], name="Deby: badanie int(3)")
+                        if ok:
+                            self.clues["Pradawne Deby"] -= 1
+                        return
+                    self.items.add("totem"); self.log["przedmiot: totem"] += 1
+                    inv["loc"] = self.barge_loc
+                    return
                 if task == "dynamit":
-                    ok, _ = self.test(inv, "com", 4, name="Fort: com(4)")
+                    ok, _ = self.test(inv, "com", 3, name="Fort: com(3)")
                     if ok:
                         self.items.add("dynamit"); self.log["przedmiot: dynamit"] += 1
                         inv["loc"] = self.barge_loc

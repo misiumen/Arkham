@@ -1,0 +1,160 @@
+<title>Scenariusz 3: „Czarny Port&quot;</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--bg:#E8E7DE;--surface:#F5F4EE;--surface-2:#DEDDD3;--line:#C7C6BA;--ink:#1A1D17;--muted:#5D6157;--accent:#3D5A45;--bloker:#7E2B22;--blad:#9C5A11;--spoj:#3D5A45;--balans:#3A5570}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#12140F;--surface:#1B1E17;--surface-2:#23261E;--line:#343829;--ink:#E7E8DE;--muted:#9AA091;--accent:#8CB18F;--bloker:#D9736A;--blad:#DFA054;--spoj:#8CB18F;--balans:#90AECC}}
+:root[data-theme="dark"]{--bg:#12140F;--surface:#1B1E17;--surface-2:#23261E;--line:#343829;--ink:#E7E8DE;--muted:#9AA091;--accent:#8CB18F;--bloker:#D9736A;--blad:#DFA054;--spoj:#8CB18F;--balans:#90AECC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px 96px}
+h1{font-family:"Bodoni Moda","Times New Roman",serif;font-weight:700;font-size:clamp(32px,5vw,50px);line-height:1.05;margin:0 0 8px;text-wrap:balance}
+h2{font-family:"Bodoni Moda","Times New Roman",serif;font-weight:500;font-size:28px;margin:44px 0 12px;padding-bottom:6px;border-bottom:3px double var(--line)}
+h3{font-family:"Bodoni Moda","Times New Roman",serif;font-weight:500;font-size:21px;margin:28px 0 8px}
+p{margin:0 0 14px;max-width:70ch}
+p.meta{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+ul,ol{margin:0 0 16px;padding-left:22px;max-width:75ch}
+li{margin-bottom:6px}
+code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.86em;background:var(--surface-2);padding:1px 5px}
+.tw{overflow-x:auto;margin:0 0 18px;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:8px 12px;border-bottom:1px solid var(--line)}
+th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--surface-2)}
+td:first-child{white-space:nowrap}
+td.sev{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.06em;font-weight:500}
+td.sev-BLOKER{color:var(--bloker)}td.sev-BLAD{color:var(--blad)}td.sev-SPOJNOSC{color:var(--spoj)}td.sev-BALANS{color:var(--balans)}
+strong{font-weight:600}
+</style>
+
+<div class="wrap">
+<h1>Playtest: Scenariusze 1 i 3</h1>
+<p class="meta">2026-09-04 · 4 badaczy · talie 0 XP z arkhamdb · worek Standard · <strong>raport, bez zmian w kartach</strong></p>
+<h2>Werdykt</h2>
+<p><strong>Scenariusz 1 „Wioska wśród drzew"</strong> — model daje <strong>84% wygranych</strong> przy medianie <strong>7 rund</strong>. To nie jest scenariusz za łatwy w walce (16% partii kończy się wybiciem grupy), tylko scenariusz <strong>bez zegara</strong>: tajemnice mają razem 25 zagłady przy tempie 1/rundę, więc gra kończy się w 7. rundzie, a <strong>tajemnica 3 i 4 nigdy nie wchodzą do gry</strong> (na 400 partii: 45% kończy na tajemnicy 1, 55% na tajemnicy 2, 0% dalej). Cała eskalacja zaprojektowana na rewersach tajemnic — Kozi Pomiot, drugie wejście Kultysty Traktorzysty, Brama z Gałęzi — to <strong>martwa treść, której gracze nie zobaczą</strong>. Do tego Akt 1 nie ma jak postąpić: jedyna ścieżka prowadzi przez przedmiot <strong>Klucz do zachrystii, którego nie ma w repo</strong>.</p>
+<p><strong>Scenariusz 3 „Czarny Port"</strong> — model daje <strong>0% wygranych</strong>; 77% partii kończy się zakleszczeniem, 15% wybiciem grupy, 8% zagładą. Powód jest jeden i policzalny: <strong>Goniec ma 2<code>&lt;per&gt;</code> zdrowia (8 przy 4 graczach) i zrzuca na lokację tyle zagłady, ile zostało mu punktów wytrzymałości</strong>, a lokacja spacza się przy <strong>4</strong>. Jeden Goniec, który dojdzie do celu nietknięty, natychmiast spacza lokację z dwukrotnym zapasem — a wskazówki na spaczonej lokacji <strong>zamieniają się w zagładę</strong>. W śledzonej partii Cytadela i UAM były spaczone w <strong>2. rundzie</strong>, Mleczarnia w 6., Akt 1 zaliczono w 10., grupa padła w 17. Odzyskiwanie idzie testem <code>&lt;wil&gt;</code>(3) po ~1 żetonie, więc arytmetyka nie domyka się nigdy. Dodatkowo <strong>Czarna Koza z Ostrowa — cel Aktu 6 — nie istnieje jako karta</strong>.</p>
+<p>Krótko: scenariusz 1 wymaga zegara i uzupełnienia jednej karty; scenariusz 3 wymaga przeliczenia zagłady na lokacjach i dopisania bossa, zanim w ogóle da się mówić o balansie.</p>
+<h2>Metoda</h2>
+<p>Ten sam warsztat co przy scenariuszu 2: <code>tools/scenario13_model.py</code> (tempo + Monte Carlo), profile 4 talii 0 XP z arkhamdb (Marie Lambeau, Carolyn Fern, André Patel, Tommy Muldoon), worek Standard, po 1000 partii na scenariusz. Model <strong>nie jest silnikiem zasad</strong> — talie graczy to liczby, efekty spotkań są skrócone, polityka graczy to lista priorytetów. Liczby traktuj jako rząd wielkości, nie wynik do promila. Pełna lista uproszczeń na końcu.</p>
+<p>Nic w kartach nie zostało zmienione.</p>
+<p>---</p>
+<h1>Scenariusz 1: „Wioska wśród drzew"</h1>
+<h2>Kompletność</h2>
+<div class="tw"><table><thead><tr><th>waga</th><th>plik / miejsce</th><th>problem</th></tr></thead><tbody>
+<tr><td class="sev sev-BLOKER">BLOKER</td><td>Zachrystia.card + Kościół.card</td><td>Jedyna ścieżka postępu Aktu 1 → 2 prowadzi przez przedmiot <strong>Klucz do zachrystii</strong> („dobierz odłożony na bok przedmiot Klucz do zachrystii"). <strong>Karty nie ma w repo.</strong> Bez niej Akt 1 nie ma jak postąpić — jego treść to samo „Zdobądź poszlaki na temat sytuacji w tej wiosce", bez progu wskazówek.</td></tr>
+<tr><td class="sev sev-BLOKER">BLOKER</td><td>Skraj Lasu.card</td><td><code>&lt;act&gt;Jako grupa wydaj 3B wskazówek żeby spowodować postęp talii aktów</code> — <strong><code>3B</code> to literówka</strong>, zapewne <code>3&lt;badacz&gt;</code>. To druga (i po Akcie 1 jedyna) droga postępu aktów, więc próg jest nieczytelny.</td></tr>
+<tr><td class="sev sev-BLOKER">BLOKER</td><td>Obóz na Mokradłach.card</td><td>„Rozstaw w tej lokalizacji odłożonego na bok <strong>Czempiona Koziegłowych</strong>" — karty nie ma w repo.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Ojciec Żerdź.card</td><td>Boss ma <code>enemy_damage</code> <strong>puste</strong> — zadaje 0 obrażeń, tylko 1 przerażenie. Przy 3<code>&lt;per&gt;</code> = 12 zdrowia to przeciwnik, który nie może nikogo pokonać inaczej niż przez poczytalność.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Tajemnica 1 / Tajemnica 2</td><td>Obie każą wtasować <strong>Bramę z gałęzi i Kultystę Traktorzystę</strong>; Tajemnica 3 wtasowuje Traktorzystę po raz trzeci. Kopii jest odpowiednio 2 i <strong>1</strong>. Nie wiadomo, co robić przy drugim i trzecim poleceniu.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Tajemnica 1 vs Nieczysta Komunia</td><td>Tajemnica mówi o <strong>„odłożonym na bok"</strong> Przekonanym wyznawcy, a Nieczysta Komunia każe go <strong>„przeszukać w talii spotkań"</strong>. Karta jest albo w talii, albo obok — dwie karty mówią co innego, a od tego zależy skład talii startowej (13 vs 8 kart).</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Przygotowanie (fabuła)</td><td>Nie mówi, które karty spotkań są odkładane na bok. Wynika to dopiero z rewersów tajemnic. Trzeba dopisać listę.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Grzęzawisko.card</td><td><code>&lt;for&gt; jeśli nie zdasz dowolnego testu &lt;agi&gt;/&lt;com&gt; w tej lokalizacji</code> — brak trudności to tu akurat poprawne (warunek, nie test), ale pole <code>clues</code> ma wartość <strong><code>2 &lt;badacz&gt;</code></strong> ze spacją, inaczej niż na wszystkich pozostałych kartach.</td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>9 lokacji wioski</td><td>Zasłona i wskazówki <strong>niewypełnione</strong> (<code>?</code> po obu stronach): Kapliczka, Kostnica, Pod Rogatym, Skład Drewna, Stary magazyn, Targ Rybny, oba Warsztaty Kowalskie, Warsztat Kołodzieja, Wędzarnio-suszarnia. Bez nich nie da się grać ani policzyć tempa (model przyjął zasłonę 2 i 1<code>&lt;per&gt;</code>).</td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>grupy spotkań</td><td>Trzy różne nazwy w jednym scenariuszu: „Ciemne chaty, puste pola", „Mroczne sprawki", „g" — a Kozi Pomiot nie ma żadnej. Podobnie lokacje: „Wioska wśród drzew" vs „Wioska pośród drzew" vs „Miejsca zwyczajne" vs „Zwyczajne miejsca".</td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>Warsztat Kowalski</td><td>Dwa pliki, ta sama nazwa i numer 9, <strong>różne zdolności</strong> (<code>9 Warsztat Kowalski.card</code> vs <code>Warsztat Kowalski 9.card</code>). Jedna wersja jest nieaktualna.</td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>mapa</td><td>Żadna z 26 lokacji nie ma <code>location_icon</code>, a w połączeniach występują 4 symbole. Przygotowanie odsyła do „schematu z instrukcji", którego w repo nie ma.</td></tr>
+</tbody></table></div>
+<h2>Balans (1000 partii, 4 graczy)</h2>
+<div class="tw"><table><thead><tr><th>miara</th><th>wynik</th></tr></thead><tbody>
+<tr><td>wygrane (Żyrij pokonany)</td><td><strong>84%</strong></td></tr>
+<tr><td>porażka: wybicie grupy</td><td>16%</td></tr>
+<tr><td>porażka: zagłada</td><td><strong>0%</strong></td></tr>
+<tr><td>mediana rund</td><td>7 (maks. 12)</td></tr>
+<tr><td>obrażenia / przerażenie na badacza</td><td>3,5 / 5,2</td></tr>
+<tr><td>osiągnięta tajemnica</td><td>1: 45% · 2: 55% · <strong>3 i 4: 0%</strong></td></tr>
+</tbody></table></div>
+<h3>Za łatwe</h3>
+<ul>
+<li><strong>Zegar nie istnieje.</strong> 7 + 7 + 7 + 4 = 25 zagłady przy 1/rundę i braku innych źródeł zagłady w talii = 25 rund. Gra trwa 7. Tajemnica 4 („Tryumf Kozicy", przegrana) jest nieosiągalna.</li>
+<li><strong>Skutek:</strong> wszystko, co tajemnice wnoszą do gry — Brama z Gałęzi, Kultysta Traktorzysta, Kozi Pomiot ×2, konwersje Ciekawskich na Wyznawców — pojawia się rzadko albo wcale. Talia spotkań przez większość partii to te same 13 kart.</li>
+<li><strong>Żyrij Żerdź</strong> przy zerowych obrażeniach i 12 zdrowia jest workiem treningowym: grupa z jednym wojownikiem zdejmuje go w 4–6 udanych ataków, ryzykując tylko przerażenie.</li>
+</ul>
+<h3>Za trudne</h3>
+<ul>
+<li><strong>Talia startowa to 12 wrogów na 13 kart (92%).</strong> Przy 4 graczach wyczerpuje się po ~3 rundach, więc ci sami wrogowie wracają dwa–trzy razy w jednej partii. Stąd 16% wybić mimo braku zegara.</li>
+<li><strong>Przekonany wyznawca ×5</strong>: Łowca, Polowanie na badacza z największą liczbą wskazówek, 3/3/3, 1 obrażenie i 1 przerażenie. Pięć kopii poluje na tę samą osobę — badacza od wskazówek. Carolyn (poczytalność 9, walka 1) nie ma na to odpowiedzi.</li>
+<li><strong>Trudność 3 dla wszystkich testów spotkań</strong> przy statystykach 2–5 daje 0–86% zależnie od badacza; Nieczysty Chrzest (<code>&lt;com&gt;</code>(3)) przechodzi u Carolyn w <strong>0%</strong> przypadków.</li>
+</ul>
+<h3>Martwe</h3>
+<ul>
+<li><strong>Tajemnice 3 i 4</strong> — nigdy nie widziane.</li>
+<li><strong>Kozi Pomiot ×2</strong> — wchodzi dopiero z tajemnicą 3.</li>
+<li><strong>Brama z Gałęzi ×2</strong> — cztery alternatywne warunki przejścia, z których pierwszy („Skład Drewna nie ma wskazówek") zwykle jest spełniony od ręki; karta blokuje przejście średnio przez pół rundy.</li>
+<li><strong>Zbłąkany Kultywator ×2</strong> — Powściągliwy, 1/5/1, buffuje sąsiadów o +1<code>&lt;com&gt;</code>/+1<code>&lt;agi&gt;</code>. Nikt go nie atakuje (5 zdrowia za brak nagrody), więc bufuje bezkarnie — ale że wrogowie i tak nie są problemem, efekt jest niezauważalny.</li>
+</ul>
+<h3>Co bym zmienił (propozycje, nie wprowadzone)</h3>
+<ol>
+<li><strong>Skrócić zegar do ~12–14 zagłady</strong> (np. 4 / 4 / 3 / 3) albo dodać źródła zagłady do talii spotkań. Bez tego trzy czwarte projektu tajemnic jest niewidoczne. To jedna zmiana, która robi najwięcej.</li>
+<li><strong>Żyrij: wpisać obrażenia</strong> (proponuję 2) i rozważyć „Łowca" — teraz można go bezkarnie ignorować.</li>
+<li><strong>Rozrzedzić talię startową</strong>: Ciekawski ×5 i Przekonany ×5 to za dużo jak na 13 kart. Ciekawski ×4, Przekonany ×3, plus 2–3 podstępy z tajemnicy 1 przeniesione do talii startowej.</li>
+<li><strong>Wypełnić zasłonę i wskazówki na 9 lokacjach wioski</strong>, ujednolicić nazwy grup spotkań i usunąć duplikat Warsztatu Kowalskiego.</li>
+<li><strong>Dodać Klucz do zachrystii i Czempiona Koziegłowych</strong>, poprawić <code>3B</code> → <code>3&lt;badacz&gt;</code>.</li>
+</ol>
+<p>---</p>
+<h1>Scenariusz 3: „Czarny Port"</h1>
+<h2>Kompletność</h2>
+<div class="tw"><table><thead><tr><th>waga</th><th>plik / miejsce</th><th>problem</th></tr></thead><tbody>
+<tr><td class="sev sev-BLOKER">BLOKER</td><td>Akt 6.card</td><td>Cel: „Pokonaj <strong>Czarną Kozę z Ostrowa</strong>". <strong>Karty nie ma w repo</strong> — scenariusza nie da się wygrać.</td></tr>
+<tr><td class="sev sev-BLOKER">BLOKER</td><td>Przygotowanie (fabuła)</td><td>Odkłada na bok lokację <strong>Stary Fort Pruski</strong> („zostanie wprowadzona w kulminacyjnym momencie") — karty nie ma; <strong>nic jej też nie wprowadza</strong>. Akt 5 każe „dostać się do fortu na Cytadeli", a Tunele Forteczne są „niedostępne, chyba że wynika to z karty scenariusza" — i żadna karta tego nie odblokowuje.</td></tr>
+<tr><td class="sev sev-BLOKER">BLOKER</td><td>Akt 3.card i Akt 4.card</td><td><strong>Identyczny cel</strong>: „Usuń wszystkie wskazówki z lokalizacji Mleczarnia". Po zaliczeniu Aktu 3 Akt 4 jest natychmiast spełniony (albo nie da się go spełnić drugi raz).</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Przygotowanie (fabuła)</td><td>Wymienia <strong>Szpital Kliniczny</strong> wśród lokacji do rozłożenia — karty nie ma. Odsyła też do „mapy powiązań kampanii", której nie ma.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Goniec 1/2/3</td><td>Trzy karty o <strong>tej samej nazwie</strong> „Goniec" i różnych celach patrolu (Mleczarnia, UAM, Cytadela) — w grze nie da się ich odróżnić. Do tego Goniec 3 ma 3<code>&lt;per&gt;</code> zdrowia, a pozostałe 2<code>&lt;per&gt;</code>.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Czarna Sadza, Smród z Garbar, Trauma Pruskiego Drylu</td><td>To <strong>podstępy z wypełnionymi statystykami wroga</strong> (atak 3, zdrowie 2<code>&lt;per&gt;</code>, unik 3, obrażenia 1). Wyrenderują się z paskami walki jak przeciwnicy.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>10 lokacji</td><td>Zasłona i wskazówki na rewersie <strong><code>-</code></strong> (niewypełnione): Mleczarnia, Nadbrzeże, Ogród Botaniczny, Ostrów Tumski, Rynek Jeżycki, Sołacz, Stary Rynek, Tunele Forteczne, UAM, Zakłady Cegielskiego.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Cień z Jeżyc</td><td>Atak i unik = <strong><code>X</code></strong>, a karta definiuje X tylko raz („X to liczba lokalizacji z cechą Spaczona"). Przy zerze Spaczonych ma atak 0 i unik 0.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Smród z Garbar</td><td>Odsyła do „akcji Badania" pisanej wielką literą jako nazwa akcji, a jednocześnie ma statystyki wroga (patrz wyżej) — nie wiadomo, czym ta karta ma być.</td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>Biblioteka / Dyrekcja / Linia Rozlewnicza</td><td>Warunek „niedostępna, dopóki na <strong>sąsiednich</strong> lokalizacjach są wskazówki" na trzech kartach naraz, przy braku mapy, może zamknąć pół planszy.</td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>wersje <code>_kor_9</code></td><td>Cztery lokacje mają warianty w nazwie pliku (<code>Biblioteka Uniwersytecka_kor_9</code>, <code>Dyrekcja Zakładu_kor_9</code>, <code>Linia Rozlewnicza_kor_9</code>) o tej samej nazwie karty — to strony Spaczone, ale nic tego nie mówi; wyglądają jak duplikaty.</td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>Linia Rozlewnicza</td><td>Dwie wersje mają różne cechy: „Mdła" i „Smrodliwa" — cechy nieużywane nigdzie indziej.</td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>emoji zamiast tagów</td><td>Biblioteka, Cytadela, Rynek Jeżycki, Sołacz i Ogród Botaniczny używają ➡️/📚/👊/🧠 zamiast tagów, mimo że reszta repo została ujednolicona.</td></tr>
+</tbody></table></div>
+<h2>Balans (1000 partii, 4 graczy)</h2>
+<div class="tw"><table><thead><tr><th>miara</th><th>wynik</th></tr></thead><tbody>
+<tr><td>wygrane</td><td><strong>0%</strong></td></tr>
+<tr><td>porażka: zakleszczenie (spaczonej lokacji nie da się odzyskać)</td><td>77%</td></tr>
+<tr><td>porażka: wybicie grupy</td><td>15%</td></tr>
+<tr><td>porażka: zagłada (Tajemnica 4)</td><td>8%</td></tr>
+<tr><td>mediana rund</td><td>11</td></tr>
+<tr><td>osiągnięty akt</td><td>1: 0,5% · 2: 18% · <strong>3: 79%</strong> · 4: 0,3% · 5: 3%</td></tr>
+</tbody></table></div>
+<h3>Arytmetyka, która to psuje</h3>
+<div class="tw"><table><thead><tr><th>element</th><th>wartość</th><th>skutek</th></tr></thead><tbody>
+<tr><td>Goniec — zdrowie</td><td>2<code>&lt;per&gt;</code> = <strong>8</strong> przy 4 graczach</td><td>tyle zagłady zrzuca na lokację, jeśli dojdzie nietknięty</td></tr>
+<tr><td>próg spaczenia lokacji</td><td><strong>4</strong> żetony</td><td>jeden Goniec spacza lokację z <strong>dwukrotnym zapasem</strong></td></tr>
+<tr><td>Gońców w talii</td><td><strong>6</strong> kart (3 nazwy × 2)</td><td>~1 na 4 dobierane karty</td></tr>
+<tr><td>spaczenie</td><td>wskazówki na lokacji → zagłada</td><td><strong>traci się cały dorobek badania tej lokacji</strong></td></tr>
+<tr><td>odzyskanie</td><td>test <code>&lt;wil&gt;</code>(3), 1 żeton za sukces (+1 za każdy punkt nadwyżki)</td><td>~0,5 żetonu na akcję przy 43% skuteczności</td></tr>
+</tbody></table></div>
+<p>Goniec jest przy tym <strong>Powściągliwy</strong> — nie wchodzi w zwarcie, więc nie prowokuje reakcji; trzeba go świadomie ścigać i zabić 8 punktów zdrowia, zanim dojdzie. Przy 4 graczach i jednym wojowniku to nie jest wykonalne dla sześciu kopii.</p>
+<p>W śledzonej partii (seed 4): <strong>Cytadela i UAM spaczone w rundzie 2</strong>, Mleczarnia w 6., Akt 1 zaliczony dopiero w 10. rundzie, grupa padła w 17. przy trzech trwale spaczonych lokacjach.</p>
+<h3>Za trudne</h3>
+<ul>
+<li><strong>Karta scenariusza</strong>: kultysta i tablica dają <strong>−X, gdzie X to liczba Spaczonych lokacji</strong>, bez limitu. Przy trzech spaczonych to −3, przy pięciu −5, a spaczenie jest w praktyce nieodwracalne. To pętla dodatniego sprzężenia: więcej spaczenia → gorsze testy → mniej odzyskiwania → więcej spaczenia.</li>
+<li><strong>Zagłada rośnie z wielu źródeł naraz</strong>: Goniec (masowo), Świeża Dostawa, Obłąkany Student (1/rundę w zwarciu), Wkurwiony Bamber (1 po każdym ataku), Mity (1/rundę). 38 zagłady wygląda dużo, ale to nie zagłada zabija — tylko 8% porażek.</li>
+<li><strong>Mleczarnia Spółdzielcza</strong>: „+2 zasłony za <strong>każdego badacza w tej lokacji</strong>" przy bazowej 2 i 3<code>&lt;per&gt;</code> wskazówek — czterech badaczy robi z niej zasłonę 10. A jest celem dwóch aktów.</li>
+<li><strong>Smród z Garbar</strong> w Mleczarni lub na Linii: <code>&lt;wil&gt;</code>(5) — w modelu przechodzi w <strong>18%</strong>.</li>
+</ul>
+<h3>Za łatwe / martwe</h3>
+<ul>
+<li><strong>Zagłada jako zegar</strong> — 8% porażek. Prawdziwy zegar to spaczenie lokacji, a ono nie jest opisane jako zagrożenie.</li>
+<li><strong>Wkurwiony Bamber</strong>: „Wydaj 4 zasoby: Pertraktacje, odrzuć" — 4 zasoby to dwie tury zbierania; taniej go zabić (3 zdrowia).</li>
+<li><strong>Nadbrzeże Warty</strong> — jedyna lokacja, która nie może się spaczyć, zasłona 1, i daje darmowy ruch po zbadaniu. Bezpieczna baza, w której nic się nie dzieje.</li>
+<li><strong>Ogród Botaniczny, Sołacz, Rynek Jeżycki</strong> — po 1–2 wskazówki i zdolności „odrzuć zasoby/kartę, by usunąć zagładę". Przy skali zagłady z Gońca (8) usuwanie po 1 żetonie za 2 zasoby jest bez znaczenia.</li>
+</ul>
+<h3>Co bym zmienił (propozycje, nie wprowadzone)</h3>
+<ol>
+<li><strong>Goniec: zrzucaj 1–2 żetony zagłady zamiast „tyle, ile zdrowia"</strong>, albo podnieś próg spaczenia do 6–8. To jedna liczba, która odblokowuje cały scenariusz.</li>
+<li><strong>Spaczenie: zamiast „wskazówki → zagłada" niech zostaje połowa wskazówek</strong> (zaokrąglona w górę). Teraz jedno zdarzenie kasuje pracę całej rundy.</li>
+<li><strong>Karta scenariusza: ograniczyć <code>−X</code> do −3</strong> (albo „X = liczba Spaczonych, maksymalnie 3"). Bez limitu spirala nie ma dna.</li>
+<li><strong>Mleczarnia: „+2 zasłony za każdego badacza" → „+1"</strong>, albo liczyć tylko badaczy poza tym, który bada.</li>
+<li><strong>Dodać Czarną Kozę z Ostrowa i Stary Fort Pruski</strong>, rozróżnić trzy Gońce nazwami (np. Goniec z Mleczarni / z UAM / z Cytadeli), rozdzielić cele Aktów 3 i 4.</li>
+<li><strong>Usunąć statystyki wroga z trzech podstępów</strong> i uzupełnić zasłonę/wskazówki na 10 lokacjach.</li>
+</ol>
+<p>---</p>
+<h2>Założenia modelu (uproszczenia)</h2>
+<p>Wspólne z modelem scenariusza 2: worek <strong>Standard</strong> (+1, 0, 0, −1, −1, −1, −2, −2, 💀💀, 👤, 📜, 🐙, ⭐); talie graczy jako profile liczbowe (średnie ikony na kartę deklarowane, gdy przewaga &lt; 2; broń/zaklęcie w grze = +1 do walki, mistyk walczy wolą; narzędzia poszukiwacza = +1 intelekt; sojusznik = +1 zdrowia i poczytalności; leczenie 1 pkt/rundę z prawdopodobieństwem udziału kart leczących); 3 akcje na turę; ruch kosztuje <strong>1–3 akcje</strong> (siatki ~3×3, losowany dystans).</p>
+<p><strong>Scenariusz 1</strong>: 9 lokacji wioski ma puste pola, więc przyjęto zasłonę 2 i 1<code>&lt;per&gt;</code> wskazówek. Akt 1 → 2 zamodelowany jako „wydaj 3<code>&lt;per&gt;</code> wskazówek" (realna ścieżka przez Klucz do zachrystii nie istnieje). Akt 2 → 3 to udany test <code>&lt;int&gt;</code>(4) w Norach lub Obozie ocalałych. Talia startowa: Ciekawski ×5, Przekonany ×5, Zbłąkany ×2, Wołanie — pozostałe karty dokładają tajemnice. Ciekawski traktowany jako Powściągliwy (Pertraktacje <code>&lt;wil&gt;</code>/<code>&lt;com&gt;</code> 3 usuwają go). Żyrij: 12 zdrowia, każde trafienie zamienia Ciekawskiego w Wyznawcę.</p>
+<p><strong>Scenariusz 3</strong>: 13 lokacji, wskazówki 1–3<code>&lt;per&gt;</code>, zasłona z awersów. Goniec patroluje do celu (1 krok/rundę) i zrzuca zagładę równą zdrowiu. Spaczenie przy 4 zagłady zamienia wskazówki na zagładę. Odzyskiwanie: <code>&lt;wil&gt;</code>(3), 1 żeton + nadwyżka. Akty: 1 = 3<code>&lt;per&gt;</code> wskazówek, 2 = Zakłady, 3 i 4 = Mleczarnia, 5 = Cytadela, 6 = boss (zamodelowany jako 4<code>&lt;per&gt;</code> zdrowia, mimo że karty nie ma). „Zakleszczenie" to 40 akcji z rzędu bez postępu — model uznaje to za porażkę, przy stole byłoby to po prostu przegrane tempo.</p>
+<p><strong>Nie modelowane</strong>: konkretne karty gracza, ataki okazyjne, zasoby, mapa połączeń (dystans losowany), Brama z Gałęzi jako blokada, warunki „niedostępna, dopóki sąsiedzi mają wskazówki", odwracanie lokacji z powrotem na stronę czystą poza celem aktu.</p>
+<p>Narzędzia: <code>tools/scenario13_model.py</code> (<code>tempo 1|3</code>, <code>sim 1|3</code>), profile z <code>tools/arkhamdb.py</code>.</p>
+</div>

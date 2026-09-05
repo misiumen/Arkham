@@ -1,6 +1,7 @@
 {
   "type": "敌人卡",
   "name": "Hierofanta Tysiąca Pędów",
+  "quantity": 1,
   "id": "",
   "created_at": "",
   "version": "2.0",

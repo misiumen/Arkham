@@ -1,0 +1,258 @@
+<title>Playtest: Scenariusz 2 „Nurt Szaleństwa&quot;</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--bg:#E8E7DE;--surface:#F5F4EE;--surface-2:#DEDDD3;--line:#C7C6BA;--ink:#1A1D17;--muted:#5D6157;--accent:#3D5A45;--bloker:#7E2B22;--blad:#9C5A11;--spoj:#3D5A45;--balans:#3A5570}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#12140F;--surface:#1B1E17;--surface-2:#23261E;--line:#343829;--ink:#E7E8DE;--muted:#9AA091;--accent:#8CB18F;--bloker:#D9736A;--blad:#DFA054;--spoj:#8CB18F;--balans:#90AECC}}
+:root[data-theme="dark"]{--bg:#12140F;--surface:#1B1E17;--surface-2:#23261E;--line:#343829;--ink:#E7E8DE;--muted:#9AA091;--accent:#8CB18F;--bloker:#D9736A;--blad:#DFA054;--spoj:#8CB18F;--balans:#90AECC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px 96px}
+h1{font-family:"Bodoni Moda","Times New Roman",serif;font-weight:700;font-size:clamp(32px,5vw,50px);line-height:1.05;margin:0 0 8px;text-wrap:balance}
+h2{font-family:"Bodoni Moda","Times New Roman",serif;font-weight:500;font-size:28px;margin:44px 0 12px;padding-bottom:6px;border-bottom:3px double var(--line)}
+h3{font-family:"Bodoni Moda","Times New Roman",serif;font-weight:500;font-size:21px;margin:28px 0 8px}
+p{margin:0 0 14px;max-width:70ch}
+p.meta{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+ul,ol{margin:0 0 16px;padding-left:22px;max-width:75ch}
+li{margin-bottom:6px}
+code{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.86em;background:var(--surface-2);padding:1px 5px}
+.tw{overflow-x:auto;margin:0 0 18px;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:8px 12px;border-bottom:1px solid var(--line)}
+th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--surface-2)}
+td:first-child{white-space:nowrap}
+td.sev{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.06em;font-weight:500}
+td.sev-BLOKER{color:var(--bloker)}td.sev-BLAD{color:var(--blad)}td.sev-SPOJNOSC{color:var(--spoj)}td.sev-BALANS{color:var(--balans)}
+strong{font-weight:600}
+</style>
+
+<div class="wrap">
+<h1>Playtest: Scenariusz 2 „Nurt Szaleństwa"</h1>
+<p class="meta">Data: 2026-09-01, aktualizacja 2026-09-04 · 4 badaczy · talie 0 XP z arkhamdb · worek Standard · warianty A i B</p>
+<h2>Werdykt</h2>
+<p>Scenariusz w obecnej postaci jest <strong>nie do wygrania w rozsądnym odsetku partii</strong>: model daje 12% wygranych w wariancie A (Rytuał) i 6% w wariancie B (Ucieczka), a rozgrywka narracyjna skończyła się rozpadem grupy w 7. rundzie przy Skażonym Nurcie, w połowie drogi. Winna nie jest zagłada (1–2% porażek), tylko <strong>gęstość wrogów w talii spotkań</strong> — 14 z 26 kart to przeciwnicy, przy 4 graczach to 2 nowe wrogi co rundę po 3 zdrowia każdy — oraz <strong>Kozi Pomiot ×4</strong>, który za każde pokonanie daje przerażenie całej grupie. Do tego scenariusz jest <strong>niekompletny</strong>: Tajemnica 1 odsyła do wroga, którego nie ma (Topielec z Warty), dwie lokacje do atutu, którego nie ma (Zapas Paliwa), a przygotowanie nie mówi, kiedy Bariery wchodzą do gry ani jak leży mapa. Najpierw: dopisać brakujące karty i zasady, potem zdjąć 3–4 wrogów z talii i zmniejszyć karę Pomiota — dopiero wtedy warto stroić bariery i Most.</p>
+<h2>Po poprawkach autora (2026-09-04)</h2>
+<p>Autor: Bariery leżą na stole od początku razem z lokacjami (przygotowanie do doprecyzowania — teraz mówi „odłóżcie na bok"); Tajemnica 1 rozstawia teraz Rzeczne Młode zamiast nieistniejącego Topielca. Model czyta <code>quantity</code> prosto z kart, więc zmiany w talii od razu liczą się w symulacji.</p>
+<p><strong>Talia spotkań po zmianie: Kozi Pomiot 4→2, Nosiciel 3→2, Rzeczne Młode 3→2, Hierofanta 2→1</strong> (26 → 21 kart, wrogów 14 → 7).</p>
+<div class="tw"><table><thead><tr><th>skład talii</th><th>A</th><th>B</th></tr></thead><tbody>
+<tr><td>pierwotny (14 wrogów / 26)</td><td>12%</td><td>4%</td></tr>
+<tr><td>Pomiot 2</td><td>33%</td><td>8%</td></tr>
+<tr><td>Pomiot 2, Nosiciel 2, Młode 2, Hierofanta 1 — <strong>wpisane do kart</strong></td><td><strong>35%</strong></td><td>5%</td></tr>
+<tr><td>jw. + Pomiot 1</td><td>47%</td><td>8%</td></tr>
+</tbody></table></div>
+<p>Wariant A wraca do grywalności samymi liczbami. Wariant B nie — 55–70% partii nadal tonie na Moście, bo Lewiatan (2 barce co rundę) i porażki „Cała naprzód" (1 barce) wyprzedzają zbieranie 6 znaczników Ciśnienia. Sprawdzone w modelu (400 gier każde, talia po zmianie):</p>
+<div class="tw"><table><thead><tr><th>zmiana w wariancie B</th><th>wygrane B</th></tr></thead><tbody>
+<tr><td>bez zmian</td><td>8%</td></tr>
+<tr><td>Lewiatan nie atakuje wszystkich (tylko zwarcie)</td><td>10%</td></tr>
+<tr><td>„Cała naprzód" wil(3)/com(3) zamiast 4</td><td>21%</td></tr>
+<tr><td><strong>Ciśnienie: 4 znaczniki zamiast <code>&lt;per&gt;</code>+2</strong></td><td><strong>26%</strong></td></tr>
+<tr><td>Ciśnienie 4 + porażka nie uszkadza barki</td><td>28%</td></tr>
+<tr><td>Ciśnienie 4 + Lewiatan 1 barce</td><td>28%</td></tr>
+<tr><td>Ciśnienie 4 + Lewiatan 1 barce, tylko zwarcie + porażka bez uszkodzenia</td><td><strong>36%</strong></td></tr>
+</tbody></table></div>
+<h2>Wprowadzone zmiany (2026-09-04, druga tura)</h2>
+<p>Model przeliczony po edycjach kart (1000 gier na wariant, talia 21 kart): <strong>A 52%, B 46%</strong> (start: 12% / 6%). Obie ścieżki w tym samym przedziale, żadna nie jest trywialna.</p>
+<div class="tw"><table><thead><tr><th>karta</th><th>zmiana</th><th>dlaczego</th></tr></thead><tbody>
+<tr><td>Most Chwaliszewski B</td><td>Ciśnienie: <strong>4 znaczniki</strong> zamiast <code>&lt;per&gt;</code>+2; Rezygnacja także gdy Lewiatana „nie ma w tej lokacji"; porażka „Cała naprzód" uszkadza barkę tylko przy <strong>różnicy 2+</strong></td><td>największa dźwignia B (8% → 26% samym progiem); okno po odepchnięciu Lewiatana trwało jedną rundę</td></tr>
+<tr><td>Lewiatan</td><td>Wymuszony dostał wyzwalacz: „Gdy Lewiatan atakuje: zamiast badacza atakuje Barkę (dokładnie 2), każdy badacz w lokacji 1 przerażenie"</td><td>tekst nie mówił, kiedy atakuje; 2 obrażenia + 2 przerażenia każdemu co rundę wybijało grupę</td></tr>
+<tr><td>Skażony Nurt</td><td>Tkanka: <strong>+1</strong> do testów zamiast +2</td><td>tu grupa stawała (rundy 4–7 w rozgrywce); testy 5–6 przy statystykach 3–5</td></tr>
+<tr><td>Toksyczny Kożuch</td><td>„test grupowy com(10)" → <strong>jeden badacz com(5), każdy inny deklaruje 1 kartę</strong></td><td>testów grupowych nie ma w zasadach; w modelu 0%</td></tr>
+<tr><td>Zrujnowany Fort</td><td>com(4) → <strong>com(3)</strong></td><td>Dynamit był martwą ścieżką (1%); teraz Miny przez Dynamit 41% w A</td></tr>
+<tr><td>Karta Scenariusza</td><td>„Mutacji" → „Tkanki/Tkanek"; czaszka „minus 1 <strong>(minimum 0)</strong>"; dopisane: <strong>pusta Talia Tkanek → przetasuj odrzucone</strong></td><td>dwa różne teksty na jednej karcie; X = −1 przy zerze Tkanek; talia kończyła się w 5. rundzie</td></tr>
+<tr><td>Most A / Most B</td><td>nagłówek <code>【Wariant A: Rytuał】</code> / <code>【Wariant B: Ucieczka】</code>; Akt 3: „kartę Mostu wykładacie podczas przygotowania"; domknięty nawias <code>(-&gt;【Z2】)</code></td><td>dwie karty o tej samej nazwie, nic nie mówiło, którą wyłożyć</td></tr>
+<tr><td>Kozi Pomiot</td><td><strong>bez zmian tekstu</strong> (2 kopie)</td><td>to klon oficjalnego *Goat Spawn* z podstawki — brzmienie zostaje oficjalne, gęstość zmniejszona przez quantity</td></tr>
+</tbody></table></div>
+<p><strong>Mroczna fala</strong> — słusznie: to oficjalne polskie tłumaczenie *Surge* z Kompletnej Księgi Zasad („dobierz i rozpatrz dodatkową kartę spotkania"). Zdejmuję z listy braków; Żywy Nurt i Zapach Feromonów są poprawne. Jedyna uwaga: oficjalna pisownia to „Mroczna fala" (mała litera).</p>
+<h3>Brakujące karty — propozycje (utworzone jako pliki .card bez ilustracji)</h3>
+<div class="tw"><table><thead><tr><th>karta</th><th>plik</th><th>typ / cechy</th><th>koszt · slot · statystyki</th><th>tekst</th></tr></thead><tbody>
+<tr><td><strong>Zapas Paliwa</strong></td><td>Karty Spotkań/scenariusz 2/Zapas Paliwa.card</td><td>atut neutralny · Przedmiot, Zapas · grupa spotkań c</td><td>– (z poza gry)</td><td><code>&lt;rea&gt;</code> Gdy badacz w twojej lokacji wykonuje test ruchu Barką, wyczerp: +1 do testu. Odrzuć: wpłynięcie do Rozlewisk nie kosztuje dodatkowej akcji. Gdy opuści grę: usuń z rozgrywki.</td></tr>
+<tr><td><strong>Wdzięczne Żyjątko</strong></td><td>Karty Badaczy/Wdzięczne Żyjątko.card</td><td>atut fabularny · Sojusznik, Istota, Fabularny</td><td>koszt 2 · Sojusznik · zdrowie 2 / poczytalność 2 · poziom 0</td><td><code>&lt;rea&gt;</code> Gdy wróg z cechą Narośl lub Potwór wchodzi do gry w twojej lokacji, wyczerp: wchodzi wyczerpany. <code>&lt;rea&gt;</code> Gdy ujawnisz <code>&lt;cur&gt;</code>, wyczerp: traktuj jak 0. Gdy opuści grę: usuń z rozgrywki.</td></tr>
+<tr><td><strong>Żebro Lewiatana</strong></td><td>Karty Badaczy/Żebro Lewiatana.card</td><td>atut fabularny · Przedmiot, Broń, Relikt, Fabularny</td><td>koszt 3 · Ręka · poziom 0</td><td><code>&lt;act&gt;</code> <strong>Walka.</strong> +2 <code>&lt;com&gt;</code>; sukces: +1 obrażenie; wróg z cechą Narośl, Potwór lub Rzeka: dodatkowo +1. Gdy opuści grę: usuń z rozgrywki.</td></tr>
+</tbody></table></div>
+<p>Uzasadnienie: Zapas Paliwa robi dokładnie to, do czego odsyłają Przystań i Rozlewiska, plus mały bonus, żeby nie był martwą kartą. Żyjątko to nagroda za wariant A — soak 2/2 jak Sojusznik za 2 zasoby, zdolność wiąże się z klątwą (motyw kampanii) i Naroślami (scenariusz 3). Żebro to nagroda za B — poziom Machete +1, bo kosztuje most i barkę.</p>
+<h3>Otwarte (wymaga twojej decyzji)</h3>
+<ul>
+<li><strong>Mapa Pobrzeży</strong> — nadal brak <code>location_icon</code>; model zakłada Dęby↔Zakole, Fabryka↔Skażony Nurt, Fort↔Rozlewiska, Dworzec↔Przystań.</li>
+<li><strong>Przygotowanie w fabule</strong>: „Odłóżcie na bok Bariery" → „Wyłóżcie Bariery przy lokacjach, które blokują (Łęgi, Rozlewiska, Most)"; dopisać wybór Mostu wraz z wariantem. Nie edytowałem <code>.docx</code>.</li>
+<li><strong>Tajemnica 2 po resecie</strong> — próg 8 ponownie? zagłada z Hierofanty też znika? Model: tak / tak.</li>
+<li><strong>Rozstawienie „w lokalizacji z Tkanką"</strong> przy kilku takich lokacjach — sugeruję „najbliższej badaczowi, który dobrał kartę".</li>
+<li><strong>Oślizgła Macka</strong> — tylko w <code>archiwum/</code>, brak karty; jeśli archiwum jest martwe, usuń folder.</li>
+</ul>
+<h2>Trzecia tura (2026-09-04): skalowanie i porządki — wprowadzone</h2>
+<div class="tw"><table><thead><tr><th>karta / plik</th><th>zmiana</th></tr></thead><tbody>
+<tr><td>Żyjący Zator</td><td>„4 wskazówki" → <strong>1<code>&lt;per&gt;</code> wskazówek</strong></td></tr>
+<tr><td>Most Chwaliszewski B</td><td>Ciśnienie <strong><code>&lt;per&gt;</code></strong> znaczników; przy wpłynięciu <strong>+1 Ciśnienia za każdą Barierę w Puli Zwycięstwa</strong> (nagroda za przedmioty w B)</td></tr>
+<tr><td>Nosiciel Zarodników</td><td>dołącza Tkankę tylko, gdy w lokacji nie ma żadnej</td></tr>
+<tr><td>Zapas Paliwa</td><td>nowa akcja: odrzuć → spal 1 Tkankę w lokacji (wybór: paliwo na Rozlewiska czy na Tkankę)</td></tr>
+<tr><td>Skrzynia Dynamitu</td><td>3 obrażenia wrogom, <strong>1</strong> badaczom (było 3)</td></tr>
+<tr><td>Lewiatan</td><td>„Lewiatan nie wraca do lokacji Most Chwaliszewski"</td></tr>
+<tr><td>Tajemnica 2</td><td>zamiast „+1 trudność na Barce": <strong>Barka otrzymuje 1 uszkodzenie</strong>, zagłada z gry, próg 8 ponownie</td></tr>
+<tr><td>Karta Scenariusza</td><td>zdanie o wyczerpaniu talii spotkań (przetasuj; Kokon i Akt 4A reagują)</td></tr>
+<tr><td>Fabuła (odt = docx)</td><td>Dworzec Puszczykowo przy <strong>Łęgach Wierzbowych</strong> (jedyny węzeł bez Pobrzeża, zamiast martwej Przystani); przy wyborze wariantu: „A to walka z bossem na Moście, B to wyścig z czasem i ucieczka przed Lewiatanem"</td></tr>
+<tr><td>Rytuał Płodności</td><td><strong>bez zmian</strong> — próba „Nosiciel gotowy i atakuje natychmiast" kosztowała 11 pp w A; martwy wybór zostaje jako niski priorytet</td></tr>
+</tbody></table></div>
+<p>Przetestowane i odrzucone: Tajemnica 2 z karą 2 uszkodzeń (−4 pp w A), Rytuał z natychmiastowym atakiem (−11 pp).</p>
+<div class="tw"><table><thead><tr><th>graczy</th><th>A</th><th>B</th></tr></thead><tbody>
+<tr><td>4</td><td><strong>48%</strong></td><td><strong>64%</strong></td></tr>
+<tr><td>3 (Tommy, Carolyn, Patel)</td><td>10%</td><td>10%</td></tr>
+<tr><td>2 (Tommy, Carolyn)</td><td>17%</td><td>27%</td></tr>
+</tbody></table></div>
+<p>B przy 4 graczach jest teraz łatwiejsze od A o ~16 pp — głównie przez bonus Ciśnienia za Bariery. Jeśli przy stole B wyjdzie za lekko, pierwszy kandydat do zdjęcia to właśnie ten bonus. 2–3 graczy nadal wyraźnie trudniejsze niż 4 (patrz ocena niżej) — to do testu przy stole.</p>
+<h2>Czwarta tura (2026-09-04): ścieżka bojowa i doświadczenie — wprowadzone</h2>
+<p>Model przeliczony: <strong>wariant A 54,8%, wariant B 61,0%</strong> w kampanii (było 54,8% / 70,8%), przy 0 XP oba po ~44%. Doświadczenie z scenariusza wzrosło z 1–2 do <strong>6–8 PD</strong>.</p>
+<h3>Sprostowanie do wcześniejszej oceny Lewiatana</h3>
+<p>W modelu był błąd: Lewiatan uszkadzał Barkę <strong>także po odepchnięciu w dół rzeki</strong>. Przez to odpychanie wyglądało na bezwartościowe i napisałem, że „nikt by z tego nie skorzystał". Po poprawce ścieżka bojowa okazała się realna — trzeba jej było tylko dać cenę i nagrodę.</p>
+<h3>Zmiany na kartach</h3>
+<div class="tw"><table><thead><tr><th>karta</th><th>zmiana</th><th>efekt</th></tr></thead><tbody>
+<tr><td>Lewiatan</td><td>zdrowie <strong>2<code>&lt;badacz&gt;</code></strong> zamiast 3<code>&lt;badacz&gt;</code>; słowo kluczowe <strong>Łowca</strong>; odepchnięcie kładzie <strong>2 znaczniki Ciśnienia</strong>; usunięte „nie wraca do lokacji Most Chwaliszewski"</td><td>odepchnięcie używane w <strong>64% zwycięstw</strong> wariantu B, ale nieobowiązkowe</td></tr>
+<tr><td>Most Chwaliszewski B</td><td>próg Rezygnacji <strong><code>&lt;badacz&gt;</code>+1</strong>; usunięty bonus Ciśnienia za Bariery w Puli Zwycięstwa</td><td>bonus dawał wariantowi B 10 pp przewagi nad A</td></tr>
+<tr><td>Zmutowany Kierownik</td><td><strong>Zwycięstwo 1</strong></td><td>zdejmowany w 81–98% partii, dotąd bez nagrody</td></tr>
+<tr><td>Arcykapłan Odrodzonej Warty</td><td><strong>Zwycięstwo 2</strong></td><td>pokonanie bossa dotąd nie dawało XP</td></tr>
+<tr><td>Fabuła, Rozwiązanie 1a</td><td>+2 PD za ukończenie scenariusza</td><td>scenariusz nie miał żadnej premii za przetrwanie</td></tr>
+<tr><td>Fabuła, Rozwiązanie 1b</td><td>+2 PD za ukończenie + 2 PD za strącenie Lewiatana</td><td>wyrównuje wypłatę obu ścieżek</td></tr>
+<tr><td>Żyjący Zator, Toksyczny Kożuch, Pruskie Miny</td><td>dopisek „Podczas przygotowania wyłóżcie tę kartę w grze przy lokacji… Ta karta nie trafia do talii spotkań"</td><td>Bariery to podstępy, które nigdy nie wchodzą do talii</td></tr>
+<tr><td>Tajemnica 2</td><td>doprecyzowany reset: zagłada z Hierofanty też znika, próg 8 obowiązuje od nowa, test powtarza się przy każdym osiągnięciu</td><td></td></tr>
+<tr><td>Zakole Warty</td><td>dopisana brakująca grupa spotkań (<code>c</code>)</td><td></td></tr>
+<tr><td>9 kart</td><td>ujednolicona nazwa <strong>Barka Jadwiga</strong> (bez cudzysłowów)</td><td>zgodnie z polem <code>name</code> karty</td></tr>
+</tbody></table></div>
+<h3>Dlaczego akurat te liczby</h3>
+<p>Ścieżka Ciśnienia to 4–5 udanych testów, czyli ~6 akcji rozłożonych na grupę. Odepchnięcie przy 3<code>&lt;badacz&gt;</code> = 12 obrażeń to ~8–9 akcji jednego wojownika i było ściśle gorsze. Przy 2<code>&lt;badacz&gt;</code> = 8 obrażeń i nagrodzie 2 Ciśnienia obie drogi kosztują podobnie.</p>
+<div class="tw"><table><thead><tr><th>konfiguracja (4 graczy, 5 XP)</th><th>wygrane B</th><th>odepchnięć/partię</th><th>zwycięstw z odepchnięciem</th></tr></thead><tbody>
+<tr><td>dzisiejszy tekst (przed zmianą)</td><td>78,3%</td><td>0,20</td><td>27%</td></tr>
+<tr><td>samo usunięcie bonusu za Bariery</td><td>68,5%</td><td>0,28</td><td>40%</td></tr>
+<tr><td><strong>wprowadzone: HP 2<code>&lt;per&gt;</code>, push 2, próg <code>&lt;per&gt;</code>+1, Łowca</strong></td><td><strong>69,9%</strong></td><td><strong>0,46</strong></td><td><strong>64%</strong></td></tr>
+<tr><td>jw. bez Łowcy (odepchnięty znika na stałe)</td><td>77,7%</td><td>0,37</td><td>47%</td></tr>
+<tr><td>jw. z progiem 6</td><td>62,7%</td><td>0,51</td><td>79%</td></tr>
+</tbody></table></div>
+<p>Wariant A dla odniesienia: 69,3%. Przy 2 graczach zmiana poprawia też skalowanie wariantu B: 19,8% → 25,4%.</p>
+<h3>Co to daje kampanii</h3>
+<div class="tw"><table><thead><tr><th></th><th>przed czwartą turą</th><th>po</th></tr></thead><tbody>
+<tr><td>XP po scenariuszu 2 (wariant A)</td><td>6,3</td><td><strong>9,2</strong></td></tr>
+<tr><td>XP po scenariuszu 2 (wariant B)</td><td>5,3</td><td><strong>8,7</strong></td></tr>
+<tr><td>XP wchodząc do scenariusza 3</td><td>5,7–6,3</td><td><strong>9,2–9,6</strong></td></tr>
+<tr><td>Pełna kampania 3/3</td><td>0,0–0,2%</td><td><strong>0,5–1,5%</strong></td></tr>
+</tbody></table></div>
+<p>Kampania nadal rozbija się o scenariusz 3 — tam nic nie zmienialiśmy.</p>
+<h2>Ocena balansu i grywalności — stan po zmianach</h2>
+<p><strong>4 graczy (1000 gier/wariant): A 52%, B 53%.</strong> Obie ścieżki w tym samym przedziale, mediana 12 / 8 rund, żadna nie kończy się przez zegar. To jest przedział, w którym siedzą oficjalne scenariusze na Standardzie. W A przegrywa się przez wybicie grupy (39%), w B przez zatopienie barki na Moście (38%) — czyli każdy wariant ma swój własny, czytelny sposób przegrania. Dobrze.</p>
+<p><strong>2–3 graczy: A 14–17%, B 1–7%.</strong> Tu scenariusz się nie skaluje. Trzy rzeczy są stałe, a powinny iść z <code>&lt;per&gt;</code>:</p>
+<div class="tw"><table><thead><tr><th>element</th><th>teraz</th><th>propozycja</th><th>efekt w modelu (2 graczy)</th></tr></thead><tbody>
+<tr><td>Żyjący Zator: „wydajcie 4 wskazówki"</td><td>4 (stałe)</td><td><strong>1<code>&lt;per&gt;</code></strong> wskazówek — przy 4 graczach bez zmian, przy 2 to 2</td><td>+1 pp; przy 2 graczach 4 wskazówki to dwie całe lokacje</td></tr>
+<tr><td>Most B: Ciśnienie</td><td>4 (stałe)</td><td><strong><code>&lt;per&gt;</code></strong> znaczników (2p: 2, 3p: 3, 4p: 4)</td><td>B 1% → 7%</td></tr>
+<tr><td>Talia Tkanek + źródła Tkanek</td><td>8 kart, 5 źródeł niezależnych od liczby graczy</td><td><code>&lt;per&gt;</code> przy „dołącz Tkankę" nie ma sensu — zamiast tego: <strong>Nosiciel Zarodników dołącza Tkankę tylko, gdy w lokacji nie ma żadnej</strong></td><td>model: 6,8 Tkanki/grę przy 2 graczach, którzy mają 6 akcji na rundę na wszystko</td></tr>
+</tbody></table></div>
+<p>Nawet po tych zmianach 2 graczy zostaje przy ~17% / ~7%. Reszta różnicy to coś, czego model nie łapie dobrze: przy 2 badaczach jedyny wojownik zabija ~1 wroga na rundę przy ~1 nowym na rundę i nie robi nic innego; prawdziwe talie mają na to odpowiedzi (Dynamite Blast, sojusznicy-tarcze, Unik + ucieczka barką), których profil liczbowy nie ma. <strong>Wniosek: 4 graczy jest zbalansowane w modelu; 2 graczy trzeba przetestować przy stole, a trzy zmiany <code>&lt;per&gt;</code> powyżej są tanie i idiomatyczne, więc warto je wpisać niezależnie od wyniku.</strong></p>
+<h3>Co dodać</h3>
+<ul>
+<li><strong>Sposób na Tkanki poza testami.</strong> Każda Tkanka to test 3–4 albo (Korzenie) 2 zasoby. Brakuje karty gracza/atutu fabularnego, który usuwa Tkankę bez testu — np. Zapas Paliwa mógłby dostać „odrzuć: spal Tkankę w twojej lokacji". Daje decyzję: paliwo na Rozlewiska czy na Tkankę.</li>
+<li><strong>Nagrodę za Bariery usunięte przedmiotem</strong> w wariancie B. W A każda Bariera w grze to +1/+1 Arcykapłana, więc przedmioty mają sens; w B jedyną motywacją jest „taniej". Propozycja: w B Most B „za każdą Barierę w Puli Zwycięstwa Cisnienie zaczyna od +1".</li>
+<li><strong>Jeden przeciwnik nie-Narośl / nie-Potwór.</strong> Faustyn, Totem, Żyjątko, Żebro — wszystkie nagrody premiują walkę z Naroślą/Potworem, a talia ma 7 wrogów, z których 6 ma te cechy. Bez kontrastu premie nie są wyborem. Hierofanta (Kultysta) mógłby zostać drugą osią: „Pertraktacje" zamiast walki — już to ma, ale 1 kopia ginie w talii.</li>
+<li><strong>Tekst „co gdy talia spotkań się wyczerpie" na Karcie Scenariusza</strong> — Kokon i Akt 4A reagują na to zdarzenie, a przy 4 graczach zdarza się co 5 rund; gracze powinni to widzieć.</li>
+</ul>
+<h3>Co usunąć albo uprościć</h3>
+<ul>
+<li><strong>Rytuał Płodności (×2)</strong>: opcja „odrzuć 5 kart → Tkanka za każdy atut/wydarzenie" jest zawsze gorsza niż „Nosiciel w zwarciu" — w modelu nikt jej nie wybiera; przy stole też nikt nie wybierze 2–3 Tkanek zamiast jednego wroga 3 hp. Albo wzmocnić opcję B (Nosiciel wchodzi <strong>gotowy, w zwarciu, i atakuje</strong>), albo zamienić na zwykłą kartę „dołącz Tkankę".</li>
+<li><strong>Skrzynia Dynamitu zadaje 3 każdemu badaczowi w lokacji</strong> — po zmianie Fortu na com(3) Dynamit jest brany w 36% partii A, ale użycie go w walce prawie nigdy się nie opłaca (własna grupa obrywa). Zostawić tylko jako klucz do Min, albo „3 obrażenia każdemu wrogowi, 1 każdemu badaczowi".</li>
+<li><strong>Tajemnica 2 z resetem</strong> — jedyna karta, której zasady trzeba tłumaczyć; w modelu wypada 1,4×/grę i prawie nigdy nie prowadzi do Tajemnicy 3 (0,6%). Prostsze: „Jeśli Barka ma 4+ uszkodzeń → Tajemnica 3; w przeciwnym razie Barka otrzymuje 2 uszkodzenia i usuńcie zagładę" — kara, którą widać, zamiast +1 trudności, o którym wszyscy zapomną.</li>
+<li><strong>Dworzec Puszczykowo</strong> — przy Przystani, gdzie nikt nie wraca; w modelu odwiedzany 0×. Albo przenieść na Łęgi (jedyny węzeł bez Pobrzeża), albo usunąć.</li>
+</ul>
+<h3>Grywalność przy stole (poza liczbami)</h3>
+<ul>
+<li>Z rozgrywki narracyjnej: <strong>rundy 1–3 są dobre</strong> — barka płynie, Zator za wskazówki daje poczucie postępu, Tkanki wchodzą stopniowo. <strong>Rundy 4–7 były jedną lokacją</strong> (Skażony Nurt) — po zmianie +2→+1 i Kożuchu com(5) powinno być krócej, ale to miejsce nadal warto obserwować przy stole.</li>
+<li>Lewiatan po odepchnięciu <strong>wraca?</strong> Nie ma Łowcy, więc nie — ale gracze będą pytać. Jedno zdanie na karcie: „Lewiatan nie wraca na Most".</li>
+<li>Wariant wybierany przed grą to dobra decyzja fabularna, ale gracze nie wiedzą, czym się różnią mechanicznie. Jedno zdanie w fabule: „A: walka z bossem, B: wyścig na czas".</li>
+</ul>
+<h2>Kompletność</h2>
+<div class="tw"><table><thead><tr><th>waga</th><th>plik</th><th>problem</th></tr></thead><tbody>
+<tr><td>OK</td><td>Karty Scenariusza/scenariusz 2/Tajemnica 1.card</td><td><strong>Poprawione przez autora</strong> — rozstawia Rzeczne Młode.</td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Fabuła/Kampania Czarna Krew Warty (Przygotowanie)</td><td>„Odłóżcie na bok wszystkie karty z cechą Bariera" — a wg autora Bariery leżą od początku przy lokacjach. Przygotowanie mówi coś innego, niż gra ma robić: dopisać „wprowadźcie Bariery do gry przy lokacjach, które blokują".</td></tr>
+<tr><td class="sev sev-BLOKER">BLOKER</td><td>Fabuła / Karty Lokacji/scenariusz 2</td><td>„Rozłóżcie lokacje Pobrzeży po lewej i prawej stronie odpowiednich lokacji rzecznych zgodnie z mapą powiązań" — <strong>mapy nie ma w repo</strong>, a żadna lokacja nie ma <code>location_icon</code>. Nie wiadomo, gdzie leży Fabryka, Fort, Dęby i Dworzec.</td></tr>
+<tr><td>OK</td><td>Karty Lokacji/scenariusz 2/Most Chwaliszewski A/B</td><td>Akt 3 mówi „Wariant A → Akt 4a (A)", ale <strong>nic nie mówi, którą kartę Mostu wystawić</strong> w którym wariancie. Obie nazywają się tak samo.</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td>OK</td><td>Przystań.card, Rozlewiska Dębiny.card (+ archiwum)</td><td>atut <strong>Zapas Paliwa</strong> „(z poza gry)" — brak karty. Rozlewiska bez niego kosztują +1 akcję zawsze.</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td>OK</td><td>Fabuła (Rozwiązania 1a, 1b)</td><td>atuty fabularne <strong>Wdzięczne Żyjątko</strong> i <strong>Żebro Lewiatana</strong> — brak kart.</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td>OK</td><td>Karta Scenariusza.card</td><td><code>body</code> mówi „kart <strong>Mutacji</strong>", „Talii <strong>Mutacji</strong>", a pola <code>scenario_card.*</code> mówią „Tkanki" — dwa różne teksty na jednej karcie.</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td>OK</td><td>Karty Barier/Toksyczny Kożuch.card</td><td>„Jako grupa wykonajcie test com(10)" — <strong>w AH LCG nie ma testów grupowych</strong>. Kto testuje, kto deklaruje karty, czy statystyki się sumują?</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td>OK</td><td>Żywy Nurt.card, Zapach Feromonów.card</td><td>słowo kluczowe <strong>Mroczna Fala</strong> nie jest zdefiniowane na żadnej karcie ani w fabule.</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td>OK</td><td>Lewiatan.card</td><td>„<code>&lt;for&gt;</code> Lewiatan atakuje każdego badacza w swojej lokalizacji ORAZ zadaje 2 obrażenia Barce" — <strong>Wymuszony bez wyzwalacza</strong> (kiedy? co fazę wrogów? zamiast zwykłego ataku?).</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td>OK</td><td>Most Chwaliszewski B.card / Lewiatan.card</td><td>Rezygnacja wymaga „Lewiatan jest wyczerpany", a odepchnięty Lewiatan gotowieje w najbliższym utrzymaniu i nie ma Łowcy — okno na ucieczkę to jedna runda, o czym karty nie mówią.</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td class="sev sev-BLAD">BŁĄD</td><td>Tajemnica 2.card</td><td>Po „resecie" karta zostaje z progiem 8: czy zagłada z Hierofanty też znika? czy przy kolejnym 8 znów sprawdza uszkodzenia barki? Nieopisane.</td></tr>
+<tr><td>OK</td><td>Most Chwaliszewski A.card</td><td><code>(-&gt;【Z2)</code> — niedomknięty nawias.</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td>OK</td><td>Karty Tkanek (8)</td><td>Talia Tkanek ma 8 kart; przy 4 graczach kończy się w 5. rundzie (rozgrywka: dokładnie tak). Co wtedy? Karty milczą.</td><td><strong>→ załatwione w drugiej turze.</strong></td></tr>
+<tr><td class="sev sev-SPOJNOSC">SPÓJNOŚĆ</td><td>Nosiciel Zarodników, Rzeczne Młode</td><td>„Rozstawienie: w lokalizacji z kartą Tkanki" — gdy takich lokacji jest kilka, kto wybiera?</td></tr>
+</tbody></table></div>
+<h2>Balans A vs B (Monte Carlo, 2000 gier na wariant)</h2>
+<div class="tw"><table><thead><tr><th>miara</th><th>A — Przerwać Rytuał</th><th>B — Ostatni Zryw</th></tr></thead><tbody>
+<tr><td>wygrane</td><td><strong>12,2%</strong></td><td><strong>5,6%</strong></td></tr>
+<tr><td>mediana rund</td><td>11</td><td>7</td></tr>
+<tr><td>porażka: wszyscy badacze pokonani</td><td>76%</td><td>31%</td></tr>
+<tr><td>porażka: barka zatopiona</td><td>10%</td><td><strong>63%</strong></td></tr>
+<tr><td>porażka: zagłada (Tajemnica 3)</td><td>1,5%</td><td>0,3%</td></tr>
+<tr><td>obrażenia / przerażenie na badacza</td><td>7,8 / 7,1</td><td>6,5 / 5,4</td></tr>
+<tr><td>Żyjący Zator</td><td>Totem 52% · wskazówki ~0%</td><td>wskazówki 93%</td></tr>
+<tr><td>Toksyczny Kożuch</td><td>Ferment 27% · test grupowy 0%</td><td>Ferment 69% · test grupowy 0%</td></tr>
+<tr><td>Pruskie Miny</td><td>agi(4) 21% · Dynamit 1%</td><td>agi(4) 64% · Dynamit 0,5%</td></tr>
+</tbody></table></div>
+<p>Odsetki barier liczą się od wszystkich gier — reszta partii kończy się, zanim barka tam dopłynie.</p>
+<h3>Za trudne</h3>
+<ul>
+<li><strong>Gęstość wrogów.</strong> 14/26 kart talii to przeciwnicy (Pomiot ×4, Nosiciel ×3, Młode ×3, Hierofanta ×2 + Rytuał ×2 rozstawia Nosiciela). Przy 4 kartach na rundę to ~2,2 wroga/rundę po 3 zdrowia. Jeden pełny wojownik z bronią zabija ~1,5/rundę i nie robi nic innego. Stąd 76% porażek w A to wybicie grupy, nie zegar.</li>
+<li><strong>Kozi Pomiot ×4 + Mściwy + Łowca.</strong> Każde pokonanie = 1 przerażenie dla <strong>każdego</strong> badacza w lokacji. Cztery kopie = do 4 przerażenia całej grupie tylko za sprzątanie. W rozgrywce Carolyn (poczytalność 9) miała 6 przerażenia w 6. rundzie.</li>
+<li><strong>Hierofanta ×2</strong> kładzie zagładę co fazę Mitów. Z progiem 6 Tajemnicy 1 to awans w 2–3 rundy (w rozgrywce: runda 2). Tajemnica 1 przy awansie uszkadza barkę i… odsyła do nieistniejącego Topielca.</li>
+<li><strong>Skażony Nurt z Tkanką: +2 do wszystkich testów.</strong> Przy 4 graczach Tkanka tam ląduje niemal zawsze (Nosiciel przy pokonaniu, Żywy Nurt, kultysta z worka). Testy 5–6 przy statystykach 3–5 = 20–40%. To tu grupa staje. W rozgrywce: rundy 4–7 bez postępu.</li>
+<li><strong>Wariant B — Lewiatan.</strong> Atak 5, 12 zdrowia, 2 obrażenia + 2 przerażenia każdemu co rundę + 2 barce, a barka ma 8 i przypływa już uszkodzona. Ciśnienie 6 przy wil(4)/com(4) to 22–57% na test → ~12 akcji, czyli 3+ rundy pod ostrzałem. 63% partii tonie.</li>
+<li><strong>Wariant A — Arcykapłan +1/+1 za każdą Barierę w grze.</strong> Bariery ominięte drogą alternatywną zostają w grze → atak 5–6. Trafialny tylko po zdobyciu przedmiotów. Dlatego A wygrywa tylko wtedy, gdy Totem, Ferment i Dynamit są zdobyte (52% / 27% / 1%).</li>
+</ul>
+<h3>Martwe</h3>
+<ul>
+<li><strong>Test grupowy com(10)</strong> na Kożuchu — 0% w symulacji, brak zasad w grze. Ferment to jedyna realna droga.</li>
+<li><strong>Skrzynia Dynamitu</strong> — Fort wymaga com(4) w lokacji z cechą Ruiny obok Rozlewisk; Patel z agi 5 przechodzi Miny taniej (agi 4). 1% użycia.</li>
+<li><strong>Zwęglony Totem</strong> poza wariantem A — 8 wskazówek przy zasłonie 4 vs 4 wskazówki w Zakolu przy zasłonie 3.</li>
+<li><strong>Zagłada jako zegar</strong> — 1,5% porażek. 24 punkty przy 5 ruchach barki to luz; Tajemnica 2 dodatkowo resetuje. Presja zegara jest wyłącznie przez Tajemnicę 1 → uszkodzenie barki.</li>
+</ul>
+<h3>Za łatwe</h3>
+<ul>
+<li><strong>Żyjący Zator.</strong> 4 wskazówki w Zakolu (1 na badacza, zasłona 3) to 1–2 rundy. Bariera „zostaje w grze", ale w B nic z tego nie wynika.</li>
+</ul>
+<h2>Rozgrywka narracyjna (seed 7, wariant B)</h2>
+<p>Talia spotkań od góry: Rozrost, Hierofanta, Nosiciel, Twarze | Dar, Rozkwit, Młode, Rozkwit | Rozrost, Twarze, Pomiot, Dar | Rytuał, Rytuał, Feromony, Nosiciel | Młode, Nurt, Młode, Nosiciel | Nurt, Pomiot, Pomiot, Feromony | Hierofanta, Pomiot. Tkanki: Błona, Gąbczasta, Kokon, Grzybnia, Oczy, Pnącza, Korzenie, Splot. Żetony w kolejności z <code>table --seed 7</code>.</p>
+<div class="tw"><table><thead><tr><th>runda</th><th>co się stało</th></tr></thead><tbody>
+<tr><td>1</td><td>Rozrost dołącza <strong>Śluzowatą Błonę do lokacji startowej</strong> — nikt nie może wystawić atutów startowych. Hierofanta i Nosiciel na Przystani. Tommy bez broni obija Hierofantę, Patel omija Nosiciela i <strong>przepływa barką do Zakola</strong> (agi 5 vs 3). Grupa zbiera 5 wskazówek.</td></tr>
+<tr><td>2</td><td>Dar Czarnej Kozy (porażka) + kultysta z worka: <strong>dwie Tkanki w Zakolu</strong> (Gąbczasta, Kokon) + zagłada. Rozkwit ×2. <strong>Tajemnica 1 awansuje w rundzie 2</strong> (Hierofanta) — barka −1, Topielec z Warty <strong>nie istnieje</strong>. Młode rozstawione przy Tkance. Grupa wydaje 4 wskazówki na <strong>Żyjący Zator</strong> → Łęgi.</td></tr>
+<tr><td>3</td><td>Rozrost + kultysta + Dar: <strong>trzy Tkanki w Łęgach</strong> (Grzybnia, Oczy, Pnącza), Pomiot w zwarciu. Tommy dobija Pomiota → <strong>cała grupa +1 przerażenia</strong>. Patel przepływa do Skażonego Nurtu → <strong>Akt 1 zaliczony</strong>.</td></tr>
+<tr><td>4</td><td>Rytuał ×2 → dwóch Nosicieli w zwarciu z Tommym i Carolyn. Feromony ściągają Pomiota #1 i przesuwają resztę wrogów w stronę barki. Tommy zabija Nosiciela → <strong>Korzenie na Skażonym Nurcie: +2 do wszystkich testów</strong>. Carolyn nie omija Nosiciela dwa razy (test 4). Kożuch przed nami: test grupowy nie ma zasad, Ferment wymaga zabicia Kierownika (6 zdrowia, atak 4) na Fabryce.</td></tr>
+<tr><td>5</td><td><strong>Tajemnica 2 osiąga 8</strong> — testy zręczności, dwie porażki; barka ma 1 uszkodzenie → reset zagłady, +1 trudność na barce. Żywy Nurt dołącza Splot → <strong>talia Tkanek pusta</strong>. Trzy nowe wrogi (Młode ×2, Nosiciel) rozstawiają się przy Tkankach na Przystani. Tommy 3 razy chybia (test 5), Marie zabija Nosiciela zaklęciem.</td></tr>
+<tr><td>6</td><td>Żywy Nurt: 2 obrażenia Tommy'emu (7/9). Pomiot ×2 w zwarciu. Feromony ściągają całą menażerię z Przystani i Zakola w naszą stronę. Marie dobija Pomiota #1 → <strong>znów +1 przerażenia wszystkim</strong>.</td></tr>
+<tr><td>7</td><td>Hierofanta #2 w zwarciu z Tommym (1 zdrowia). Pomiot #4 na Carolyn (już 4/6 obrażeń, 6/9 przerażenia). <strong>Talia spotkań wyczerpana → Kokon w Zakolu rozstawia kolejnego wroga.</strong> Grupa nie ma jak przejść Kożucha ani przeżyć fazy wrogów. Koniec: barka przy Skażonym Nurcie, Akt 2 z 4, wszyscy badacze ranni, Tommy i Carolyn spadają w rundzie 8.</td></tr>
+</tbody></table></div>
+<p>Zgodne z symulacją: mediana 7 rund, porażka przez wybicie grupy, barka nigdy nie dopłynęła do Mostu.</p>
+<h3>Pytania do autora (z rozgrywki)</h3>
+<ol>
+<li><strong>Kiedy Bariery wchodzą do gry?</strong> Przygotowanie każe je odłożyć na bok i nic więcej.</li>
+<li><strong>Skąd bierze się Lewiatan?</strong> „Przyzwij Lewiatana" — jest odłożony? w talii? Przygotowanie odkłada tylko Arcykapłana i Bariery.</li>
+<li><strong>Test grupowy com(10)</strong> na Kożuchu — jaka mechanika?</li>
+<li><strong>Czaszka −X, X = Tkanki − 1</strong>: przy zerze Tkanek X = −1. Czaszka daje +1?</li>
+<li><strong>Żyjący Zator</strong>: przeniesienie barki za 4 wskazówki — czy barka się wyczerpuje? czy to „ruch barką" (liczy się do +1 akcji w Rozlewiskach / przy Tkance w Zakolu)?</li>
+<li><strong>Mięsne Pnącza</strong> „akcja Ruch" — dotyczy ruchu barką (to aktywacja atutu, nie akcja Ruchu)?</li>
+<li><strong>Rozstawienie „w lokalizacji z Tkanką"</strong> przy kilku takich lokacjach — kto wybiera?</li>
+<li><strong>Talia Tkanek pusta</strong> (runda 5 przy 4 graczach) — co wtedy z „dobierz z Talii Tkanek"?</li>
+<li><strong>Śluzowata Błona w lokacji startowej w rundzie 1</strong> blokuje wystawienie atutów startowych — zamierzone?</li>
+<li><strong>Tajemnica 2 po resecie</strong> — próg znowu 8? zagłada z Hierofanty też znika?</li>
+<li><strong>Lewiatan</strong>: kiedy wykonuje atak na wszystkich? Czy odepchnięty (gotowy w utrzymaniu) liczy się jako „wyczerpany" dla Rezygnacji?</li>
+<li><strong>Mroczna Fala</strong> — co robi?</li>
+<li><strong>Który Most</strong> w którym wariancie?</li>
+</ol>
+<h2>Założenia modelu (uproszczenia)</h2>
+<p>Model to nie silnik zasad — liczby to kierunek i rząd wielkości.</p>
+<ul>
+<li>Worek chaosu: <strong>Standard</strong> (+1, 0, 0, −1, −1, −1, −2, −2, 💀💀, 👤, 📜, 🐙, ⭐); Starszy Znak = +1; czaszka przy zerze Tkanek = 0.</li>
+<li>Pobrzeża przypisane tak, by przedmiot był osiągalny <strong>przed</strong> barierą: Dworzec ↔ Przystań, Dęby ↔ Zakole, Fabryka ↔ Skażony Nurt, Fort ↔ Rozlewiska. Bariery w grze od początku.</li>
+<li>Badacze z arkhamdb: Marie Lambeau (Mistyk, #64502), Carolyn Fern (Poszukiwacz, #64388), André Patel (Włóczęga, #64503), Tommy Muldoon (Obrońca, #62530). Talia = profil liczbowy: średnie ikony na kartę deklarowane tylko gdy przewaga &lt; 2, 1 karta na test, +1 karta na rundę; broń/zaklęcie w grze = +1 do umiejętności walki (mistyk walczy wolą); narzędzia poszukiwacza = +1 intelekt; każdy sojusznik = +1 zdrowia i +1 poczytalności; leczenie 1 pkt/rundę z prawdopodobieństwem udziału kart leczących.</li>
+<li>Efekty spotkań skrócone: Rytuał Płodności = zawsze Nosiciel; Zapach Feromonów (porażka) = 1 obrażenie; zagłada z Daru liczy się do tajemnicy; Topielec z Warty pominięty (brak karty); Tajemnica 2 po resecie: próg 8, +1 trudność na barce.</li>
+<li>Kożuch: „test grupowy" = suma walki grupy + po 1 karcie; raz na rundę. Ferment: zawsze stać na 1 zasób. Zator za wskazówki: bariera zostaje w grze (liczy się Arcykapłanowi).</li>
+<li>Lewiatan: atak na wszystkich co fazę wrogów; po odepchnięciu liczy się jako „wyczerpany" dla Rezygnacji.</li>
+<li>Polityka graczy: walka/unik wg statystyk → cel wariantu na Moście → zdjąć Tkankę z lokacji barki → przedmiot na najbliższą barierę (A: wszystkie, B: tańsza droga) → ruch barką raz na rundę → wskazówki → odpoczynek. Pierwszy badacz w kolejności = najlepszy wojownik.</li>
+<li>Nie modelowane: konkretne karty gracza, ataki okazyjne, zasoby, przetasowanie stosu odrzuconych Tkanek, Kokon, wpływ Barier na ruch po Pobrzeżach.</li>
+</ul>
+<p>Pliki: <code>tools/scenario2_model.py</code> (<code>tempo</code>, <code>sim</code>, <code>table</code>), <code>tools/arkhamdb.py</code> (talie), <code>.cache/sim_scenariusz2_A.json</code>, <code>.cache/sim_scenariusz2_B.json</code>, <code>.cache/table_scenariusz2.json</code> (seed 7).</p>
+</div>

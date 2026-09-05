@@ -1,2 +1,5 @@
 .cache/file_cache.json
 .cache/file_cache.json
+.cache/arkhamdb/
+.cache/sim_scenariusz2.json
+.cache/table_scenariusz2.json
