@@ -14,13 +14,13 @@
     "flavor": "Plany są przerażające. Kadzie mają służyć do hodowli, nie przechowywania. Na dokumentach widnieje sygnatura konsultanta naukowego z UAM – prof. Konrada Kleszcza.",
     "serial_number": "2",
     "name": "Żelazne Łono",
-    "body": "Każdy badacz odkrywa 1 dodatkową wskazówkę w swojej lokalizacji.\nUsuń 1 żeton zagłady z lokalizacji lub obecnej tajemnicy."
+    "body": "Każdy badacz odkrywa 1 dodatkową wskazówkę w swojej lub połączonej lokalizacji.\nUsuń 2 żetony zagłady z lokalizacji lub obecnej tajemnicy."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "5d1c6eeb88287c938bb0b1b35964114fd52bf1ba3685e53e4d2779382f1943c2",
+  "content_hash": "c81ee6c5b59ff7f0f90c02e005c779e56cafc56e0a4d896c3eb54f2c9ef42e03",
   "flavor": "Poznań zdaje się pogrążać w sennym letargu, ale pod powierzchnią tętni nienaturalna gorliwość. Dyrekcja Zakładu milczy, zasłaniając się procedurami, a bibliotekarze odmawiają dostępu do archiwów, twierdząc, że dokumenty są \"w konserwacji\".\nWchodzicie na teren fabryki. Hale produkcyjne nie wytwarzają parowozów. Robotnicy spawają olbrzymie, hermetyczne kadzie o organicznych kształtach, przypominające metalowe żołądki. Dyrekcja Zakładu (złowroga, bezimienna rada nadzorcza) ukrywa się w biurach na piętrze, obserwując pracę przez przyciemniane szyby.",
   "serial_number": "2",
   "encounter_group": "f",

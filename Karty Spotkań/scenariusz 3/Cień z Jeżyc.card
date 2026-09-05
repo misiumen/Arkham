@@ -34,12 +34,12 @@
   "enemy_health": "1<调查员>",
   "evade": "X",
   "enemy_damage_horror": 1,
-  "body": "Łowca. Masywny.\nX to liczba lokalizacji w grze z cechą {Spaczona}.\n<spa> Lokalizacja z największą liczbą żetonów zagłady.",
+  "body": "Łowca. Masywny.\nX to liczba lokalizacji w grze z cechą {Spaczona}.\n<spa> Lokalizacja z największą liczbą żetonów zagłady lub (jeżeli nie ma) największą liczbą wskazówek.",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "0da87b2d7aa92d4825bec8ba4b56d060cdd59aa136489aee52e6b011bf384096",
+  "content_hash": "0d73123d2d31e02e3039224d1bdc5d0fa6a02dbe97a3f300089be89185408c80",
   "enemy_damage": 0,
   "traits": [
     "Widmowy"

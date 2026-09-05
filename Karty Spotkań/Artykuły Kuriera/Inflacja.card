@@ -13,7 +13,7 @@
     "encounter_group_number": "",
     "encounter_group": "f",
     "flavor": "",
-    "body": "<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">„Gdy kurz opadł, okazało się, że tylko ci, którzy przewidzieli krach, zachowali środki do dalszej walki z mrokiem...”</flavor>\nJeżeli na tej karcie:\n<upg> Nie ma żetonów zasobów: Badacze otrzymują 1 bezpośredni punkt obrażenia.\n<upg> jest do 1<调查员> żetonów: Inflacja pożarła oszczędności. Badacze jako grupa odzyskują połowę (zaokrąglając w górę) swoich zasobów z tej karty.\n<upg> jest do 2<调查员> żetonów: Uczciwa wymiana. Badacze jako grupa odzyskują wszystkie swoje zasoby.\n<upg> jest do 3<调查员> żetonów: Spekulacja się opłaciła! Każdy badacz odzyskuje swoje zasoby oraz dodatkowo dobiera 2 karty i zyskuje 2 zasoby",
+    "body": "<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">„Gdy kurz opadł, okazało się, że tylko ci, którzy przewidzieli krach, zachowali środki do dalszej walki z mrokiem...”</flavor>\nJeżeli na tej karcie:\n<upg> Nie ma żetonów zasobów: Badacze otrzymują 1 bezpośredni punkt obrażenia.\n<upg> jest do 1<调查员> żetonów: Inflacja pożarła oszczędności. Badacze jako grupa odzyskują połowę (zaokrąglając w górę) swoich zasobów z tej karty.\n<upg> jest do 2<调查员> żetonów: Uczciwa wymiana. Badacze jako grupa odzyskują wszystkie swoje zasoby.\n<upg> jest do 3<调查员> żetonów: Spekulacja się opłaciła! Każdy badacz odzyskuje swoje zasoby oraz dodatkowo dobiera 2 karty i zyskuje 2 zasoby.",
     "horror": 2,
     "traits": [],
     "name": "Inflacja",
@@ -50,8 +50,8 @@
     "version": "v2",
     "script_id": "6A25EA53"
   },
-  "content_hash": "32b2ebd9dd65374818a4dcb0e07a9e5b78cdba608b41a221dc3cc79f8f0b951b",
+  "content_hash": "8ec607ed0ec760558207bdd004e01c92dd327e7d53d63007bed63f10df5d988a",
   "encounter_group": "f",
-  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, środa dnia 21. grudnia 1921 | Nr 292<hr>\n<size \"\"><b>MARKA POLSKA LECI NA ŁEB!</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Kurs waluty spada z godziny na godzinę! Poznańskie kantory przeżywają oblężenie, a ceny chleba rosną w oczach. Kto nie zamieni papieru na twarde aktywa lub nie zainwestuje w pewne przedsięwzięcia, zostanie z niczym. Miasto ogarnia finansowa gorączka.</flavor>\n<rev> Pozostaje w grze przez  rundy.\n<obj> ➡️ Przenieś dowolną liczbę swoich zasobów na tę kartę.\n<for> Na koniec każdej rundy każdy badacz odrzuca wszystkie zasoby ze swojej puli.\n<for> Na koniec drugiej rundy: Odwróć tę kartę.",
+  "body": "<p><b><size \"4\">KURJER POZNAŃSKI</b>\n<size \"-4\">Poznań, środa dnia 21. grudnia 1921 | Nr 292<hr>\n<size \"\"><b>MARKA POLSKA LECI NA ŁEB!</b></p>\n<flavor align=\"left\" flex=\"false\" padding=\"30\" quote=\"true\">Kurs waluty spada z godziny na godzinę! Poznańskie kantory przeżywają oblężenie, a ceny chleba rosną w oczach. Kto nie zamieni papieru na twarde aktywa lub nie zainwestuje w pewne przedsięwzięcia, zostanie z niczym. Miasto ogarnia finansowa gorączka.</flavor>\n<rev> Pozostaje w grze przez 2 rundy.\n<obj> ➡️ Przenieś dowolną liczbę swoich zasobów na tę kartę.\n<for> Na koniec każdej rundy każdy badacz odrzuca wszystkie zasoby ze swojej puli.\n<for> Na koniec drugiej rundy: Odwróć tę kartę.",
   "card_number": "48"
 }

@@ -23,14 +23,14 @@
     "version": "v2",
     "script_id": "5CA1B3BB"
   },
-  "content_hash": "bed6924981fb4b683ee58daf02e238e9fc9881fee7d51808b30a99b84d39f23f",
+  "content_hash": "865ad0813b878f8b6b5f020a2cbbfc8df4d1a9ee6e064326baa7498c6427c8e8",
   "scenario_type": 0,
   "encounter_group": "f",
   "scenario_card": {
-    "cultist": "--X. X to liczba lokalizacji z cechą {Spaczona}.",
-    "tablet": "--X. X to liczba lokalizacji z cechą {Spaczona}.",
-    "skull": "--1",
-    "elder_thing": "--1 (zamiast tego --3, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})"
+    "cultist": "−1 (zamiast tego −2, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})",
+    "tablet": "−1 (zamiast tego −3, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})",
+    "skull": "−1",
+    "elder_thing": "−X. X to liczba lokalizacji z cechą {Spaczona}."
   },
   "subtitle": "ŁATWY / STANDARDOWY",
   "card_number": "1"

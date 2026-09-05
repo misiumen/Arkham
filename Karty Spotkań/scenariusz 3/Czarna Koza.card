@@ -30,7 +30,7 @@
   },
   "encounter_group": "f",
   "class": "",
-  "attack": "5",
+  "attack": "4",
   "enemy_health": "8<调查员>",
   "evade": "2",
   "enemy_damage_horror": 2,
@@ -39,7 +39,7 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "b5c06b4c519a47b6df29b51e417b73c316a73aff700cfe227ebc1a9457fef36d",
+  "content_hash": "47c3f22a66a2a3506f896bdb5d113b5e3a3bd025134bbaaa1e28578de7c1b897",
   "enemy_damage": 2,
   "traits": [
     "Masywny",
