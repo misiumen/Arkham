@@ -20,7 +20,7 @@
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "31fe88c134bdb8c1e3d292884db21615e0c377356d683f50dbe3b9d1a38f1943",
+  "content_hash": "4c3594f5ddf929383a24c5eb8294dc11bdf2e49697749358c54978042a37eef3",
   "flavor": "Ślad prowadzi na Uniwersytet. Biblioteka jest zamknięta, a w Ogrodzie Botanicznym (połączonym z Sołaczem) panuje nienaturalny rozkwit. Rośliny w środku zimy kwitną i... krwawią białym sokiem. Prof. Kleszcz nie jest szalonym kultystą – jest przerażonym naukowcem, który zrozumiał, co odkrył, i ukrył się w szklarni, by szukać antidotum.",
   "serial_number": "3",
   "encounter_group": "f",
@@ -46,6 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Usuń wszystkie wskazówki i żetony spaczenia z lokalizacji Uniwesytet Adama Miskatonica, aby spowodować postęp talii.",
+  "body": "<obj> Usuń wszystkie wskazówki i żetony zagłady z lokalizacji Uniwesytet Adama Miskatonica, aby spowodować postęp talii.",
   "card_number": "4"
 }

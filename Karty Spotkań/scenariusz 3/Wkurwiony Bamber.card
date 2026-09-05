@@ -30,7 +30,7 @@
   },
   "encounter_group": "f",
   "class": "",
-  "attack": "4",
+  "attack": "3",
   "enemy_health": "3",
   "evade": "2",
   "enemy_damage_horror": 0,
@@ -39,7 +39,7 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "2b56a7b6ce529666522f1f543ec6d45c8d0d85d5effef0e29fcfbed33a408446",
+  "content_hash": "cc15b6d72c73646f0b390509c960839179a6fb9905942723403ef9988de115e5",
   "enemy_damage": 1,
   "traits": [
     "Humanoid",

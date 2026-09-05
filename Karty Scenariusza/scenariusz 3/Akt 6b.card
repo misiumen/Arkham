@@ -1,6 +1,6 @@
 {
   "type": "场景卡",
-  "name": "Excathedra",
+  "name": "Excommunicatus",
   "id": "",
   "created_at": "",
   "version": "2.0",
@@ -11,18 +11,18 @@
     "type": "场景卡",
     "is_back": true,
     "encounter_group": "f",
-    "flavor": "Cielsko Czarnej Kozy pada na posadzkę z łoskotem, od którego pękają resztki witraży w Katedrze. Bestia wije się w agonii, ale nie wydaje z siebie dźwięku bólu. To... śmiech. Niski, wibrujący rechot, który wchodzi wam w kości.\n\nJej ciało nie zastyga. Rozpuszcza się w gęstą, mleczno-krwawą plazmę, która błyskawicznie wsiąka w szczeliny prastarej posadzki Ostrowa Tumskiego. Ziemia zaczyna pulsować. To nie trzęsienie ziemi – to bicie gigantycznego serca.\nKamienne filary Katedry zaczynają puszczać korzenie i zmieniać się w skamieniałe drzewa. Złota Kaplica zapada się, odsłaniając niebo, które nie jest już niebem nad Poznaniem. Jest fioletowe, duszne i pełne wirujących kształtów.\nArcybiskup Dalbor (jeśli żyje) upuszcza krucyfiks, patrząc w górę z obłędem w oczach: \"To nie był potwór... To był tylko klucz. Otworzyliście drzwi do Jej Lasu\".",
-    "serial_number": "6a",
-    "name": "Excathedra",
+    "flavor": "Mleczno-krwawy jad podsiąka pod kamień, a konające cielsko staje się po prostu nową glebą. Zamiast filarów wykwitają mięsiste pnie – bezlistne, drżące pod naporem obcego wiatru.\n\nArcybiskup Dalbor nie zdążył skonać; jego ciało wpisano w anatomię bestii. Sztywna postać twardnieje w żywiczną tkankę, a z jego pękniętych ust wyziera ciosany z chrząstki pysk.\n\nNagle znikąd wybucha chór – jednolity, suchy skowyt tysięcy połączonych przełyków. Mieszkańcy Poznania bez dostępu do mleka matki giną z głodu w przeraźliwym krzyku i rozpaczy. Miasta nie ma. Zostało tylko pulsujące serce matki.",
+    "serial_number": "6b",
+    "name": "Excommunicatus",
     "body": "Zapisz w Dzienniku Kampanii: \"Badacze uśmiercili Awatara, karmiąc ziemię jego krwią\". Każdy badacz otrzymuje 1 punkt Fizycznej Traumy (ziemia pod wami się zapada). Przejdźcie do Finału 【Z1】: \"Łono Tysiąca Młodych\"."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "2dcd26a890f24b6146eae9e023c1bcbd40c49ac4b6678c176381da2f1059ede8",
-  "flavor": "Rytuał osiągnął swój punkt kulminacyjny. Posadzka katedry pęka, a z głębin wyłania się monumentalny, ociekający mazią kształt. To ona – Czarna Koza z Ostrowa, gotowa pochłonąć całe miasto.",
-  "serial_number": "6a",
+  "content_hash": "dd755852c2e8f785029a335217939ef8b8fce31bc51d7552296235cdf74ce0ed",
+  "flavor": "Rytuał osiągnął swój punkt kulminacyjny. Posadzka katedry pęka, a z głębin wyłania się monumentalny, ociekający mazią kształt. To ona – Czarna Koza z Ostrowa. Miasta już nie ma, zjednoczyło się wraz z tkankami tego organizmu, który teraz chce was wchłonąć.",
+  "serial_number": "6b",
   "encounter_group": "f",
   "use_external_image": 0,
   "external_image": "",
@@ -46,6 +46,6 @@
   },
   "is_back": false,
   "threshold": "-",
-  "body": "<obj> Pokonaj \"Czarną Kozę z Ostrowa\" zanim Agenda dojdzie do końca.\nMożesz poświęcić sojusznika (np. Kleszcza), aby usunąć 3 żetony zagłady (Heroiczna ofiara).",
+  "body": "<obj> Pokonaj Czarną Kozę.\nMożesz poświęcić sojusznika (np. Kleszcza), aby usunąć 3 żetony zagłady (Heroiczna ofiara).",
   "card_number": "7"
 }

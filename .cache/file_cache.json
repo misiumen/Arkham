@@ -158,7 +158,7 @@
     },
     "Karty Lokacji\\scenariusz 3\\Cytadela.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788555714.4273973
+      "mtime": 1788642553.144771
     },
     "Karty Lokacji\\scenariusz 3\\Dyrekcja Zak\u0142adu.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -190,7 +190,7 @@
     },
     "Karty Lokacji\\scenariusz 3\\Ostr\u00f3w Tumski.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788548220.637657
+      "mtime": 1788643771.2340493
     },
     "Karty Lokacji\\scenariusz 3\\Rynek Je\u017cycki.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -198,7 +198,7 @@
     },
     "Karty Lokacji\\scenariusz 3\\So\u0142acz.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788630482.7639923
+      "mtime": 1788643739.1848068
     },
     "Karty Lokacji\\scenariusz 3\\Stary Rynek.card": {
       "card_type": "\u5730\u70b9\u5361",
@@ -210,11 +210,11 @@
     },
     "Karty Lokacji\\scenariusz 3\\UAM.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788630386.7881796
+      "mtime": 1788642715.731043
     },
     "Karty Lokacji\\scenariusz 3\\Zak\u0142ady Cegielskiego.card": {
       "card_type": "\u5730\u70b9\u5361",
-      "mtime": 1788616545.3499403
+      "mtime": 1788642735.312923
     },
     "Karty Scenariusza\\scenariusz 2\\Akt 1.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -266,11 +266,11 @@
     },
     "Karty Scenariusza\\scenariusz 3\\Akt 3.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1788610185.983472
+      "mtime": 1788643229.6760116
     },
     "Karty Scenariusza\\scenariusz 3\\Akt 4.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1788610237.183161
+      "mtime": 1788643175.4767542
     },
     "Karty Scenariusza\\scenariusz 3\\Akt 5.card": {
       "card_type": "\u573a\u666f\u5361",
@@ -298,7 +298,7 @@
     },
     "Karty Scenariusza\\scenariusz 3\\Tajemnica 4.card": {
       "card_type": "\u5bc6\u8c0b\u5361",
-      "mtime": 1788617908.5175068
+      "mtime": 1788641779.1431684
     },
     "Karty Spotka\u0144\\Artyku\u0142y Kuriera\\1.card": {
       "card_type": null,
@@ -598,7 +598,7 @@
     },
     "Karty Spotka\u0144\\scenariusz 3\\Goniec 1.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1788617686.7757194
+      "mtime": 1788640969.0570583
     },
     "Karty Spotka\u0144\\scenariusz 3\\Goniec 2.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -814,11 +814,11 @@
     },
     "Karty Scenariusza\\scenariusz 3\\Akt 6a.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1788558706.9123569
+      "mtime": 1788641057.5837686
     },
     "Karty Scenariusza\\scenariusz 3\\Akt 6b.card": {
       "card_type": "\u573a\u666f\u5361",
-      "mtime": 1788557370.3474011
+      "mtime": 1788642380.3565526
     },
     "Karty Spotka\u0144\\scenariusz 1\\Ciekawski Wie\u015bniak x5.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -834,7 +834,7 @@
     },
     "Karty Spotka\u0144\\scenariusz 3\\Czarna Koza.card": {
       "card_type": "\u654c\u4eba\u5361",
-      "mtime": 1788617967.9541326
+      "mtime": 1788642871.4035668
     },
     "Karty Spotka\u0144\\scenariusz 2\\Topielec z Warty.card": {
       "card_type": "\u654c\u4eba\u5361",
@@ -883,6 +883,10 @@
     "Karty Lokacji\\scenariusz 1\\Kluczowe\\Klucz do zachrystii.card": {
       "card_type": "\u652f\u63f4\u5361",
       "mtime": 1788608998.4571826
+    },
+    "Karty Scenariusza\\scenariusz 3\\Akt 6a_copy1.card": {
+      "card_type": "\u573a\u666f\u5361",
+      "mtime": 1788641791.9780462
     }
   }
 }

@@ -39,13 +39,14 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "47c3f22a66a2a3506f896bdb5d113b5e3a3bd025134bbaaa1e28578de7c1b897",
+  "content_hash": "d6be523c4946273975b3cc56d068dc5cc90f90996cef22c43e516419c920a71b",
   "enemy_damage": 2,
   "traits": [
     "Masywny",
     "Elitarny"
   ],
-  "quantity": 2,
+  "quantity": 1,
   "flavor": "Ciepłe spływa z matczynej łaski, budując życie. Jednak gdy dziecko przestaje ssać, ona wciąż żąda. Wtedy zaczyna trawić ciało od środka, wiążąc je na zawsze.",
-  "card_number": "30"
+  "card_number": "30",
+  "victory": 2
 }
