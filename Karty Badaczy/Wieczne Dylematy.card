@@ -30,7 +30,7 @@
     "flip_horizontal": false,
     "flip_vertical": false
   },
-  "body": "<rev> Umieść 3 żetony wątpliwości na tej karcie.\n<for> Gdy wykonujesz test umiejętności, możesz usunąć 1 żeton wątpliwości, w przeciwnym razie test kończy się porażką. Jeśli to zrobisz, wybierz:\n<bul>otrzymaj 1 horror, lub\n<bul>obniż wynik testu o 1.\nOdrzuć tę kartę, gdy na karcie nie ma już żetonów wątpliwości.",
+  "body": "<rev> Umieść 3 żetony wątpliwości na tej karcie.\n<for> Gdy wykonujesz test umiejętności, usuń 1 żeton wątpliwości z tej karty i wybierz jedno:\n<bul>otrzymaj 1 przerażenie, lub\n<bul>obniż wynik tego testu o 1.\nOdrzuć tę kartę, gdy nie ma na niej żetonów wątpliwości.",
   "flavor": "Podejmowanie decyzji jest jak paprykarz - nie trawisz tego.",
   "cost": -1,
   "traits": [

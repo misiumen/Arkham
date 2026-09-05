@@ -27,12 +27,7 @@
   },
   "subtype": "默认",
   "class": "潜修者",
-  "attribute": [
-    2,
-    5,
-    4,
-    2
-  ],
+  "attribute": [4, 3, 3, 2],
   "health": 6,
   "horror": 8,
   "traits": [

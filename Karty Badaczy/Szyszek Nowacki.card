@@ -33,7 +33,7 @@
       "flip_vertical": false
     },
     "card_back": {
-      "option": "karty Ocalałego <Sur> o poziomie 0-5, karty neutralne o poziomie 0-5, do 10 innych {{Wrodzona}} i/lub {{Sztuczka}} o poziomie 0-2.",
+      "option": "karty Ocalałego (<sur>) o poziomie 0-5, karty neutralne o poziomie 0-5, do 10 innych {{Wrodzona}} i/lub {{Sztuczka}} o poziomie 0-2.",
       "story": "Szyszka Nowiczok od lat mieszka tam, gdzie nawet wspomnienia gubią drogę – w Borach Tucholskich. Las wybrał nie z miłości do natury, lecz dlatego, że drzewa nie zadają pytań, a przeszłość zwykle nie lubi wilgoci. Im dalej od ludzi, tym mniejsza szansa, że ktoś sobie o nim przypomni. Albo że będzie tęsknił. Szyszka potrafi naprawić wszystko, czego nie powinno się już dać naprawić. Złamane, zgubione i zapomniane rzeczy czują się przy nim niepokojąco potrzebne. Improwizacja zastępuje mu plan, a doświadczenie – zdrowy rozsądek. Nie szuka walki ani zemsty. Woli, żeby świat po prostu zapomniał, że istnieje. Niestety, świat bywa uparty, a dawne sprawy mają złą tendencję do wracania bez zaproszenia. Gdy więc groza wpełza nawet do lasu, Szyszka robi to, co potrafi najlepiej: radzi sobie, zużywa minimum, a potem znika – bo najlepszym rozwiązaniem problemu wciąż pozostaje udawanie, że go nie ma.",
       "requirement": "Znikanie Bez Śladu, Dawny Wspólnik, 1 losowe podstawowe osłabienie.",
       "size": 30
@@ -41,7 +41,7 @@
   },
   "class": "生存者",
   "weakness_type": "弱点",
-  "body": "<rea> Raz na rundę, po tym jak odrzucisz co najmniej 1 kartę z ręki lub z gry, możesz zyskać 1 zasób albo wyleczyć 1 punkt obrażeń (limit raz na rundę).\n<eld> efekt: (+1). Możesz wziąć na rękę 1 kartę ze swojego stosu kart odrzuconych. Jeśli to zrobisz, koszt następnej karty, którą zagrasz w tej rundzie zostaje obniżony o 1.",
+  "body": "<rea> Raz na rundę, po tym jak odrzucisz co najmniej 1 kartę z ręki lub z gry, możesz zyskać 1 zasób albo wyleczyć 1 punkt obrażeń lub 1 punkt przerażenia.\n<eld> efekt: (+1). Możesz wziąć na rękę 1 kartę ze swojego stosu kart odrzuconych. Jeśli to zrobisz, koszt następnej karty, którą zagrasz w tej rundzie zostaje obniżony o 1.",
   "traits": [
     "Włóczęga",
     "Paranoik"
@@ -65,8 +65,8 @@
     "flip_vertical": false
   },
   "content_hash": "04d05fbd065266ed01a559a80e48d4b9f70132dc4731e2185d7d882665cbc980",
-  "health": 8,
-  "horror": 6,
+  "health": 7,
+  "horror": 7,
   "level": -1,
   "slots": "盟友",
   "cost": 2,

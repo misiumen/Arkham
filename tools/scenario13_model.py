@@ -292,8 +292,11 @@ class Base:
             if i.get("move_or_horror") and not i.get("moved"):
                 self.hurt(i, 0, 1, "Toksyczny Gomez (bez ruchu)")
             i["moved"] = False
-            if i.get("heal_on_commit") and i.get("committed") and i["dmg"] > 0:
-                i["dmg"] -= 1
+            if i.get("heal_on_commit") and i.get("committed"):
+                if i["dmg"] > 0:
+                    i["dmg"] -= 1
+                elif i["hor"] > 0:
+                    i["hor"] -= 1
             i["committed"] = False
             if i["heal_cards"] and self.rng.random() < i["heal_cards"] / i["cards"]:
                 if i["dmg"] > 0:

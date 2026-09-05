@@ -39,8 +39,8 @@ PICK = ["Szyszek Nowacki", "Michał z Bargłowa", "Baruch Hałabała", "Wojciech
 #   Znikanie Bez Sladu, efekty Starszego Znaku, Wojciech "dokladnie o 1" (~7% testow -> +1 karta).
 ABILITIES = {
     "Baruch Hałabała": dict(shroud_mod=-1, weapons=1, dmg_bonus=1, weakness_horror=1),
-    "Michał z Bargłowa": dict(phase_bonus=1, move_or_horror=1, agi_mod=-1, weakness_horror=0),
-    "Szyszka Nowiczok": dict(heal_on_commit=1, weakness_horror=2),
+    "Michał z Bargłowa": dict(phase_bonus=1, move_or_horror=0, agi_mod=-1, weakness_horror=0),   # Gomez: "Ruch lub Badania" - badanie jest co runde
+    "Szyszka Nowiczok": dict(heal_on_commit=1, weakness_horror=2),   # leczy obrazenie, a gdy brak - przerazenie
     "Wojciech Robak": dict(weakness_horror=2, draw_on_exact=1),
 }
 

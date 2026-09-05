@@ -12,7 +12,7 @@
   },
   "class": "弱点",
   "weakness_type": "弱点",
-  "body": "Tylko talia Szyszki Nowiczoka.\n<rev> Umieść Dawnego Wspólnika w grze, w twoim obszarze zagrożenia. Za każdy punkt kosztu wystawienia, którego nie możesz pokryć, otrzymujesz 1 punkt przerażenia.\n<for> Na końcu twojej tury odrzuć 1 zasób za każdą kartę na ręce (do maksymalnie 2 zasobów). Za każdy zasób, którego nie możesz w ten sposób odrzucić, otrzymujesz 1 punkt przerażenia.\n<for> Jeśli Dawny Wspólnik miałby zostać pokonany: zamiast tego wtasuj go do talii.\n<act> {{Pertraktacje}} – Wykonaj test <wil> (2). Ten test dostaje +1 do trudności za każdy atut, który kontrolujesz. Jeśli test zakończy się sukcesem, odrzuć Dawnego Wspólnika.",
+  "body": "Tylko talia Szyszki Nowiczoka.\n<rev> Umieść Dawnego Wspólnika w grze, w twoim obszarze zagrożenia, i zapłać 2 zasoby. Za każdy zasób, którego nie możesz zapłacić, otrzymujesz 1 punkt przerażenia. Dopóki Dawny Wspólnik jest w grze, zajmuje twój slot Sojusznika.\n<for> Na końcu twojej tury odrzuć 1 zasób za każdą kartę na ręce (do maksymalnie 2 zasobów). Za każdy zasób, którego nie możesz w ten sposób odrzucić, otrzymujesz 1 punkt przerażenia.\n<for> Jeśli Dawny Wspólnik miałby zostać pokonany: zamiast tego wtasuj go do talii.\n<act> {{Pertraktacje}} – Wykonaj test <wil> (2). Ten test dostaje +1 do trudności za każdy atut, który kontrolujesz. Jeśli test zakończy się sukcesem, odrzuć Dawnego Wspólnika.",
   "traits": [
     "Sprzymierzeniec",
     "Przestępca"

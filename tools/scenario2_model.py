@@ -756,8 +756,11 @@ class Game:
             if i.get("move_or_horror") and not i.get("moved"):
                 self.hurt(i, 0, 1, "Toksyczny Gomez (bez ruchu)")
             i["moved"] = False
-            if i.get("heal_on_commit") and i.get("committed") and i["dmg"] > 0:
-                i["dmg"] -= 1
+            if i.get("heal_on_commit") and i.get("committed"):
+                if i["dmg"] > 0:
+                    i["dmg"] -= 1
+                elif i["hor"] > 0:
+                    i["hor"] -= 1
             i["committed"] = False
             if i["loc"] == "Pradawne Deby":
                 ok, _ = self.test(i, "wil", 3, name="Deby: wil(3)")
