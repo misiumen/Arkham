@@ -32,11 +32,12 @@ PLAYERS = 4
 
 # Punkty zwyciestwa dostepne na kartach (pola victory / victory_text), stan 5 IX 2026:
 #  scen 1: Nory (1), Oboz na mokradlach (1), Zyrij Zerdz (1)
-#  scen 2: 3 karty Barier po 1 - tylko gdy ominieto je przedmiotem
+#  scen 2: 3 karty Barier po 1 (tylko przedmiotem), Arcykaplan 2, Zmutowany Kierownik 1
 #  scen 3: ZADNA karta nie ma pola victory
-VICTORY_AVAILABLE = {1: 3, 2: 3, 3: 0}
-# Premie z Fabuly (rozwiazania): scen 1 Z1 +4, Z2 (pokonani) +2, Z3/Z4 0; scen 2 i 3 tylko Victory X
-SURVIVAL_XP = {1: {"wygrana": 4, "porazka": 2, "zaglada": 0}, 2: {"wygrana": 0, "porazka": 0},
+VICTORY_AVAILABLE = {1: 3, 2: 6, 3: 0}
+# Premie z Fabuly: scen 1 Z1 +4, Z2 (pokonani) +2, Z3/Z4 0; scen 2 +2 za ukonczenie (1a, 1b) i +2 za
+# stracenie Lewiatana (1b); scen 3 tylko Victory X
+SURVIVAL_XP = {1: {"wygrana": 4, "porazka": 2, "zaglada": 0}, 2: {"wygrana": 2, "porazka": 0},
                3: {"wygrana": 0, "porazka": 0}}
 TASK_XP = 2   # "Wiesniacy zostali uratowani" / "pochowek": +2 PD za zadanie
 
@@ -123,7 +124,7 @@ def run_campaign(bases, variant="A", seed=None, log=None, narrate=False):
         if scen == 1 and getattr(g, "rescued", False):
             earned += TASK_XP
         if scen == 2 and won and variant == "B":
-            pass   # Fabula 1b: tylko Victory X (Zebro Lewiatana jako karta, nie PD)
+            earned += 2   # Fabula 1b: +2 PD za stracenie Lewiatana w otchlan
 
         # traumy: pokonany badacz = 1 trauma; do tego kary z rozwiazan
         for inv_state, sim in zip(crew, g.inv):
@@ -259,10 +260,11 @@ def cmd_xp():
     print("%-6s %-24s %-22s %s" % ("scen", "punkty zwyciestwa", "premia za przetrwanie", "maks XP"))
     tot = 0
     src = {1: "Nory, Oboz na mokradlach, Zyrij; +2 wiesniacy, +2 pochowek",
-           2: "3 karty Barier (tylko przedmiotem)", 3: "brak pol victory w scenariuszu 3"}
+           2: "3 Bariery (przedmiotem), Arcykaplan 2, Kierownik 1; +2 ukonczenie, +2 Lewiatan (B)",
+           3: "brak pol victory w scenariuszu 3"}
     for i in (1, 2, 3):
         v = VICTORY_AVAILABLE[i]
-        b = SURVIVAL_XP[i]["wygrana"] + (2 * TASK_XP if i == 1 else 0)
+        b = SURVIVAL_XP[i]["wygrana"] + (2 * TASK_XP if i == 1 else 0) + (2 if i == 2 else 0)
         tot += v + b
         print("%-6d %-24s %-22s %d      (%s)" % (i, v, "+%d" % b, v + b, src[i]))
     print()

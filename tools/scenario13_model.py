@@ -53,21 +53,20 @@ S1_FOREST = {  # las: (zaslona, wskazowki LACZNIE przy 4 graczach) - wartosci z 
 REVEAL_COST = 2   # "odrzuc 2 wskazowki: odkryj sasiadujaca lokacje" (Nory: 4, Grzezawisko/Gesty Las: test 5)
 S1_ENEMY = {
     "ciekawski": dict(atk=2, hp=2, ev=2, dmg=1, hor=0, name="Ciekawski wiesniak", aloof=True, hunter=False),
-    "wyznawca": dict(atk=3, hp=3, ev=3, dmg=1, hor=1, name="Przekonany wyznawca", aloof=False, hunter=True),
+    "wyznawca": dict(atk=2, hp=2, ev=3, dmg=1, hor=0, name="Przekonany wyznawca", aloof=False, hunter=True),
     "kultywator": dict(atk=1, hp=5, ev=1, dmg=1, hor=0, name="Zblakany Kultywator", aloof=True, hunter=False),
     "traktorzysta": dict(atk=4, hp=5, ev=3, dmg=2, hor=1, name="Kultysta Traktorzysta", aloof=False, hunter=True),
     "pomiot": dict(atk=3, hp=3, ev=2, dmg=1, hor=0, name="Kozi Pomiot", aloof=False, hunter=True),
-    # karta: obrazenia puste (0), przerazenie 1
-    "zerdz": dict(atk=3, hp=3 * PLAYERS, ev=3, dmg=0, hor=1, name="Zyrij Zerdz", aloof=False, hunter=False),
+    "zerdz": dict(atk=3, hp=3 * PLAYERS, ev=3, dmg=1, hor=1, name="Zyrij Zerdz", aloof=False, hunter=False),
 }
-# Talia startowa: Ciekawski x5, Kultywator x2, Wolanie; reszta "odlozona na bok" (tajemnice).
-S1_DECK_START = {"ciekawski": 5, "kultywator": 2, "wolanie": 1}
-S1_SHUFFLE_IN = {  # po tajemnicy N -> co wtasowac (rewersy tajemnic)
-    1: {"brama": 2, "kazanie": 1, "traktorzysta": 1, "komunia": 1, "chrzest": 1},
-    2: {},                       # Brama/Traktorzysta juz w talii
+# Talia startowa (Fabula): Ciekawski x5, Wolanie x2, Kultywator x2; reszta odlozona na bok.
+S1_DECK_START = {"ciekawski": 5, "kultywator": 2, "wolanie": 2}
+S1_SHUFFLE_IN = {  # po tajemnicy N -> co wtasowac (rewersy tajemnic, stan po commicie 1b373dd)
+    1: {"kazanie": 2, "komunia": 2, "chrzest": 2, "wyznawca": 0},   # Wyznawcy: reszta z "odlozonych" (patrz aside)
+    2: {"brama": 2, "traktorzysta": 1},
     3: {"pomiot": 2},
 }
-S1_AGENDA = [7, 7, 7, 4]
+S1_AGENDA = [4, 4, 4, 3]
 
 # ===========================================================================
 # SCENARIUSZ 3 - "Czarny Port"
@@ -398,6 +397,9 @@ class Game1(Base):
             if self.aside["wyznawca"] > 0:
                 self.aside["wyznawca"] -= 1
                 self.spawn("wyznawca", inv["loc"])
+            elif "wyznawca" in self.deck:
+                self.deck.remove("wyznawca")
+                self.spawn("wyznawca", inv["loc"])
 
     def move_to(self, inv, dest):
         """Las: do nieodkrytej lokacji nie da sie wejsc z lasu - trzeba ja odkryc za 2 wskazowki."""
@@ -461,6 +463,9 @@ class Game1(Base):
             return
         for kind, n in S1_SHUFFLE_IN.get(self.agenda, {}).items():
             self.deck += [kind] * n
+        if self.agenda == 1:   # Tajemnica 1: odlozeni Wyznawcy ida do talii
+            self.deck += ["wyznawca"] * self.aside["wyznawca"]
+            self.aside["wyznawca"] = 0
         self.rng.shuffle(self.deck)
         # Srodek wioski: rozstaw Ciekawskiego; zamiana Ciekawskiego na Przekonanego wyznawce
         for e in list(self.enemies):
@@ -557,9 +562,7 @@ class Game1(Base):
                     self.log["wiesniacy uratowani"] += 1
                     self.note("Wiesniacy odprowadzeni do wioski (+2 PD)")
             return
-        # Akt 1 -> 2: oproznij Kosciol (Klucz do zachrystii), potem Zachrystia int(3).
-        # uproszczenie: karty Klucz do zachrystii nie ma w repo - model zaklada,
-        # ze oprozniony Kosciol po prostu go daje.
+        # Akt 1 -> 2: oproznij Kosciol -> Klucz do zachrystii (karta odlozona na bok), potem Zachrystia int(3).
         if self.act == 0 and inv is self.best("int"):
             if not self.key:
                 if self.clues["Kosciol"] > 0:
@@ -983,9 +986,9 @@ def cmd_tempo(which, profiles):
         print("Zegar: %s = %d zaglady; 1/runde z Mitow -> %d rund do konca"
               % (" + ".join(map(str, S1_AGENDA)), sum(S1_AGENDA), sum(S1_AGENDA)))
         n = sum(S1_DECK_START.values())
-        print("Talia startowa: %d kart (Ciekawski x5, Kultywator x2, Wolanie) -> przy 4 graczach "
+        print("Talia startowa: %d kart (Ciekawski x5, Kultywator x2, Wolanie x2) -> przy 4 graczach "
               "wyczerpuje sie po %.0f rundach; reszta dochodzi z tajemnic." % (n, n / PLAYERS))
-        print("Zyrij Zerdz: %d zdrowia, walka 3, 0 obrazen / 1 przerazenie za atak." % (3 * PLAYERS))
+        print("Zyrij Zerdz: %d zdrowia, walka 3, 1 obrazenie / 1 przerazenie za atak." % (3 * PLAYERS))
         for p in profiles:
             print("  %-17s badanie zaslona2: %3.0f%%  Pertraktacje int(4): %3.0f%%  walka(3): %3.0f%%"
                   % (p["investigator"], 100 * p_success(val(p, "int"), 2),

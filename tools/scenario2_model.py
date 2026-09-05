@@ -435,9 +435,11 @@ class Game:
             self.attach_tissue(enemy["loc"])
         if enemy["kind"] == "kierownik":
             self.kierownik_done = True
+            self.victory += 1   # karta: Zwyciestwo 1
             self.items.add("ferment")
             self.log["przedmiot: ferment"] += 1
         if enemy["kind"] == "arcykaplan":
+            self.victory += 2   # karta: Zwyciestwo 2
             self.result = ("wygrana", "Arcykaplan pokonany")
 
     def engaged_ready(self, inv):
