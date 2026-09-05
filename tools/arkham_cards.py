@@ -196,12 +196,14 @@ def m_index(paths):
                        ("health", "zdr"), ("horror", "psy")):
             if c.get(k) not in (None, ""):
                 stats.append("%s%s" % (lab, c[k]))
+        # lokacja: awers "nieodkryta" (未揭示) ma tylko atrapy ("?", "X") - wartosci sa na rewersie
+        rev_back = c.get("location_type") in ("未揭示", "nieodkryta") and b.get("location_type") in ("已揭示", "odkryta")
         for k, lab in (("shroud", "zaslona"), ("clues", "wskaz"), ("threshold", "prog"),
                        ("victory", "zwyc")):
-            v = c.get(k, b.get(k))
+            v = b.get(k, c.get(k)) if rev_back and k in ("shroud", "clues") else c.get(k, b.get(k))
             if v not in (None, ""):
                 stats.append("%s%s" % (lab, v))
-        traits = c.get("traits") or b.get("traits") or []
+        traits = (b.get("traits") if rev_back else None) or c.get("traits") or b.get("traits") or []
         print("\t".join([
             path, str(c.get("type", "?")), name_of(c) or "-", str(c.get("class") or "-"),
             "%s/%s" % (c.get("cost", "-"), c.get("level", "-")), ",".join(stats) or "-",

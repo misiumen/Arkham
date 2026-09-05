@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 import scenario13_model as s13
+import investigators as iv
 import scenario2_model as s2
 from scenario2_model import load_profiles
 
@@ -43,7 +44,9 @@ TASK_XP = 2   # "Wiesniacy zostali uratowani" / "pochowek": +2 PD za zadanie
 
 
 def apply_xp(prof, xp):
-    """XP -> statystyki. Zwraca nowy slownik profilu."""
+    """XP -> ulepszenia z investigators.UPGRADES (badacze z repo); inni: +1 statystyka co 5 PD."""
+    if prof.get("investigator") in iv.UPGRADES:
+        return iv.apply_upgrades(prof, xp)[0]
     p = dict(prof)
     p["icons"] = dict(prof["icons"])
     lvl = min(3, xp // 5)

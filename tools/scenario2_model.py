@@ -14,6 +14,8 @@ priorytetow. Kazde uproszczenie jest oznaczone komentarzem "# uproszczenie:".
 Dane scenariusza przepisane recznie z kart w repo (stan: wrzesien 2026).
 """
 import sys, os, io, json, random, argparse, statistics, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import investigators as iv
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -36,16 +38,15 @@ SHROUD = {"Stara Przystan": 2, "Zakole Warty": 3, "Legi Wierzbowe": 2, "Skazony 
 CLUES_PER_INV = {"Stara Przystan": 1, "Zakole Warty": 1, "Legi Wierzbowe": 1, "Skazony Nurt": 0,
                  "Rozlewiska Debiny": 0, "Most Chwaliszewski": 0, "Dworzec Puszczykowo": 1,
                  "Pradawne Deby": 1, "Fabryka Drozdzy": 1, "Zrujnowany Fort": 2}
-# uproszczenie: karty nie mowia, ktore Pobrzeze lezy przy ktorym wezle rzeki
-# ("zgodnie z mapa powiazan" - mapy nie ma w repo). Przypisanie tak, by przedmiot
-# na bariere byl osiagalny PRZED ta bariera.
-SHORE = {"Stara Przystan": "Dworzec Puszczykowo", "Zakole Warty": "Pradawne Deby",
+# Ksiega Kampanii (Fabula/Kampania Czarna Krew Warty.odt, przygotowanie scen. 2): Dworzec przy
+# Legach Wierzbowych, Deby przy Zakolu, Fabryka przy Skazonym Nurcie, Fort przy Rozlewiskach.
+SHORE = {"Legi Wierzbowe": "Dworzec Puszczykowo", "Zakole Warty": "Pradawne Deby",
          "Skazony Nurt": "Fabryka Drozdzy", "Rozlewiska Debiny": "Zrujnowany Fort"}
 BARRIERS = {
     # blokuje wejscie do:      (nazwa, przedmiot omijajacy, droga alternatywna)
     "Legi Wierzbowe": ("Zyjacy Zator", "totem", "4 wskazowki w Zakolu (bariera zostaje w grze)"),
-    "Rozlewiska Debiny": ("Toksyczny Kozuch", "ferment", "test grupowy com(10), kazdy 1 obrazenie"),
-    "Most Chwaliszewski": ("Pruskie Miny", "dynamit", "test agi(4), porazka = 3 uszkodzenia barki"),
+    "Rozlewiska Debiny": ("Toksyczny Kozuch", "ferment", "test com(5) + 1 karta od kazdego, kazdy 1 obrazenie"),
+    "Most Chwaliszewski": ("Pruskie Miny", "dynamit", "test agi(4), porazka = 2 uszkodzenia barki"),
 }
 AGENDA = [6, 8, 10]          # progi zaglady; 2. przechodzi dalej tylko przy >=4 uszkodzeniach barki
 BARGE_HP = 10
@@ -61,7 +62,7 @@ ENCOUNTER_FILES = {
     "Dar Czarnej Kozy": "dar", "Gwałtowny Rozkwit": "rozkwit", "Hierofanta Tysiąca Pędów": "hierofanta",
     "Kozi Pomiot": "pomiot", "Niekontrolowany Rozrost": "rozrost", "Nosiciel Zarodników": "nosiciel",
     "Rytuał Płodności": "rytual", "Rzeczne Młode": "mlode", "Twarze w Korze": "twarze",
-    "Zapach Feromonów": "feromony", "Żywy Nurt": "nurt",
+    "Zapach Feromonów": "feromony", "Żywy Nurt": "nurt", "Strażnik Śluzy": "straznik",
 }
 
 
@@ -108,6 +109,9 @@ ENEMY = {
     "kierownik": dict(atk=4, hp=6, ev=2, dmg=2, hor=1, hunter=False, name="Zmutowany Kierownik"),
     "arcykaplan": dict(atk=3, hp=3 * PLAYERS, ev=3, dmg=2, hor=1, hunter=False, name="Arcykaplan"),
     "lewiatan": dict(atk=5, hp=3 * PLAYERS, ev=1, dmg=2, hor=2, hunter=False, name="Lewiatan"),
+    # karta 5 IX: rozstawia sie w lokacji barki; dopoki gotowy, barka nie moze opuscic lokacji;
+    # Pertraktacje int(3) usuwa go z gry (+1 karta)
+    "straznik": dict(atk=2, hp=3, ev=3, dmg=1, hor=1, hunter=False, name="Straznik Sluzy"),
 }
 ENEMY["lewiatan"]["hp"] = 3 * PLAYERS   # nadpisywane w Game.__init__ przez LEWIATAN_HP_MULT
 # Tkanki: (umiejetnosc do usuniecia, trudnosc, efekt-skrot)
@@ -170,6 +174,17 @@ class Game:
         for i in self.inv:
             if i.get("weapons"):
                 i["wil" if (i.get("faction") == "mystic" and i["wil"] >= i["com"]) else "com"] += 1
+            i["res"] = 5
+        self.bag = list(CHAOS_BAG)
+        self.log = collections.Counter()
+        for i in self.inv:
+            iv.setup(self, i)
+        # graf polaczen (rzeka + pobrzeza) - dla Znikania Bez Sladu
+        self.adj = collections.defaultdict(set)
+        for a, b in zip(RIVER, RIVER[1:]):
+            self.adj[a].add(b); self.adj[b].add(a)
+        for r, s in SHORE.items():
+            self.adj[r].add(s); self.adj[s].add(r)
         self.barge_idx = 0
         self.barge_hp = BARGE_HP
         self.barge_moved = False
@@ -195,8 +210,10 @@ class Game:
         self.kierownik_done = False
         ENEMY["lewiatan"]["hp"] = LEWIATAN_HP_MULT * PLAYERS
         self.result = None
-        self.log = collections.Counter()
         self.tests = collections.defaultdict(lambda: [0, 0])   # nazwa -> [proby, sukcesy]
+
+    def passable(self, inv, frm, to):
+        return True
 
     # --- pomocnicze ---------------------------------------------------------
     @property
@@ -212,8 +229,8 @@ class Game:
     def ctx(self, loc):
         return {"tissues": len(self.tissues.get(loc, [])), "boss": self.boss is not None}
 
-    def draw_token(self):
-        return self.rng.choice(CHAOS_BAG)
+    def draw_token(self, inv=None):
+        return iv.draw_token(self, inv) if inv is not None else self.rng.choice(self.bag)
 
     def test(self, inv, skill, difficulty, loc=None, name=None, commit=True):
         """Test umiejetnosci: statystyka + (ewentualnie 1 karta z reki) + zeton."""
@@ -224,17 +241,19 @@ class Game:
                                         "com": "combat", "agi": "agility"}[skill]])
             inv["hand"] -= 1
             inv["committed"] = True
-        if inv.get("phase_bonus") and not inv.get("phase_used"):
-            base += inv["phase_bonus"]; inv["phase_used"] = True
         difficulty += len([t for t in self.tissues[loc] if t == "gabczasta"])
         if loc == "Skazony Nurt" and self.tissues[loc]:
             difficulty += 1
-        tok = self.draw_token()
-        v = token_value(tok, self.ctx(loc))
+        base += iv.test_mod(self, inv, skill, base, difficulty)
+        tok = self.draw_token(inv)
+        v = iv.token_value_extra(self, inv, tok) if tok in (iv.CURSE, iv.BLESS, "elder") else None
+        if v is None and tok not in (iv.CURSE, iv.BLESS):
+            v = token_value(tok, self.ctx(loc))
         rec = self.tests[name or skill]
         rec[0] += 1
         if v is None:
             self.on_fail(inv, tok, loc, difficulty - base)
+            iv.after_test(self, inv, False, -99)
             return False, -99
         total = base + v
         ok = total > difficulty or (total == difficulty and not (self.boss and tok == "elder"))
@@ -242,6 +261,7 @@ class Game:
             rec[1] += 1
         else:
             self.on_fail(inv, tok, loc, difficulty - total)
+        iv.after_test(self, inv, ok, total - difficulty)
         return ok, total - difficulty
 
     def on_fail(self, inv, tok, loc, margin):
@@ -361,6 +381,8 @@ class Game:
                 self.hurt(inv, 2, 0, "Zywy Nurt")
             else:
                 self.attach_tissue(loc)
+        elif card == "straznik":
+            self.spawn("straznik", self.barge_loc)
         self.discard.append(card)
 
     def mythos(self):
@@ -372,10 +394,7 @@ class Game:
             if self.result:
                 return
             i["phase_used"] = False
-            if i.get("weakness_horror") and i.get("weak_round", self.rng.randint(2, 8)) == self.round and not i.get("weak_done"):
-                i["weak_done"] = True
-                self.hurt(i, 0, i["weakness_horror"], "wlasna slabosc")
-            i.setdefault("weak_round", self.rng.randint(2, 8))
+            iv.weakness(self, i)
             self.draw_encounter(i)
 
     # --- faza badaczy: polityka ---------------------------------------------
@@ -400,9 +419,11 @@ class Game:
         return p_success(inv["agi"] + round(inv["icons"]["agility"]), enemy["ev"], self.ctx(inv["loc"]))
 
     def fight(self, inv, enemy):
-        ok, _ = self.test(inv, self.fight_skill(inv), enemy["atk"] + self.enemy_bonus(enemy), name="walka")
+        mod, extra, cost = iv.halabarda(self, inv, enemy) or (0, 0, 0)
+        inv["actions"] -= cost
+        ok, _ = self.test(inv, self.fight_skill(inv), enemy["atk"] + self.enemy_bonus(enemy) - mod, name="walka")
         if ok:
-            enemy["hp"] -= 1 + (inv["dmg_bonus"] if inv["weapons"] else 0)
+            enemy["hp"] -= 1 + (inv["dmg_bonus"] if inv["weapons"] else 0) + extra
             if enemy["hp"] <= 0:
                 self.defeat(enemy)
         elif enemy["kind"] == "pomiot":
@@ -454,6 +475,9 @@ class Game:
 
     def move_barge(self, inv):
         """Ruch barki o jeden wezel (test com/agi 3), jesli nic nie blokuje."""
+        if any(e["kind"] == "straznik" and e["loc"] == self.barge_loc and not e["exhausted"] for e in self.enemies):
+            self.log["ruch barki zablokowany: Straznik Sluzy"] += 1
+            return False
         nxt = RIVER[self.barge_idx + 1]
         skill = "com" if inv["com"] + inv["icons"]["combat"] >= inv["agi"] + inv["icons"]["agility"] else "agi"
         diff = 3 + self.agenda2_mod
@@ -483,6 +507,8 @@ class Game:
 
     def try_barrier(self, inv, nxt):
         """Omija bariere przedmiotem albo droga alternatywna. Zwraca True, gdy barka przeszla."""
+        if any(e["kind"] == "straznik" and e["loc"] == self.barge_loc and not e["exhausted"] for e in self.enemies):
+            return False
         name, item, _ = BARRIERS[nxt]
         crew = self.at(self.barge_loc)
         if item in self.items:
@@ -575,13 +601,14 @@ class Game:
         inv["actions"] = 3 - (1 if inv.pop("lost_action", False) else 0)
         if self.kara and self.round == 1:
             inv["actions"] -= 1
+        iv.start_turn(self, inv)
         while inv["actions"] > 0 and inv["alive"] and not self.result:
             inv["actions"] -= 1
-            if inv["actions"] == 0 and inv.get("move_or_horror") and not inv.get("moved"):
-                inv["moved"] = True   # Gomez: ostatnia akcja tury na przejscie sie (1 akcja < 1 przerazenie)
-                self.log["Gomez: akcja ruchu"] += 1
+            if iv.free_action(self, inv):
                 continue
             self.act(inv)
+        inv["wspolnik_tried"] = False
+        iv.end_of_turn(self, inv)
 
     def act(self, inv):
         loc = inv["loc"]
@@ -624,6 +651,14 @@ class Game:
             else:
                 self.barge_hp -= PRESSURE_FAIL_DMG
                 self.log["obrazenia barki: Cala naprzod"] += PRESSURE_FAIL_DMG
+            return
+        # 2b. Straznik Sluzy: dopoki gotowy, barka stoi - Pertraktacje int(3) go usuwa
+        guard = [e for e in self.enemies if e["kind"] == "straznik" and e["loc"] == self.barge_loc and not e["exhausted"]]
+        if guard and loc == self.barge_loc and inv is self.best("int", loc):
+            ok, _ = self.test(inv, "int", 3, name="Straznik Sluzy: Pertraktacje int(3)")
+            if ok:
+                self.enemies.remove(guard[0]); self.log["Straznik Sluzy: pertraktacje"] += 1
+                inv["hand"] = min(8, inv["hand"] + 1)
             return
         # 3. tkanka w lokacji barki
         if loc == self.barge_loc and self.tissues[loc]:
@@ -694,7 +729,8 @@ class Game:
                     return
         # 6. wskazowki
         if self.clues[loc] > 0:
-            shroud = max(0, SHROUD[loc] + (2 if "oczy" in self.tissues[loc] else 0) + inv.get("shroud_mod", 0))
+            shroud = max(0, SHROUD[loc] + (2 if "oczy" in self.tissues[loc] else 0) + iv.shroud_mod(self, inv))
+            inv["investigated"] = True
             ok, _ = self.test(inv, "int", shroud, name="badanie")
             if ok:
                 self.clues[loc] -= 1; self.pool_clues += 1
@@ -726,6 +762,8 @@ class Game:
                 self.log["obrazenia barki: Arcykaplan"] += 2
                 continue
             if e["engaged"] and e["engaged"]["alive"]:
+                if iv.avoid_attack(self, e["engaged"], e):
+                    continue
                 self.hurt(e["engaged"], e["dmg"], e["hor"], e["name"])
         if self.barge_loc == "Skazony Nurt":
             for i in self.alive():
@@ -755,14 +793,9 @@ class Game:
                     self.hurt(i, 1, 0, "Zraca Grzybnia")
         for i in self.alive():
             i["hand"] = min(8, i["hand"] + 1)
-            if i.get("move_or_horror") and not i.get("moved"):
-                self.hurt(i, 0, 1, "Toksyczny Gomez (bez ruchu)")
+            i["res"] += 1
+            iv.upkeep(self, i)
             i["moved"] = False
-            if i.get("heal_on_commit") and i.get("committed"):
-                if i["dmg"] > 0:
-                    i["dmg"] -= 1
-                elif i["hor"] > 0:
-                    i["hor"] -= 1
             i["committed"] = False
             if i["loc"] == "Pradawne Deby":
                 ok, _ = self.test(i, "wil", 3, name="Deby: wil(3)")
@@ -829,8 +862,7 @@ def cmd_tempo(profiles):
                  100 * p_success(s(p, "com"), 4),
                  100 * max(p_success(s(p, "wil"), 4), p_success(s(p, "com"), 4))))
     group = sum(s(p, "com") for p in profiles)
-    print("\nKozuch: test grupowy com(10) przy sumie com grupy = %d -> %.0f%% (uproszczenie: suma statystyk)"
-          % (group, 100 * p_success(group, 10)))
+    print("Kozuch: test com(%d) najlepszego wojownika + 1 karta od kazdego innego badacza w lokacji, kazdy 1 obrazenie." % KOZUCH_DIFF)
     best_move = max(max(p_success(s(p, "com"), 3), p_success(s(p, "agi"), 3)) for p in profiles)
     rounds_move = 5 / best_move
     extra = 3 * 2 / 26 * PLAYERS   # Gwaltowny Rozkwit + Dar: ~ile zaglady/runde z 4 kart

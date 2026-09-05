@@ -1,518 +1,425 @@
 <title>Kampania Czarnej Krwi</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 :root{
-  --paper:#ecebe3; --paper-2:#e2e0d5; --ink:#1e211d; --ink-2:#4a4d46; --ink-3:#7a7d73;
-  --line:#c9c7b9; --rust:#9a4426; --moss:#4b6a44; --moss-2:#dfe6d6;
-  --sev-bloker:#8a1c1c; --sev-blad:#b0601c; --sev-spoj:#6d6b32; --sev-balans:#3d5c86; --sev-nit:#7a7d73;
-  --chip:#f6f5ee; --bar:#d9d6c8;
-  --serif:"Bodoni Moda","Bodoni 72","Didot",Georgia,serif;
-  --sans:"Alegreya Sans","Gill Sans","Segoe UI",system-ui,sans-serif;
-  --mono:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;
+  --bg:#ECEFE8;--surface:#F7F8F4;--ink:#161C19;--muted:#5B6660;--accent:#1E6E76;
+  --line:#CBD3CB;--line-soft:#DDE3DC;--code:#E3E8E1;
+  --bloker:#8C2F1F;--blad:#B0571C;--spoj:#7A6A2B;--balans:#2E6B8A;--nit:#6B7570;
+  --chip-ink:#F7F8F4;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#1b1d19; --paper-2:#23261f; --ink:#e8e6da; --ink-2:#bdbbad; --ink-3:#8b8d82;
-    --line:#3c3f36; --rust:#d9784f; --moss:#93b487; --moss-2:#2b3627;
-    --sev-bloker:#e46a6a; --sev-blad:#e39a52; --sev-spoj:#c9c66f; --sev-balans:#8db0e0; --sev-nit:#8b8d82;
-    --chip:#262922; --bar:#34372f;
+    --bg:#0F1513;--surface:#182019;--ink:#E4E8E1;--muted:#98A39B;--accent:#71C4C8;
+    --line:#2A352E;--line-soft:#222C26;--code:#1F2923;
+    --bloker:#D9705B;--blad:#DE9455;--spoj:#C9B45A;--balans:#6FAED0;--nit:#9AA59D;
+    --chip-ink:#0F1513;
   }
 }
 :root[data-theme="dark"]{
-  --paper:#1b1d19; --paper-2:#23261f; --ink:#e8e6da; --ink-2:#bdbbad; --ink-3:#8b8d82;
-  --line:#3c3f36; --rust:#d9784f; --moss:#93b487; --moss-2:#2b3627;
-  --sev-bloker:#e46a6a; --sev-blad:#e39a52; --sev-spoj:#c9c66f; --sev-balans:#8db0e0; --sev-nit:#8b8d82;
-  --chip:#262922; --bar:#34372f;
+  --bg:#0F1513;--surface:#182019;--ink:#E4E8E1;--muted:#98A39B;--accent:#71C4C8;
+  --line:#2A352E;--line-soft:#222C26;--code:#1F2923;
+  --bloker:#D9705B;--blad:#DE9455;--spoj:#C9B45A;--balans:#6FAED0;--nit:#9AA59D;
+  --chip-ink:#0F1513;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5}
-a{color:var(--rust)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px 96px}
-header.masthead{padding:48px 0 28px;border-bottom:2px solid var(--ink)}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
-h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5vw,56px);line-height:1.02;margin:10px 0 14px;text-wrap:balance}
-.lede{max-width:66ch;font-size:19px;color:var(--ink-2);margin:0}
-.meta{display:flex;flex-wrap:wrap;gap:18px 32px;margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--ink-3)}
-.meta b{color:var(--ink);font-weight:500}
-nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);margin:0 -24px;padding:8px 24px;display:flex;gap:4px 18px;flex-wrap:wrap;font-family:var(--mono);font-size:12px}
-nav.toc a{color:var(--ink-2);text-decoration:none;padding:4px 0}
-nav.toc a:hover,nav.toc a:focus-visible{color:var(--rust);outline:none;text-decoration:underline}
-section{padding-top:48px}
-h2{font-family:var(--serif);font-weight:600;font-size:32px;line-height:1.1;margin:0 0 6px;text-wrap:balance}
-h2 + .sub{margin:0 0 22px;color:var(--ink-2);max-width:70ch}
-h3{font-family:var(--sans);font-weight:700;font-size:18px;margin:30px 0 8px;letter-spacing:.01em}
-p{max-width:70ch}
-p.wide{max-width:none}
-ul,ol{max-width:72ch;padding-left:22px}
-li{margin:4px 0}
-li::marker{color:var(--ink-3)}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:26px 0 8px}
-.tile{background:var(--paper);padding:18px 18px 16px}
-.tile .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
-.tile .v{font-family:var(--serif);font-size:46px;line-height:1;margin:8px 0 6px;font-variant-numeric:tabular-nums}
-.tile .v small{font-size:20px;color:var(--ink-3);margin-left:6px}
-.tile .d{font-size:14px;color:var(--ink-2)}
-.tile.bad .v{color:var(--sev-bloker)}
-.tile.ok .v{color:var(--moss)}
-.tile.mid .v{color:var(--sev-blad)}
-.callout{border-left:4px solid var(--rust);background:var(--paper-2);padding:14px 18px;margin:22px 0;max-width:78ch}
-.callout p{margin:0 0 6px}
-.callout .t{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--rust);margin-bottom:6px}
-table{border-collapse:collapse;width:100%;font-size:15px;margin:14px 0 6px;font-variant-numeric:tabular-nums}
-.tbl{overflow-x:auto;margin:14px 0}
-th{text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:500;padding:8px 10px 8px 0;border-bottom:1px solid var(--ink);vertical-align:bottom}
-td{padding:8px 10px 8px 0;border-bottom:1px solid var(--line);vertical-align:top}
-td.n,th.n{text-align:right;font-family:var(--mono);font-size:13.5px;white-space:nowrap}
-td.mono{font-family:var(--mono);font-size:13px}
-tr.tot td{border-top:1px solid var(--ink);font-weight:700}
-.bar{display:flex;align-items:center;gap:10px;min-width:170px}
-.bar i{display:block;height:9px;background:var(--bar);flex:1;position:relative;border-radius:1px}
-.bar i b{position:absolute;left:0;top:0;bottom:0;background:var(--moss);border-radius:1px}
-.bar i b.low{background:var(--sev-bloker)}
-.bar i b.mid{background:var(--sev-blad)}
-.bar span{font-family:var(--mono);font-size:13px;width:44px;text-align:right}
-.timeline{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:16px}
-@media (max-width:760px){.timeline{grid-template-columns:1fr}}
-.run{border-top:2px solid var(--ink);padding-top:10px}
-.run h4{font-family:var(--serif);font-size:22px;font-weight:600;margin:0 0 4px}
-.run .who{font-size:14px;color:var(--ink-2);margin:0 0 12px}
-.ev{display:grid;grid-template-columns:52px 1fr;gap:6px 10px;font-size:15px}
-.ev .r{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);padding-top:3px}
-.ev .s{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--rust);grid-column:1/-1;margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
-.ev .s:first-child{margin-top:0;border-top:0;padding-top:0}
-.ev .out{grid-column:1/-1;margin-top:8px;padding:8px 12px;background:var(--paper-2);font-size:14px}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px;align-items:center}
-.filters button{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--line);background:var(--chip);color:var(--ink-2);cursor:pointer}
-.filters button[aria-pressed="true"]{border-color:var(--ink);color:var(--ink);background:var(--paper-2)}
-.filters button:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
-.filters .cnt{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-left:auto}
-.findings{list-style:none;padding:0;margin:0;max-width:none}
-.f{display:grid;grid-template-columns:96px 1fr;gap:6px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
-.f[hidden]{display:none}
-.sev{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:3px 0;color:var(--paper);text-align:center;height:fit-content;font-weight:500}
-.sev.bloker{background:var(--sev-bloker)} .sev.blad{background:var(--sev-blad)} .sev.spoj{background:var(--sev-spoj)} .sev.balans{background:var(--sev-balans)} .sev.nit{background:var(--sev-nit)}
-[data-theme="dark"] .sev, .sev{color:#fff}
-.f .where{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-bottom:2px}
-.f .what{margin:0 0 4px;max-width:78ch}
-.f .fix{margin:0;max-width:78ch;color:var(--ink-2)}
-.f .fix::before{content:"Poprawka — ";font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--moss)}
-.prio{counter-reset:p;list-style:none;padding:0;max-width:78ch}
-.prio li{counter-increment:p;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
-.prio li::before{content:counter(p,decimal-leading-zero);font-family:var(--serif);font-size:26px;color:var(--rust);line-height:1}
-.prio b{display:block;margin-bottom:2px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-@media (max-width:760px){.two{grid-template-columns:1fr}}
-code{font-family:var(--mono);font-size:.88em;background:var(--chip);padding:1px 5px;border:1px solid var(--line)}
-pre{font-family:var(--mono);font-size:13px;background:var(--chip);border:1px solid var(--line);padding:12px 14px;overflow-x:auto;line-height:1.45}
-.small{font-size:14px;color:var(--ink-2)}
-.tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:1px 6px;color:var(--ink-2);white-space:nowrap}
-footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--ink-3)}
-@media (prefers-reduced-motion: no-preference){.f{transition:opacity .15s}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Source Sans 3",system-ui,"Segoe UI",Arial,sans-serif;font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+.wrap{display:grid;grid-template-columns:1fr;max-width:1180px;margin:0 auto;padding:0 20px 80px}
+@media (min-width:1100px){.wrap{grid-template-columns:230px minmax(0,1fr);gap:48px}}
+nav.toc{position:sticky;top:0;align-self:start;padding:28px 0;font-size:14px;display:none}
+@media (min-width:1100px){nav.toc{display:block}}
+nav.toc a{display:block;color:var(--muted);text-decoration:none;padding:4px 0 4px 12px;border-left:2px solid var(--line-soft)}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--ink);border-color:var(--accent);outline:none}
+nav.toc .grp{margin-top:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-left:14px}
+main{min-width:0;max-width:78ch}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:44px;font-weight:600;margin:36px 0 6px}
+h2{font-size:30px;font-weight:600;margin:56px 0 14px;padding-top:14px;border-top:1px solid var(--line)}
+h3{font-size:21px;font-weight:600;margin:28px 0 8px}
+p{margin:0 0 12px}
+.lead{font-size:18px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.stan{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 24px;margin:18px 0 10px;padding:14px 16px;background:var(--surface);border:1px solid var(--line)}
+.stan div{font-size:14px}.stan b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.errata{border-left:3px solid var(--blad);padding:10px 16px;margin:18px 0;background:var(--surface)}
+code,.mono{font-family:"JetBrains Mono",Consolas,monospace;font-size:.86em}
+code{background:var(--code);padding:1px 5px;border-radius:3px}
+pre{background:var(--code);padding:12px 14px;overflow-x:auto;font-family:"JetBrains Mono",Consolas,monospace;font-size:13px;line-height:1.45;margin:10px 0 14px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:10px 0 18px}
+.tw{overflow-x:auto}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line)}
+td.n,th.n{text-align:right}
+tr.sum td{border-top:1px solid var(--line);font-weight:600}
+ul,ol{padding-left:22px;margin:0 0 14px}li{margin:0 0 6px}
+.chip{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:2px;color:var(--chip-ink);line-height:1.6;white-space:nowrap}
+.c-bloker{background:var(--bloker)}.c-blad{background:var(--blad)}.c-spoj{background:var(--spoj)}.c-balans{background:var(--balans)}.c-nit{background:var(--nit)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px}
+.filters button{font:600 12px/1 "Source Sans 3",sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.finding{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.finding .id{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);margin-top:3px}
+.finding h4{margin:0 0 4px;font-size:16px;font-weight:600}
+.finding p{margin:0 0 4px;font-size:15px}
+.finding .src{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);word-break:break-all}
+.finding .fix::before{content:"Propozycja: ";font-weight:600;color:var(--accent)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0 16px}
+.kv div{background:var(--surface);border:1px solid var(--line);padding:10px 12px}
+.kv b{display:block;font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:600;line-height:1}
+.kv span{font-size:12.5px;color:var(--muted)}
+.tl{list-style:none;padding:0;margin:8px 0 16px;font-size:14.5px}
+.tl li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px;padding:3px 0;border-bottom:1px dotted var(--line-soft)}
+.tl li span:first-child{font-family:"JetBrains Mono",monospace;color:var(--muted);font-size:12.5px;margin-top:2px}
+.small{font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.filters button{transition:background .12s,color .12s}}
 </style>
 
 <div class="wrap">
-<header class="masthead">
-  <div class="eyebrow">Czarna Krew Warty · raport z rozgrywki 1 → 2 → 3 · dla deweloperów scenariuszy</div>
-  <h1>Kampania Czarnej Krwi</h1>
-  <p class="lede">Świeży odczyt wszystkich kart z repo, nasza czwórka badaczy z <code>Karty Badaczy</code> (Szyszka, Michał, Baruch, Wojciech) jako ekipa główna i cztery talie startowe z arkhamdb jako punkt odniesienia, model tempa i 400 pełnych kampanii pod rząd z przenoszeniem doświadczenia i traum. Wynik: wioska gra, rzeka gra dla mocnej ekipy, Poznań nie gra wcale — a nasza czwórka topi się na rzece.</p>
-  <div class="meta">
-    <div>stan repo <b>c18412c (po odzyskaniu commitów z 4 IX)</b></div>
-    <div>data <b>5 IX 2026</b></div>
-    <div>kart <b>186</b> · znalezisk z gry <b>52</b></div>
-    <div>gracze <b>4</b> · worek <b>Standard</b> · ekipa <b>własna</b> (odniesienie: arkhamdb)</div>
-  </div>
-</header>
-
-<nav class="toc" aria-label="Sekcje">
-  <a href="#werdykt">Werdykt</a><a href="#grupa">Ekipa</a><a href="#przebieg">Przebieg</a><a href="#s1">Scen. 1</a><a href="#s2">Scen. 2</a><a href="#s3">Scen. 3</a><a href="#badacze">Badacze w grze</a><a href="#xp">Doświadczenie</a><a href="#bledy">Błędy</a><a href="#poprawki">Poprawki</a><a href="#karty">Karty +/−</a><a href="#metoda">Metoda</a>
+<nav class="toc" aria-label="Spis treści">
+  <div class="grp">Raport</div>
+  <a href="#werdykt">Werdykt</a><a href="#zrodla">Skąd są liczby</a><a href="#ekipa">Ekipa</a><a href="#liczby">Wyniki</a>
+  <div class="grp">Scenariusze</div>
+  <a href="#s1">1 · Wioska wśród drzew</a><a href="#s2">2 · Nurt Szaleństwa</a><a href="#s3">3 · Czarny Port</a>
+  <div class="grp">Reszta</div>
+  <a href="#badacze">Badacze i PD</a><a href="#xp">Doświadczenie</a><a href="#przebieg">Dwa przebiegi</a><a href="#znaleziska">Lista znalezisk</a><a href="#karty">Karty: dodać / usunąć</a><a href="#metoda">Metoda</a>
 </nav>
+<main>
 
-<section id="werdykt">
-  <h2>Werdykt</h2>
-  <p class="sub">Szansa wygranej naszej czwórki (Szyszka, Michał, Baruch, Wojciech) grającej kampanię od początku, z PD i traumami z poprzednich scenariuszy. W nawiasie ten sam scenariusz dla czterech starterów z arkhamdb (Tommy, Carolyn, André, Marie). Scenariusz 3 policzony dwojako: według zasad AH LCG i według najłagodniejszego czytania intencji autora.</p>
-  <div class="tiles">
-    <div class="tile ok"><div class="k">Scenariusz 1 · Wioska</div><div class="v">92<small>%</small></div><div class="d">Po poprawkach badaczy z 5 IX. Samodzielnie 90%, mediana 10 rund (przed poprawkami: 64% / 68%; arkhamdb: 91% / 90%).</div></div>
-    <div class="tile ok"><div class="k">Scenariusz 2 · wariant A</div><div class="v">85<small>%</small></div><div class="d">Samodzielnie 73% (przed poprawkami badaczy: 24% / 29%; arkhamdb: 93% / 72%).</div></div>
-    <div class="tile mid"><div class="k">Scenariusz 2 · wariant B</div><div class="v">56<small>%</small></div><div class="d">Samodzielnie 40% (przed poprawkami badaczy: 19% / 26%; arkhamdb: 70% / 38%). Wszyscy pokonani 53%.</div></div>
-    <div class="tile bad"><div class="k">Scenariusz 3 · Czarny Port</div><div class="v">0<small>%</small></div><div class="d">Obie ekipy, oba czytania. Zasady: zagłada do 11. rundy. Intencyjnie: 30 rund, 59% pokonanych z przerażenia, 32% Mleczarnia bez wyjścia.</div></div>
-  </div>
-  <div class="tiles" style="margin-top:1px">
-    <div class="tile bad"><div class="k">Kampania 3 z 3</div><div class="v">0<small>%</small></div><div class="d">Obie ekipy. Nasza dociera do Poznania w 85% (A) / 56% (B) kampanii.</div></div>
-    <div class="tile"><div class="k">PD po trzech scenariuszach</div><div class="v">6,6</div><div class="d">arkhamdb: 6,2. Oficjalne kampanie: 15–25. Scenariusz 3 nie ma ani jednej karty ze Zwycięstwem.</div></div>
-    <div class="tile"><div class="k">Traumy na badacza</div><div class="v">0,6<small>A</small></div><div class="d">1,3 w wariancie B (przed poprawkami badaczy: 2,9). arkhamdb: 0,5–0,9.</div></div>
-  </div>
+<div class="eyebrow">Czarna Krew Warty · scenariusze 1–3 · pełna rozgrywka</div>
+<h1>Kampania Czarnej Krwi — analiza rozgrywki</h1>
+<p class="lead">Wszystkie 181 plików <code>.card</code> i Księga Kampanii ze stanu repozytorium z 5 września 2026, 16:37. Każda liczba w modelu jest czytana wprost z pliku karty (właściwa strona), układ wioski i lasu z dwóch schematów w Księdze, połączenia scenariusza 3 z symboli na kartach. Każde znalezisko cytuje aktualny tekst karty i podaje plik.</p>
 
-  <div class="callout">
-    <div class="t">Pięć zdań</div>
-    <p><b>Scenariusz 1</b> jest gotowy do stołu i przechodni dla obu ekip. <b>Scenariusz 2</b> po zmianach z 4–5 IX jest zbalansowany: 85% / 56% dla naszej czwórki po poprawkach badaczy, 93% / 70% dla starterów arkhamdb; B pozostaje trudniejszy zgodnie z fabułą. Przed poprawkami badaczy (zręczność 8 w sumie, Gomez, brak leczenia przerażenia) nasza ekipa wygrywała rzekę w co czwartej kampanii — to był problem ekipy, nie scenariusza, i osiem zmian na kartach badaczy go zamknęło. <b>Scenariusz 3</b> jest niegrywalny dla każdego z trzech niezależnych powodów: zagłada na lokacjach liczy się do tajemnicy, spaczenie zamienia 12 wskazówek w 12 zagłady, a boss aktu 6 to kopia Agitatora z 3 zdrowia. <b>Ekonomia PD</b> daje 6,6 punktu po trzech scenariuszach przy 15–25 w kampaniach FFG. Poniżej 52 znalezisk (w tym 5 o badaczach, wprowadzone) i 18 poprawek.</p>
-  </div>
-</section>
-
-<section id="grupa">
-  <h2>Ekipa</h2>
-  <p class="sub">Czwórka z <code>Karty Badaczy</code> po poprawkach z 5 IX (w nawiasie wartości sprzed poprawek). Statystyki z pola <code>attribute</code>, zdrowie i poczytalność z kart. Nie mają gotowych talii, więc każdy dostaje profil talii startera arkhamdb swojej klasy (średnie ikony, bronie, leczenie, sojusznicy). Zdolności i słabości z kart zamienione na modyfikatory — kolumna „w modelu”.</p>
-  <div class="tbl"><table>
-    <tr><th>Badacz</th><th>Klasa</th><th class="n">Wola</th><th class="n">Int.</th><th class="n">Walka</th><th class="n">Zręcz.</th><th class="n">Zdr./Pocz.</th><th>W modelu</th><th>Pominięte</th></tr>
-    <tr><td>Szyszka Nowiczok</td><td>Ocalały</td><td class="n">3</td><td class="n">4</td><td class="n">3</td><td class="n">2</td><td class="n">7 / 7 (8/6)</td><td>Leczy 1 obrażenie, a gdy nie ma obrażeń — 1 przerażenie, w rundzie, w której zadeklarował kartę. Dawny Wspólnik: ~2 przerażenia raz na scenariusz. Talia Ocalałego: bez broni.</td><td>Zasób zamiast leczenia, Znikanie Bez Śladu, efekt Starszego Znaku.</td></tr>
-    <tr><td>Michał z Bargłowa</td><td>Mistyk</td><td class="n">4 (2)</td><td class="n">3 (5)</td><td class="n">3 (4)</td><td class="n">2→1</td><td class="n">6 / 8</td><td>+1 do pierwszego testu w każdej fazie (Gomez w obszarze zagrożeń). Gomez: −1 zręczności; przerażenie „bez Ruchu lub Badania” praktycznie nie odpala. Walczy wolą (4) zaklęciami z talii Mistyka.</td><td>Bánh Mì, Starszy Znak.</td></tr>
-    <tr><td>Baruch Hałabała</td><td>Obrońca</td><td class="n">4</td><td class="n">2</td><td class="n">4</td><td class="n">2</td><td class="n">7 / 7 (8/6)</td><td>Zasłona −1 (brak klątw w worku; Halabarda zamienia je na błogosławieństwa). Halabarda: +1 obrażenie. Czas Spowiedzi: ~1 przerażenie.</td><td>Taca Ofiarna (zasoby), tryb 2 akcje / +2 obrażenia, Starszy Znak.</td></tr>
-    <tr><td>Wojciech Robak</td><td>Włóczęga</td><td class="n">2</td><td class="n">4</td><td class="n">2 (3)</td><td class="n">4 (3)</td><td class="n">6 / 8</td><td>Talia Włóczęgi (2 bronie +1). Wieczne Dylematy: ~2 przerażenia raz na scenariusz.</td><td>Dobranie karty za „o 1 lub 2” (~14% testów), Paprykarz (model nie liczy zasobów), Starszy Znak.</td></tr>
-  </table></div>
-  <p class="small">Suma zręczności ekipy po poprawkach: 9 (przed: 8; arkhamdb: 13), ale z jednym badaczem na 4 — i to wystarcza, bo testy zręczności robi zawsze najzwinniejszy. Suma woli 13 (11). Ekipa odniesienia z arkhamdb: Tommy Muldoon (Obrońca 3/3/4/2), Carolyn Fern (Poszukiwacz 3/5/1/3), André Patel (Włóczęga 2/3/2/5), Marie Lambeau (Mistyk 4/4/1/3). Uczciwość porównania: podstawowe osłabienia talii arkhamdb nie są modelowane, nasze własne słabości tak — to kosztuje naszą ekipę ok. 1,2 przerażenia na badacza na scenariusz. Pełna lista uproszczeń w sekcji <a href="#metoda">Metoda</a>.</p>
-</section>
-
-<section id="przebieg">
-  <h2>Przebieg dwóch kampanii</h2>
-  <p class="sub">Dwa zapisane przebiegi naszej ekipy <b>sprzed poprawek badaczy</b> (seed 7 i 11) — nie średnie, tylko konkretne partie, żeby było widać, <em>jak</em> się przegrywa i za co dokładnie zapłaciły zręczność 2, Gomez i poczytalność 6. Lewa: wariant A, scen. 3 według zasad. Prawa: wariant B, scen. 3 w czytaniu intencyjnym.</p>
-  <div class="timeline">
-    <div class="run">
-      <h4>Kampania A · seed 7</h4>
-      <p class="who">Szyszka, Michał, Baruch, Wojciech. Wariant A: „Wypleniamy kult”.</p>
-      <div class="ev">
-        <div class="s">Scenariusz 1 — wygrana po 15 rundach, +5 PD</div>
-        <div class="r">r6</div><div>Kościół opróżniony (Baruch bada przy zasłonie 1 dzięki −1). Klucz do zachrystii — karta Demigodera z 4 IX, odzyskana.</div>
-        <div class="r">r8</div><div>Szyszka pokonany: 8/8 przerażenia (Wyznawcy, Wołanie, Dawny Wspólnik). Zachrystia: intelekt (3) — Michał zdaje dopiero za szóstym razem (16%).</div>
-        <div class="r">r10–12</div><div>Akt 2. Wojciech pokonany (8/8 obrażeń — Traktorzysta zadał w tej partii 12). Nory: Pertraktacje (4) — Posiadłość.</div>
-        <div class="r">r15</div><div>Żyrij pada. Michał wydał 10 akcji na spacery z Gomezem. Zostało dwóch z czwórki.</div>
-        <div class="out">Najtrudniejsze testy: Zachrystia 16% (6 prób), Pertraktacje 25%, badanie 74%, walka 75%.</div>
-        <div class="s">Scenariusz 2 (A) — porażka po 7 rundach, 0 PD</div>
-        <div class="r">r1–7</div><div>8 Tkanek dołączonych, 4 Nosicieli. Nerwowy Splot: 13 przerażenia w jednej partii (porażki o 2+ przy zręczności 1–2). Żrąca Grzybnia 8 obrażeń. Nikt nie zdaje testu zręczności (4) na usunięcie Splotu — 0 z 4.</div>
-        <div class="r">r7</div><div>Wszyscy pokonani przed Kożuchem: Michał 9/9 i 10/11, Baruch 10/10, Szyszka 8/8 przerażenia. Dziennik: „Szlam wylał się na ulice portu”, każdy 1 trauma.</div>
-        <div class="out">Dar Czarnej Kozy wola (4): 0 z 3. Zapach Feromonów: 33%. Walka 51%.</div>
-        <div class="s">Scenariusz 3 — porażka po 5 rundach, 0 PD</div>
-        <div class="r">r3–4</div><div>Akty 2 i 3 w dwóch rundach — ekipa bada dobrze (94%).</div>
-        <div class="r">r5</div><div>Goniec dociera do Mleczarni: +8, spaczenie, +12 z wskazówek = 20 zagłady. Tajemnice 3 i 4 w tej samej fazie Mitów. <b>Koniec kampanii.</b> Traumy: 2,5 na badacza.</div>
-      </div>
-    </div>
-    <div class="run">
-      <h4>Kampania B · seed 11</h4>
-      <p class="who">Wariant B: „Odpalamy silnik”. Scen. 3 z zagładą lokacji poza zegarem.</p>
-      <div class="ev">
-        <div class="s">Scenariusz 1 — wygrana po 10 rundach, +5 PD</div>
-        <div class="r">r6–8</div><div>Kościół, Zachrystia, Obóz ocalałych — Posiadłość w 7. rundzie. Michał: 7 spacerów z Gomezem.</div>
-        <div class="r">r10</div><div>Żyrij pada, nikt nie pokonany. Baruch 5/10 obrażeń, Szyszka 6/8 przerażenia (5 z własnej słabości).</div>
-        <div class="s">Scenariusz 2 (B) — porażka po 13 rundach, 0 PD</div>
-        <div class="r">r1–8</div><div>Zator za wskazówki, Kożuch testem walki (Baruch 5 + karty), Miny — Wojciech (3) zdaje za drugim razem. 8 Tkanek. Twarze w Korze: 25% (wola 2–4).</div>
-        <div class="r">r9–13</div><div>Most: Lewiatan ready co drugą rundę, 12 obrażeń i 12 przerażenia dla sterującego; „Cała naprzód!” walką (4) 25% z 8 prób — Baruch i Michał nie dobijają do 5 znaczników. Kozi Pomiot (Mściwy): 10 obrażeń przy walce 54%. Wszyscy pokonani w 13. rundzie, barka 4/10.</div>
-        <div class="out">Tajemnica 2 zręczność (3): 33%. Rozrost: 50%. Traumy po scenariuszu: 2 na badacza.</div>
-        <div class="s">Scenariusz 3 (intencyjnie) — porażka po 23 rundach, 0 PD</div>
-        <div class="r">r6</div><div>Goniec 2: UAM spaczona (16 zagłady). Odzyskiwanie int (3): 36 prób, 44%.</div>
-        <div class="r">r7–14</div><div>Szyszka pokonany (7/7 przerażenia — poczytalność 6 minus trauma). Wojciech (8/8), Baruch (6/6) — wszyscy z przerażenia, przy 1–4 obrażeniach. Mleczarnia spaczona (20).</div>
-        <div class="r">r23</div><div>Michał pada ostatni (10/10). 15 spacerów z Gomezem. Kurier: 19 kart, Cień 10 przerażenia.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="s1">
-  <h2>Scenariusz 1 · Wioska wśród drzew</h2>
-  <p class="sub">Przechodni i dobrze wyskalowany na 4 graczy. Nasza ekipa po poprawkach: 90% samodzielnie, 92% w kampanii, mediana 10 rund, 3,0 obrażeń i 5,3 przerażenia na badacza — tyle samo co startery arkhamdb (90% / 91%). Przed poprawkami: 68% / 64%, 12 rund, 6,7 przerażenia.</p>
-  <div class="tbl"><table>
-    <tr><th>Co zabiera życie (nasza ekipa przed poprawkami, na partię)</th><th class="n">na partię</th><th>Uwaga</th></tr>
-    <tr><td>Przekonany Wyznawca (Łowca, 1/1)</td><td class="n">7,8 + 7,8</td><td>Wchodzi z żetonu kultysty (−2) i z zamian Ciekawskich; ściga badacza z największą liczbą wskazówek. Unik: zręczność 2 przeciw 3 — 25%.</td></tr>
-    <tr><td>Kultysta Traktorzysta (4/5, 2 obr.)</td><td class="n">7,7</td><td>Dwa razy więcej niż u ekipy arkhamdb — walka 58% zamiast 49%, ale dłuższe partie i brak uniku.</td></tr>
-    <tr><td>Wołanie</td><td class="n">5,8 przer.</td><td>1 przerażenie na rundę; zdjęcie wolą (3) — 43%.</td></tr>
-    <tr><td>Własne słabości + Gomez</td><td class="n">4,9 przer. + 8 akcji</td><td>Dawny Wspólnik, Wieczne Dylematy, Czas Spowiedzi: 4,9 przerażenia; Gomez: 8 akcji Michała na spacer (albo 8 przerażenia). Ekipa arkhamdb: 0.</td></tr>
-    <tr><td>Żyrij Żerdź</td><td class="n">2,5 przer.</td><td>Pole obrażeń puste (0), przerażenie 1. Boss, który nie rani.</td></tr>
-  </table></div>
-  <h3>Co działa</h3>
-  <ul>
-    <li>Łańcuch aktów bez progów (Kościół → Klucz → Zachrystia → las → Pertraktacje w Norach/Obozie → Posiadłość) jest czytelny i daje wybór trasy.</li>
-    <li>Las z „nie możesz przejść do nieodkrytej” i odkrywaniem za 2 wskazówki to dobra, rzadka w fanowskich kampaniach mechanika eksploracji.</li>
-    <li>Ciekawski Wieśniak (Powściągliwy, Pertraktacje 3) jako presja bez obrażeń — 18 sztuk na partię, bo talia startowa ma 8 kart.</li>
-  </ul>
-  <h3>Co nie działa</h3>
-  <ul>
-    <li>Zegar 7+7+7+4 = 25 rund nie ma znaczenia: partie kończą się w 10. Zagłada nie jest zagrożeniem, jest nim wyłącznie ubytek.</li>
-    <li>Talia startowa: 8 kart przy 4 graczach tasuje się 3 razy na partię. Ciekawski wchodzi 18 razy, Kultywator 7.</li>
-    <li>Skraj Lasu: „kiedy dowolny badacz opuści tę lokalizację, usuń lokalizacje bez cechy Natura” — Posiadłość nie ma cechy Natura i wchodzi później. Dosłownie: pierwszy powrót przez Skraj Lasu usuwa cel Aktu 3.</li>
-    <li>11 z 14 lokacji wioski ma puste pola zasłony i wskazówek („?”), dwie mają „X”. Model przyjął zasłonę 2 i 1 na badacza — to założenie, nie odczyt.</li>
-  </ul>
-</section>
-
-<section id="s2">
-  <h2>Scenariusz 2 · Nurt Szaleństwa</h2>
-  <p class="sub">Stan po wszystkich zmianach z 5 IX 2026 (28 kart, 4 nowe, Fabuła). Etapy: <b>pakiet</b> — Lewiatan 2 zdrowia na badacza, Łowca, odepchnięcie = +2 Ciśnienia i powrót na koniec następnej rundy, „nie można go Unikać”; Most B próg <code>1&lt;per&gt;+1</code>; Zwycięstwo Kierownik 1, Arcykapłan 2; tekst rozstawienia Barier; Tajemnica 2; grupa na Zakolu; „Barka Jadwiga”; +2 PD w 1a/1b. <b>Dopiski B</b> — nieudane „Cała naprzód!” bez uszkodzenia, Lewiatan atakuje sterującego, 1 obrażenie barki. <b>Reszta</b> — barka 10 zdrowia, Miny 2, Dęby zasłona 3 i 1 wskazówka na badacza, Kozi Pomiot bez przerażenia po pokonaniu, quantity na 11 kartach (talia 20), nawias na Moście A, usunięte <code>archiwum/</code>. <b>Odzyskane z niewypchniętych commitów z 4 IX</b> (stare repo w Koszu): ilustrowane karty Wdzięczne Żyjątko, Zapas Paliwa, Żebro Lewiatana, nowy wróg Strażnik Śluzy, Kożuch jako test jednego badacza (5) z kartami reszty, Zator za 1 na badacza wskazówek, Fort (3), Skażony Nurt +1, Skrzynia 1 obrażenie badaczom, Nosiciel bez dublowania Tkanek, nagłówki wariantów na Mostach, Tajemnica 1 → Rzeczne Młode zamiast nieistniejącego Topielca, zasady tasowania na Karcie Scenariusza, przygotowanie w Fabule (Bariery, wybór wariantu, przypisanie Pobrzeży).</p>
-  <div class="tbl"><table>
-    <tr><th>Stan kart</th><th>A samodzielnie</th><th>A w kampanii</th><th>B samodzielnie</th><th>B w kampanii</th></tr>
-    <tr><td>Przed zmianami (z luką Uniku Lewiatana)</td><td><div class="bar"><i><b class="mid" style="width:46%"></b></i><span>46%</span></div></td><td><div class="bar"><i><b style="width:76%"></b></i><span>76%</span></div></td><td><div class="bar"><i><b class="low" style="width:25%"></b></i><span>25%</span></div></td><td><div class="bar"><i><b class="mid" style="width:45%"></b></i><span>45%</span></div></td></tr>
-    <tr><td>Po samym pakiecie</td><td class="n">46%</td><td class="n">76%</td><td><div class="bar"><i><b class="low" style="width:4%"></b></i><span>4%</span></div></td><td><div class="bar"><i><b class="low" style="width:18%"></b></i><span>18%</span></div></td></tr>
-    <tr><td>Pakiet + dopiski B</td><td class="n">46%</td><td class="n">76%</td><td><div class="bar"><i><b class="low" style="width:19%"></b></i><span>19%</span></div></td><td><div class="bar"><i><b class="mid" style="width:49%"></b></i><span>49%</span></div></td></tr>
-    <tr class="tot"><td>Po wszystkim (stan repo), ekipa arkhamdb</td><td><div class="bar"><i><b style="width:72%"></b></i><span>72%</span></div></td><td><div class="bar"><i><b style="width:93%"></b></i><span>93%</span></div></td><td><div class="bar"><i><b class="mid" style="width:38%"></b></i><span>38%</span></div></td><td><div class="bar"><i><b style="width:70%"></b></i><span>70%</span></div></td></tr>
-    <tr><td>Po wszystkim, nasza ekipa <b>przed</b> poprawkami badaczy</td><td><div class="bar"><i><b class="low" style="width:29%"></b></i><span>29%</span></div></td><td><div class="bar"><i><b class="low" style="width:24%"></b></i><span>24%</span></div></td><td><div class="bar"><i><b class="low" style="width:26%"></b></i><span>26%</span></div></td><td><div class="bar"><i><b class="low" style="width:19%"></b></i><span>19%</span></div></td></tr>
-    <tr class="tot"><td>Po wszystkim, <b>nasza ekipa po poprawkach</b> (stan repo)</td><td><div class="bar"><i><b style="width:73%"></b></i><span>73%</span></div></td><td><div class="bar"><i><b style="width:85%"></b></i><span>85%</span></div></td><td><div class="bar"><i><b class="mid" style="width:40%"></b></i><span>40%</span></div></td><td><div class="bar"><i><b class="mid" style="width:56%"></b></i><span>56%</span></div></td></tr>
-  </table></div>
-  <p class="small">Ekipa arkhamdb: A — porażki to barka 15%, badacze 12%; B — badacze 48%, barka 8%; mediana 9 i 11 rund. Zator omijany Totemem w 23% partii (wcześniej 2%), Kożuch Fermentem 92%, Miny testem 78%. <b>Nasza ekipa przed poprawkami</b>: A — barka zatopiona 44% (Miny: zręczność 4 przy najlepszej 3 = 30%), badacze 25%; B — badacze pokonani 58–66%. <b>Po poprawkach</b> (Wojciech zręczność 4, Michał 4/3/3/2 walczący zaklęciami, Gomez bez kary za badanie, Szyszka leczący przerażenie, poczytalność 7): A — barka 13%, badacze 13%; B — badacze 53%, barka 5%; Miny 50%, unik 67%, Tajemnica 2 37%. Różnica do starterów arkhamdb to już tylko brak Poszukiwacza z intelektem 5 i brak drugiego wojownika.</p>
-  <p class="small">Skok 46 → 76% w kampanii bierze się z 5 PD po scenariuszu 1 (+1 do najlepszej statystyki każdego badacza): testy tego scenariusza siedzą dokładnie na progach 3–4, więc jeden punkt statystyki przesuwa wynik o 30 punktów procentowych. To znaczy, że balans jest kruchy, nie że jest dobry.</p>
-  <div class="callout">
-    <div class="t">Wariant B — co pokazał pakiet</div>
-    <p>Zamknięcie luki Uniku odsłoniło właściwy problem: gotowy Lewiatan zadawał co rundę 2 obrażenia barce i po 2/2 każdemu badaczowi, a każde nieudane „Cała naprzód!” (43% prób) to było kolejne uszkodzenie. Barka wpływała pod most z 4–5 zdrowia i tonęła w dwie rundy. Stąd trzy dopiski (wprowadzone): nieudane „Cała naprzód!” bez efektu, Lewiatan atakuje sterującego, 1 obrażenie barki. Reszta zmian (barka 10, Miny 2, Pomiot bez przerażenia, Dęby) podniosła oba warianty o kolejne 20 punktów, bo grupa dopływa pod most zdrowsza.</p>
-  </div>
-
-  <h3>Bariery i Most</h3>
-  <div class="tbl"><table>
-    <tr><th>Bariera</th><th>Jak grupa ją przechodzi</th><th class="n">udział</th><th>Skutek</th></tr>
-    <tr><td>Żyjący Zator</td><td>4 wskazówki w Zakolu (76%) albo Totem z Dębów (24%; przed zmianą 2%, bo Dęby miały 8 wskazówek przy zasłonie 4)</td><td class="n">100%</td><td>Za wskazówki bariera zostaje w grze: Arcykapłan +1/+1, Rezygnacja na Moście A droższa o 2 wskazówki, 0 PD.</td></tr>
-    <tr><td>Toksyczny Kożuch</td><td>Faustyn Ferment po pokonaniu Kierownika (6 zdrowia, walka 4, 2 obr.)</td><td class="n">92%</td><td>Kierownik kosztuje ok. 3 obrażeń na partię. Test walki (5) jednego badacza z kartami reszty (wersja z 4 IX; przed nią test grupowy 10) rani całą załogę — model sięga po niego tylko bez Fermenta.</td></tr>
-    <tr><td>Pruskie Miny</td><td>Zręczność (4) — André 72%</td><td class="n">76%</td><td>Porażka = 2 uszkodzenia barki (przed zmianą 3). Dynamit z Fortu (walka 4, zasłona 5) w 7% partii.</td></tr>
-  </table></div>
-  <ul>
-    <li><b>Most A</b> to wyścig: Arcykapłan zadaje barce dokładnie 2 obrażenia co rundę. Przy barce 8 i 2–4 uszkodzeniach z rzeki (Tajemnica 1, Miny, Łęgi z Tkanką) grupa miała 2–3 rundy na 12 zdrowia — 31% „barka zatopiona”. Po zmianach (barka 10, Miny 2) spadło do 13%.</li>
-    <li><b>Most B</b> (stan przed pakietem, dla porównania): Lewiatan miał cechę Masywny i unik 1, więc jeden badacz wyczerpywał go co rundę (91%), a reszta robiła „Cała naprzód!”. Po pakiecie Unik jest zabroniony, Lewiatan ma 8 zdrowia, wraca po rundzie i daje 2 ciśnienia za odepchnięcie — ale gotowy atakuje wszystkich (2/2) i barkę (2) co rundę, i to on decyduje o wyniku.</li>
-    <li>Wymagane ciśnienie po pakiecie <code>1&lt;per&gt;+1</code> = 5 przy 4 graczach; „Cała naprzód!” wolą (4) 57%, walką (4) 7% (robi to André, bo wola 2 = walka 2). Pięć znaczników to 2–3 rundy — o jedną za dużo przy barce z 4 zdrowia.</li>
-  </ul>
-
-  <h3>Skąd obrażenia (wariant A, na partię, stan przed zmianami)</h3>
-  <div class="tbl"><table>
-    <tr><th>Źródło</th><th class="n">obrażenia</th><th class="n">przerażenie</th><th>Uwaga</th></tr>
-    <tr><td>Kozi Pomiot (Łowca, Mściwy, „każdy badacz 1 przerażenia po pokonaniu”)</td><td class="n">5,7</td><td class="n">5,0</td><td>Najdroższy wróg scenariusza mimo 3 zdrowia. Po zmianie (bez przerażenia po pokonaniu) przerażenie na badacza w scen. 2 spadło z 4,3 do 2,9.</td></tr>
-    <tr><td>Żeton tablicy (−3, 1 obrażenie przy porażce)</td><td class="n">4,7</td><td class="n">—</td><td>150 testów na partię; co 14. to tablica.</td></tr>
-    <tr><td>Twarze w Korze (wola 3+, brakujące punkty)</td><td class="n">—</td><td class="n">3,6</td><td>André (wola 2) traci 2–4 za jedną kartę.</td></tr>
-    <tr><td>Zmutowany Kierownik</td><td class="n">2,9</td><td class="n">—</td><td>Cena Fermenta.</td></tr>
-    <tr><td>Tajemnica 2 (zręczność 3, każdy badacz)</td><td class="n">2,4</td><td class="n">2,4</td><td>Odpala się średnio 1,2 raza (reset przy &lt;4 uszkodzeń barki).</td></tr>
-    <tr><td>Żywy Nurt, Krwawe Korzenie, Nerwowy Splot</td><td class="n">2,3 + 1,4</td><td class="n">2,2</td><td>Tkanki: 7,6 dołączonych na partię, 2,9 usuniętych.</td></tr>
-  </table></div>
-</section>
-
-<section id="s3">
-  <h2>Scenariusz 3 · Czarny Port</h2>
-  <p class="sub">Największa zmiana od poprzedniej analizy: 6 aktów, 4 tajemnice (4/8/12/14), trzy różne karty Gońca, 14 kart „Artykułów Kuriera” w tej samej grupie spotkań. Model liczy 37-kartową talię, 14 lokacji, 116 wskazówek na stole.</p>
-  <div class="tbl"><table>
-    <tr><th>Czytanie</th><th>Wygrane</th><th>Główna porażka</th><th class="n">Mediana rund</th><th class="n">Przer./badacz</th></tr>
-    <tr><td>Zasady AH LCG: zagłada na lokacjach liczy się do tajemnicy</td><td><div class="bar"><i><b class="low" style="width:0%"></b></i><span>0%</span></div></td><td>Tajemnica 4 — 100%</td><td class="n">11</td><td class="n">4,5</td></tr>
-    <tr><td>Intencyjne: liczy się tylko zagłada na tajemnicy</td><td><div class="bar"><i><b class="low" style="width:0%"></b></i><span>0%</span></div></td><td>Wszyscy pokonani 63%, Mleczarnia spaczona bez wyjścia 29%</td><td class="n">28</td><td class="n">8,6</td></tr>
-    <tr><td>Intencyjne + wskazówki 1 na badacza zamiast 3</td><td><div class="bar"><i><b class="low" style="width:8%"></b></i><span>8%</span></div></td><td>Wszyscy pokonani 66%</td><td class="n">29</td><td class="n">8,7</td></tr>
-    <tr><td>jw. + boss ze statystykami Awatara (10 na badacza)</td><td><div class="bar"><i><b class="low" style="width:4%"></b></i><span>4%</span></div></td><td>Wszyscy pokonani 70%</td><td class="n">29</td><td class="n">8,9</td></tr>
-    <tr><td><b>Nasza ekipa</b> (po poprawkach), zasady / intencyjne</td><td><div class="bar"><i><b class="low" style="width:0%"></b></i><span>0%</span></div></td><td>Tajemnica 4 — 100% / wszyscy pokonani 59%, Mleczarnia bez wyjścia 32%</td><td class="n">11 / 30</td><td class="n">— / 8,6</td></tr>
-  </table></div>
-  <p class="small">Nasza ekipa w czytaniu intencyjnym: Cień z Jeżyc 18 przerażenia na partię, Kurier 7, tajemnice 7, Trauma Pruskiego Drylu 5. Żadna zmiana na kartach badaczy nie rusza tego wyniku — to trzy blokady scenariusza.</p>
-
-  <h3>Trzy niezależne blokady</h3>
-  <ol>
-    <li><b>Zagłada na lokacjach.</b> W AH LCG tajemnica postępuje, gdy zagłada <em>w grze</em> osiągnie próg. Goniec 1 kładzie 8 na Mleczarni, Goniec 2 kładzie 4 na UAM, Goniec 3 rozstawia się na Cytadeli i patroluje do Cytadeli (jest tam od razu): 2 zagłady, wtasowanie, kolejne 2 przy następnym dobraniu. Tajemnice 1–3 mówią wprost „nie usuwaj zagłady z lokalizacji”, więc te żetony liczą się do każdego kolejnego progu. Jeden Goniec u celu = 3–4 tajemnice w 4 fazy Mitów. Jeśli intencja jest inna, trzeba to napisać na Karcie scenariusza.</li>
-    <li><b>Spaczenie zamienia wskazówki w zagładę.</b> UAM, Mleczarnia, Biblioteka, Dyrekcja, Linia i Tunele mają po 3 wskazówki na badacza — 12 przy 4 graczach. Spaczona Mleczarnia to 8 + 12 = 20 zagłady, a odzyskanie to test woli (3) zdejmujący tyle, o ile się udało. W przebiegu B: 25 prób, 36%. To jest 29% porażek „zakleszczenie” nawet w intencyjnym czytaniu.</li>
-    <li><b>Czarna Koza nie istnieje.</b> Karta „Czarna Koza” w talii to kopia Agitatora z Wildy: identyczny tekst („po tym, jak Agitator z Wildy wejdzie w zwarcie…”), walka 2, 3 zdrowia, quantity 2, grupa f. Akt 5 rozstawia ją na Ostrowie jako bossa aktu 6, Fabuła nazywa ją Awatarem Shub-Niggurath, a karta o takich statystykach (10 na badacza) leży w folderze „Scenariusz 4”.</li>
-  </ol>
-
-  <h3>Nawet po zdjęciu blokad scenariusz jest za długi</h3>
-  <ul>
-    <li>Cele aktów: 12 wskazówek (Akt 1), Zakłady 4 przy zasłonie 4, UAM 12 przy zasłonie 4, Mleczarnia 12 przy zasłonie 2 <b>+2 za każdego badacza w lokacji</b> (czterech badających razem = zasłona 10), Tunele 12 przy zasłonie 4. To 52 udane testy badania przy 45–60% skuteczności — 100+ akcji samego badania.</li>
-    <li>Przy medianie 28 rund talia (37 kart) tasuje się trzy razy. Cień z Jeżyc (Łowca, walka i unik X = liczba Spaczonych, 2 przerażenia za atak, rozstawia się tam, gdzie najwięcej zagłady) wchodzi 6 razy i zadaje 16–21 przerażenia na partię — to on zabija grupę, nie zagłada.</li>
-    <li>Tajemnice 2 i 3: „1 na badacza przerażenia za każdą Spaczoną” = 4 przerażenia na Spaczoną dla grupy. Przy 2–3 Spaczonych to 8–12 na jedną kartę.</li>
-    <li>Biblioteka, Dyrekcja i Linia Rozlewnicza są „niedostępne, dopóki na sąsiednich lokalizacjach są wskazówki”. Ich jedyni sąsiedzi to UAM, Zakłady i Mleczarnia — miejsca z 4–12 wskazówkami. Trzy lokacje otwierają się dopiero po wykonaniu celów aktów 2–4, więc na 14 lokacji realnie gra się na 10.</li>
-    <li>Zero kart ze Zwycięstwem. Nawet wygrany scenariusz daje 0 PD.</li>
-  </ul>
-</section>
-
-<section id="badacze">
-  <h2>Badacze w rozgrywce</h2>
-  <p class="sub">Co model powiedział o każdym z naszej czwórki <b>przed poprawkami</b> (400 kampanii, 4500 partii) i co z tego wprowadzono 5 IX. Analiza samych kart wobec 97 oficjalnych badaczy jest w osobnym raporcie <code>raport-badacze.html</code>.</p>
-  <div class="callout">
-    <div class="t">Wprowadzone 5 IX (8 zmian na 7 kartach)</div>
-    <p>Gomez: przerażenie „chyba że wykonasz akcję Ruch <b>lub Badania</b>”. Michał: 4/3/3/2 (mistyk walczący wolą; było 2/5/4/2). Wojciech: 2/4/2/4 (było 2/4/3/3) i reakcja „o 1 lub 2” zamiast „dokładnie o 1”. Szyszka: leczy 1 obrażenie <b>lub 1 przerażenie</b>, bez podwójnego „raz na rundę”. Szyszka i Baruch: zdrowie 7 / poczytalność 7 (było 8 / 6). Dawny Wspólnik: wprost „zapłać 2 zasoby… zajmuje slot Sojusznika”. Wieczne Dylematy: „usuń 1 żeton i wybierz” zamiast „możesz… w przeciwnym razie porażka”, „horror” → „przerażenie”. Tagi klas <code>&lt;gua&gt;</code>, <code>&lt;sur&gt;</code>. Efekt: scen. 1 64 → 92%, scen. 2 A 24 → 85%, B 19 → 56% w kampanii.</p>
-  </div>
-  <div class="tbl"><table>
-    <tr><th>Badacz</th><th>Co robi dobrze</th><th>Gdzie ginie</th><th>Co to znaczy dla kart</th></tr>
-    <tr><td><b>Baruch Hałabała</b><br><span class="small">4/2/4/2 · 8/6</span></td><td>Jedyny pełnoprawny wojownik: walka 5 z Halabardą, +1 obrażenie. Zasłona −1 robi z niego drugiego poszukiwacza w wiosce (zasłona 2 → 1) i na rzece. Kożuch (5) zdaje w 76%.</td><td>Przerażenie: poczytalność 6, wola 4 pomaga w testach, ale nie w obrażeniach psychicznych od wrogów. W scen. 3 pada z przerażenia przy 1 obrażeniu.</td><td>Karta działa jak trzeba. Wartość −1 do zasłony jest silniejsza, niż wygląda: w scen. 1 i 2 aktywna przez całą partię, bo Halabarda czyści klątwy.</td></tr>
-    <tr><td><b>Michał z Bargłowa</b><br><span class="small">2/5/4/2 · 6/8</span></td><td>Najlepszy intelekt ekipy (5) i drugi wojownik (walka 4). +1 raz na fazę odczuwalne przy progach 3–4.</td><td>Gomez: 5–18 akcji na partię na przymusowy spacer albo tyle samo przerażenia — to 15–25% jego akcji. Zręczność 1 po Gomezie: każdy test zręczności (Rozrost, Tajemnica 2, Miny, Splot) to porażka. Wola 2: Twarze w Korze, Dar, Feromony, Wołanie — porażki.</td><td>Mistyk z wolą 2 nie ma czym grać zaklęć; w praktyce to poszukiwacz-wojownik z profilem 5/4. Gomez jest najcięższą słabością w całej ekipie — dwa razy droższy niż Dawny Wspólnik i Wieczne Dylematy razem.</td></tr>
-    <tr><td><b>Szyszka Nowiczok</b><br><span class="small">3/4/3/2 · 8/6</span></td><td>Leczenie po odrzuceniu karty trzyma obrażenia nisko (0–2 pod koniec partii). Intelekt 4 wystarcza na zasłony 2–3.</td><td>Poczytalność 6 minus Dawny Wspólnik (~2 przerażenia) — pierwszy pada z przerażenia w 3 z 4 przebiegów. Bez broni w talii Ocalałego walka 3 nie wystarcza na Wyznawcę.</td><td>Zdolność leczy tylko obrażenia, a ekipa umiera z przerażenia. Opcja „albo wylecz 1 przerażenie” zmieniłaby jego rolę.</td></tr>
-    <tr><td><b>Wojciech Robak</b><br><span class="small">2/4/3/3 · 6/8</span></td><td>Jedyna zręczność 3: to on robi Miny (30–43%), unika i zdaje Tajemnicę 2. Intelekt 4 do badania.</td><td>Zdrowie 6: pada z obrażeń (8/8 w przebiegu A scen. 1). Wieczne Dylematy: ~2 przerażenia. Zdolność „dokładnie o 1” odpala się w ~7% testów.</td><td>Włóczęga ze zręcznością 3 nie robi tego, co Włóczęga robić powinien; ekipa nie ma nikogo od uników. Zręczność 4 albo bardziej lekka reakcja („o 1 lub 2”).</td></tr>
-  </table></div>
-  <div class="callout">
-    <div class="t">Wniosek</div>
-    <p>Ekipa była zbudowana z dwóch wojowników-badaczy i dwóch badaczy bez roli obronnej: nikt nie unikał (suma zręczności 8), nikt nie leczył przerażenia, a cztery karty słabości z Gomezem na czele dokładały 5–9 przerażenia na partię. Scenariusz 2 karał dokładnie za to: Miny, Tajemnica 2, Rozrost i Splot to testy zręczności, Twarze, Dar, Feromony i Dęby to testy woli. Po ośmiu poprawkach ekipa gra na poziomie starterów arkhamdb w scen. 1 (92% vs 91%) i 8–14 punktów poniżej w scen. 2 (85 / 56% vs 93 / 70%) — resztę różnicy robi brak Poszukiwacza z intelektem 5. Co dalej, jeśli ma być równo: Paprykarz i Taca Ofiarna nie są modelowane (zasoby), więc przy stole ekipa może wypaść lepiej niż tu.</p>
-  </div>
-</section>
-
-<section id="xp">
-  <h2>Doświadczenie i traumy</h2>
-  <p class="sub">Z pól <code>victory</code> na kartach i rozwiązań w księdze kampanii. Model śledzi, ile faktycznie zdobywa grupa.</p>
-  <div class="tbl"><table>
-    <tr><th>Scenariusz</th><th>Karty ze Zwycięstwem</th><th>Premia z Fabuły</th><th class="n">Maks</th><th class="n">Zdobyte (mediana)</th><th>Dlaczego mniej</th></tr>
-    <tr><td>1 · Wioska</td><td>Nory 1, Obóz na mokradłach 1, Żyrij 1</td><td>+4 za wygraną (Z2: +2), +2 wieśniacy, +2 pochówek</td><td class="n">11</td><td class="n">5 (32% partii: 2)</td><td>Nory i Obóz na mokradłach nikt nie opróżnia (zasłona 4 i 3, 4 wskazówki). Pochówek to 8 wskazówek w Dole. Wieśniacy: 5–8% partii.</td></tr>
-    <tr><td>2 · Rzeka</td><td>Bariery (przedmiotem) 3, Arcykapłan 2, Kierownik 1</td><td>+2 za ukończenie (1a, 1b), +2 za Lewiatana (1b)</td><td class="n">10</td><td class="n">1 (50% partii: 0)</td><td>Nasza ekipa najczęściej nie dopływa do Mostu. Arkhamdb: mediana 2.</td></tr>
-    <tr><td>3 · Poznań</td><td>żadna</td><td>brak</td><td class="n">0</td><td class="n">0</td><td>Nawet po naprawieniu blokad scenariusz nie nagradza.</td></tr>
-    <tr class="tot"><td>Razem</td><td></td><td></td><td class="n">21</td><td class="n">6,6 (arkhamdb 6,2; przed poprawkami badaczy 4,9)</td><td>Oficjalne kampanie: 15–25 po trzech scenariuszach.</td></tr>
-  </table></div>
-  <p>Przelicznik PD na moc w modelu jest umowny (co 5 PD +1 do statystyki, 8 PD lepsza broń, 12 PD lepsze karty), ale efekt jest jednoznaczny: grupa wchodzi do Poznania z niemal tą samą talią, z jaką wchodziła do wioski, a traumy (0,6–1,3 na badacza po poprawkach; 2,9 przed nimi) obniżają poczytalność tam, gdzie i tak jest najcieńsza. Fabuła obiecuje zbuffowanego Żerdzia i Lewiatana w scenariuszu 4 — bez PD nie ma czym ich przyjąć.</p>
-  <div class="callout">
-    <div class="t">Niespójności dziennika kampanii</div>
-    <p>Z1 scenariusza 1: „Ojciec Żerdź zostanie wtasowany do talii spotkań w Scenariuszu 3” — przygotowanie scenariusza 3 tego nie robi, a karta Żerdzia ma grupę „b”, nie „f”. Z3/Z4: „Przekonany Wyznawca wtasowany do talii w scenariuszach 3 i 4” — jak wyżej. Przygotowanie scenariusza 3 wymienia lokację „Szpital Kliniczny” i zestawy „Kultyści, Szczury” — nie ma ich w repo. Rozwiązanie 1b scenariusza 2 obiecuje atut „Żebro Lewiatana”, 1a „Wdzięczne Żyjątko” — kart nie ma. Interludium II cz. 2 każe dołożyć „Tkankę narośli” — brak takiej karty.</p>
-  </div>
-</section>
-
-<section id="bledy">
-  <h2>Lista błędów</h2>
-  <p class="sub">52 znaleziska z lektury kart i z gry, w tym 5 o naszych badaczach. Lint mechaniczny (emoji zamiast tagów, puste pola, duplikaty nazw) jest w osobnym raporcie <code>raport-kart.html</code> — tu tylko to, co zmienia rozgrywkę lub jest sprzeczne z zasadami.</p>
-  <div class="filters" role="group" aria-label="Filtr wagi">
-    <button aria-pressed="true" data-sev="all">Wszystkie</button>
-    <button aria-pressed="false" data-sev="bloker">Bloker</button>
-    <button aria-pressed="false" data-sev="blad">Błąd</button>
-    <button aria-pressed="false" data-sev="balans">Balans</button>
-    <button aria-pressed="false" data-sev="spoj">Spójność</button>
-    <span class="cnt" id="cnt"></span>
-  </div>
-  <ul class="findings" id="findings">
-    <!-- BADACZE -->
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">Karty Badaczy · cała ekipa <span class="tag">wprowadzone 5 IX</span></div><p class="what">Suma zręczności 8 (Szyszka 2, Michał 2→1 po Gomezie, Baruch 2, Wojciech 3). Scenariusz 2 ma pięć testów zręczności (Miny 4, Tajemnica 2, Rozrost, Splot 4, Gwałtowny Rozkwit) — ekipa zdaje je w 21–30%, unika w 25–57%. Wynik: A 29% / B 26% samodzielnie przy 72% / 38% dla starterów arkhamdb.</p><p class="fix">Wojciech 2/4/2/4. Po zmianie: Miny 50%, unik 67%, scen. 2 A 29 → 73% samodzielnie.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">Karty Badaczy · Toksyczny Gomez <span class="tag">wprowadzone 5 IX</span></div><p class="what">„1 przerażenie na koniec rundy, chyba że wykonałeś akcję Ruch” kosztuje Michała 5–18 akcji na partię (spacer) albo tyle samo przerażenia — 15–25% jego akcji przez całą kampanię. Najdroższa słabość w ekipie, droższa niż Dawny Wspólnik i Wieczne Dylematy razem; do tego −1 zręczności robi z niego 1.</p><p class="fix">Wpisane: „…chyba że wykonasz w tej rundzie przynajmniej 1 akcję Ruch lub Badania”.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">Karty Badaczy · Michał z Bargłowa <span class="tag">wprowadzone 5 IX</span></div><p class="what">Mistyk z wolą 2: talia Mistyka to zaklęcia na wolę, więc nie ma nimi czym grać; model traktuje go jako poszukiwacza-wojownika (intelekt 5, walka 4) i tak jest najlepszy w ekipie. Testy woli ze spotkań (Twarze, Dar, Feromony, Wołanie, Dęby) zdaje w 25–40%.</p><p class="fix">Wpisane: 4/3/3/2 (suma 12), Mistyk zostaje i walczy zaklęciami.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">Karty Badaczy · Szyszka Nowiczok, Baruch Hałabała <span class="tag">wprowadzone 5 IX</span></div><p class="what">Poczytalność 6 przy słabościach zadających przerażenie (Dawny Wspólnik ~2, Czas Spowiedzi) i braku leczenia przerażenia w ekipie. W przebiegach padają pierwsi, z przerażenia, przy 0–5 obrażeń. Zdolność Szyszki leczy obrażenia, których nie traci.</p><p class="fix">Wpisane: Szyszka „1 obrażenie lub 1 przerażenie”; obaj zdrowie 7 / poczytalność 7.</p></div></li>
-    <li class="f" data-sev="spoj"><span class="sev spoj">Spójność</span><div><div class="where">Karty Badaczy · Wojciech Robak <span class="tag">wprowadzone 5 IX</span></div><p class="what">Reakcja na „wynik dokładnie o 1 wyższy niż trudność” odpala się w ok. 7% testów (jeden żeton z czternastu). Efekt „dobierz 1 kartę” raz na kilkanaście testów nie zmienia partii.</p><p class="fix">Wpisane: „o 1 lub 2 wyższym niż poziom trudności”.</p></div></li>
-    <!-- SCENARIUSZ 3 -->
-    <li class="f" data-sev="bloker"><span class="sev bloker">Bloker</span><div><div class="where">scen. 3 · Goniec 1/2/3, Tajemnice 1–3, Karta scenariusza</div><p class="what">Zagłada zrzucana przez Gońców na lokacje (8, 4, 2) liczy się według zasad do progu tajemnicy (4/8/12/14), a tajemnice każą jej nie usuwać. Model: 100% porażek do 11. rundy.</p><p class="fix">Na Karcie scenariusza: „Zagłada na lokacjach nie liczy się do progu tajemnicy” — albo zmienić Gońców tak, by kładli zagładę na tajemnicy (1–2), a na lokacji tylko żeton spaczenia.</p></div></li>
-    <li class="f" data-sev="bloker"><span class="sev bloker">Bloker</span><div><div class="where">scen. 3 · Czarna Koza.card, Akt 5, Akt 6a/6b</div><p class="what">Karta bossa jest kopią Agitatora z Wildy (tekst mówi o Agitatorze, walka 2, 3 zdrowia, quantity 2, siedzi w talii spotkań). Akt 6 „Pokonaj Czarną Kozę” kończy się w jednej turze albo Koza ginie przypadkiem jako zwykły wróg zanim Akt 5 ją rozstawi.</p><p class="fix">Osobna karta Elitarna: walka 4, zdrowie 4 na badacza, 2/2, Masywny; usunąć z talii spotkań (quantity 1, odłożona na bok). Fabuła nazywa ją Awatarem Shub-Niggurath.</p></div></li>
-    <li class="f" data-sev="bloker"><span class="sev bloker">Bloker</span><div><div class="where">scen. 3 · rewersy lokacji Spaczonych</div><p class="what">„Zamień wszystkie żetony wskazówek na żetony zagłady” przy 3 wskazówkach na badacza daje 12–20 zagłady na jednej karcie; odzyskanie to test po 1 żetonie (UAM, Sołacz, Rynek, Zakłady, Ogród) lub „o ile się udał” (Mleczarnia, Cytadela). 29% porażek „bez wyjścia” w czytaniu intencyjnym.</p><p class="fix">Spaczenie blokuje badanie zamiast zamieniać wskazówki; odzyskanie zdejmuje spaczenie po 2 sukcesach. Albo obniżyć wskazówki do 1 na badacza.</p></div></li>
-    <li class="f" data-sev="bloker"><span class="sev bloker">Bloker</span><div><div class="where">scen. 3 · Goniec 3.card</div><p class="what">Rozstawia się na Cytadeli i patroluje do Cytadeli. Jest u celu od razu: 2 zagłady, wtasowanie, i tak w kółko przy każdym dobraniu.</p><p class="fix">Rozstawienie: Nadbrzeże Warty lub Zakłady Cegielskiego; cel: Cytadela.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Mleczarnia Spółdzielcza (awers)</div><p class="what">„+2 zasłony za każdego badacza w tej lokacji” — cztery osoby badające razem to zasłona 10, jedna 4. Karta karze za współpracę, której wymaga cel Aktu 4 (12 wskazówek).</p><p class="fix">+1 za każdego <em>innego</em> badacza, albo zwykła zasłona 3.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Tajemnica 2, Tajemnica 3 (rewers)</div><p class="what">„Gracze jako grupa otrzymują 1 &lt;badacz&gt; punkt przerażenia za każdą Spaczoną” = 4 przerażenia na Spaczoną. Przy 3 Spaczonych 12 przerażenia z jednej karty. Rewers Tajemnicy 3 powtarza flavor z Tajemnicy 1.</p><p class="fix">1 przerażenie na Spaczoną dla grupy (rozdzielane) i własny tekst rewersu.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Cień z Jeżyc</div><p class="what">Walka i unik X = liczba Spaczonych: na starcie 0 (test bez trudności), potem 3–4. Łowca z 2 przerażenia za atak i 4 zdrowia, 2 kopie w 37-kartowej talii tasowanej trzy razy — 16–21 przerażenia na partię, najwięcej ze wszystkich źródeł.</p><p class="fix">Walka 2+X (maks 5), 1 przerażenie, „Zwycięstwo 1”.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Akt 3, Akt 4 (rewers)</div><p class="what">„Z wybranej lokalizacji usuń 1 żeton chaosu” — żetony chaosu leżą w worku. Awers: „usuń wskazówki i żetony spaczenia” — w kampanii nie ma żetonów spaczenia, jest zagłada i cecha Spaczona.</p><p class="fix">„usuń 1 żeton zagłady”; ujednolicić: Spaczona = cecha, zagłada = żeton.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Stary Rynek (rewers)</div><p class="what">Spaczona strona nie ma żadnej akcji odzyskania i nie ma warunku „bez zagłady odwróć” — po trzeciej Spaczonej Stary Rynek jest spaczony do końca gry i liczy się do X kultysty/tablicy i Cienia.</p><p class="fix">Dodać akcję Pertraktacje wola (3) jak na Sołaczu albo warunek odwrotu przy &lt;3 Spaczonych.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Biblioteka, Dyrekcja Zakładu, Linia Rozlewnicza (awers)</div><p class="what">„Niedostępna, dopóki na sąsiednich lokalizacjach są wskazówki” — sąsiadem Biblioteki jest tylko UAM (12 wskazówek), Dyrekcji tylko Zakłady, Linii tylko Mleczarnia. Trzy lokacje otwierają się dopiero po wykonaniu celów aktów 2–4, kiedy już nie są potrzebne.</p><p class="fix">Warunek na konkretną liczbę („mniej niż 4 wskazówki”) albo na akt.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Nadbrzeże Warty</div><p class="what">Lokacja startowa ma cechę Spaczona na awersie (liczy się do X od pierwszej rundy), rewers bez zasłony i wskazówek („-”), a awers nie ma warunku odwrócenia. Brak grupy spotkań.</p><p class="fix">Zdjąć cechę Spaczona z awersu; jeśli lokacja ma się spaczyć, dodać próg jak na innych.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Tunele Forteczne (rewers)</div><p class="what">Osierocone zdanie „X to liczba lokalizacji z cechą Spaczona w grze” bez żadnego efektu używającego X. Lokacja ma 12 wskazówek przy zasłonie 4 jako cel Aktu 5 — więcej niż cokolwiek wcześniej.</p><p class="fix">Usunąć zdanie albo dodać efekt; wskazówki 2 na badacza.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 3 · Karta scenariusza 3</div><p class="what">Modyfikatory zapisane jako „--X” i „--1” (podwójny minus). Kultysta i tablica −X przy 3 Spaczonych to −3 w obu; Starszy Znak −1/−3 (negatywny).</p><p class="fix">Pojedynczy minus; Starszy Znak +1 jak wszędzie w grze.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 3 · cele aktów</div><p class="what">Akt 1: 12 wskazówek; Zakłady 4 (zasłona 4, nie można badać z ≤3 zasobami); UAM 12 (zasłona 4); Mleczarnia 12; Tunele 12. 52 udane testy badania przy 45–60% — 100+ akcji. Mediana partii 28 rund; oficjalne scenariusze mieszczą się w 12–16.</p><p class="fix">1 na badacza w Zakładach, UAM, Mleczarni; 2 w Tunelach. Model: samo to daje 0 → 8%.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 3 · cały zestaw</div><p class="what">Ani jedna karta scenariusza 3 nie ma Zwycięstwa. Rozwiązania 1 i 2 dają tylko „równowartość Zwycięstwa”, czyli 0.</p><p class="fix">Goniec 1 i 3 po 1, Cień 1, Wkurwiony Bamber 1, Czarna Koza 3; Biblioteka/Dyrekcja/Linia po 1 za opróżnienie.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 3 · Strajk ×3, Tej co Wy tu robicie</div><p class="what">Strajk blokuje wejście i wyjście z lokacji do końca rundy; 3 kopie + Mroczna Fala przy dublu. 9 Strajków na partię przy trzech tasowaniach — badacz siedzący na celu aktu traci całą turę.</p><p class="fix">2 kopie; blokada tylko wejścia.</p></div></li>
-    <li class="f" data-sev="spoj"><span class="sev spoj">Spójność</span><div><div class="where">scen. 3 · Artykuły Kuriera (14 kart)</div><p class="what">Grupa spotkań „f” — ta sama co Czarny Port, a Fabuła i karta scenariusza o nich milczą. Dwie karty „Godzina policyjna”, dwie „Lo Kittay w Poznaniu” i dwie „Seans Spirytystyczny” mają te same nazwy i różne rewersy. „Inflacja” zostaje w grze przez „&nbsp;rundy” (liczba wypadła). Tagi &lt;hau&gt; (Stary Rynek, Rynek Jeżycki, Zakłady) i &lt;fullname&gt; (Tej…) nie istnieją w edytorze.</p><p class="fix">Zdecydować, czy Kurier jest w talii scenariusza 3 (wtedy 37 kart — to dobra liczba) i wpisać to w przygotowanie; unikatowe nazwy; uzupełnić liczbę rund.</p></div></li>
-    <li class="f" data-sev="spoj"><span class="sev spoj">Spójność</span><div><div class="where">scen. 3 · lokacje (emoji), Kurier (emoji)</div><p class="what">Biblioteka, Cytadela, Dyrekcja, Rynek Jeżycki, Sołacz i 12 kart Kuriera mają ➡️ 📚 👊 🧠 zamiast tagów. 9 rewersów lokacji ma „-” w polach zasłony i wskazówek.</p><p class="fix"><code>python tools/arkham_cards.py fix --apply</code> zamienia emoji na tagi bez ryzyka (zweryfikowane w źródle edytora).</p></div></li>
-    <!-- SCENARIUSZ 2 -->
-    <li class="f" data-sev="bloker"><span class="sev bloker">Bloker</span><div><div class="where">scen. 2 · Tajemnica 1, Stara Przystań, Rozlewiska Dębiny, Fabuła <span class="tag">wprowadzone 5 IX</span></div><p class="what">Były odwołania do kart, których nie było: „Topielec z Warty”, „Zapas Paliwa”, „Wdzięczne Żyjątko”, „Żebro Lewiatana”. Zapas Paliwa, Żyjątko i Żebro (z ilustracjami, teksty z 4 IX) oraz Strażnik Śluzy odzyskane z niewypchniętych commitów starego repo; Tajemnica 1 odsyła do Rzecznego Młodego, więc Topielec nie jest potrzebny.</p><p class="fix">—</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 2 · Lewiatan <span class="tag">wprowadzone 5 IX</span></div><p class="what">Było: Masywny + unik 1, każdy badacz mógł go Unikać z 91% szansą i spełnić warunek Rezygnacji; po odepchnięciu (12 obrażeń) zostawał na Starej Przystani na zawsze. Teraz: „Lewiatana nie można Unikać”, Łowca, 2 zdrowia na badacza, odepchnięcie = 2 znaczniki Ciśnienia, powrót na koniec następnej rundy.</p><p class="fix">Zostało: gotowy Lewiatan (2 barce + 2/2 każdemu co rundę) topi barkę w dwie rundy — patrz callout w sekcji scen. 2 i trzy dopiski do decyzji.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 2 · 11 kart talii spotkań <span class="tag">wprowadzone 5 IX</span></div><p class="what">Żadna karta talii scenariusza 2 nie miała pola <code>quantity</code>. Wpisane: Kozi Pomiot 2, Nosiciel 2, Młode 2, Hierofanta 1, Rytuał 1, Dar, Rozkwit, Rozrost, Twarze, Feromony, Żywy Nurt po 2 — talia 20 kart (+ Topielec 1).</p><p class="fix">—</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 2 · Karta Scenariusza <span class="tag">wprowadzone 5 IX</span></div><p class="what">Pole <code>body</code> miało starszą wersję modyfikatorów („karty Mutacji”, emoji) obok pól żetonów. Wyczyszczone; zostały pola żetonów („karty Tkanki”).</p><p class="fix">—</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 2 · Most Chwaliszewski A / B <span class="tag">wprowadzone 5 IX</span></div><p class="what">Most A: „(->【Z2)” → „(→【Z2】)”. Most B: „&lt;per&gt;+2” → „1&lt;per&gt;+1” (5 przy 4 graczach), nieudane „Cała naprzód!” bez uszkodzenia barki, poprawiona spacja w teście.</p><p class="fix">—</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 2 · Barka Jadwiga, Pruskie Miny <span class="tag">wprowadzone 5 IX</span></div><p class="what">Barka miała 8 zdrowia i traciła 3 przy nieudanych Minach; wyścig z Arcykapłanem (2 na rundę) kończył się zatopieniem w 31% (A) i 54% (B) partii. Teraz barka 10, Miny 2. Arcykapłan bez zmian — wyścig zostaje, ale z zapasem.</p><p class="fix">Zatopienia: A 13%, B 9%.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 2 · Kozi Pomiot <span class="tag">wprowadzone 5 IX</span></div><p class="what">Łowca + Mściwy + „każdy badacz otrzymuje 1 przerażenie po pokonaniu” na barce z 4 badaczami dawało 5,7 obrażeń i 5,0 przerażenia na partię z karty o 3 zdrowia. Efekt po pokonaniu zdjęty z wersji rzecznej (kopia ze scen. 1 bez zmian).</p><p class="fix">—</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 2 · Pradawne Dęby, Zwęglony Totem <span class="tag">wprowadzone 5 IX</span></div><p class="what">Totem wymagał 8 wskazówek przy zasłonie 4 i nikt po niego nie szedł (2% partii). Dęby: zasłona 3, 1 wskazówka na badacza. Totem w 24% partii — Zator zdjęty, Arcykapłan bez +1, 1 PD.</p><p class="fix">—</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 2 · Toksyczny Kożuch <span class="tag">wprowadzone 5 IX</span></div><p class="what">Test grupowy walki (10) był martwą opcją (1–40%). Teraz (8).</p><p class="fix">Nadal warto dopisać wprost, że każdy badacz w lokacji może dołożyć karty do tego testu.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 2 · Zwycięstwo <span class="tag">częściowo wprowadzone 5 IX</span></div><p class="what">Tylko Bariery ominięte przedmiotem dawały PD (po 1); Zator za wskazówki i Miny testem — 0. Teraz Arcykapłan ma Zwycięstwo 2, Kierownik 1, a Fabuła daje +2 PD za ukończenie (1a i 1b). Lewiatan wciąż 0.</p><p class="fix">Zwycięstwo Bariery za każde przejście; Lewiatan 2 (w 1b „strącenie w otchłań” jest już nagrodzone w Fabule).</p></div></li>
-    <li class="f" data-sev="spoj"><span class="sev spoj">Spójność</span><div><div class="where">scen. 2 · 7 kart, Zakole Warty, archiwum <span class="tag">wprowadzone 5 IX</span></div><p class="what">„Barka "Jadwiga"” ujednolicone do „Barka Jadwiga” na 7 kartach. Zakole Warty dostało grupę spotkań c. Folder <code>archiwum/</code> (4 nieaktualne karty, „Oślizgła Macka”) usunięty z repo — historia w git.</p><p class="fix">—</p></div></li>
-    <!-- SCENARIUSZ 1 -->
-    <li class="f" data-sev="bloker"><span class="sev bloker">Bloker</span><div><div class="where">scen. 1 · rozłożenie mapy</div><p class="what">Fabuła: „rozłóżcie losowo zgodnie ze schematem”, Akt 1: „zgodnie z rozpiską z instrukcji” — w repo nie ma schematu ani instrukcji. 26 lokacji nie ma własnego symbolu, połączenia ma tylko 11 wiejskich (wszystkie te same trzy), las 0. Nie wiadomo, ile losowych lokacji wioski wchodzi do gry.</p><p class="fix">Dodać rozpiskę (obrazek w Fabule) albo symbole i połączenia na kartach; napisać „wylosujcie 8 z 12”.</p></div></li>
-    <li class="f" data-sev="bloker"><span class="sev bloker">Bloker</span><div><div class="where">scen. 1 · Kościół, Zachrystia</div><p class="what">„Klucz do zachrystii” — przedmiot odłożony na bok, którego karta nie istnieje. Bez niego Zachrystia jest zamknięta do Tajemnicy 3 (14 rund), a to jedyna droga do Aktu 2.</p><p class="fix">Karta atutu (propozycja w sekcji Karty) albo zapis na Kościele: „gdy nie ma tu wskazówek, drzwi Zachrystii są otwarte”.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 1 · Skraj Lasu (rewers)</div><p class="what">„Kiedy dowolny badacz opuści tę lokalizację, usuń wszystkie lokalizacje bez cechy Natura” — bez limitu. Posiadłość (cel Aktu 3, cechy Miejsce Kultu) nie ma cechy Natura; każde późniejsze wyjście ze Skraju Lasu ją usuwa. Odkrycie usuwa też Kościół z Wikariuszem.</p><p class="fix">„(limit raz na grę)” i „lokalizacje wioski”.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 1 · 13 lokacji</div><p class="what">11 lokacji wioski bez zasłony i wskazówek („?”), Targ Rybny i Warsztat Mechaniczny z „X” bez definicji X. Grzęzawisko: „jeśli nie zdasz dowolnego testu zręczności/walki” — bez trudności w drugim zdaniu (ok), ale test odkrycia ma trudność 5 przy zasłonie 1.</p><p class="fix">Wpisać wartości; sugerowane 2 / 1 na badacza (tak liczy model).</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 1 · Żyrij Żerdź</div><p class="what">Nazwa karty „Żyrij Żerdź”, tekst „Ojcu Żerdź”, Akt 3 „Żyrija Źerdzia” (Ź), Fabuła „Sergiej Żerdź”, Posiadłość „Żyrija Żerdźa”. Cztery pisownie jednego wroga. Pole obrażeń puste: boss zadaje 0 obrażeń i 1 przerażenie.</p><p class="fix">Jedna nazwa; obrażenia 1.</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 1 · Karta scenariusza</div><p class="what">Tablica: „−X, X to liczba odłożonych na bok kart z cechą Zwycięstwo 0” — nie ma takiej cechy ani takich kart. Czaszka −X za Humanoidów: przy 5 Ciekawskich na stole to −5.</p><p class="fix">Tablica −2; czaszka −X (maks 3).</p></div></li>
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">scen. 1 · Obóz na Mokradłach, Przerażony Wikariusz</div><p class="what">Obóz: „(→R4)” — odwołanie donikąd; „talia mitów” zamiast talii spotkań. Wikariusz: „usuń Tkankę lub żeton zagłady” — Tkanki są w scenariuszu 2; zdrowie −1.</p><p class="fix">Usunąć „(→R4)”; Wikariusz: „żeton zagłady lub kartę Podstępu z lokalizacji”, zdrowie 1.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 1 · Tajemnice, talia startowa</div><p class="what">Zegar 7+7+7+4 = 25 rund przy partiach na 10 — Tajemnica 4 nigdy nie zagrozi. Talia startowa ma 8 kart (Ciekawski 5, Kultywator 2, Wołanie) i tasuje się 3 razy; 18 Ciekawskich i 7 Kultywatorów na partię.</p><p class="fix">Tajemnice 6/6/5/4; w talii startowej Gorliwe Kazanie i Nieczysta Komunia zamiast dokładać je z Tajemnicy 1.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 1 · Wołanie</div><p class="what">1 przerażenie na rundę do zdjęcia testem woli (3) — 43% skuteczności, 5,3 przerażenia na partię z jednej karty. Więcej niż Żyrij i Kozi Pomiot razem.</p><p class="fix">Wola (2) albo „na koniec rundy, jeśli w tej rundzie nie wykonałeś testu woli”.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">scen. 1 · Nory, Obóz na mokradłach, Dół</div><p class="what">Trzy źródła PD, po które nikt nie idzie: Nory 4 wskazówki przy zasłonie 4 i 1 przerażenie na koniec tury, Obóz 4 przy zasłonie 3 i Wyznawca przy odkryciu, pochówek w Dole 8 wskazówek. Mediana PD: 5 z 11 możliwych.</p><p class="fix">Zwycięstwo 1 na Żyriju → 2; pochówek 1 na badacza wskazówek.</p></div></li>
-    <li class="f" data-sev="spoj"><span class="sev spoj">Spójność</span><div><div class="where">scen. 1 · Kozi Pomiot, Zbłąkany Kultywator, pliki w katalogu głównym</div><p class="what">Trzy kopie Koziego Pomiota (Karty Spotkań, scen. 1, scen. 2) i trzy pliki <code>.card</code> bez typu w katalogu głównym („Ciekawski Wieśniak x5”, „Przekonany wyznawca x5”, „Zbłąkany Kultywator x2”). Kultywator ma „Powściągliwy” wpisane w cechy zamiast w tekst (jest w obu).</p><p class="fix">Usunąć duplikaty; słowo kluczowe tylko w tekście.</p></div></li>
-    <!-- KAMPANIA -->
-    <li class="f" data-sev="blad"><span class="sev blad">Błąd</span><div><div class="where">Fabuła · przygotowanie scen. 3, rozwiązania</div><p class="what">Przygotowanie wymienia „Szpital Kliniczny”, zestawy „Kultyści, Szczury”, „Tkankę narośli” — nie ma ich. Z1 scen. 1 obiecuje Żerdzia w talii scen. 3, Z3/Z4 Przekonanych Wyznawców — przygotowanie scen. 3 tego nie robi. Interludium II cz. 2 każe wtasować Nosiciela i Hierofantę (grupa c) do talii f.</p><p class="fix">Dopisać do przygotowania scen. 3 blok „Sprawdźcie Dziennik” z tymi kartami albo wykreślić obietnice.</p></div></li>
-    <li class="f" data-sev="balans"><span class="sev balans">Balans</span><div><div class="where">Fabuła · doświadczenie</div><p class="what">Maksimum 14 PD po trzech scenariuszach, realnie 6. Scenariusze 2 i 3 nie mają premii za przetrwanie, scenariusz 3 nie ma kart ze Zwycięstwem. Oficjalne kampanie: 15–25.</p><p class="fix">+2 PD za ukończenie w scen. 2 (obie drogi), +3 w scen. 3; Zwycięstwo na bossach i wrogach elitarnych.</p></div></li>
-    <li class="f" data-sev="spoj"><span class="sev spoj">Spójność</span><div><div class="where">Fabuła · Księga Kampanii.odt (katalog główny)</div><p class="what">Plik „Księga Kampanii.odt” i „(AutoRecovered)” w katalogu głównym to angielska kampania „Blood of Walachia” (Castlevania) — inspiracja, nie część projektu; skrypt <code>story</code> i lint jej nie czytają, ale gracz pobierający repo tak.</p><p class="fix">Przenieść do „Inspiracje, Materialy”.</p></div></li>
-    <li class="f" data-sev="spoj"><span class="sev spoj">Spójność</span><div><div class="where">Karty Badaczy · Baruch, Szyszka, Michał</div><p class="what">Tagi klas &lt;Gua&gt;, &lt;Sur&gt;, &lt;mys&gt; — edytor rozpoznaje tylko małe litery (weryfikacja w źródle: <code>re.sub</code> bez IGNORECASE); &lt;Gua&gt; i &lt;Sur&gt; wyrenderują się jako tekst. Szczegóły w raporcie badaczy.</p><p class="fix">&lt;gua&gt;, &lt;sur&gt;.</p></div></li>
-  </ul>
-</section>
-
-<section id="poprawki">
-  <h2>Proponowane poprawki</h2>
-  <p class="sub">W kolejności, w jakiej warto je robić. Pierwsze sześć odblokowuje scenariusz 3; bez nich reszta kampanii nie ma finału.</p>
-  <ol class="prio">
-    <li><div><b>Scen. 3 — zagłada lokacji poza zegarem.</b> Na Karcie scenariusza 3: „Żetony zagłady na lokalizacjach nie liczą się do progu tajemnicy.” Jedno zdanie zmienia 100% porażek w 11. rundzie na normalną partię. Alternatywa mechaniczna: Gońcy kładą 1 zagładę na tajemnicy i żeton spaczenia na lokacji.</div></li>
-    <li><div><b>Scen. 3 — Gońcy.</b> Goniec 1: Cytadela → Mleczarnia, zrzuca 3 (nie „pozostałe zdrowie”). Goniec 2: Nadbrzeże → UAM, zrzuca 2. Goniec 3: Zakłady → Cytadela, zrzuca 2. Zwycięstwo 1 na każdym. Dziś Goniec 1 przy 4 graczach zrzuca 8 przy progu spaczenia 4.</div></li>
-    <li><div><b>Scen. 3 — spaczenie bez konwersji wskazówek.</b> Rewers Spaczonej: „Nie można badać tej lokalizacji. Wskazówki zostają.” Odzyskanie: dwa udane testy (dowolne z obecnych) zamiast „po 1 żetonie”. Stary Rynek dostaje akcję odzyskania.</div></li>
-    <li><div><b>Scen. 3 — wskazówki.</b> Zakłady, UAM, Mleczarnia, Biblioteka, Dyrekcja, Linia: 1 na badacza. Tunele: 2 na badacza. Akt 1: 2 na badacza. Mleczarnia: zasłona 3 bez modyfikatora za badaczy. Model: mediana z 28 rund spada w okolice 14.</div></li>
-    <li><div><b>Scen. 3 — Czarna Koza jako karta.</b> Nowa karta Elitarna (walka 4, unik 2, zdrowie 4 na badacza, 2 obrażenia / 2 przerażenia, Masywny, „nie może opuścić Ostrowa Tumskiego”), odłożona na bok, Zwycięstwo 3. Obecną kartę usunąć z talii. Akt 6a/6b to dwie identyczne karty — zostawić jedną.</div></li>
-    <li><div><b>Scen. 3 — Cień z Jeżyc i tajemnice.</b> Cień: walka 2+X (maks 5), 1 przerażenie, Zwycięstwo 1. Tajemnice 2/3: 1 przerażenie na Spaczoną dla grupy. Strajk: 2 kopie.</div></li>
-    <li><div><b>Scen. 2 — Lewiatan.</b> <span class="tag">wprowadzone</span> Bez Uniku, 2 zdrowia na badacza, odepchnięcie = 2 ciśnienia i powrót po rundzie, atakuje sterującego, 1 obrażenie barki; Most B próg 5, nieudane „Cała naprzód!” bez efektu. B: 4% → 37% na świeżo, 18% → 70% w kampanii.</div></li>
-    <li><div><b>Scen. 2 — barka i most.</b> <span class="tag">wprowadzone</span> Barka 10 zdrowia, Miny 2 uszkodzenia. Arcykapłan zostawiony bez zmian (wyścig jest zamierzony). Zatopienia: A 31 → 13%.</div></li>
-    <li><div><b>Scen. 2 — brakujące karty i quantity.</b> <span class="tag">wprowadzone</span> Topielec z Warty, Zapas Paliwa, Wdzięczne Żyjątko, Żebro Lewiatana jako pliki <code>.card</code> bez ilustracji (teksty niżej). Quantity na 11 kartach, talia 20. <code>body</code> Karty Scenariusza wyczyszczone. Zostaje: ilustracje do czterech nowych kart.</div></li>
-    <li><div><b>Scen. 2 — Zwycięstwo.</b> <span class="tag">częściowo wprowadzone</span> Arcykapłan 2, Kierownik 1, Topielec 1 oraz +2 PD w Fabule już są. Do decyzji: Bariery za każde przejście (dziś tylko przedmiotem, co jest sensowną zachętą).</div></li>
-    <li><div><b>Scen. 2 — Kozi Pomiot i Dęby.</b> <span class="tag">wprowadzone</span> Wersja rzeczna Pomiota bez przerażenia po pokonaniu. Dęby zasłona 3, 1 wskazówka na badacza — Totem w 24% partii. Kożuch test grupowy (8).</div></li>
-    <li><div><b>Scen. 1 — rozpiska mapy.</b> Schemat wioski (ile losowych lokacji, gdzie Kościół i Skraj Lasu) i siatki lasu jako obrazek w Fabule; albo symbole połączeń na wszystkich 26 kartach. Bez tego scenariusza nie da się rozłożyć z samych kart.</div></li>
-    <li><div><b>Scen. 1 — Klucz do zachrystii.</b> Karta atutu albo zdanie na Kościele. Skraj Lasu: „limit raz na grę”, „lokalizacje wioski”.</div></li>
-    <li><div><b>Scen. 1 — puste pola.</b> Zasłona i wskazówki na 13 lokacjach; nazwa Żerdzia; obrażenia Żyrija 1; tablica na Karcie scenariusza.</div></li>
-    <li><div><b>Scen. 1 — tempo.</b> Tajemnice 6/6/5/4 (zamiast 7/7/7/4), Wołanie wola (2). Scenariusz stanie się o 10 punktów procentowych trudniejszy i zacznie mieć zegar.</div></li>
-    <li><div><b>Kampania — dziennik.</b> Przygotowanie scen. 3: blok „Sprawdźcie Dziennik” realizujący obietnice z Z1/Z3/Z4 scen. 1 i Interludium II (Żerdź, Wyznawcy, Nosiciel, Hierofanta, Kozi Pomiot, Tkanka). Usunąć „Szpital Kliniczny”, „Kultyści, Szczury”.</div></li>
-    <li><div><b>Kampania — PD.</b> Docelowo 8–10 PD na scenariusz: Zwycięstwo na wrogach elitarnych i bossach, premie za ukończenie w scen. 2 i 3.</div></li>
-    <li><div><b>Porządki w repo.</b> Usunąć: 3 pliki bez typu w katalogu głównym, <code>Karty Spotkań/Kozi Pomiot.card</code>, folder <code>archiwum/</code>, duplikat Aktu 6, „Księga Kampanii.odt” (Walachia) do Inspiracji. <code>python tools/arkham_cards.py fix --apply</code> na emoji.</div></li>
-    <li><div><b>Test przy stole.</b> Po poprawkach 1–6 zagrać scenariusz 3 we dwóch badaczy — model skaluje wskazówki i Gońców przez „na badacza”, ale nie wie, jak gra się w 2 osoby po 14 lokacjach.</div></li>
-  </ol>
-</section>
-
-<section id="karty">
-  <h2>Karty do dodania i usunięcia</h2>
-  <div class="two">
-    <div>
-      <h3>Dodać</h3>
-      <ul>
-        <li><b>Klucz do zachrystii</b> (scen. 1, atut, Przedmiot, koszt 0, bez slotu). „Odłożony na bok. Kontrolujący badacz może wejść do Zachrystii. Gdy Zachrystia zostanie odkryta, usuń Klucz z gry.”</li>
-        <li><b>Strażnik Śluzy</b> <span class="tag">odzyskane</span> (scen. 2, wróg, z ilustracją). „Rozstawienie: lokacja Barki. Dopóki jest gotowy, Barka nie może opuścić jego lokacji. Pertraktacje: intelekt (3) — usuń z gry i dobierz kartę.”</li>
-        <li><b>Zapas Paliwa</b> <span class="tag">odzyskane</span> (atut, z ilustracją). „Wyczerp: +1 do testu ruchu Barką. Odrzuć: wpłynięcie do Rozlewisk bez dodatkowej akcji. Akcja, odrzuć: spal 1 Tkankę w twojej lokacji.”</li>
-        <li><b>Wdzięczne Żyjątko</b> <span class="tag">odzyskane</span> (atut fabularny, z ilustracją). „Po Rozwiązaniu 1a (Z1). Wyczerp: wróg Narośl/Potwór wchodzi do gry wyczerpany. Wyczerp: żeton klątwy liczy się jak 0.”</li>
-        <li><b>Żebro Lewiatana</b> <span class="tag">odzyskane</span> (atut fabularny, z ilustracją). „Po Rozwiązaniu 1b (Z2). Walka: +2 do walki, +1 obrażenie; przeciw Narośli, Potworowi lub Rzece kolejne +1.”</li>
-        <li><b>Topielec z Warty</b> — niepotrzebny: Tajemnica 1 odsyła do Rzecznego Młodego (wersja z 4 IX).</li>
-        <li><b>Czarna Koza z Ostrowa</b> (scen. 3, wróg Elitarny) — jak w poprawce 5.</li>
-        <li><b>Tkanka narośli</b> <span class="tag">załatwione w Fabule</span> — Interludium II cz. 2 i przygotowanie scen. 3 każą zbudować Talię Tkanek z 8 kart Tkanek ze scen. 2; osobna karta niepotrzebna.</li>
-        <li><b>Rozpiska mapy scen. 1</b> — nie karta, ale bez niej scenariusz nie istnieje.</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Usunąć lub scalić</h3>
-      <ul>
-        <li>Katalog główny: <code>Ciekawski Wieśniak x5.card</code>, <code>Przekonany wyznawca x5.card</code>, <code>Zbłąkany Kultywator x2.card</code> — pliki bez typu, duplikaty kart ze scen. 1.</li>
-        <li><code>Karty Spotkań/Kozi Pomiot.card</code> — trzecia kopia bez grupy.</li>
-        <li><code>Karty Lokacji/scenariusz 2/archiwum/</code> — <span class="tag">usunięte</span> 4 karty, jedna z „Oślizgłą Macką”.</li>
-        <li><b>Czarna Koza.card</b> (scen. 3) w obecnej postaci — kopia Agitatora.</li>
-        <li><b>Akt 6b</b> — identyczny z 6a poza jednym słowem w cytacie Dalbora.</li>
-        <li><b>Goniec 3</b> w obecnej postaci (patrz poprawka 2) — albo przenieść rozstawienie.</li>
-        <li>Kurier: jedna z dwóch „Godzin policyjnych” (ta z obrażeniem za ruch jest ostrzejsza od tej z akcją), nazwy „Seans 2/3/4” do rozróżnienia.</li>
-        <li><b>Księga Kampanii.odt</b> — nie usuwać, przenieść.</li>
-        <li>Rozważyć: <b>Strajk</b> z 3 do 2 kopii; <b>Tunele Forteczne</b> jako cel Aktu 5 — Akt 5 mógłby wymagać 2 na badacza wskazówek z Cytadeli, a Tunele być tylko przejściem.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="metoda">
-  <h2>Metoda i założenia</h2>
-  <p class="sub">Model nie jest silnikiem zasad. Każde uproszczenie ma komentarz <code># uproszczenie:</code> w kodzie. Liczby są porównawcze: „0% vs 8%” znaczy więcej niż „8%”.</p>
-  <h3>Co zrobiono</h3>
-  <ol>
-    <li>Nowy klon repo, świeży odczyt 182 kart przez <code>tools/arkham_cards.py</code> (index, text, lint, dump) i księgi kampanii. Nic z poprzednich analiz nie było przenoszone; poprzednie pliki modeli odtworzono i przepisano pod obecne karty (Goniec ×3, 6 aktów, 4 tajemnice, Kurier, stary Lewiatan).</li>
-    <li>Ekipa główna: czterech badaczy z <code>Karty Badaczy</code> (<code>tools/custom_investigators.py build</code>): statystyki, zdrowie, poczytalność i klasa z kart; talia = profil startera arkhamdb tej klasy (średnie ikony, bronie, leczenie, sojusznicy); zdolności i słabości jako modyfikatory opisane w tabeli „Ekipa”. Ekipa odniesienia: cztery talie z arkhamdb sprowadzone do tych samych profili.</li>
-    <li>Modele Monte Carlo: 1500 partii scen. 1, po 1500 A i B scen. 2, 600 partii scen. 3 w każdym wariancie odczytu; 400 kampanii 1→2→3 dla A i B z przenoszeniem PD, traum i wpisów dziennika (kara zasobów i akcji, Interludium II, dodatkowi wrogowie po porażce).</li>
-    <li>Wrażliwość: barka 12 zdrowia, Lewiatan bez Uniku, wskazówki 1/badacza w scen. 3, boss ze statystykami Awatara.</li>
-    <li>Dwa zapisane przebiegi (seed 7 i 11) jako narracja.</li>
-  </ol>
-  <h3>Najważniejsze uproszczenia</h3>
-  <ul>
-    <li>Worek chaosu Standard z instrukcji podstawki (repo nie definiuje składu); Starszy Znak +1.</li>
-    <li>Test = statystyka + zaokrąglone średnie ikony jednej karty z ręki + żeton. Ręka 5 kart, +1 na rundę. Bez zasobów, bez zagrywania konkretnych kart; bronie = +1 do walki i +1 obrażenie; sojusznicy = dodatkowe pola zdrowia.</li>
-    <li>Ruch po mapie scen. 1 i 3: losowo 1–3 akcje (mapy 3×3 / 14 lokacji bez rozpiski). Patrol Gońców po grafie z symboli połączeń.</li>
-    <li>Polityka graczy: wróg w zwarciu → walka, jeśli szansa ≥ szansy uniku − 15 pp. lub wróg jest Łowcą; cel aktu ma pierwszeństwo; przedmioty na bariery zdobywa najlepszy wojownik; test grupowy Kożucha tylko przy szansie ≥ 45%; Miny testuje najzwinniejszy; Lewiatana unika najzwinniejszy. Wołanie zdejmowane akcją. Świeża Dostawa: pół na pół zasoby / zagłada. Kurier: 60% bez efektu, 20% 1 przerażenie, 20% −1 zagłada.</li>
-    <li>Talia scen. 2: quantity z kart (20 kart; przed zmianą po 2 kopie każdej = 22). Talia scen. 3: quantity z kart + 14 kart Kuriera; karty bez pola = 1. Topielec i Zapas Paliwa nie są modelowane (Topielec: 1 karta na 21, Zapas: rzadko opłacalny).</li>
-    <li>PD → moc: co 5 PD +1 do najlepszej statystyki (maks +3), 8 PD +1 obrażenie, 12 PD +0,2 ikony. Trauma: −1 zdrowia/poczytalności na stałe; zgon przy zrównaniu.</li>
-    <li>Scen. 1: 11 lokacji wioski z „?” liczone jako zasłona 2 / 1 na badacza; 8 losowych lokacji w grze. Pochówek w Dole nie jest modelowany.</li>
-  </ul>
-  <h3>Odtworzenie</h3>
-<pre>python tools/arkhamdb.py fetch decks 62530 64388 64503 64502
-python tools/custom_investigators.py build
-set ARKHAM_PROFILES=custom          # nasza ekipa; bez tej zmiennej: arkhamdb
-python tools/scenario13_model.py sim 1 --games 1500
-python tools/scenario2_model.py  sim --games 1500 --variant A
-python tools/scenario2_model.py  sim --games 1500 --variant B --tweak LEWIATAN_EVADE=0
-python tools/scenario13_model.py sim 3 --games 600
-python tools/scenario13_model.py sim 3 --games 600 --tweak LOC_DOOM_COUNTS=0,S3_CLUE_CUT=2
-python tools/campaign_model.py   run --variant A --campaigns 400
-python tools/campaign_model.py   narrate --variant B --seed 11 --tweak LOC_DOOM_COUNTS=0</pre>
-  <p class="small">Pokrętła: <code>LOC_DOOM_COUNTS</code>, <code>KOZA_STATS</code>, <code>KOZA_IN_DECK</code>, <code>S3_CLUE_CUT</code>, <code>S3_DECK_COPIES</code>, <code>KURIER</code>, <code>LEWIATAN_EVADE</code>, <code>LEWIATAN_RETURNS</code>, <code>LEWIATAN_HP_MULT</code>, <code>LEWIATAN_AOE</code>, <code>LEWIATAN_BARGE</code>, <code>PUSH_PRESSURE</code>, <code>PRESSURE_NEED</code>, <code>PRESSURE_FAIL_DMG</code>, <code>RETURN_EXHAUSTED</code>, <code>BARGE_HP</code>, <code>DECK_COPIES</code>. Domyślne wartości = tak, jak stoi na kartach po pakiecie. Stara luka Uniku: <code>--tweak LEWIATAN_EVADE=1,LEWIATAN_RETURNS=0,LEWIATAN_HP_MULT=3,PRESSURE_NEED=6,PUSH_PRESSURE=0</code>.</p>
-</section>
-
-<footer>Czarna Krew Warty · raport z rozgrywki kampanii · 5 IX 2026 · stan repo c18412c (zmiany scen. 2, odzyskane commity z 4 IX); ekipa główna: Szyszka, Michał, Baruch, Wojciech; scenariusze 1 i 3 bez zmian w kartach</footer>
+<div class="stan">
+  <div><b>Stan repo</b><span class="mono">6a4a38c</span> „scen3 changes”, 2026‑09‑05 16:37, drzewo kart czyste</div>
+  <div><b>Skan</b>181 kart: 18 w Kartach Badaczy, 68 lokalizacji, 30 kart scenariuszy, 65 spotkań; Księga: <span class="mono">Fabuła/Kampania Czarna Krew Warty.odt</span> (2 schematy)</div>
+  <div><b>Ekipa</b>Szyszka Nowiczok, Michał z Bargłowa, Baruch Hałabała, Wojciech Robak; zdolności i karty sygnaturowe liczone dokładnie wg tekstu</div>
+  <div><b>Odniesienie</b>4 talie startowe z arkhamdb (Tommy, Carolyn, André, Marie)</div>
+  <div><b>Symulacja</b>1500 gier na scenariusz 1 i 2, 600 na scenariusz 3, 400 kampanii na wariant; worek Standard; <span class="mono">PYTHONHASHSEED=0</span>, ziarno 1</div>
 </div>
 
+<div class="errata">
+<p><strong>Co jest inne niż w poprzedniej wersji tego raportu (5 IX, 16:50).</strong> Tamta wersja czytała wartości lokalizacji z awersu pliku karty, a awers strony nieodkrytej ma atrapy („?”, „X”); prawdziwe zasłony, wskazówki i cechy są na rewersie. Stąd fałszywe znaleziska „12 lokalizacji bez zasłony”, „8 lokalizacji z pustym rewersem” i „jedynym Miejscem Kultu jest Posiadłość” (Dół ma Miejsce kultu na rewersie). Wszystkie liczby były liczone na częściowo zmyślonych wejściach. Teraz: <code>tools/cards_data.py</code> czyta obie strony i wybiera właściwą, <code>values</code> wypisuje każdą wartość z plikiem i polem, mapa scenariusza 1 pochodzi ze schematów Księgi, ruch jest liczony po grafie, a zdolności czwórki badaczy są zakodowane zdanie po zdaniu. Decyzje autora z 5 IX są wymienione w sekcji „Skąd są liczby”.</p>
+</div>
+
+<h2 id="werdykt">Werdykt</h2>
+<p><strong>Scenariusz 1 jest grywalny i ciasny w dobrym sensie.</strong> Własna ekipa wygrywa 78% gier, talie startowe z arkhamdb 68%. Jedyna porażka to zegar (15 zagłady), o którym rozstrzyga Pertraktacja int(4) w Obozie ocalałych i to, jak szybko las odsłania Obóz. Kart nie brakuje. Do poprawy są nazwy, dwie luki mapy i kilka tekstów.</p>
+<p><strong>Scenariusz 2 jest grywalny w obu wariantach.</strong> Wariant A (Arcykapłan) 76% / 71%, wariant B (Lewiatan) 45% / 35%. B przegrywa się przez wykrwawienie ekipy, nie przez zegar. Komplet kart, Strażnik Śluzy i atuty fabularne są na miejscu.</p>
+<p><strong>Scenariusz 3 nie jest gotowy.</strong> Ekipa bez doświadczenia wygrywa 7–8%, ekipa po dwóch scenariuszach z ulepszeniami 28–36%. Trzy rzeczy to blokują: Gońce, którzy po każdym dotarciu do celu zadają całej grupie 4 obrażenia i wracają do talii (średnio 28 obrażeń na grę; bez tego zdania wynik skacze do 64%), Czarna Koza z <code>quantity 2</code> i grupą spotkań (autor: ma być odłożona do Aktu 5 — karta wciąż mówi inaczej) oraz Obłąkany Student, który samym rozstawieniem spacza Ostrów Tumski. Do tego zero punktów doświadczenia za cały scenariusz.</p>
+<p><strong>Kampania:</strong> komplet trzech zwycięstw w 25% (A) / 19% (B) kampanii własnej ekipy, 32% / 26% ekipy arkhamdb. Trójka jest najtrudniejsza i jako jedyna nic nie daje.</p>
+
+<h2 id="zrodla">Skąd są liczby</h2>
+<ul>
+<li><strong>Z plików kart</strong> (strona odkryta): zasłona, wskazówki, cechy, symbole połączeń, statystyki wrogów, liczby kopii (<code>quantity</code>, brak pola = 1), progi tajemnic i aktów, pola Zwycięstwo. Tabela wszystkich wartości: <code>python tools/scenario13_model.py values</code> (wysłana osobno jako <code>wartosci-z-kart.txt</code>).</li>
+<li><strong>Z Księgi Kampanii:</strong> wioska 3×3 = Środek wioski + 8 losowych z 10, Rampa nad górną środkową, Kościół z lewej środkowego rzędu, Zachrystia za Kościołem; las 3×3 losowo, Skraj Lasu połączony z lewą kolumną lasu i kartami Natura wioski; pobrzeża s2 (Dworzec przy Łęgach, Dęby przy Zakolu, Fabryka przy Skażonym Nurcie, Fort przy Rozlewiskach); talia startowa s1; rozwiązania i PD.</li>
+<li><strong>Decyzje autora (5 IX):</strong> worek Standard; Skraj Lasu wchodzi po rewersie Aktu 1; Wołanie na koniec tury każdego badacza; Traktorzysta i Żerdź po 1 kopii; Brama „po prawej” = prawa strona schematu; po opuszczeniu Skraju badacze nie wracają do wioski; wskazówki z Aktu 1 s2 na Skażonym Nurcie są zabezpieczeniem przed zakleszczeniem; Kurier po jednej wersji z par (pliki bez numeru, Lo Kittay „Seans 2”); Czarna Koza odłożona do Aktu 5; Gońce odłożeni; połączenia s3 dwustronne; ikony ze stron odkrytych; Zachrystia odcięta = luka, badacz przechodzi na Skraj; Dalbor raz na rundę; Akty 3/4 = wskazówki i zagłada; Karta Scenariusza s2 awers; talie = startery arkhamdb; zdolności badaczy dokładnie; ulepszenia za PD wybrane przez analityka (lista w sekcji Badacze).</li>
+<li><strong>Uproszczenia, których nie da się usunąć bez silnika kart graczy</strong> (10 pozycji, pełna lista w <code>values</code>): karty graczy nie są zagrywane (zasoby ubywają tylko przez efekty spotkań i lokacji), deklarowanie = 1 karta o średnich ikonach, Dół = 2 przerażenia, Wikariusz nieużywany, losowe podstawowe osłabienie badaczy nie modelowane (brak kart w repo).</li>
+</ul>
+
+<h2 id="ekipa">Ekipa</h2>
+<div class="tw"><table>
+<tr><th>Badacz</th><th>Klasa</th><th class="n">Wola</th><th class="n">Int.</th><th class="n">Walka</th><th class="n">Zręcz.</th><th class="n">Zdr/Pocz</th><th>Co jest liczone dokładnie</th></tr>
+<tr><td>Szyszka Nowiczok</td><td>Ocalały</td><td class="n">3</td><td class="n">4</td><td class="n">3</td><td class="n">2</td><td class="n">7/7</td><td>raz na rundę po odrzuceniu karty: zasób albo leczenie 1; Znikanie Bez Śladu (unik ataku + ruch, koszt 3); Dawny Wspólnik (2 zasoby, potem zasoby za karty na ręce, Pertraktacje wil 2+atuty); Starszy Znak +1 i karta</td></tr>
+<tr><td>Michał z Bargłowa</td><td>Mistyk</td><td class="n">4</td><td class="n">3</td><td class="n">3</td><td class="n">2 (1 z Gomezem)</td><td class="n">6/8</td><td>+X raz na fazę (Gomez w obszarze zagrożeń); Gomez: −1 zręczności, 1 przerażenie na koniec rundy bez akcji Ruch/Badanie; Bánh Mì; Starszy Znak +1 i karta</td></tr>
+<tr><td>Baruch Hałabała</td><td>Obrońca</td><td class="n">4</td><td class="n">2</td><td class="n">4</td><td class="n">2</td><td class="n">7/7</td><td>Taca Ofiarna (2 zasoby zamiast 1; dobranie do 3 = klątwa do worka); −1 zasłony bez klątw w worku; Halabarda (1 akcja: −1/+1 obr.; 2 akcje: +1/+2 obr.; klątwy→błogosławieństwa); Czas Spowiedzi; Starszy Znak +1 i klątwa z worka</td></tr>
+<tr><td>Wojciech Robak</td><td>Włóczęga</td><td class="n">2</td><td class="n">4</td><td class="n">2</td><td class="n">4</td><td class="n">6/8</td><td>raz na rundę po sukcesie o 1–2: karta albo zasób; Paprykarz (3 zapasy: 1 zasób = +1 akcja); Wieczne Dylematy (3 żetony: −1 do wyniku albo 1 przerażenie); Starszy Znak +1 i zasób</td></tr>
+</table></div>
+<p class="small">Klątwa −2, błogosławieństwo +2, żeton usuwany po wyciągnięciu (zasady AH LCG). Karty z Kart Badaczy: Halabarda, Taca Ofiarna, Czas Spowiedzi, Toksyczny Gomez, Bánh Mì z ziemi, Znikanie Bez Śladu, Dawny Wspólnik, Paprykarz, Wieczne Dylematy. Odniesienie (arkhamdb): Tommy Muldoon 3/3/4/2, Carolyn Fern 3/4/2/2, André Patel 3/4/2/4, Marie Lambeau 4/3/2/3.</p>
+
+<h2 id="liczby">Wyniki</h2>
+<div class="tw"><table>
+<tr><th>Scenariusz</th><th class="n">Własna ekipa</th><th class="n">arkhamdb</th><th>Mediana rund</th><th>Najczęstsza porażka (własna ekipa)</th></tr>
+<tr><td>1 · Wioska wśród drzew</td><td class="n">78,2%</td><td class="n">68,0%</td><td>11 / 12</td><td>zegar: Tajemnica 4 (21,7%)</td></tr>
+<tr><td>2A · Nurt Szaleństwa, Rytuał</td><td class="n">76,1%</td><td class="n">71,3%</td><td>9 / 10</td><td>barka zatopiona (11,7%), wszyscy pokonani (11,3%)</td></tr>
+<tr><td>2B · Nurt Szaleństwa, Ucieczka</td><td class="n">44,9%</td><td class="n">35,3%</td><td>10 / 12</td><td>wszyscy pokonani (46,6%)</td></tr>
+<tr><td>3 · Czarny Port, ekipa 0 PD</td><td class="n">7,3%</td><td class="n">8,2%</td><td>17 / 16</td><td>wszyscy pokonani (67,7%), zegar (25,0%)</td></tr>
+<tr><td>3 · Czarny Port, po kampanii (A / B)</td><td class="n">30,8% / 28,2%</td><td class="n">35,5% / 29,2%</td><td>17 / 16</td><td>wszyscy pokonani (~50%)</td></tr>
+<tr class="sum"><td>Kampania 3 z 3 (A / B)</td><td class="n">24,8% / 18,8%</td><td class="n">32,0% / 26,0%</td><td></td><td></td></tr>
+</table></div>
+<p>Wrażliwość scenariusza 3 (własna ekipa, 0 PD) na czytania kart, które dziś są niejednoznaczne albo sporne:</p>
+<div class="tw"><table>
+<tr><th>Czytanie</th><th class="n">Wygrane</th><th>Uwaga</th></tr>
+<tr><td>Tak jak stoi na kartach i wg decyzji autora</td><td class="n">7,3%</td><td>Goniec zadaje grupie 4 obrażenia; Koza odłożona; Kurier po jednej wersji</td></tr>
+<tr><td>Goniec bez obrażeń dla grupy</td><td class="n">64,2%</td><td>obrażenia na badacza spadają z 7,4 do 2,0; zostaje tylko zegar</td></tr>
+<tr><td>Akty 3/4 wymagają tylko wskazówek (bez zagłady)</td><td class="n">18,2%</td><td>„żetony spaczenia” na kartach — patrz S3‑05</td></tr>
+<tr><td>Zagłada z lokacji nie liczy się do tajemnicy</td><td class="n">11,3%</td><td>zegar znika, ekipa i tak ginie od Gońców</td></tr>
+<tr><td>Czarna Koza w talii spotkań (jak mówi karta: 2 kopie)</td><td class="n">1,3%</td><td>boss z 32 zdrowia wychodzi losowo w rundzie 2–6</td></tr>
+<tr><td>Bez Artykułów Kuriera w talii</td><td class="n">0,3%</td><td>talia 21 kart = wróg lub podstęp co drugie dobranie</td></tr>
+</table></div>
+
+<h2 id="s1">Scenariusz 1 · Wioska wśród drzew</h2>
+<h3>Co jest na kartach</h3>
+<ul>
+<li>Zegar: Tajemnice 4 / 4 / 4 / 3 = 15 zagłady. Tajemnica 1 wtasowuje Kazanie ×2, Komunię ×2, Chrzest ×2 i Wyznawców ×5; Tajemnica 2 Bramę ×2 i Traktorzystę; Tajemnica 3 Kozi Pomiot ×2. Talia startowa (Księga): Ciekawski ×5, Wołanie ×2, Kultywator ×2.</li>
+<li>W grze 12 lokalizacji wioski (Środek 2 / 1 na badacza; Kościół 2 / 2 na badacza; Zachrystia 1 / 1; Rampa 0 / 0; z puli 10 losowych: Kapliczka 1/2, Kostnica 2/2, Pod Rogatym 1/2, Skład Drewna 3/4, Stary magazyn 2/2, Targ Rybny 1/2, Kowalski 1 / 1 na badacza, Kołodzieja 1/2, Mechaniczny 1/4, Wędzarnia 2/4) i 9 lokalizacji lasu (od Ambony 0/1 do Grzęzawiska 1 / 2 na badacza), Skraj Lasu 2/4.</li>
+<li>Miejsca Kultu: Kościół, Posiadłość, Kostnica, Karczma „Pod Rogatym”, Dół. Natura: Rampa, Skład Drewna, Skraj i cały las.</li>
+<li>Akt 1 → 2: opróżnić Kościół (8 wskazówek, zasłona 2) → Klucz do zachrystii → Zachrystia int(3). Rewers Aktu 2 zabiera wszystkie zebrane wskazówki i wprowadza Skraj Lasu. Akt 2 → 3: Posiadłość stawia Obóz ocalałych (Pertraktacje int(4), obok lokalizacji Natura bez wskazówek) albo Obóz na mokradłach (2 wskazówki na badacza). Akt 3: Żyrij Żerdź, walka 3, 12 zdrowia, 1/1, Elitarny, Zwycięstwo 1.</li>
+<li>Las: „Nie możesz przejść do sąsiadującej nieodkrytej lokalizacji” na każdej karcie; odkrycie za 2 wskazówki (Nory 4), Grzęzawisko test agi/com(5), Gęsty Las test wil(5), Obóz na mokradłach po pokonaniu wroga. Ze Skraju wchodzi się do lewej kolumny bez ograniczeń.</li>
+</ul>
+<h3>Jak to się gra</h3>
+<div class="kv">
+<div><b>78%</b><span>wygranych, własna ekipa</span></div>
+<div><b>11</b><span>rund, mediana</span></div>
+<div><b>37%</b><span>Pertraktacje int(4), własna ekipa</span></div>
+<div><b>27%</b><span>Gęsty Las: odkrycie wil(5)</span></div>
+</div>
+<p>Kościół pada w rundzie 3 (cała ekipa bada), Zachrystia zdana w 80%, Skraj Lasu odkryty w rundzie 3–6. Potem las: odkrywanie kosztuje 2 wskazówki na lokalizację, a pula została wyzerowana przez Akt 2, więc każda nowa karta lasu to najpierw badanie, potem odkrycie. Posiadłość wchodzi w rundzie 7–11, Żerdź pada w 9–13. Talie startowe z arkhamdb (int 3–4) mają Pertraktację na 44%, ale wolniej badają i częściej walczą (walka 51%), stąd 31% porażek z zegara.</p>
+<p>Źródła strat na grę (własna ekipa): Nieczyste rytuały 2,7 obrażeń i 2,7 przerażenia, Traktorzysta 2,2 przy rozstawieniu, Nory 1,9 przerażenia, Gomez 1,8, Wyznawcy w zwarciu. Wołanie po poprawieniu Miejsc Kultu spadło poniżej 2 przerażeń na grę (arkhamdb 2,5) — Dół w lesie i Miejsca Kultu w wiosce dają schronienie, a test wil(3) zdawany jest w 55%. Znikanie Bez Śladu ratuje Szyszkę 1,9 razy na grę.</p>
+<h3>Wąskie gardła</h3>
+<ul>
+<li><strong>Pertraktacje int(4)</strong> w Obozie ocalałych: 37% (własna), 44% (arkhamdb); alternatywa to 8 wskazówek w Obozie na mokradłach po tym, jak Akt 2 wyzerował pulę. To rozstrzyga 22–31% gier.</li>
+<li><strong>Odkrywanie lasu przez test</strong>: Gęsty Las wil(5) 27%, Grzęzawisko com(5) 33% / agi(5) 41%. Jeśli losowanie postawi je w lewej kolumnie, ekipa traci 2–4 rundy.</li>
+<li><strong>Rewers Aktu 2</strong> („Usuńcie do puli zdobyte przez badaczy żetony wskazówek”) sprawia, że wskazówki wioski poza Kościołem są bez wartości — model ich nie zbiera, bo nie ma po co.</li>
+</ul>
+
+<h2 id="s2">Scenariusz 2 · Nurt Szaleństwa</h2>
+<h3>Co jest na kartach</h3>
+<ul>
+<li>Rzeka: Stara Przystań → Zakole Warty → [Żyjący Zator] → Łęgi Wierzbowe → Skażony Nurt → [Toksyczny Kożuch] → Rozlewiska Dębiny (+1 akcja) → [Pruskie Miny] → Most Chwaliszewski A/B. Pobrzeża z Księgi.</li>
+<li>Bariery: Zator — Totem albo 4 wskazówki (bariera zostaje); Kożuch — Ferment i 1 zasób albo com(5) z 1 kartą od każdego innego badacza i 1 obrażeniem dla wszystkich; Miny — Dynamit albo agi(4), porażka 2 uszkodzenia. Zwycięstwo 1 tylko za przejście przedmiotem.</li>
+<li>Barka Jadwiga 10 zdrowia, ruch com(3)/agi(3). Zegar 6 / 8 / 10; Tajemnica 2 idzie dalej tylko przy 4 lub więcej uszkodzeniach, inaczej reset i +1 trudności na barce.</li>
+<li>Talia: 21 kart z pól <code>quantity</code> (Dar ×2, Rozkwit ×2, Hierofanta, Pomiot ×2, Rozrost ×2, Nosiciel ×2, Rytuał, Młode ×2, Twarze ×2, Feromony ×2, Żywy Nurt ×2, Strażnik Śluzy) i 8 Tkanek.</li>
+<li>Most A: Arcykapłan walka 3, 12 zdrowia, +1/+1 za każdą Barierę w grze, 2 obrażenia barki co fazę wrogów, Zwycięstwo 2. Most B: Lewiatan walka 5, 8 zdrowia, nie do uniknięcia, blokuje barkę dopóki gotowy; „pokonany” = odepchnięty i 2 znaczniki Ciśnienia, wraca na koniec następnej rundy; Rezygnacja przy 5 znacznikach i wyczerpanym Lewiatanie.</li>
+</ul>
+<h3>Jak to się gra</h3>
+<div class="kv">
+<div><b>76%</b><span>wariant A, własna ekipa</span></div>
+<div><b>45%</b><span>wariant B, własna ekipa</span></div>
+<div><b>9 / 10</b><span>rund, mediana A / B</span></div>
+<div><b>7,7</b><span>Tkanek dołączonych na grę</span></div>
+</div>
+<p>Zegar kończy 1–2% gier. Bariery: Zator za 4 wskazówki (88%), Kożuch Fermentem (92%), Miny Dynamitem (64%) lub agi(4) (27%). Przegrywa się obrażeniami: żeton tablicy (−3 i 1 obrażenie) 4,3–4,9 obrażeń na grę, Arcykapłan 3,4 na barkę, Kozi Pomiot (Mściwy) 3,2–3,7, Zmutowany Kierownik 3,1, Gomez 3,0–3,9 przerażenia. W wariancie B Lewiatan daje 5,0 obrażeń i 5,0 przerażenia na grę plus 2,5 dla barki; „Cała naprzód!” com(4) zdaje 8% testów, wil(4) 50%.</p>
+<p>Kara z Dziennika po porażce w scenariuszu 1 (4 zasoby, −1 akcja w pierwszej turze) obniża wariant A z 76,1% do 72,3%.</p>
+<h3>Wąskie gardła</h3>
+<ul>
+<li><strong>Wariant B</strong> przegrywa się wykrwawieniem (47% „wszyscy pokonani”). Pięć znaczników to 5–8 udanych akcji „Cała naprzód!” przy jednym ataku Lewiatana na rundę.</li>
+<li><strong>Totem prawie nieużywany</strong> (12% w Zatorze): 4 wskazówki w Dębach przy zasłonie 3 i teście wil(3) na koniec rundy kosztują tyle samo, co 4 wskazówki w Zakolu, a bariera zostawiona w grze to +1/+1 dla Arcykapłana i −1 PD.</li>
+<li><strong>Strażnik Śluzy</strong> zatrzymuje barkę do zdania int(3) (67% własna ekipa, 83% arkhamdb).</li>
+<li><strong>Przetasowanie talii</strong> co ~5 rund (21 kart, 4 dobrania na rundę) uruchamia Kokon Młodego i leczy Arcykapłana o 3.</li>
+</ul>
+
+<h2 id="s3">Scenariusz 3 · Czarny Port</h2>
+<h3>Co jest na kartach</h3>
+<ul>
+<li>Zegar: Tajemnice 4 / 8 / 14 / 16 = 42 zagłady. Awers Tajemnic 1–3: „nie usuwaj żetonów zagłady z lokalizacji w grze”. Rewersy: rozstaw odłożonego na bok losowego Dostawcę; Tajemnica 3 dodatkowo 1 przerażenie na badacza za każdą Spaczoną lokalizację.</li>
+<li>14 lokalizacji, 100 wskazówek (Biblioteka 2 / 2 na badacza, Dyrekcja 4 / 2, Linia 4 / 2 — wartości ze strony odkrytej, nie z awersu „nieodkryty” 4 / 3). Lokalizacja z 4 lub więcej zagłady odwraca się na Spaczoną: wskazówki zamieniają się w zagładę; odzyskanie testem (Cytadela com 2, Mleczarnia wil 3, Ostrów wil 2, Rynek/Sołacz/Cegielskiego wil 3, UAM int 3, Ogród com 3); Biblioteka, Dyrekcja, Linia mają osobne karty „_kor_9” z własnymi wskazówkami i akcją odwrócenia. Stary Rynek spacza się przy 3 Spaczonych. Ostrów Tumski i Sołacz spaczają się także, gdy na koniec rundy stoi tam wróg z cechą Kultysta; rewers: „Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę”.</li>
+<li>Akty: 1) 3 wskazówki na badacza; 2) opróżnić Zakłady Cegielskiego (badanie tylko z więcej niż 3 zasobami); 3) UAM z wskazówek i „żetonów spaczenia”; 4) Mleczarnia; 5) Tunele Forteczne (zasłona X = liczba Spaczonych) → Czarna Koza na Ostrowie, Edmund Dalbor; 6) pokonać Kozę (walka 4, 32 zdrowia, 2/2, 1 zagłada na sobie co rundę).</li>
+<li>Gońce: Goniec 1 (Cytadela → Mleczarnia, 8 zdrowia), 2 (Nadbrzeże → UAM, 4 zdrowia, 0 obrażeń), 3 (Cytadela → Zakłady Cegielskiego, 12 zdrowia). Walka 2, unik 3, Powściągliwy. Po dojściu: za każdy punkt zdrowia 1 wskazówka → zagłada, wtasowanie do talii, „badacze jako grupa otrzymują 1<badacz> punktów obrażeń”.</li>
+<li>Talia: Agitator ×2, Cień ×2, Student ×2, Bamber ×2, Sadza ×2, Smród ×2, Strajk ×3, Trauma ×2, Kryzys, Cenzura, Tej, Dostawa (22) + 10 Artykułów Kuriera (po jednej wersji z par) = 32 karty.</li>
+<li>Połączenia z symboli kart (suma obu stron): m.in. UAM ↔ Stary Rynek, Cytadela, Cegielskiego, Biblioteka, Ogród, Rynek Jeżycki, Sołacz; Cytadela ↔ Tunele, Ostrów, Sołacz; 11 połączeń jest wpisanych tylko na jednej z dwóch kart.</li>
+</ul>
+<h3>Jak to się gra</h3>
+<div class="kv">
+<div><b>7%</b><span>wygranych, ekipa 0 PD</span></div>
+<div><b>49%</b><span>gier dochodzi do Aktu 6</span></div>
+<div><b>28,4</b><span>obrażeń z Gońców na grę</span></div>
+<div><b>0 PD</b><span>za cały scenariusz</span></div>
+</div>
+<p>Akty idą: 49% gier dochodzi do Czarnej Kozy (arkhamdb 36%), Akt 6 w rundzie 12–17. Ekipa ginie po drodze. Gońce wchodzą z Tajemnic 1–3, dochodzą do celu w 1–3 rundy (Goniec 3 ma cel w lokalizacji sąsiedniej z miejscem rozstawienia), zadają grupie 4 obrażenia, wracają do talii i wychodzą znowu: 7,3 dojść i 28,4 obrażeń na grę, 68% gier kończy się pokonaniem wszystkich. W przebiegu z ziarnem 7 Goniec dochodzi 9 razy i sam kończy całą czwórkę w rundach 14–19. Bez tego jednego zdania wynik to 64%.</p>
+<p>Obłąkany Student rozstawia się na Ostrowie Tumskim z cechą Kultysta: 11,5 spaczeń Ostrowa na grę. Gdy Ostrów jest już pusty, rewers („jeżeli nie ma zagłady, odwróć”) odwraca go z powrotem w tej samej chwili — reguła kręci się w kółko, a gdy wskazówki jeszcze są, zamienia je w zagładę na stałe. Zakłady Cegielskiego blokują badanie 3,7 razy na grę przez próg zasobów (Kryzys, Dostawa, Bamber za 4 zasoby, Inflacja). Cień z Jeżyc (walka 0 przy braku Spaczonych) daje 3,9 przerażenia, Godzina policyjna 4,5 obrażenia za ruch przy Starym Rynku.</p>
+<p>Po dwóch scenariuszach ekipa ma 9–11 PD i ulepszenia — wtedy Czarny Port wygrywa się w 28–36%. Scenariusz zakłada doświadczoną ekipę, ale sam nie daje ani jednego punktu.</p>
+
+<h2 id="badacze">Badacze i PD</h2>
+<ul>
+<li><strong>Szyszka Nowiczok</strong> (3/4/3/2, 7/7). Najlepszy do wioski i Dębów (badanie 93% przy zasłonie 2). Znikanie Bez Śladu unika 1,9 (s1) do 4,1 (s3) ataków na grę; Dawny Wspólnik po zagraniu Znikania wymaga wil(3) — 56% zdanych, do tego czasu zjada 1–2 zasoby na turę. Plik <code>Szyszek Nowacki.card</code>, na karcie badacza wpisany koszt 2 i poziom −1.</li>
+<li><strong>Michał z Bargłowa</strong> (4/3/3/2, 6/8). Gomez kosztuje 1,8 (s1) do 3,9 (s2B) przerażenia na grę, bo na barce często nie ma ani Ruchu, ani Badania. Wola 4 robi z niego sternika w wariancie B (wil(4) 64%). Losowe podstawowe osłabienie nie modelowane.</li>
+<li><strong>Baruch Hałabała</strong> (4/2/4/2, 7/7). Halabarda za 2 akcje (+1 walka, +2 obrażenia) to główna broń na Żerdzia, Kierownika i Kozę; Taca daje zasoby kosztem klątw, które Halabarda zamienia w błogosławieństwa przy wejściu. Int 2: Pertraktacje 14%, badanie zasłony 4: 14%.</li>
+<li><strong>Wojciech Robak</strong> (2/4/2/4, 6/8). Paprykarz to 3 dodatkowe akcje w każdym scenariuszu; jedyny, kto przechodzi Miny testem (64%). Walka 2 i wola 2: „Cała naprzód!” 14%, Fort 0%. Wieczne Dylematy: 3 testy z karą.</li>
+<li><strong>Ulepszenia za PD</strong> (wybór analityka, kupowane po kolei, gdy starcza PD): Baruch — Beat Cop (2), Vicious Blow (2), Physical Training (2); Michał — Shrivelling (3), Guts (2), Ward of Protection (2); Szyszka — Peter Sylvestre (2), Lucky! (2), Track Shoes (2); Wojciech — Lockpicks (1), Switchblade (2), Streetwise (3). Po scenariuszu 2 ekipa ma 9–11 PD, czyli 2–3 karty z listy.</li>
+<li><strong>Karty wspólne:</strong> Edmund Dalbor (koszt −1, ⭕ zamiast <code>&lt;rea&gt;</code>, rewers „Opętany Dalbor” bez warunku odwrócenia), Kajetan Kleszcz (plik <code>Konrad Kleszcz.card</code>; Akt 2 pisze „Konrada Kleszcza”; „Zakażenie Natury”, „Roślina”, „Zepsucie” nie istnieją w repo; brak karty, która go daje).</li>
+</ul>
+
+<h2 id="xp">Doświadczenie</h2>
+<div class="tw"><table>
+<tr><th>Scenariusz</th><th class="n">Zwycięstwo X</th><th class="n">Premia z Księgi</th><th class="n">Maks.</th><th>Źródła</th></tr>
+<tr><td>1</td><td class="n">3</td><td class="n">+4 (+2, +2)</td><td class="n">11</td><td>Nory 1, Obóz na mokradłach 1, Żerdź 1; +4 za Z1, +2 „Wieśniacy uratowani”, +2 „pochówek”</td></tr>
+<tr><td>2</td><td class="n">6</td><td class="n">+2 (+2 w B)</td><td class="n">10</td><td>3 Bariery po 1 (tylko przedmiotem), Arcykapłan 2, Kierownik 1; +2 ukończenie, +2 Lewiatan w otchłani</td></tr>
+<tr><td>3</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td>żadna karta scenariusza 3 nie ma pola Zwycięstwo; Rozwiązania 1 i 2 odsyłają do „Victory X z kart”</td></tr>
+<tr class="sum"><td>Razem</td><td class="n">9</td><td class="n">+12</td><td class="n">21</td><td>ekipa w symulacji kończy z 9,4–10,7 PD na badacza po scenariuszu 2</td></tr>
+</table></div>
+
+<h2 id="przebieg">Dwa przebiegi</h2>
+<p class="small">Jedna kampania z narracją na ziarno, własna ekipa, ulepszenia kupowane między scenariuszami.</p>
+<h3>Wariant A, ziarno 7</h3>
+<ul class="tl">
+<li><span>S1</span><span>r3 Kościół pusty, Klucz, Zachrystia zdana, Skraj odkryty · r4 Tajemnica 2 · r6 Skraj opuszczony · r8 Tajemnica 3 · r10 Posiadłość za 8 wskazówek w Obozie na mokradłach · r11 Żerdź w grze · r12 Tajemnica 4 i Żerdź pokonany. Wygrana, +6 PD. Michał 9/11 przerażenia.</span></li>
+<li><span>S2</span><span>Arcykapłan pokonany w r7, +6 PD; Kożuch Fermentem, Miny Dynamitem. Wojciech pokonany (8/8 obrażeń: tablica, Krwawe Korzenie, Pomiot).</span></li>
+<li><span>S3</span><span>r3–6 Akty 2–4 · r7 Mleczarnia spaczona (12 zagłady) → Tajemnica 3, Goniec +4 · r10 Goniec +8, Tajemnica 4 · r13 Akt 5 · r14 Baruch pokonany · r17 Akt 6, Wojciech pokonany · r18–19 Michał i Szyszka pokonani. Porażka; 36 obrażeń z Gońców, 9 dojść.</span></li>
+</ul>
+<h3>Wariant B, ziarno 11</h3>
+<ul class="tl">
+<li><span>S1</span><span>r3 Klucz · r5 Akt 2 · r6 Skraj · r7 Posiadłość za wskazówki, Żerdź · r9 Żerdź pokonany. Wygrana, +5 PD, prawie bez strat.</span></li>
+<li><span>S2</span><span>Most w r8, Lewiatan odepchnięty, Rezygnacja z 5 znacznikami. +6 PD.</span></li>
+<li><span>S3</span><span>r3–9 Akty 2–5 · Goniec (Cegielskiego) dochodzi w r5, r9, r11, r12, r14 (zawsze +0 zagłady, zawsze 4 obrażenia) · r12 Akt 6, Koza · r15 Koza pokonana. Wygrana, 0 PD; 24 obrażenia z Gońców, Znikanie ×6.</span></li>
+</ul>
+
+<h2 id="znaleziska">Lista znalezisk</h2>
+<p>Każdy wpis: plik, cytat lub liczby z aktualnej karty, propozycja. Wagi: <span class="chip c-bloker">Bloker</span> nie da się grać bez decyzji autora · <span class="chip c-blad">Błąd</span> karta mówi coś, czego nie da się wykonać, albo pole jest puste · <span class="chip c-spoj">Spójność</span> dwie karty lub karta i Księga mówią co innego · <span class="chip c-balans">Balans</span> liczby z symulacji · <span class="chip c-nit">Drobiazg</span>.</p>
+<div class="filters" role="group" aria-label="Filtr wagi">
+<button type="button" data-f="all" aria-pressed="true">Wszystkie (51)</button>
+<button type="button" data-f="bloker" aria-pressed="false">Bloker (3)</button>
+<button type="button" data-f="blad" aria-pressed="false">Błąd (11)</button>
+<button type="button" data-f="spoj" aria-pressed="false">Spójność (17)</button>
+<button type="button" data-f="balans" aria-pressed="false">Balans (14)</button>
+<button type="button" data-f="nit" aria-pressed="false">Drobiazg (6)</button>
+</div>
+<div id="lista">
+
+<div class="finding" data-s="bloker"><div><span class="chip c-bloker">Bloker</span><div class="id">S3‑01</div></div><div><h4>Czarna Koza siedzi w talii spotkań zamiast czekać na Akt 5</h4><p>Karta ma <code>quantity 2</code> i grupę spotkań f. Księga: „Zbierzcie wszystkie karty z zestawu spotkań: Czarny Port”, nic o odłożeniu Kozy. Akt 5: „W lokalizacji Ostrów Tumski umieść w grze wroga Czarna Koza. Wróg ten wchodzi do gry wyczerpany.” Autor potwierdził intencję (Akt 5); z Kozą w talii symulacja daje 1,3%.</p><p class="src">Karty Spotkań/scenariusz 3/Czarna Koza.card; Karty Scenariusza/scenariusz 3/Akt 5.card; Fabuła/Kampania Czarna Krew Warty.odt (Przygotowanie s3)</p><p class="fix">quantity 1, w Księdze „odłóżcie na bok Czarną Kozę i trzech Gońców”.</p></div></div>
+
+<div class="finding" data-s="bloker"><div><span class="chip c-bloker">Bloker</span><div class="id">S3‑02</div></div><div><h4>Gońce zabijają ekipę: 4 obrażenia dla grupy za każde dojście, potem wracają do talii</h4><p>Wszystkie trzy karty: „…a następnie wtasuj Gońca do talii spotkań. Badacze jako grupa otrzymują 1<badacz> punktów obrażeń.” Goniec wraca z talii i dochodzi ponownie; Goniec 3 rozstawia się na Cytadeli, a jego cel (Zakłady Cegielskiego) sąsiaduje z Cytadelą. Średnio 7,3 dojść i 28,4 obrażeń na grę; 68% gier kończy się pokonaniem wszystkich. Bez tego zdania: 64% wygranych.</p><p class="src">Karty Spotkań/scenariusz 3/Goniec 1.card, Goniec 2.card, Goniec 3.card</p><p class="fix">obrażenia tylko przy pierwszym dojściu albo Goniec po dojściu usunięty z gry; zamiana wskazówek w zagładę jest już karą.</p></div></div>
+
+<div class="finding" data-s="bloker"><div><span class="chip c-bloker">Bloker</span><div class="id">S3‑03</div></div><div><h4>Obłąkany Student spacza Ostrów Tumski samym rozstawieniem</h4><p>Student: „<spa> Ostrów Tumski. Powściągliwy.”, cecha Kultysta. Ostrów: „Na koniec rundy, jeśli na Ostrowie Tumskim znajduje się wróg z cechą Kultysta, odwróć tę kartę na wersję Spaczoną.” Rewers: „Zamień wszystkie żetony wskazówek na zagładę” i „Jeżeli nie ma żetonów zagłady, odwróć tę kartę”. Z wskazówkami: 4 zagłady na stałe; bez wskazówek: karta odwraca się tam i z powrotem co rundę (11,5 razy na grę), dopóki Student stoi.</p><p class="src">Karty Spotkań/scenariusz 3/Obłąkany Student Teologii.card; Karty Lokacji/scenariusz 3/Ostrów Tumski.card</p><p class="fix">Student bez cechy Kultysta albo rozstawienie gdzie indziej; ta sama reguła dotyczy Sołacza.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S1‑01</div></div><div><h4>Przerażony Wikariusz ma zdrowie −1</h4><p>Pole zdrowia puste (−1), poczytalność 3, koszt 3, poziom −2. Kościół rozstawia go „na lokalizacji Przybrzeżna rampa załadunkowa” jako atut — karta nie mówi, kto go bierze.</p><p class="src">Karty Lokacji/scenariusz 1/Kluczowe/Przerażony Wikariusz.card; Karty Lokacji/scenariusz 1/Kluczowe/Kościół.card</p><p class="fix">zdrowie, poziom 0, „badacz w lokalizacji Rampa może przejąć kontrolę”.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S1‑02</div></div><div><h4>Żeton tablicy liczy karty, których nie ma na boku</h4><p>Karta scenariusza: „−X. X jest liczbą odłożonych na bok kart z cechą Zwycięstwo 0.” Jedyna karta ze Zwycięstwo 0 to Ciekawski Wieśniak; jest w talii startowej, a w Miejscu Kultu jest „usuwany z gry”, nie odkładany. X = 0 przez całą grę (tak liczy model).</p><p class="src">Karty Scenariusza/scenariusz 1/Karta scenariusza.card; Karty Spotkań/scenariusz 1/Ciekawski Wieśniak x5.card</p><p class="fix">„X = liczba Ciekawskich Wieśniaków usuniętych z gry”.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S3‑04</div></div><div><h4>Akt 4 rewers: „usuń 2 żetony chaosu”</h4><p>Nie ma żetonów chaosu; Akty 2, 3 i 5 mówią o zagładzie.</p><p class="src">Karty Scenariusza/scenariusz 3/Akt 4.card</p><p class="fix">„2 żetony zagłady”.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S3‑05</div></div><div><h4>Akty 3 i 4 wymagają usunięcia „żetonów spaczenia”</h4><p>„Usuń wszystkie wskazówki i żetony spaczenia z lokalizacji Uniwesytet Adama Miskatonica” — nie ma takiego żetonu. Autor: wskazówki i zagłada (7,3%); samo „wskazówki” dałoby 18,2%.</p><p class="src">Karty Scenariusza/scenariusz 3/Akt 3.card, Akt 4.card</p><p class="fix">„bez wskazówek i żetonów zagłady”.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S3‑06</div></div><div><h4>Tajemnice każą rozstawić „odłożonego na bok” Dostawcę, którego nikt nie odłożył</h4><p>Rewersy Tajemnic 1–3: „Rozstaw odłożonego na bok loswego wroga z cechą Dostawca”. Przygotowanie w Księdze nie wymienia Gońców, a mają grupę f jak reszta talii.</p><p class="src">Karty Scenariusza/scenariusz 3/Tajemnica 1–3.card; Fabuła/Kampania Czarna Krew Warty.odt</p><p class="fix">dopisać do przygotowania s3 (razem z Kozą); poprawić „loswego”.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S3‑07</div></div><div><h4>Edmund Dalbor: brak warunku odwrócenia na „Opętanego Dalbora”</h4><p>Awers: „Gorliwa Modlitwa: usuń jeden żeton zagłady z obecnej Tajemnicy lub wylecz do dwóch przerażeń” — bez kosztu i limitu (model: raz na rundę). Rewers: „Na koniec fazy wrogów umieść 1 żeton zagłady na lokalizacji Opętanego Dalbora”. Nic nie mówi, kiedy karta się odwraca. Koszt −1, ⭕ zamiast <code>&lt;rea&gt;</code>.</p><p class="src">Karty Badaczy/Edmund Dalbor.card</p><p class="fix">warunek odwrócenia i limit użyć.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S3‑08</div></div><div><h4>11 połączeń wpisanych tylko na jednej z dwóch kart</h4><p>UAM nie wskazuje Biblioteki, Ogrodu, Rynku Jeżyckiego ani Sołacza, choć one wskazują UAM; Ostrów nie wskazuje Mleczarni ani Starego Rynku; Cytadela nie wskazuje Ostrowa, Sołacza; Cegielskiego nie wskazuje Cytadeli; Mleczarnia nie wskazuje Cegielskiego. Pełna lista: <code>values</code>. Model liczy je dwustronnie (decyzja autora).</p><p class="src">Karty Lokacji/scenariusz 3/*.card (location_link)</p><p class="fix">uzupełnić brakujące symbole na drugiej karcie z każdej pary.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S3‑09</div></div><div><h4>Strony Spaczone z innymi symbolami niż awers</h4><p>Sołacz: awers 绿菱 → UAM, Cytadela; rewers ma ikonę Ogrodu (粉桃) i tylko UAM. Zakłady Cegielskiego: rewers ma ikonę Ostrowa (红十). Cytadela: rewers dokłada połączenie z Nadbrzeżem. Po spaczeniu inne karty wskazują symbol, którego już nie ma na stole.</p><p class="src">Karty Lokacji/scenariusz 3/Sołacz.card, Zakłady Cegielskiego.card, Cytadela.card</p><p class="fix">ta sama ikona i te same połączenia na obu stronach.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">S3‑10</div></div><div><h4>Biblioteka Uniwersytecka i Rynek Jeżycki mają tę samą ikonę</h4><p>Obie karty: ikona 青花, obie łączą się tylko z UAM. Każda karta wskazująca 青花 wskazuje obie.</p><p class="src">Karty Lokacji/scenariusz 3/Biblioteka Uniwersytecka.card, Rynek Jeżycki.card</p><p class="fix">osobna ikona dla Rynku Jeżyckiego.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">OG‑01</div></div><div><h4>Nieparsowalne duplikaty kart w katalogu głównym</h4><p><code>Przekonany wyznawca x5.card</code> i <code>Zbłąkany Kultywator x2.card</code> nie mają nazwy ani typu; właściwe karty są w <code>Karty Spotkań/scenariusz 1/</code>. Obok leży <code>Szyszek token Card.card</code> (drugi żeton Szyszki).</p><p class="src">./Przekonany wyznawca x5.card, ./Zbłąkany Kultywator x2.card, ./Szyszek token Card.card</p><p class="fix">usunąć z repo.</p></div></div>
+
+<div class="finding" data-s="blad"><div><span class="chip c-blad">Błąd</span><div class="id">OG‑02</div></div><div><h4>Kozi Pomiot w trzech plikach o różnej treści</h4><p><code>Karty Spotkań/Kozi Pomiot.card</code> (bez grupy, „pokonany: każdy badacz 1 przerażenie”), <code>scenariusz 1/Kozi Pomiot.card</code> (to samo, quantity 2), <code>scenariusz 2/Kozi Pomiot.card</code> („Łowca. Mściwy.”, bez przerażenia, grupa c, quantity 2). Interludium II wtasowuje „kartę Kozi Pomiot” do s3 bez wskazania wersji.</p><p class="src">Karty Spotkań/Kozi Pomiot.card; Karty Spotkań/scenariusz 1/Kozi Pomiot.card; Karty Spotkań/scenariusz 2/Kozi Pomiot.card</p><p class="fix">jedna karta albo dwie różne nazwy; plik w katalogu <code>Karty Spotkań/</code> usunąć.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S1‑03</div></div><div><h4>Przywódca kultu ma trzy imiona i dwie pisownie</h4><p>Karta: nazwa „Żyrij Żerdź”, plik <code>Ojciec Żerdź.card</code>, tekst „Ojcu Żerdź”. Akt 3: „Pokonaj Żyrija Źerdzia” (Ź), rewers „Źyrij Żerdź”. Księga: „Sergiej Żerdź”, „Ojciec Żerdź”, „Żyrij”.</p><p class="src">Karty Spotkań/scenariusz 1/Ojciec Żerdź.card; Karty Scenariusza/scenariusz 1/Akt 3.card; Fabuła/Kampania Czarna Krew Warty.odt</p><p class="fix">jedna forma na kartach; „Sergiej” tylko w narracji, jeśli tak ma być.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S1‑04</div></div><div><h4>Zachrystia zostaje odcięta po odkryciu Skraju Lasu</h4><p>Skraj Lasu <rev>: „Usuń z gry wszystkie odkryte lokalizacje Miejsce Kultu” — w tym Kościół. Zachrystia łączy się tylko z Kościołem (schemat), więc badacz, który w niej stoi, nie ma drogi. Model przenosi go na Skraj (decyzja autora: luka do naprawy).</p><p class="src">Karty Lokacji/scenariusz 1/Kluczowe/Skraj Lasu.card; schemat wioski w Księdze</p><p class="fix">„badacze w usuwanych lokalizacjach przechodzą na Skraj Lasu” albo Zachrystia połączona z siatką.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S1‑05</div></div><div><h4>„talia mitów”, „(→R4)”, „zgodnie z rozpiską z instrukcji”</h4><p>Obóz na mokradłach: „Przeszukaj talię mitów…” i „(→R4)”; Tajemnica 3: „Wtasuj do talii mitów”; Akt 1: „zgodnie z rozpiską z instrukcji”.</p><p class="src">Karty Lokacji/scenariusz 1/Losowe/Las/Obóz na Mokradłach.card; Karty Scenariusza/scenariusz 1/Tajemnica 3.card, Akt 1.card</p><p class="fix">„talia spotkań”, usunąć „(→R4)”, „zgodnie ze schematem w Księdze Kampanii”.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S1‑06</div></div><div><h4>Grupy spotkań i cechy w s1 są niejednolite</h4><p>Wrogowie „Ciemne chaty, puste pola” (grupa b), podstępy „Mroczne sprawki”, Brama i Skraj „g”, lokalizacje „Wioska wśród drzew” / „Wioska pośród drzew” / „Zwyczajne miejsca” / „Leśne zakamarki”, Kozi Pomiot bez grupy. Dół: „Miejsce kultu” małą literą, reszta „Miejsce Kultu”. Awers kart lasu nazywa się „Las”, ale Nory mają na awersie „Nory”. Sześć kart wioski ma wpisane listy połączeń (深蓝T, 橙心, 青花) bez własnej ikony — zostawione po czymś.</p><p class="src">Karty Spotkań/scenariusz 1/*, Karty Lokacji/scenariusz 1/**</p><p class="fix">jedna nazwa zestawu, jedna pisownia cechy, awers Nor = „Las”, wyczyścić location_link.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S1‑07</div></div><div><h4>Gęsty Las: test odkrycia bez ikony akcji</h4><p>„Test <wil>(5): odkryj 1 nieodkrytą sąsiadującą lokalizację.” — na Grzęzawisku analogiczny test ma <act>, na Gęstym Lesie nie ma ani <act>, ani ⚡. Model liczy jako akcję.</p><p class="src">Karty Lokacji/scenariusz 1/Losowe/Las/Gęsty Las.card</p><p class="fix">dodać <act>.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S2‑01</div></div><div><h4>Karta Scenariusza ma dwa komplety żetonów bez informacji, kiedy używać rewersu</h4><p>Awers: czaszka −X (Tkanki −1), kultysta −2, tablica −3 (i 1 obrażenie), Starszy −4. Rewers: −X (Tkanki −2), −3, −4 (i odrzuć kartę), −5. Ani karta, ani Księga nie mówią „rewers = trudny”. Model liczy awers (decyzja autora). To samo na Karcie scenariusza 3, gdzie rewers ma „--3”, „--X”.</p><p class="src">Karty Scenariusza/scenariusz 2/Karta Scenariusza.card; Karty Scenariusza/scenariusz 3/Karta scenariusza 3.card</p><p class="fix">dopisać poziom trudności przy rewersie albo usunąć rewers.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S2‑02</div></div><div><h4>Akt 1 kładzie 4 wskazówki na Skażonym Nurcie bez wyjaśnienia</h4><p>Autor: to zabezpieczenie przed zakleszczeniem, bo wskazówki z poprzednich lokalizacji są odrzucane. Karta tego nie mówi, a jedyne miejsce, gdzie te wskazówki się przydają, to Rezygnacja na Moście A („2 wskazówki za każdą Barierę”). Przy Tkance w Skażonym Nurcie wszystkie testy +1.</p><p class="src">Karty Scenariusza/scenariusz 2/Akt 1.card</p><p class="fix">jedno zdanie na rewersie Aktu 1, do czego te wskazówki służą.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S2‑03</div></div><div><h4>Odmiana „Barki Jadwiga”</h4><p>Barka Jadwiga: „w lokalizacji Barki Jadwiga”; Lewiatan: „do lokalizacji Barki Jadwiga”. Reszta kart: „atut Barka Jadwiga”.</p><p class="src">Karty Scenariusza/scenariusz 2/Barka Jadwiga.card; Karty Spotkań/scenariusz 2/Lewiatan.card</p><p class="fix">„lokalizacja atutu Barka Jadwiga”.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S3‑11</div></div><div><h4>Akt 6a i 6b to dwie karty o tej samej nazwie i prawie tej samej treści</h4><p>Różnica: 6b „Pokonaj „Czarną Kozę z Ostrowa” zanim Agenda dojdzie do końca” i inny cytat Dalbora na rewersie. Talia aktów nie może mieć obu.</p><p class="src">Karty Scenariusza/scenariusz 3/Akt 6a.card, Akt 6b.card</p><p class="fix">zostawić jedną.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S3‑12</div></div><div><h4>Kleszcz: Kajetan czy Konrad, i skąd go wziąć</h4><p>Karta „Kajetan Kleszcz” w pliku <code>Konrad Kleszcz.card</code>; Akt 2: „prof. Konrada Kleszcza”; Akt 3: „ukrył się w szklarni”; Akt 6a: „Możesz poświęcić sojusznika (np. Kleszcza)”. Żadna karta nie daje Kleszcza badaczom. Jego tekst używa „Zakażenie Natury”, „Roślina”, „Zepsucie” — nie ma takich słów kluczowych ani cech w repo.</p><p class="src">Karty Badaczy/Konrad Kleszcz.card; Karty Scenariusza/scenariusz 3/Akt 2.card, Akt 3.card, Akt 6a.card</p><p class="fix">jedno imię; efekt w Ogrodzie Botanicznym, który daje Kleszcza; cechy istniejące (Narośl, Tkanka).</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S3‑13</div></div><div><h4>Trzy lokalizacje mają wersję Spaczoną jako osobny plik „_kor_9”, reszta jako rewers</h4><p>Biblioteka, Dyrekcja, Linia istnieją podwójnie; ich karty bazowe mają awers „nieodkryty” z atrapą 4 / 3 na badacza i rewers odkryty (2/2, 4/2, 4/2). Wersje _kor_9 mają własne wskazówki (1, 1, 3 na badacza) i odwracają się jedną akcją „gdy nie ma wskazówek” — inna mechanika niż u pozostałych.</p><p class="src">Karty Lokacji/scenariusz 3/*_kor_9.card</p><p class="fix">ujednolicić: rewers i ten sam wzorzec odzyskania.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S3‑14</div></div><div><h4>Przygotowanie s3 w Księdze wymienia rzeczy, których nie ma</h4><p>„Szpital Kliniczny” (brak lokalizacji), „odpowiednie zestawy podstawowe, np. Kultyści, Szczury” (zestawy FFG spoza repo — jeśli celowo, trzeba to nazwać i policzyć w talii; model ich nie ma). Obietnice z rozwiązań s1 („Ojciec Żerdź zostanie wtasowany do talii spotkań w Scenariuszu 3”, „Przekonany Wyznawca zostaną wtasowane w Scenariuszach 3 i 4”) nie mają odpowiednika w przygotowaniu s3. Nic nie mówi o wtasowaniu Artykułów Kuriera.</p><p class="src">Fabuła/Kampania Czarna Krew Warty.odt (Scenariusz III, Przygotowanie; Scenariusz I, Zakończenia 1, 3, 4)</p><p class="fix">wpisy „Sprawdźcie Dziennik Kampanii”, usunąć Szpital, dopisać Kuriera i odłożenie Kozy z Gońcami.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S3‑15</div></div><div><h4>Kurier: cztery pary duplikatów</h4><p>Godzina policyjna ×2 (obrażenie przy ruchu / +1 akcja), Seans ×2, Lo Kittay ×2, Targi ×2 (Lornetka / Słoń). Autor: po jednej; model używa plików bez numeru i „Seans 2”. Bez Kuriera talia to 21 kart, a wygrane spadają do 0,3% — Kurier jest niezbędnym rozcieńczalnikiem.</p><p class="src">Karty Spotkań/Artykuły Kuriera/*.card</p><p class="fix">usunąć odrzucone wersje z repo.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S3‑16</div></div><div><h4>Rozwiązania s3 mówią o „Awatarze Shub‑Niggurath”, karta nazywa się „Czarna Koza”</h4><p>Księga: „Jeśli badacze pokonali Awatara Shub‑Niggurath (Czarną Kozę z Ostrowa)”. Karta „Awatar Shub‑Niggurath” leży w <code>Karty Spotkań/Scenariusz 4/</code> (walka 4, 10 na badacza, Zwycięstwo 3). Akt 6b: „Czarną Kozę z Ostrowa”, Akt 6a: „Czarną Kozę”.</p><p class="src">Fabuła (Rozwiązania s3); Karty Spotkań/Scenariusz 4/Awatar Kozicy.card</p><p class="fix">jedna nazwa na kartach s3.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">S3‑17</div></div><div><h4>Ostrów Tumski: pusta lokalizacja odwraca się w tę i z powrotem</h4><p>Rewers: „Jeżeli na tej lokalizacji nie ma żetonów zagłady, odwróć tę kartę” bez ikony reakcji ani akcji. Gdy Student stoi na pustym Ostrowie, karta odwraca się na Spaczoną na koniec rundy i natychmiast wraca (11,2 razy na grę). To samo zdanie jest na Sołaczu, Rynku Jeżyckim, UAM, Cegielskiego, Ogrodzie, Mleczarni, Cytadeli, Starym Rynku.</p><p class="src">Karty Lokacji/scenariusz 3/Ostrów Tumski.card i pozostałe rewersy</p><p class="fix">„<act>: jeżeli nie ma zagłady, odwróć” albo warunek „i nie ma tu wroga z cechą Kultysta”.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">BD‑01</div></div><div><h4>Szyszka: plik, nazwa, żeton, koszt</h4><p>Plik <code>Szyszek Nowacki.card</code>, nazwa „Szyszka Nowiczok”, Dawny Wspólnik: „Tylko talia Szyszki Nowiczoka”. Na karcie badacza wypełniono koszt 2 i poziom −1.</p><p class="src">Karty Badaczy/Szyszek Nowacki.card; ./Szyszek token Card.card</p><p class="fix">zmienić nazwę pliku, wyczyścić koszt/poziom.</p></div></div>
+
+<div class="finding" data-s="spoj"><div><span class="chip c-spoj">Spójność</span><div class="id">OG‑03</div></div><div><h4>Stare raporty i obce pliki w katalogu głównym</h4><p><code>raport-badacze.html</code>, <code>raport-playtest-1-3.html</code>, <code>raport-scenariusz-2.html/.md</code>, <code>raport-scenariusze-1-3.html/.md</code> — wcześniejsze analizy, nieaktualne. <code>Księga Kampanii.odt</code> i <code>Księga Kampanii (AutoRecovered).odt</code> to „Blood of Walachia” (obca kampania, 10–15 MB). PNG renderów w katalogu głównym i podwójne <code>Warsztat Kowalski 9_*.png</code> obok <code>9 Warsztat Kowalski_*.png</code>.</p><p class="src">./</p><p class="fix">usunąć lub przenieść do <code>archiwum/</code>.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S1‑08</div></div><div><h4>Pertraktacje int(4) i odkrywanie lasu rozstrzygają scenariusz</h4><p>Obóz ocalałych: 37% zdanych testów (własna ekipa), 44% (arkhamdb); alternatywa to 8 wskazówek w Obozie na mokradłach po wyzerowaniu puli przez Akt 2. Odkrycie przez Gęsty Las wil(5) 27%, Grzęzawisko com(5) 33%. Zegar kończy 22% / 31% gier.</p><p class="src">Karty Lokacji/scenariusz 1/Losowe/Las/Obóz ocalałych.card, Gęsty Las.card, Grzęzawisko.card; Karty Scenariusza/scenariusz 1/Akt 2.card</p><p class="fix">int(3) albo powtórka testu; test odkrycia (4) zamiast (5); ewentualnie Akt 2 zostawia połowę wskazówek.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S1‑09</div></div><div><h4>Nieczyste rytuały to największe źródło strat w wiosce</h4><p>Komunia i Chrzest (po 2 kopie) testują każdego badacza w lokalizacji i sąsiednich: 2,7 obrażeń i 2,7 przerażenia na grę (własna), 4,9 i 3,1 (arkhamdb, walka 2–3). Wołanie po uwzględnieniu wszystkich pięciu Miejsc Kultu daje poniżej 2 przerażeń (arkhamdb 2,5).</p><p class="src">Karty Spotkań/scenariusz 1/Nieczysta komunia.card, Nieczysty chrzest.card, Wołanie.card</p><p class="fix">rytuały tylko dla badaczy w tej lokalizacji (bez sąsiednich).</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S1‑10</div></div><div><h4>Kultysta Traktorzysta: 2 obrażenia i 1 przerażenie bez testu przy rozstawieniu</h4><p>„Jeśli Kultysta Traktorzysta rozstawi się na lokalizacji z badaczem, zadaj mu obrażenia rozpisane na karcie” + Łowca, walka 4, unik 3, 5 zdrowia. 2,2 obrażeń przy rozstawieniu na grę; Warsztat Mechaniczny rozstawia go dodatkowo w zwarciu.</p><p class="src">Karty Spotkań/scenariusz 1/Kultysta Traktorzysta.card; Karty Lokacji/scenariusz 1/Losowe/Warsztat Mechaniczny 11.card</p><p class="fix">test agi(3) przed obrażeniami z rozstawienia.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S2‑04</div></div><div><h4>Wariant B: 45% / 35% wygranych, połowa gier kończy się pokonaniem wszystkich</h4><p>Lewiatan 5,0 obrażeń i 5,0 przerażenia na grę; „Cała naprzód!” com(4) 8%, wil(4) 50%; 5 znaczników = ~8 udanych akcji lub odepchnięć. Wariant A 76% / 71%.</p><p class="src">Karty Lokacji/scenariusz 2/Most Chwaliszewski B.card; Karty Spotkań/scenariusz 2/Lewiatan.card</p><p class="fix">1<per> znaczników (4) albo „Cała naprzód!” wil(3)/com(3); Lewiatan 1 przerażenie zamiast 2.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S2‑05</div></div><div><h4>Żeton tablicy: drugie źródło obrażeń w scenariuszu</h4><p>„−3. Jeśli test zakończy się porażką, otrzymujesz 1 obrażenie.” — 4,3 (A) / 4,9 (B) obrażeń na grę. Jeden żeton z 14, wyciągany w każdym teście, także barki i Tkanek.</p><p class="src">Karty Scenariusza/scenariusz 2/Karta Scenariusza.card</p><p class="fix">obrażenie tylko przy teście w lokalizacji z Tkanką.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S2‑06</div></div><div><h4>Zwęglony Totem nie jest wart wyprawy</h4><p>Zator przechodzony Totemem w 12% gier (własna) / 31% (arkhamdb), za 4 wskazówki w 88% / 69%. Dęby: 4 wskazówki przy zasłonie 3 i wil(3) na koniec rundy; Zakole: 4 wskazówki przy zasłonie 3 bez kary. Bariera zostawiona = +1/+1 Arcykapłana i −1 PD.</p><p class="src">Karty Lokacji/scenariusz 2/Pradawne Dęby.card; Karty Lokacji/scenariusz 2/Karty Barier/Żyjący Zator.card</p><p class="fix">Dęby „2 wskazówki łącznie” zamiast 1 na badacza, albo Zator za wskazówki = 1 uszkodzenie barki.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S2‑07</div></div><div><h4>Przetasowanie talii co ~5 rund leczy Arcykapłana o 3</h4><p>21 kart, 4 dobrania na rundę; Akt 4A: „Gdy talia spotkań się wyczerpie: Arcykapłan leczy 3 obrażenia”; Kokon Młodego wtedy wystawia wroga. Przy medianie 9 rund typowo jedno przetasowanie.</p><p class="src">Karty Scenariusza/scenariusz 2/Akt 4 Wariant A.card; Karty Scenariusza/scenariusz 2/Karty Tkanek/Kokon Młodego.card</p><p class="fix">świadoma decyzja; jest przypomniane na Karcie Scenariusza.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S2‑08</div></div><div><h4>Kara z Dziennika po porażce w s1 jest kosmetyczna</h4><p>4 zasoby i −1 akcja w pierwszej turze: wariant A 76,1% → 72,3%.</p><p class="src">Fabuła/Kampania Czarna Krew Warty.odt (Interludium I, Część 2)</p><p class="fix">jeśli ma boleć: −1 akcja przez 2 rundy albo 1 uszkodzenie barki na start.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S3‑18</div></div><div><h4>Scenariusz 3 nie daje punktów doświadczenia</h4><p>Żadna karta s3 nie ma pola Zwycięstwo; Rozwiązania 1 i 2: „równowartość punktów Zwycięstwa z kart w strefie zwycięstwa” = 0.</p><p class="src">Karty Spotkań/scenariusz 3/*, Karty Lokacji/scenariusz 3/*; Fabuła (Rozwiązania s3)</p><p class="fix">Koza 3, Gońce po 1, Tunele Forteczne 1 — albo premia w Rozwiązaniu.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S3‑19</div></div><div><h4>Zakłady Cegielskiego: cel Aktu 2 za progiem zasobów</h4><p>„Nie możesz badać Zakładów Cegielskiego, dopóki masz 3 lub mniej zasobów”, a talia zabiera zasoby: Kryzys (wil 4, −1 za brakujący punkt), Świeża Dostawa (2 zasoby albo zagłada), Inflacja, Wkurwiony Bamber (4 zasoby). 3,7 zablokowanych badań na grę przy modelu, który nie liczy kosztów kart graczy — w realnej grze więcej.</p><p class="src">Karty Lokacji/scenariusz 3/Zakłady Cegielskiego.card; Karty Spotkań/scenariusz 3/Kryzys Aprowizacyjny.card, Świeża Dostawa.card, Wkurwiony Bamber.card</p><p class="fix">próg 1 zasób albo próg tylko na stronie Spaczonej.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S3‑20</div></div><div><h4>Zagłada z lokacji zostaje po tajemnicach i liczy się do progu</h4><p>Awers Tajemnic 1–3: „nie usuwaj żetonów zagłady z lokalizacji w grze”. Spaczona Mleczarnia (12 wskazówek → 12 zagłady) sama zamyka Tajemnicę 2 i 3 (przebieg z ziarnem 7: runda 7 i 10). Czytanie „tylko zagłada na tajemnicy” daje 11,3% zamiast 7,3%.</p><p class="src">Karty Scenariusza/scenariusz 3/Tajemnica 1–3.card</p><p class="fix">dopisać, czy zagłada na lokalizacjach liczy się do progu; jeśli tak, podnieść progi.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S3‑21</div></div><div><h4>Cień z Jeżyc: walka 0 przy braku Spaczonych, 3,9 przerażenia na grę</h4><p>„X to liczba lokalizacji w grze z cechą Spaczona”; walka X, unik X, 4 zdrowia, 0 obrażeń, 1 przerażenie, Łowca, Masywny, 2 kopie.</p><p class="src">Karty Spotkań/scenariusz 3/Cień z Jeżyc.card</p><p class="fix">walka 1+X.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S3‑22</div></div><div><h4>Wkurwiony Bamber i Godzina policyjna</h4><p>Bamber (2 kopie, 4,9 rozstawień na grę z przetasowaniami): rozstawia się przy badaczu z największą liczbą wskazówek, walka 4, po ataku +1 zagłada na tajemnicy, Pertraktacje za 4 zasoby. Godzina policyjna (wersja bez numeru): 1 obrażenie za każdy ruch przy Starym Rynku do końca rundy — 4,5 obrażeń na grę, bo Stary Rynek sąsiaduje z pięcioma lokalizacjami.</p><p class="src">Karty Spotkań/scenariusz 3/Wkurwiony Bamber.card; Karty Spotkań/Artykuły Kuriera/Godzina policyjna.card</p><p class="fix">Bamber walka 3; Godzina policyjna: „pierwszy ruch” albo wersja „+1 akcja”.</p></div></div>
+
+<div class="finding" data-s="balans"><div><span class="chip c-balans">Balans</span><div class="id">S3‑23</div></div><div><h4>Ekipa 0 PD 7%, ekipa po dwóch scenariuszach 28–36%</h4><p>Z zerową ekipą Akt 6 osiąga 49% gier, ale Kozę (32 zdrowia, walka 4) pokonuje 7%. S3 nie nadaje się do gry osobno, bez s1 i s2.</p><p class="src">wyniki symulacji</p><p class="fix">jeśli ma być grywalny osobno: Koza 6<badacz> zdrowia.</p></div></div>
+
+<div class="finding" data-s="nit"><div><span class="chip c-nit">Drobiazg</span><div class="id">N‑01</div></div><div><h4>Puste koszty (−1) na atutach</h4><p>Klucz do zachrystii, Taca Ofiarna, Bánh Mì z ziemi, Edmund Dalbor.</p><p class="src">Karty Lokacji/scenariusz 1/Kluczowe/Klucz do zachrystii.card; Karty Badaczy/Taca Ofiarna.card, Bánh mì.card, Edmund Dalbor.card</p><p class="fix">0 lub „—”.</p></div></div>
+
+<div class="finding" data-s="nit"><div><span class="chip c-nit">Drobiazg</span><div class="id">N‑02</div></div><div><h4>Emoji zamiast tagów JiM w 14 kartach s3</h4><p>➡️ zamiast <code>&lt;act&gt;</code>, 📚 zamiast <code>&lt;int&gt;</code>, 🧠, 👊, 🦶 — Biblioteka, Cytadela, Dyrekcja ×2, Rynek Jeżycki, Sołacz, Czarna Sadza i 8 kart Kuriera.</p><p class="src">lint: „emoji zamiast tagow JiM”</p><p class="fix">zamienić.</p></div></div>
+
+<div class="finding" data-s="nit"><div><span class="chip c-nit">Drobiazg</span><div class="id">N‑03</div></div><div><h4>Literówki w s3</h4><p>„Cytdaelę”, „loswego” (Tajemnice 1–3), „odwórć” (Nadbrzeże), „Lini Rozlewniczej” ×2, „zagładyw” (Rynek Jeżycki), „Uniwesytet” (nazwa UAM), „Excathedra”.</p><p class="src">Karty Lokacji/scenariusz 3/*, Karty Scenariusza/scenariusz 3/*</p><p class="fix">korekta.</p></div></div>
+
+<div class="finding" data-s="nit"><div><span class="chip c-nit">Drobiazg</span><div class="id">N‑04</div></div><div><h4>Etykiety w 【】 dla rzeczy, które nie są nazwami kart</h4><p>「Gorliwa Modlitwa: 」 (Dalbor), 【Badanie: 】 (Sensacyjne Morderstwo), 【Ruchu】 (Godzina policyjna 2), 【Zablokowana】 (Fort).</p><p class="src">lint</p><p class="fix">nawiasy tylko dla nazw kart i Z1–Z4.</p></div></div>
+
+<div class="finding" data-s="nit"><div><span class="chip c-nit">Drobiazg</span><div class="id">N‑05</div></div><div><h4>Paprykarz: „Zużywalny (3 zasoby)”</h4><p>W AH LCG słowo to „Zapasy”; „Zużywalny” nie występuje nigdzie indziej.</p><p class="src">Karty Badaczy/Paprykarz.card</p><p class="fix">„Zapasy (3 porcje)”.</p></div></div>
+
+<div class="finding" data-s="nit"><div><span class="chip c-nit">Drobiazg</span><div class="id">N‑06</div></div><div><h4>67 kart bez ilustratora</h4><p>Pole <code>illustrator</code> puste m.in. w całych Kartach Badaczy.</p><p class="src">lint</p><p class="fix">uzupełnić przed drukiem.</p></div></div>
+
+</div>
+
+<h2 id="karty">Karty: dodać / usunąć</h2>
+<p>Nic nie zostało utworzone ani zmienione w kartach — to lista dla autorów.</p>
+<h3>Usunąć</h3>
+<ul>
+<li>Katalog główny: <code>Przekonany wyznawca x5.card</code>, <code>Zbłąkany Kultywator x2.card</code>, <code>Szyszek token Card.card</code>, sześć PNG renderów, <code>Księga Kampanii.odt</code> i <code>Księga Kampanii (AutoRecovered).odt</code> (Blood of Walachia).</li>
+<li><code>Karty Spotkań/Kozi Pomiot.card</code> (trzecia kopia bez grupy).</li>
+<li><code>Karty Lokacji/scenariusz 1/Losowe/Warsztat Kowalski 9_*.png</code> (duplikat).</li>
+<li>Jeden z Aktów 6a/6b; odrzucone wersje Godziny policyjnej, Seansu, Lo Kittaya, Targów.</li>
+<li>Trzy pliki <code>_kor_9</code> po przeniesieniu treści na rewersy.</li>
+<li>Stare raporty (<code>raport-badacze.html</code>, <code>raport-playtest-1-3.html</code>, <code>raport-scenariusz-2.*</code>, <code>raport-scenariusze-1-3.*</code>).</li>
+</ul>
+<h3>Dodać lub uzupełnić</h3>
+<ul>
+<li>Pola Zwycięstwo w scenariuszu 3 (Koza, Gońce, Tunele).</li>
+<li>Efekt, który daje badaczom Kleszcza (Ogród Botaniczny, Akt 3), i warunek odwrócenia Dalbora.</li>
+<li>W Księdze (przygotowanie s3): odłożenie na bok Czarnej Kozy i Gońców; Artykuły Kuriera w talii; wpisy Dziennika z s1.</li>
+<li>Na Kartach Scenariusza s2 i s3: kiedy używa się rewersu z żetonami.</li>
+<li>Brakujące symbole połączeń na drugiej karcie każdej z 11 par w s3; te same ikony na obu stronach.</li>
+</ul>
+
+<h2 id="metoda">Metoda</h2>
+<p>To nie jest silnik zasad Arkham Horror LCG. Cztery skrypty w <code>tools/</code>: <code>cards_data.py</code> czyta liczby z plików kart, <code>investigators.py</code> koduje zdolności czwórki badaczy zdanie po zdaniu, <code>scenario13_model.py</code> i <code>scenario2_model.py</code> grają tysiące uproszczonych rozgrywek (efekty kart spotkań zakodowane z cytatem, polityka graczy = lista priorytetów), <code>campaign_model.py</code> spina scenariusze, PD, traumy i ulepszenia. Talie graczy to profile starterów arkhamdb (średnie ikony, liczba broni, leczenie); karty nie są zagrywane.</p>
+<h3>Powtórzenie</h3>
+<pre>cd D:/arkham/Arkham
+set PYTHONHASHSEED=0
+set ARKHAM_PROFILES=custom          # własna ekipa; bez zmiennej: arkhamdb
+python tools/custom_investigators.py build
+python tools/scenario13_model.py values          # tabela wartości z kart
+python tools/scenario13_model.py sim 1 --games 1500
+python tools/scenario2_model.py sim --games 1500 --variant A
+python tools/scenario2_model.py sim --games 1500 --variant B
+python tools/scenario13_model.py sim 3 --games 600
+python tools/scenario13_model.py sim 3 --games 600 --tweak GONIEC_DMG=0
+python tools/scenario13_model.py sim 3 --games 600 --tweak KOZA_IN_DECK=1
+python tools/scenario13_model.py sim 3 --games 600 --tweak AKT_DOOM=0
+python tools/campaign_model.py run --variant A --campaigns 400
+python tools/campaign_model.py narrate --variant A --seed 7
+python tools/campaign_model.py xp
+python tools/arkham_cards.py lint .</pre>
+<p class="small">Selftesty: <code>python tools/cards_data.py --selftest</code>, <code>python tools/investigators.py</code>, <code>python tools/scenario2_model.py --selftest</code>, <code>python tools/scenario13_model.py --selftest</code>, <code>python tools/campaign_model.py --selftest</code>. Zmiany w narzędziach są w drzewie roboczym, niezacommitowane.</p>
+
+</main>
+</div>
 <script>
 (function(){
-  var btns=document.querySelectorAll('.filters button'),items=document.querySelectorAll('#findings .f'),cnt=document.getElementById('cnt');
-  function apply(sev){var n=0;items.forEach(function(li){var show=sev==='all'||li.dataset.sev===sev;li.hidden=!show;if(show)n++;});cnt.textContent=n+' z '+items.length;}
-  btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');apply(b.dataset.sev);});});
-  apply('all');
+  var btns=document.querySelectorAll('.filters button');
+  var items=document.querySelectorAll('#lista .finding');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    items.forEach(function(it){it.hidden=!(f==='all'||it.getAttribute('data-s')===f);});
+  });});
 })();
 </script>
