@@ -14,7 +14,7 @@
     "Tkanka",
     "Przeszkoda"
   ],
-  "body": "Dołącz do twojej lokacji.\nStała: Zwiększ koszt wykonania akcji Ruch (by wyjść z tej lokacji lub do niej wejść) o 1 dodatkową akcję.\n<act> Wykonaj test <com> (3) lub <agi> (3). Jeśli test zakończy się sukcesem, odrzuć Mięsne Pnącza.",
+  "body": "Dołącz do twojej lokalizacji.\nStała: Zwiększ koszt wykonania akcji Ruch (by wyjść z tej lokalizacji lub do niej wejść) o 1 dodatkową akcję.\n<act> Wykonaj test <com> (3) lub <agi> (3). Jeśli test zakończy się sukcesem, odrzuć Mięsne Pnącza.",
   "flavor": "Wiją się jak węże, ale w dotyku są ciepłe i pulsujące.",
   "tts_config": {
     "version": "v2",

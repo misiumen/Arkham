@@ -19,7 +19,7 @@
     "Istota",
     "Fabularny"
   ],
-  "body": "Jeden z badaczy dodaje tę kartę do talii po Rozwiązaniu 1a (Z1) scenariusza 2 – pokonanie Arcykapłana Odrodzonej Warty.\n<for> Gdy Wdzięczne Żyjątko opuści grę: Usuń je z rozgrywki.\n<rea> Gdy wróg z cechą Narośl lub Potwór wchodzi do gry w twojej lokacji, wyczerp Wdzięczne Żyjątko: ten wróg wchodzi do gry wyczerpany.\n<rea> Gdy ujawnisz żeton <cur>, wyczerp Wdzięczne Żyjątko: traktuj ten żeton jak 0.",
+  "body": "Jeden z badaczy dodaje tę kartę do talii po Rozwiązaniu 1a (Z1) scenariusza 2, jeśli w Dzienniku Kampanii zapisano „Wdzięczne Żyjątko dołączyło do badaczy”.\n<for> Gdy Wdzięczne Żyjątko opuści grę: Usuń je z rozgrywki.\n<rea> Gdy wróg z cechą Narośl lub Potwór wchodzi do gry w twojej lokalizacji, wyczerp Wdzięczne Żyjątko: ten wróg wchodzi do gry wyczerpany.\n<rea> Gdy ujawnisz żeton <cur>, wyczerp Wdzięczne Żyjątko: traktuj ten żeton jak 0.",
   "flavor": "Patrzy na ciebie z wdzięcznością, jakby wiedziało, kto rozbił ołtarz. Ilekroć rzeka szepcze, kuli się przy twojej nodze.",
   "footer_copyright": "",
   "slots": "盟友",

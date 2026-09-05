@@ -18,7 +18,7 @@
     "Przedmiot",
     "Zapas"
   ],
-  "body": "<for> Gdy Zapas Paliwa opuści grę: Usuń go z rozgrywki.\n<rea> Gdy badacz w twojej lokacji wykonuje test ruchu atutem Barka Jadwiga, wyczerp Zapas Paliwa: ten badacz dostaje +1 do tego testu.\nOdrzuć Zapas Paliwa: wpłynięcie Barką Jadwiga do lokacji Rozlewiska Dębiny nie kosztuje dodatkowej akcji.\n<act> Odrzuć Zapas Paliwa: spal i odrzuć 1 kartę z cechą <t>Tkanka</t> dołączoną do twojej lokacji.",
+  "body": "<for> Gdy Zapas Paliwa opuści grę: Usuń go z rozgrywki.\n<rea> Gdy badacz w twojej lokalizacji wykonuje test ruchu atutem Barka Jadwiga, wyczerp Zapas Paliwa: ten badacz dostaje +1 do tego testu.\nOdrzuć Zapas Paliwa: wpłynięcie Barką Jadwiga do lokalizacji Rozlewiska Dębiny nie kosztuje dodatkowej akcji.\n<act> Odrzuć Zapas Paliwa: spal i odrzuć 1 kartę z cechą <t>Tkanka</t> dołączoną do twojej lokalizacji.",
   "flavor": "Ropa śmierdzi rybą i czymś jeszcze. Ale silnik „Jadwigi\" nie jest wybredny.",
   "footer_copyright": "",
   "encounter_group": "c",

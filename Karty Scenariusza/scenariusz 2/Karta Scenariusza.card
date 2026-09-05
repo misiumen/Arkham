@@ -13,8 +13,8 @@
     "subtitle": "Trudny / Ekspert",
     "scenario_type": 0,
     "scenario_card": {
-      "skull": "-X. X to liczba kart Tkanki w twojej lokacji minus 2.",
-      "cultist": "-3. Jeśli w twojej lokacji znajduje się mniej niż 2 karty Tkanki, dobierz wierzchnią kartę z Talii Tkanek i dołącz ją do swojej lokacji. W przeciwnym wypadku (jeśli jest już pełna), otrzymujesz 1 przerażenie.",
+      "skull": "-X. X to liczba kart Tkanki w twojej lokalizacji minus 2.",
+      "cultist": "-3. Jeśli w twojej lokalizacji znajduje się mniej niż 2 karty Tkanki, dobierz wierzchnią kartę z Talii Tkanek i dołącz ją do swojej lokalizacji. W przeciwnym wypadku (jeśli jest już pełna), otrzymujesz 1 przerażenie.",
       "tablet": "-4. Jeśli test zakończy się porażką, odrzuć 1 losową kartę z ręki i otrzymujesz 1 obrażenie.",
       "elder_thing": "-5. Jeśli test zakończy się porażką, Arcykapłan lub Lewiatan leczy 2 obrażenia LUB (jeśli jest w pełni zdrowy) wykonuje natychmiastowy atak przeciwko badaczowi w zwarciu."
     },
@@ -22,8 +22,8 @@
   },
   "body": "Gdy Talia Tkanek jest pusta, przetasujcie odrzucone karty Tkanki i utwórzcie z nich nową Talię Tkanek.\nGdy talia spotkań się wyczerpie, przetasujcie stos odrzuconych kart spotkań w nową talię – pamiętajcie o kartach, które na to reagują (Kokon Młodego, Akt 4 Wariant A).",
   "scenario_card": {
-    "skull": "-X. X to liczba kart Tkanki w twojej lokacji minus 1.",
-    "cultist": "-2. Jeśli test zakończy się porażką, a w twojej lokacji znajduje się mniej niż 2 karty Tkanki, dobierz wierzchnią kartę z Talii Tkanek i dołącz ją do swojej lokacji.",
+    "skull": "-X. X to liczba kart Tkanki w twojej lokalizacji minus 1.",
+    "cultist": "-2. Jeśli test zakończy się porażką, a w twojej lokalizacji znajduje się mniej niż 2 karty Tkanki, dobierz wierzchnią kartę z Talii Tkanek i dołącz ją do swojej lokalizacji.",
     "tablet": "-3. Jeśli test zakończy się porażką, otrzymujesz 1 obrażenie.",
     "elder_thing": "-4. Jeśli w grze znajduje się Arcykapłan lub Lewiatan, ten test automatycznie kończy się porażką w przypadku remisu."
   },

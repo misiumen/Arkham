@@ -17,7 +17,7 @@
     "Pułapka",
     "Mechanizm"
   ],
-  "body": "<p>Podczas przygotowania wyłóżcie tę kartę w grze przy lokacji, do której blokuje wpłynięcie. Ta karta nie trafia do talii spotkań.\nKarta pozostaje w grze.\nNie można wpłynąć atutem Barka Jadwiga do lokacji Most Chwaliszewski.\n<act> Badacz w lokacji Rozlewiska Dębiny wykonuje test <agi>(4): Jeśli udany, przenieście Barkę Jadwiga do lokacji Most Chwaliszewski. Jeśli nieudany, Barka Jadwiga otrzymuje 2 uszkodzenia, a ruch zostaje anulowany.\n<act> Badacz w lokacji Rozlewiska Dębiny odrzuca z gry kontrolowany atut Skrzynia Dynamitu: Przenieście Barkę Jadwiga do lokacji Most Chwaliszewski. Dodajcie tę kartę do Puli Zwycięstwa.</p>",
+  "body": "<p>Podczas przygotowania wyłóżcie tę kartę w grze przy lokalizacji, do której blokuje wpłynięcie. Ta karta nie trafia do talii spotkań.\nKarta pozostaje w grze.\nNie można wpłynąć atutem Barka Jadwiga do lokalizacji Most Chwaliszewski.\n<act> Badacz w lokalizacji Rozlewiska Dębiny wykonuje test <agi>(4): Jeśli udany, przenieście Barkę Jadwiga do lokalizacji Most Chwaliszewski. Jeśli nieudany, Barka Jadwiga otrzymuje 2 uszkodzenia, a ruch zostaje anulowany.\n<act> Badacz w lokalizacji Rozlewiska Dębiny odrzuca z gry kontrolowany atut Skrzynia Dynamitu: Przenieście Barkę Jadwiga do lokalizacji Most Chwaliszewski. Dodajcie tę kartę do Puli Zwycięstwa.</p>",
   "victory": 1,
   "flavor": "Zardzewiałe kule kołyszą się tuż pod lustrem wody. Pamiątka po wielkiej wojnie, która tylko czeka na jeden fałszywy ruch sterem.",
   "tts_config": {

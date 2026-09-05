@@ -20,7 +20,7 @@
     "Relikt",
     "Fabularny"
   ],
-  "body": "Jeden z badaczy dodaje tę kartę do talii po Rozwiązaniu 1b (Z2) scenariusza 2 – zniszczenie Mostu Chwaliszewskiego.\n<for> Gdy Żebro Lewiatana opuści grę: Usuń je z rozgrywki.\n<act> 【Walka】. Dostajesz +2 do <com> w tym ataku. Jeśli atak zakończy się sukcesem, zadaj +1 obrażenie. Jeśli atakujesz wroga z cechą Narośl, Potwór lub Rzeka, ten atak zadaje dodatkowo +1 obrażenie.",
+  "body": "Jeden z badaczy dodaje tę kartę do talii po Rozwiązaniu 1b (Z2) scenariusza 2, jeśli w Dzienniku Kampanii zapisano „Żebro Lewiatana trafiło do badaczy”.\n<for> Gdy Żebro Lewiatana opuści grę: Usuń je z rozgrywki.\n<act> 【Walka】. Dostajesz +2 do <com> w tym ataku. Jeśli atak zakończy się sukcesem, zadaj +1 obrażenie. Jeśli atakujesz wroga z cechą Narośl, Potwór lub Rzeka, ten atak zadaje dodatkowo +1 obrażenie.",
   "flavor": "Twarde jak stal mostu, który je złamał. Wciąż pulsuje, kiedy w pobliżu płynie Warta.",
   "footer_copyright": "",
   "slots": "手部",
