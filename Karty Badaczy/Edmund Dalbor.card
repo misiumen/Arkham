@@ -34,7 +34,8 @@
     "traits": [
       "Łowca"
     ],
-    "flavor": "\"Las... Dam ja wszystkim wam, moi wierni poddani!\""
+    "flavor": "\"Las... Dam ja wszystkim wam, moi wierni poddani!\"",
+    "name": "Edmund Dalbor I Mleczny"
   },
   "subtitle": "Arcybiskup",
   "class": "中立",
@@ -73,5 +74,5 @@
     "version": "v2",
     "script_id": "6E8971DB"
   },
-  "content_hash": "378ef307992c24e6bb16188cd05681b82d223e82ee8312b3e0b3e8af188437a0"
+  "content_hash": "53114bf2ee74bd877d6469335203a14a14d8b802d0c8d655b379e94b3a73e0d2"
 }

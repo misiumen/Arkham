@@ -14,13 +14,13 @@
     "flavor": "Kleszcz wyjaśnia: \"To mleko Shub-Niggurath. Zmienia DNA. Oni chcą to rozlać do butelek i nakarmić tym miasto. Centrum dystrybucji to Mleczarnia na Ogrodowej\".",
     "serial_number": "3",
     "name": "Czarna koza białe mleko daje",
-    "body": "Z wybranej lokalizacji usuń 1 żeton chaosu."
+    "body": "Z wybranej lokalizacji usuń 2 żetony zagłady."
   },
   "tts_config": {
     "version": "v2",
     "script_id": "2FD1CFB0"
   },
-  "content_hash": "aa74c5e04a894ee74ad209bb254b7acdc0346d006a6438f08600be5e4ee28017",
+  "content_hash": "31fe88c134bdb8c1e3d292884db21615e0c377356d683f50dbe3b9d1a38f1943",
   "flavor": "Ślad prowadzi na Uniwersytet. Biblioteka jest zamknięta, a w Ogrodzie Botanicznym (połączonym z Sołaczem) panuje nienaturalny rozkwit. Rośliny w środku zimy kwitną i... krwawią białym sokiem. Prof. Kleszcz nie jest szalonym kultystą – jest przerażonym naukowcem, który zrozumiał, co odkrył, i ukrył się w szklarni, by szukać antidotum.",
   "serial_number": "3",
   "encounter_group": "f",
