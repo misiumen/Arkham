@@ -149,7 +149,7 @@ class Base:
                      health=p["health"] + p.get("allies", 0),
                      sanity=p["sanity"] + p.get("allies", 0))
             if p.get("weapons"):
-                i["wil" if p.get("faction") == "mystic" else "com"] += 1
+                i["wil" if (p.get("faction") == "mystic" and p["wil"] >= p["com"]) else "com"] += 1
             if p.get("faction") == "seeker":
                 i["int"] += 1
             self.inv.append(i)
@@ -176,7 +176,9 @@ class Base:
         return [i for i in self.alive() if i["loc"] == loc]
 
     def fight_skill(self, inv):
-        return "wil" if inv.get("faction") == "mystic" and inv["weapons"] else "com"
+        if inv.get("faction") == "mystic" and inv["weapons"] and inv["wil"] >= inv["com"]:
+            return "wil"
+        return "com"
 
     def fight_value(self, inv):
         sk = self.fight_skill(inv)
@@ -200,6 +202,7 @@ class Base:
         steps = self.rng.choice([1, 2, 2, 3])
         inv["actions"] -= steps - 1
         inv["loc"] = dest
+        inv["moved"] = True
         self.log["ruch (%d akcji)" % steps] += 1
         return True
 
@@ -209,6 +212,9 @@ class Base:
             base += round(inv["icons"][{"wil": "willpower", "int": "intellect",
                                         "com": "combat", "agi": "agility"}[skill]])
             inv["hand"] -= 1
+            inv["committed"] = True
+        if inv.get("phase_bonus") and not inv.get("phase_used"):
+            base += inv["phase_bonus"]; inv["phase_used"] = True
         tok = self.rng.choice(CHAOS_BAG)
         v = token_value(tok, self.ctx(inv["loc"]))
         rec = self.tests[name or skill]
@@ -283,6 +289,12 @@ class Base:
             e["exhausted"] = False
         for i in self.alive():
             i["hand"] = min(8, i["hand"] + 1)
+            if i.get("move_or_horror") and not i.get("moved"):
+                self.hurt(i, 0, 1, "Toksyczny Gomez (bez ruchu)")
+            i["moved"] = False
+            if i.get("heal_on_commit") and i.get("committed") and i["dmg"] > 0:
+                i["dmg"] -= 1
+            i["committed"] = False
             if i["heal_cards"] and self.rng.random() < i["heal_cards"] / i["cards"]:
                 if i["dmg"] > 0:
                     i["dmg"] -= 1
@@ -291,6 +303,13 @@ class Base:
 
     def doom_total(self):
         return self.doom
+
+    def weakness(self, inv):
+        inv["phase_used"] = False
+        inv.setdefault("weak_round", self.rng.randint(2, 8))
+        if inv.get("weakness_horror") and inv["weak_round"] == self.round and not inv.get("weak_done"):
+            inv["weak_done"] = True
+            self.hurt(inv, 0, inv["weakness_horror"], "wlasna slabosc")
 
     def add_doom(self, n=1):
         self.doom += n
@@ -308,8 +327,13 @@ class Base:
                 break
             for i in sorted(self.alive(), key=lambda x: -self.fight_value(x)):
                 i["actions"] = 3
+                i["phase_used"] = False
                 while i["actions"] > 0 and i["alive"] and not self.result:
                     i["actions"] -= 1
+                    if i["actions"] == 0 and i.get("move_or_horror") and not i.get("moved"):
+                        i["moved"] = True   # Gomez: ostatnia akcja tury na przejscie sie
+                        self.log["Gomez: akcja ruchu"] += 1
+                        continue
                     self.act_once(i)
                 if self.check_end():
                     break
@@ -386,6 +410,7 @@ class Game1(Base):
         return Base.move_to(self, inv, dest)
 
     def draw_encounter(self, inv):
+        self.weakness(inv)
         if not self.deck:
             self.deck, self.discard = self.discard, []
             self.rng.shuffle(self.deck)
@@ -538,7 +563,7 @@ class Game1(Base):
                     if loc != "Kosciol":
                         self.move_to(inv, "Kosciol")
                         return
-                    ok, _ = self.test(inv, "int", self.shroud["Kosciol"], name="badanie Kosciola")
+                    ok, _ = self.test(inv, "int", max(0, self.shroud["Kosciol"] + inv.get("shroud_mod", 0)), name="badanie Kosciola")
                     if ok:
                         self.clues["Kosciol"] -= 1
                         self.pool += 1
@@ -565,7 +590,7 @@ class Game1(Base):
     def explore_or_investigate(self, inv):
         loc = inv["loc"]
         if self.clues[loc] > 0:
-            ok, _ = self.test(inv, "int", self.shroud[loc], name="badanie")
+            ok, _ = self.test(inv, "int", max(0, self.shroud[loc] + inv.get("shroud_mod", 0)), name="badanie")
             if ok:
                 self.clues[loc] -= 1
                 self.pool += 1
@@ -633,6 +658,9 @@ class Game3(Base):
             base += round(inv["icons"][{"wil": "willpower", "int": "intellect",
                                         "com": "combat", "agi": "agility"}[skill]])
             inv["hand"] -= 1
+            inv["committed"] = True
+        if inv.get("phase_bonus") and not inv.get("phase_used"):
+            base += inv["phase_bonus"]; inv["phase_used"] = True
         tok = self.rng.choice(CHAOS_BAG)
         v = tok if isinstance(tok, int) else self.token_mod(tok, inv["loc"])
         rec = self.tests[name or skill]
@@ -666,6 +694,7 @@ class Game3(Base):
         return e
 
     def draw_encounter(self, inv):
+        self.weakness(inv)
         if not self.deck:
             self.deck, self.discard = self.discard, []
             self.rng.shuffle(self.deck)
@@ -918,7 +947,7 @@ class Game3(Base):
             sh = self.shroud[loc]
             if loc == "Mleczarnia Spoldzielcza":
                 sh += 2 * len(self.at(loc))   # "+2 zaslony za kazdego badacza w tej lokacji"
-            ok, _ = self.test(inv, "int", sh, name="badanie")
+            ok, _ = self.test(inv, "int", max(0, sh + inv.get("shroud_mod", 0)), name="badanie")
             if ok:
                 self.clues[loc] -= 1
                 self.pool += 1

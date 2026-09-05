@@ -169,7 +169,7 @@ class Game:
                     for p in profiles]
         for i in self.inv:
             if i.get("weapons"):
-                i["wil" if i.get("faction") == "mystic" else "com"] += 1
+                i["wil" if (i.get("faction") == "mystic" and i["wil"] >= i["com"]) else "com"] += 1
         self.barge_idx = 0
         self.barge_hp = BARGE_HP
         self.barge_moved = False
@@ -223,6 +223,9 @@ class Game:
             base += round(inv["icons"][{"wil": "willpower", "int": "intellect",
                                         "com": "combat", "agi": "agility"}[skill]])
             inv["hand"] -= 1
+            inv["committed"] = True
+        if inv.get("phase_bonus") and not inv.get("phase_used"):
+            base += inv["phase_bonus"]; inv["phase_used"] = True
         difficulty += len([t for t in self.tissues[loc] if t == "gabczasta"])
         if loc == "Skazony Nurt" and self.tissues[loc]:
             difficulty += 1
@@ -368,6 +371,11 @@ class Game:
         for i in list(self.alive()):
             if self.result:
                 return
+            i["phase_used"] = False
+            if i.get("weakness_horror") and i.get("weak_round", self.rng.randint(2, 8)) == self.round and not i.get("weak_done"):
+                i["weak_done"] = True
+                self.hurt(i, 0, i["weakness_horror"], "wlasna slabosc")
+            i.setdefault("weak_round", self.rng.randint(2, 8))
             self.draw_encounter(i)
 
     # --- faza badaczy: polityka ---------------------------------------------
@@ -378,7 +386,10 @@ class Game:
                    default=None)
 
     def fight_skill(self, inv):
-        return "wil" if inv.get("faction") == "mystic" and inv.get("weapons") else "com"
+        # mistyk z zaklaciami walczy wola, chyba ze walka jest lepsza (Michal: com 4, wil 2)
+        if inv.get("faction") == "mystic" and inv.get("weapons") and inv["wil"] >= inv["com"]:
+            return "wil"
+        return "com"
 
     def fight_p(self, inv, enemy):
         sk = self.fight_skill(inv)
@@ -455,7 +466,7 @@ class Game:
             self.barge_idx += 1
             self.barge_moved = True
             for i in crew:
-                i["loc"] = nxt
+                i["loc"] = nxt; i["moved"] = True
             self.log["ruch barki"] += 1
             if nxt == "Most Chwaliszewski":
                 if self.variant == "A":
@@ -523,7 +534,7 @@ class Game:
         self.barge_idx += 1
         self.barge_moved = True
         for i in crew:
-            i["loc"] = nxt
+            i["loc"] = nxt; i["moved"] = True
         if nxt == "Most Chwaliszewski":
             if self.variant == "A":
                 self.boss = self.spawn("arcykaplan", nxt)
@@ -558,11 +569,16 @@ class Game:
             return ("Zrujnowany Fort", "dynamit") if self.barge_loc == "Rozlewiska Debiny" else None
 
     def investigator_turn(self, inv):
+        inv["phase_used"] = False
         inv["actions"] = 3 - (1 if inv.pop("lost_action", False) else 0)
         if self.kara and self.round == 1:
             inv["actions"] -= 1
         while inv["actions"] > 0 and inv["alive"] and not self.result:
             inv["actions"] -= 1
+            if inv["actions"] == 0 and inv.get("move_or_horror") and not inv.get("moved"):
+                inv["moved"] = True   # Gomez: ostatnia akcja tury na przejscie sie (1 akcja < 1 przerazenie)
+                self.log["Gomez: akcja ruchu"] += 1
+                continue
             self.act(inv)
 
     def act(self, inv):
@@ -626,7 +642,7 @@ class Game:
             shore, task = plan
             if loc == self.barge_loc:
                 if inv is self.best("int" if task == "totem" else "com"):
-                    inv["loc"] = shore; self.log["wyprawa na pobrzeze"] += 1
+                    inv["loc"] = shore; inv["moved"] = True; self.log["wyprawa na pobrzeze"] += 1
                     if task == "kierownik" and not any(e["kind"] == "kierownik" for e in self.enemies):
                         self.spawn("kierownik", shore, engaged=inv)
                     return
@@ -653,7 +669,7 @@ class Game:
                     inv["loc"] = self.barge_loc
                     return
         if loc != self.barge_loc:
-            inv["loc"] = self.barge_loc   # wracaj na barke
+            inv["loc"] = self.barge_loc; inv["moved"] = True   # wracaj na barke
             return
         # 5. ruch barki (raz na runde) - jesli droga wolna albo bariera do przejscia
         if not self.barge_moved and self.barge_idx + 1 < len(RIVER):
@@ -676,7 +692,7 @@ class Game:
                     return
         # 6. wskazowki
         if self.clues[loc] > 0:
-            shroud = SHROUD[loc] + (2 if "oczy" in self.tissues[loc] else 0)
+            shroud = max(0, SHROUD[loc] + (2 if "oczy" in self.tissues[loc] else 0) + inv.get("shroud_mod", 0))
             ok, _ = self.test(inv, "int", shroud, name="badanie")
             if ok:
                 self.clues[loc] -= 1; self.pool_clues += 1
@@ -737,6 +753,12 @@ class Game:
                     self.hurt(i, 1, 0, "Zraca Grzybnia")
         for i in self.alive():
             i["hand"] = min(8, i["hand"] + 1)
+            if i.get("move_or_horror") and not i.get("moved"):
+                self.hurt(i, 0, 1, "Toksyczny Gomez (bez ruchu)")
+            i["moved"] = False
+            if i.get("heal_on_commit") and i.get("committed") and i["dmg"] > 0:
+                i["dmg"] -= 1
+            i["committed"] = False
             if i["loc"] == "Pradawne Deby":
                 ok, _ = self.test(i, "wil", 3, name="Deby: wil(3)")
                 if not ok:
@@ -781,7 +803,11 @@ class Game:
 # TRYBY
 # ============================================================================
 def load_profiles():
-    return json.loads(io.open(PROFILES, encoding="utf-8").read())
+    """ARKHAM_PROFILES=custom -> profiles_custom.json (wlasni badacze z Karty Badaczy/)."""
+    path = PROFILES
+    if os.environ.get("ARKHAM_PROFILES") == "custom":
+        path = os.path.join(CACHE, "arkhamdb", "profiles_custom.json")
+    return json.loads(io.open(path, encoding="utf-8").read())
 
 
 def cmd_tempo(profiles):
