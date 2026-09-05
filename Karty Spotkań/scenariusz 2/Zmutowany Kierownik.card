@@ -1,6 +1,7 @@
 {
   "type": "敌人卡",
   "name": "Zmutowany Kierownik",
+  "victory": 1,
   "id": "",
   "created_at": "",
   "version": "2.0",

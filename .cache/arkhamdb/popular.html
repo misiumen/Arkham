@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Popular Decklists &middot; ArkhamDB</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Light mode favicon -->
+    <link rel="icon" sizes="192x192" href="/icon-light-192.png" media="(prefers-color-scheme: light)" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icon-light-120.png" media="(prefers-color-scheme: light)" />
+
+    <!-- Dark mode favicon -->
+    <link rel="icon" sizes="192x192" href="/icon-dark-192.png" media="(prefers-color-scheme: dark)" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icon-dark-120.png" media="(prefers-color-scheme: dark)" />
+
+        <meta name="description" content="Browse the collection of thousands of premade decks.">        
+    <link href='https://fonts.googleapis.com/css?family=Amiri:400,400italic,700,700italic|Julius+Sans+One|Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.9.0/css/bootstrap-markdown.min.css">
+        <link rel="stylesheet" href="/css/app.css" />
+		<!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+	  </head>
+  <body>
+  <div id="wrapper">
+      <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+                  <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            <span class="icon icon-link-half-top"></span>
+            <span class="icon icon-link-half-bottom"></span>
+            <span class="icon icon-eldersign"></span> ArkhamDB
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/decks">My Decks</a></li>
+            <li><a href="/decklists">Decklists</a></li>
+            <li><a href="/search">Cards</a></li>
+            <li class="hidden-sm"><a href="/reviews">Reviews</a></li>
+            <li class="hidden-sm"><a href="/rules">Rules</a></li>
+            <li class="hidden-sm"><a href="/faqs">FAQs</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown hidden-xs hidden-lg">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-search"></span></a>
+                <div class="dropdown-menu">
+                  <form action="/find" target="_blank">
+                    <input type="text" placeholder="Card Search" class="form-control" name="q">
+                  </form>
+              </div>
+            </li>
+
+            <!-- locale selection -->
+
+                                                                        <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                <span class="lang-sm" lang="en"></span>
+                <span class="caret">
+              </a>
+              <ul class="dropdown-menu">
+                                  <li>
+                    <a href="/decklists">
+                      <span lang="en" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://es.arkhamdb.com/decklists">
+                      <span lang="es" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://de.arkhamdb.com/decklists">
+                      <span lang="de" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://it.arkhamdb.com/decklists">
+                      <span lang="it" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://fr.arkhamdb.com/decklists">
+                      <span lang="fr" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://ko.arkhamdb.com/decklists">
+                      <span lang="ko" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://uk.arkhamdb.com/decklists">
+                      <span lang="uk" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://pl.arkhamdb.com/decklists">
+                      <span lang="pl" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://ru.arkhamdb.com/decklists">
+                      <span lang="ru" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://zh.arkhamdb.com/decklists">
+                      <span lang="zh" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                                  <li>
+                    <a href="https://pt.arkhamdb.com/decklists">
+                      <span lang="pt" class="lang-sm lang-lbl lang-lbl-full"></span>
+                    </a>
+                  </li>
+                              </ul>
+            </li>
+                        
+            <li id="login">
+                <a href="#" class="disabled"><span class="fa fa-user"></span></a>
+            </li>
+
+
+          </ul>
+          <form class="navbar-form navbar-right visible-lg-block visible-xs-block external" action="/find" target="_blank">
+            <div class="form-group">
+              <input type="text" placeholder="Card Search" class="form-control" name="q">
+            </div>
+          </form>
+        </div><!--/.navbar-collapse -->
+              </div>
+    </nav>
+
+<div class="main white container">
+<div class="row">
+<div class="col-md-3">
+<!--
+<ul class="nav nav-pills nav-stacked" style="margin-bottom:2em">
+	<li class=""><a href="/decklists">Popular</a></li>
+	<li class=""><a href="/decklists/recent">Recent</a></li>
+	<li class=""><a href="/decklists/hottopics">Hot topics</a></li>
+	<li class=""><a href="/decklists/solo">Solo</a></li>
+	<li class=""><a href="/decklists/multiplayer">Multiplayer</a></li>
+	<li class=""><a href="/decklists/beginner">Beginner</a></li>
+	<li class=""><a href="/decklists/theme">Theme</a></li>
+	<li class=""><a href="/decklists/halloffame">Hall of Fame</a></li>
+	<li class=""><a href="/decklists/favorites">My favorites</a></li>
+	<li class=""><a href="/decklists/mine">My decklists</a></li>
+	<li class=""><a href="/decklists/search"><span class="fa fa-search"></span> Search</a></li>
+</ul>
+-->
+</div>
+
+<div>
+	<div>
+		<form method="GET" action="/decklists" role="form" id="decklist-search-form">
+			<header style="padding: 0.5rem;">
+				<div class="quick-search-decklists">
+	<select class="form-control" id="decklist-quick-category" name="category">
+		<option  value="">All Decklists</option>
+		<option  value="favorites">My favorites</option>
+		<option  value="mine">My decklists</option>
+	</select>
+
+	<select class="form-control" id="decklist-quick-investigator" name="investigator">
+		<option value="">Any investigator</option>
+				<option value="02005">
+			&quot;Ashcan&quot; Pete 
+		</option>
+				<option value="01003">
+			&quot;Skids&quot; O&#039;Toole 
+		</option>
+				<option value="11008">
+			Agatha Crane 
+		</option>
+				<option value="11007">
+			Agatha Crane 
+		</option>
+				<option value="01004">
+			Agnes Baker 
+		</option>
+				<option value="03004">
+			Akachi Onyele 
+		</option>
+				<option value="10009">
+			Alessandra Zorzi 
+		</option>
+				<option value="07002">
+			Amanda Sharpe 
+		</option>
+				<option value="09011">
+			Amina Zidane 
+		</option>
+				<option value="60351">
+			André Patel (Chapter 2)
+		</option>
+				<option value="08016">
+			Bob Jenkins 
+		</option>
+				<option value="04005">
+			Calvin Wright 
+		</option>
+				<option value="60251">
+			Carolyn Fern (Chapter 2)
+		</option>
+				<option value="05001">
+			Carolyn Fern 
+		</option>
+				<option value="09001">
+			Carson Sinclair 
+		</option>
+				<option value="09018">
+			Charlie Kane 
+		</option>
+				<option value="01002">
+			Daisy Walker 
+		</option>
+				<option value="12001">
+			Daniela Reyes (Chapter 2)
+		</option>
+				<option value="08001">
+			Daniela Reyes 
+		</option>
+				<option value="09015">
+			Darrell Simmons 
+		</option>
+				<option value="07004">
+			Dexter Drake 
+		</option>
+				<option value="12010">
+			Dexter Drake (Chapter 2)
+		</option>
+				<option value="05004">
+			Diana Stanley 
+		</option>
+				<option value="04004">
+			Father Mateo 
+		</option>
+				<option value="04003">
+			Finn Edwards 
+		</option>
+				<option value="11017">
+			George Barnaby 
+		</option>
+				<option value="11014">
+			Gloria Goldberg 
+		</option>
+				<option value="10015">
+			Hank Samson 
+		</option>
+				<option value="60201">
+			Harvey Walters 
+		</option>
+				<option value="12013">
+			Isabelle Barnes (Chapter 2)
+		</option>
+				<option value="60401">
+			Jacqueline Fine 
+		</option>
+				<option value="02003">
+			Jenny Barnes 
+		</option>
+				<option value="02004">
+			Jim Culver 
+		</option>
+				<option value="12004">
+			Joe Diamond (Chapter 2)
+		</option>
+				<option value="05002">
+			Joe Diamond 
+		</option>
+				<option value="10004">
+			Kate Winthrop 
+		</option>
+				<option value="10012">
+			Kōhaku Narukami 
+		</option>
+				<option value="09008">
+			Kymani Jones 
+		</option>
+				<option value="04001">
+			Leo Anderson 
+		</option>
+				<option value="08010">
+			Lily Chen 
+		</option>
+				<option value="03006">
+			Lola Hayes 
+		</option>
+				<option value="11004">
+			Lucius Galloway 
+		</option>
+				<option value="06004">
+			Luke Robinson 
+		</option>
+				<option value="06002">
+			Mandy Thompson 
+		</option>
+				<option value="05006">
+			Marie Lambeau 
+		</option>
+				<option value="60451">
+			Marie Lambeau (Chapter 2)
+		</option>
+				<option value="11001">
+			Marion Tavares 
+		</option>
+				<option value="03001">
+			Mark Harrigan 
+		</option>
+				<option value="11011">
+			Michael McGlen 
+		</option>
+				<option value="60551">
+			Miguel de la Cruz (Chapter 2)
+		</option>
+				<option value="03002">
+			Minh Thi Phan 
+		</option>
+				<option value="08007">
+			Monterey Jack 
+		</option>
+				<option value="60101">
+			Nathaniel Cho 
+		</option>
+				<option value="08004">
+			Norman Withers 
+		</option>
+				<option value="06005">
+			Patrice Hathaway 
+		</option>
+				<option value="05003">
+			Preston Fairmont 
+		</option>
+				<option value="02002">
+			Rex Murphy 
+		</option>
+				<option value="05005">
+			Rita Young 
+		</option>
+				<option value="01001">
+			Roland Banks 
+		</option>
+				<option value="03003">
+			Sefina Rousseau 
+		</option>
+				<option value="07005">
+			Silas Marsh 
+		</option>
+				<option value="07001">
+			Sister Mary 
+		</option>
+				<option value="60501">
+			Stella Clark 
+		</option>
+				<option value="89001">
+			Subject 5U-21 
+		</option>
+				<option value="60151">
+			Tommy Muldoon (Chapter 2)
+		</option>
+				<option value="06001">
+			Tommy Muldoon 
+		</option>
+				<option value="06003">
+			Tony Morgan 
+		</option>
+				<option value="07003">
+			Trish Scarborough 
+		</option>
+				<option value="12007">
+			Trish Scarborough (Chapter 2)
+		</option>
+				<option value="04002">
+			Ursula Downs 
+		</option>
+				<option value="09004">
+			Vincent Lee 
+		</option>
+				<option value="01005">
+			Wendy Adams 
+		</option>
+				<option value="03005">
+			William Yorick 
+		</option>
+				<option value="10001">
+			Wilson Richards 
+		</option>
+				<option value="60301">
+			Winifred Habbamock 
+		</option>
+				<option value="02001">
+			Zoey Samaras 
+		</option>
+			</select>
+
+	<select class="form-control" id="decklist-quick-tag" name="tag">
+		<option  value="">All Tags</option>
+		<option  value="solo">Solo</option>
+		<option  value="multiplayer">Multiplayer</option>
+		<option  value="beginner">Beginner</option>
+		<option  value="theme">Theme</option>
+	</select>
+
+	<select class="form-control" id="decklist-quick-collection" name="collection">
+		<option  value="">All Cards</option>
+		<option  value="mine">My Collection (must be logged in)</option>
+	</select>
+
+	<select class="form-control" id="decklist-quick-sort" name="sort">
+		<option  value="">Sort by Popularity</option>
+		<option  value="date">Sort by Date</option>
+		<option  value="activity">Sort by Activity (Hot topics)</option>
+		<option  value="likes">Sort by Number of Likes</option>
+		<option  value="reputation">Sort by Reputation of Author</option>
+	</select>
+</div>
+
+			</header>
+			<div class="advanced">
+				<div class="decklists-advanced-search-toggle" id="toggle-advanced-decklist-search">
+	<span class="fa fa-caret-down"></span><a>Show advanced search</a>
+</div>
+
+<div style="background-color: #ededed; border-radius: 5px; padding: 1rem;" class="decklists-advanced-search ">
+	<form method="GET" action="/decklists/find"
+		role="form">
+		<div class="row" style="margin-bottom:1em">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label for="">Class</label> <select class="form-control" id="faction" name="faction">
+						<option value="">any</option>
+												<option value="guardian">Guardian</option>
+												<option value="mystic">Mystic</option>
+												<option value="mythos">Mythos</option>
+												<option value="neutral">Neutral</option>
+												<option value="rogue">Rogue</option>
+												<option value="seeker">Seeker</option>
+												<option value="survivor">Survivor</option>
+											</select>
+				</div>
+				<div class="form-group">
+					<label for="">Author name</label> <input type="text"
+						class="form-control" id="author" name="author"
+						placeholder="Enter author name" value="">
+				</div>
+				<div class="form-group">
+					<label for="">Decklist name</label> <input type="text"
+						class="form-control" id="name" name="name" value=""
+						placeholder="Enter text to search in name">
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">Search</button>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="">Cards used</label>
+					
+					<input type="text" class="form-control" id="card" placeholder="Enter card name">
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-bottom:1em">
+			<div class="col-sm-12">
+				<p><a id="allowed_collection_packs" href="#allowed_collection_packs">Select packs from your collection</a></p>
+				<p><a data-toggle="collapse" data-target="#allowed_packs" href="#allowed_packs">View allowed packs</a> (<span id="packs-on">114</span> on, <span id="packs-off">1</span> off)</p>
+				<div id="allowed_packs" class="collapse">
+					<a href="#" id="select_all"><span class="fa fa-check"></span> all</a>
+					/ <a href="#" id="select_none"><span class="fa fa-times"></span> none</a>
+					<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 1rem;">
+													<div style="flex: 25%;">
+								<p><small>Core</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-1" type="checkbox" name="packs[]" value="1" checked="checked" >Core Set</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-1-2" type="checkbox" name="packs[]" value="1-2" >Second Core Set</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-76" type="checkbox" name="packs[]" value="76" checked="checked" >Revised Core Set</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Dunwich Legacy</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-2" type="checkbox" name="packs[]" value="2" checked="checked" >The Dunwich Legacy</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-98" type="checkbox" name="packs[]" value="98" checked="checked" >The Dunwich Legacy Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-4" type="checkbox" name="packs[]" value="4" checked="checked" >The Miskatonic Museum</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-99" type="checkbox" name="packs[]" value="99" checked="checked" >The Dunwich Legacy Campaign Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-5" type="checkbox" name="packs[]" value="5" checked="checked" >The Essex County Express</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-8" type="checkbox" name="packs[]" value="8" checked="checked" >Blood on the Altar</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-9" type="checkbox" name="packs[]" value="9" checked="checked" >Undimensioned and Unseen</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-10" type="checkbox" name="packs[]" value="10" checked="checked" >Where Doom Awaits</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-11" type="checkbox" name="packs[]" value="11" checked="checked" >Lost in Time and Space</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Path to Carcosa</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-12" type="checkbox" name="packs[]" value="12" checked="checked" >The Path to Carcosa</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-100" type="checkbox" name="packs[]" value="100" checked="checked" >The Path to Carcosa Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-13" type="checkbox" name="packs[]" value="13" checked="checked" >Echoes of the Past</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-101" type="checkbox" name="packs[]" value="101" checked="checked" >The Path to Carcosa Campaign Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-14" type="checkbox" name="packs[]" value="14" checked="checked" >The Unspeakable Oath</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-15" type="checkbox" name="packs[]" value="15" checked="checked" >A Phantom of Truth</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-16" type="checkbox" name="packs[]" value="16" checked="checked" >The Pallid Mask</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-17" type="checkbox" name="packs[]" value="17" checked="checked" >Black Stars Rise</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-18" type="checkbox" name="packs[]" value="18" checked="checked" >Dim Carcosa</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Forgotten Age</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-20" type="checkbox" name="packs[]" value="20" checked="checked" >The Forgotten Age</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-102" type="checkbox" name="packs[]" value="102" checked="checked" >The Forgotten Age Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-21" type="checkbox" name="packs[]" value="21" checked="checked" >Threads of Fate</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-103" type="checkbox" name="packs[]" value="103" checked="checked" >The Forgotten Age Campaign Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-22" type="checkbox" name="packs[]" value="22" checked="checked" >The Boundary Beyond</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-23" type="checkbox" name="packs[]" value="23" checked="checked" >Heart of the Elders</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-24" type="checkbox" name="packs[]" value="24" checked="checked" >The City of Archives</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-25" type="checkbox" name="packs[]" value="25" checked="checked" >The Depths of Yoth</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-26" type="checkbox" name="packs[]" value="26" checked="checked" >Shattered Aeons</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Circle Undone</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-29" type="checkbox" name="packs[]" value="29" checked="checked" >The Circle Undone</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-104" type="checkbox" name="packs[]" value="104" checked="checked" >The Circle Undone Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-30" type="checkbox" name="packs[]" value="30" checked="checked" >The Secret Name</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-105" type="checkbox" name="packs[]" value="105" checked="checked" >The Circle Undone Campaign Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-31" type="checkbox" name="packs[]" value="31" checked="checked" >The Wages of Sin</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-34" type="checkbox" name="packs[]" value="34" checked="checked" >For the Greater Good</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-35" type="checkbox" name="packs[]" value="35" checked="checked" >Union and Disillusion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-36" type="checkbox" name="packs[]" value="36" checked="checked" >In the Clutches of Chaos</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-37" type="checkbox" name="packs[]" value="37" checked="checked" >Before the Black Throne</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Dream-Eaters</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-38" type="checkbox" name="packs[]" value="38" checked="checked" >The Dream-Eaters</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-106" type="checkbox" name="packs[]" value="106" checked="checked" >The Dream-Eaters Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-40" type="checkbox" name="packs[]" value="40" checked="checked" >The Search for Kadath</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-107" type="checkbox" name="packs[]" value="107" checked="checked" >The Dream-Eaters Campaign Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-41" type="checkbox" name="packs[]" value="41" checked="checked" >A Thousand Shapes of Horror</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-42" type="checkbox" name="packs[]" value="42" checked="checked" >Dark Side of the Moon</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-43" type="checkbox" name="packs[]" value="43" checked="checked" >Point of No Return</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-44" type="checkbox" name="packs[]" value="44" checked="checked" >Where the Gods Dwell</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-45" type="checkbox" name="packs[]" value="45" checked="checked" >Weaver of the Cosmos</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Innsmouth Conspiracy</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-52" type="checkbox" name="packs[]" value="52" checked="checked" >The Innsmouth Conspiracy</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-108" type="checkbox" name="packs[]" value="108" checked="checked" >The Innsmouth Conspiracy Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-56" type="checkbox" name="packs[]" value="56" checked="checked" >In Too Deep</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-109" type="checkbox" name="packs[]" value="109" checked="checked" >The Innsmouth Conspiracy Campaign Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-57" type="checkbox" name="packs[]" value="57" checked="checked" >Devil Reef</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-58" type="checkbox" name="packs[]" value="58" checked="checked" >Horror in High Gear</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-59" type="checkbox" name="packs[]" value="59" checked="checked" >A Light in the Fog</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-60" type="checkbox" name="packs[]" value="60" checked="checked" >The Lair of Dagon</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-61" type="checkbox" name="packs[]" value="61" checked="checked" >Into the Maelstrom</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>Edge of the Earth</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-73" type="checkbox" name="packs[]" value="73" checked="checked" >Edge of the Earth Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-74" type="checkbox" name="packs[]" value="74" checked="checked" >Edge of the Earth Campaign Expansion</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Scarlet Keys</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-79" type="checkbox" name="packs[]" value="79" checked="checked" >The Scarlet Keys Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-80" type="checkbox" name="packs[]" value="80" checked="checked" >The Scarlet Keys Campaign Expansion</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Feast of Hemlock Vale</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-84" type="checkbox" name="packs[]" value="84" checked="checked" >The Feast of Hemlock Vale Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-85" type="checkbox" name="packs[]" value="85" checked="checked" >The Feast of Hemlock Vale Campaign Expansion</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>The Drowned City</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-93" type="checkbox" name="packs[]" value="93" checked="checked" >The Drowned City Investigator Expansion</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-94" type="checkbox" name="packs[]" value="94" checked="checked" >The Drowned City Campaign Expansion</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>Core (2026)</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-97" type="checkbox" name="packs[]" value="97" checked="checked" >Core Set (2026)</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>Return to...</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-28" type="checkbox" name="packs[]" value="28" checked="checked" >Return to the Night of the Zealot</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-33" type="checkbox" name="packs[]" value="33" checked="checked" >Return to the Dunwich Legacy</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-39" type="checkbox" name="packs[]" value="39" checked="checked" >Return to the Path to Carcosa</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-54" type="checkbox" name="packs[]" value="54" checked="checked" >Return to the Forgotten Age</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-72" type="checkbox" name="packs[]" value="72" checked="checked" >Return to the Circle Undone</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>Investigator Starter Decks</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-47" type="checkbox" name="packs[]" value="47" checked="checked" >Nathaniel Cho</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-48" type="checkbox" name="packs[]" value="48" checked="checked" >Harvey Walters</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-49" type="checkbox" name="packs[]" value="49" checked="checked" >Winifred Habbamock</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-50" type="checkbox" name="packs[]" value="50" checked="checked" >Jacqueline Fine</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-51" type="checkbox" name="packs[]" value="51" checked="checked" >Stella Clark</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>Investigator Decks</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-110" type="checkbox" name="packs[]" value="110" checked="checked" >Tommy Muldoon</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-111" type="checkbox" name="packs[]" value="111" checked="checked" >Carolyn Fern</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-112" type="checkbox" name="packs[]" value="112" checked="checked" >André Patel</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-113" type="checkbox" name="packs[]" value="113" checked="checked" >Marie Lambeau</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-114" type="checkbox" name="packs[]" value="114" checked="checked" >Miguel de la Cruz</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>Side Stories</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-3" type="checkbox" name="packs[]" value="3" checked="checked" >Curse of the Rougarou</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-6" type="checkbox" name="packs[]" value="6" checked="checked" >Carnevale of Horrors</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-27" type="checkbox" name="packs[]" value="27" checked="checked" >The Labyrinths of Lunacy</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-32" type="checkbox" name="packs[]" value="32" checked="checked" >Guardians of the Abyss</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-46" type="checkbox" name="packs[]" value="46" checked="checked" >Murder at the Excelsior Hotel</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-55" type="checkbox" name="packs[]" value="55" checked="checked" >The Blob That Ate Everything</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-70" type="checkbox" name="packs[]" value="70" checked="checked" >War of the Outer Gods</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-77" type="checkbox" name="packs[]" value="77" checked="checked" >Machinations Through Time</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-81" type="checkbox" name="packs[]" value="81" checked="checked" >Fortune and Folly</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-82" type="checkbox" name="packs[]" value="82" checked="checked" >The Blob That Ate Everything ELSE!</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-92" type="checkbox" name="packs[]" value="92" checked="checked" >The Midwinter Gala</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-95" type="checkbox" name="packs[]" value="95" checked="checked" >Film Fatale</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>Promotional</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-19" type="checkbox" name="packs[]" value="19" checked="checked" >Books</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-63" type="checkbox" name="packs[]" value="63" checked="checked" >Hour of the Huntress</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-64" type="checkbox" name="packs[]" value="64" checked="checked" >The Dirge of Reason</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-65" type="checkbox" name="packs[]" value="65" checked="checked" >Ire of the Void</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-66" type="checkbox" name="packs[]" value="66" checked="checked" >The Deep Gate</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-67" type="checkbox" name="packs[]" value="67" checked="checked" >To Fight the Black Wind</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-68" type="checkbox" name="packs[]" value="68" checked="checked" >Blood of Baalshandor</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-69" type="checkbox" name="packs[]" value="69" checked="checked" >Dark Revelations</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-7" type="checkbox" name="packs[]" value="7" checked="checked" >Promo</label></div>
+															</div>
+													<div style="flex: 25%;">
+								<p><small>Parallel</small></p>
+																	<div class="checkbox"><label class=""><input id="collection-53" type="checkbox" name="packs[]" value="53" checked="checked" >Read or Die</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-62" type="checkbox" name="packs[]" value="62" checked="checked" >All or Nothing</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-71" type="checkbox" name="packs[]" value="71" checked="checked" >Bad Blood</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-75" type="checkbox" name="packs[]" value="75" checked="checked" >By the Book</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-78" type="checkbox" name="packs[]" value="78" checked="checked" >Red Tide Rising</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-83" type="checkbox" name="packs[]" value="83" checked="checked" >On the Road Again</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-86" type="checkbox" name="packs[]" value="86" checked="checked" >Laid to Rest</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-87" type="checkbox" name="packs[]" value="87" checked="checked" >Path of the Righteous</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-88" type="checkbox" name="packs[]" value="88" checked="checked" >Relics of the Past</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-89" type="checkbox" name="packs[]" value="89" checked="checked" >Hunting for Answers</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-90" type="checkbox" name="packs[]" value="90" checked="checked" >Pistols and Pearls</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-91" type="checkbox" name="packs[]" value="91" checked="checked" >Aura of Faith</label></div>
+																	<div class="checkbox"><label class=""><input id="collection-96" type="checkbox" name="packs[]" value="96" checked="checked" >Enthralling Encore</label></div>
+															</div>
+											</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="col-md-12">
+
+<div class="text-center">
+	<ul class="pagination pagination-sm" style="margin: 0.2rem;">
+				<li class="disabled"><a href="#">&laquo;</a></li>
+		
+								<li class="active"><a href="/decklists">1 <span class="sr-only">(current)</span></a></li>
+											<li><a href="/decklists/popular/2">2</a></li>
+											<li><a href="/decklists/popular/3">3</a></li>
+											<li><a href="/decklists/popular/1292">1292</a></li>
+					
+				<li class=""><a href="/decklists/popular/2">&raquo;</a></li>
+			</ul>
+</div>
+
+<table class="table">
+<thead></thead>
+<tbody>
+
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/05005.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">13</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">8</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">7</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64597/the-queen-of-tricks-29-xp-legacy-1.0">The Queen of Tricks (29 XP Legacy)</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/68943/Ramun" class="">Ramun</a>
+						<small class="reputation">1731</small>
+					</span>
+					·
+					<time datetime="2026-08-30T18:31:13+00:00">Aug 30</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="05005" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Rita Young
+																			</a>
+								<span>[multiplayer,theme]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/60551.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">3</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">2</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">0</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64750/disaster-artist-ch2-starters-revisited-1.0">Disaster Artist | Ch2 Starters Revisited</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-09-04T18:22:32+00:00">Sep 04</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="60551" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Miguel de la Cruz
+																			</a>
+								<span>[multiplayer,theme]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/60451.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">18</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">10</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">4</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64502/marie-poppin-cultists-ch2-starters-revisited-1.0">Marie Poppin&#039; Cultists | Ch2 Starters Revisited</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-08-27T14:37:03+00:00">Aug 27</time>
+				</div>
+				<a class="card card-tip fg-mystic" data-code="60451" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Marie Lambeau
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/60251.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">25</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">14</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">0</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64388/living-her-bast-life-ch2-starters-revisited-1.0">Living her Bast Life | Ch2 Starters Revisited</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-08-21T18:16:08+00:00">Aug 21</time>
+				</div>
+				<a class="card card-tip fg-seeker" data-code="60251" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Carolyn Fern
+																			</a>
+								<span>[multiplayer,theme]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/06001.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">15</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">4</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">6</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">2.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64471/tommy-the-tank-engine-hunter-s-armor-5-dmg-becky-2.0">Tommy The Tank Engine - Hunter&#039;s Armor | 5 DMG Becky</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/169657/Mexemilion" class="">Mexemilion</a>
+						<small class="reputation">36</small>
+					</span>
+					·
+					<time datetime="2026-08-26T10:51:20+00:00">Aug 26</time>
+				</div>
+				<a class="card card-tip fg-guardian" data-code="06001" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Tommy Muldoon
+																			</a>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/60351.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">12</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">9</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">2</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64503/the-fatal-thespian-ch2-starters-revisited-1.0">The Fatal Thespian | Ch2 Starters Revisited</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-08-27T14:37:22+00:00">Aug 27</time>
+				</div>
+				<a class="card card-tip fg-rogue" data-code="60351" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					André Patel
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/09015.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">15</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">8</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">3</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64418/the-hunter-who-doesn-t-hunt-19-xp-legacy-1.0">The Hunter Who Doesn&#039;t Hunt (19 XP Legacy)</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/68943/Ramun" class="">Ramun</a>
+						<small class="reputation">1731</small>
+					</span>
+					·
+					<time datetime="2026-08-23T19:32:42+00:00">Aug 23</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="09015" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Darrell Simmons
+																			</a>
+								<span>[multiplayer,theme]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/02005.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">545</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">383</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">30</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/54484/unstoppable-survivor-true-solo-normal-hard-updated-2025-1.0">Unstoppable Survivor (True Solo, Normal/Hard) Updated 2025</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/43924/walla" class="survivor">walla</a>
+						<small class="reputation">3292</small>
+					</span>
+					·
+					<time datetime="2025-04-19T19:25:39+00:00">Apr 19</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="02005" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					&quot;Ashcan&quot; Pete
+																			</a>
+								<span>[solo,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/12001.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">0</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">0</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">0</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64761/butchmaxxing-1.0">Butchmaxxing</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/97874/linkazzz3" class="">linkazzz3</a>
+						<small class="reputation">1</small>
+					</span>
+					·
+					<time datetime="2026-09-05T07:03:38+00:00">Sep 05</time>
+				</div>
+				<a class="card card-tip fg-guardian" data-code="12001" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Daniela Reyes
+																			</a>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/01002.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">0</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">0</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">0</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64760/4-1.0">黛西满经验套牌4</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/172477/wsfcysdd" class="">wsfcysdd</a>
+						<small class="reputation">31</small>
+					</span>
+					·
+					<time datetime="2026-09-05T06:43:51+00:00">Sep 05</time>
+				</div>
+				<a class="card card-tip fg-seeker" data-code="01002" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Daisy Walker
+																			</a>
+								<span>[solo,multiplayer]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/02002.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">1480</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">970</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">33</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/36402/clue-vacuuming-rex-core-dunwich-edge-beginner-deck-guide-1.0">Clue Vacuuming Rex|Core+Dunwich+Edge|Beginner Deck Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/42890/Valentin1331" class="survivor">Valentin1331</a>
+						<small class="reputation">96999</small>
+					</span>
+					·
+					<time datetime="2022-03-21T23:35:41+00:00">Mar 21</time>
+				</div>
+				<a class="card card-tip fg-seeker" data-code="02002" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Rex Murphy
+																			</a>
+								<span>[multiplayer,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/12004.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">143</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">92</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">14</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/60807/joe-diamond-the-drawlord-chapter-2-core-only-1.0">Joe Diamond: The Drawlord | Chapter 2 Core Only</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-03-23T07:11:37+00:00">Mar 23</time>
+				</div>
+				<a class="card card-tip fg-seeker" data-code="12004" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Joe Diamond
+																			</a>
+								<span>[multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/10012.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">780</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">510</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">80</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/47001/khaku-fifty-shades-of-blurse-fhv-intro-deck-guide-1.0">Kōhaku, Fifty Shades of Blurse|FHV Intro|Deck Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/42890/Valentin1331" class="survivor">Valentin1331</a>
+						<small class="reputation">96999</small>
+					</span>
+					·
+					<time datetime="2024-02-20T13:39:21+00:00">Feb 20</time>
+				</div>
+				<a class="card card-tip fg-mystic" data-code="10012" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Kōhaku Narukami
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/03004.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">1286</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">894</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">31</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/37358/akachi-ony-elemental-core-tdl-ptc-eote-beginner-deck-guide-1.0">Akachi Ony-Elemental|Core+TDL+PtC+EotE|Beginner Deck Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/42890/Valentin1331" class="survivor">Valentin1331</a>
+						<small class="reputation">96999</small>
+					</span>
+					·
+					<time datetime="2022-05-27T15:48:03+00:00">May 27</time>
+				</div>
+				<a class="card card-tip fg-mystic" data-code="03004" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Akachi Onyele
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/01001.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">1926</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">1438</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">38</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/20344/roland-banks-structure-deck-series-core-set-1.0">Roland Banks - Structure Deck Series ( Core Set )</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/4220/Uncle%2520George%2520the%2520Farmer" class="guardian">Uncle George the Farmer</a>
+						<small class="reputation">56075</small>
+					</span>
+					·
+					<time datetime="2020-03-31T16:51:31+00:00">Mar 31</time>
+				</div>
+				<a class="card card-tip fg-guardian" data-code="01001" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Roland Banks
+																			</a>
+								<span>[solo,multiplayer,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/03005.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">18</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">8</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">3</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64230/oops-i-made-an-oops-deck-1.0">Oops! I made an Oops deck!</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/70102/Tom%25C3%25A1sAmi" class="rogue">TomásAmi</a>
+						<small class="reputation">299</small>
+					</span>
+					·
+					<time datetime="2026-08-13T00:05:08+00:00">Aug 13</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="03005" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					William Yorick
+																			</a>
+								<span>[multiplayer]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/60501.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">14</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">9</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">0</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64317/the-chainsaw-chain-29-xp-legacy-1.0">The Chainsaw Chain (29 XP Legacy)</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/68943/Ramun" class="">Ramun</a>
+						<small class="reputation">1731</small>
+					</span>
+					·
+					<time datetime="2026-08-17T08:38:07+00:00">Aug 17</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="60501" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Stella Clark
+																			</a>
+								<span>[multiplayer,theme]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/03005.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">2</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">1</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">0</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/64689/william-yorick-graveyard-guardian-1.0">William Yorick: Graveyard Guardian</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/60516/arjan480" class="">arjan480</a>
+						<small class="reputation">14</small>
+					</span>
+					·
+					<time datetime="2026-09-02T18:09:41+00:00">Sep 02</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="03005" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					William Yorick
+																			</a>
+								<span>[solo,multiplayer]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/06005.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">25</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">19</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">5</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/63980/strings-cats-an-expert-ready-patrice-deck-1.0">STRINGS &amp; CATS: an expert-ready Patrice deck</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/150463/Zoio" class="">Zoio</a>
+						<small class="reputation">121</small>
+					</span>
+					·
+					<time datetime="2026-07-31T03:26:33+00:00">Jul 31</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="06005" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Patrice Hathaway
+																			</a>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/12013.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">109</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">89</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">8</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/60808/izzie-barnes-mad-skillz-chapter-2-core-only-1.0">Izzie Barnes: Mad Skillz | Chapter 2 Core Only</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-03-23T07:20:51+00:00">Mar 23</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="12013" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Isabelle Barnes
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/12010.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">83</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">63</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">12</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/62239/a-faustian-bargain-chapter-2-starter-guide-1.0">A Faustian Bargain | Chapter 2 Starter Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-04-27T10:24:46+00:00">Apr 27</time>
+				</div>
+				<a class="card card-tip fg-mystic" data-code="12010" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Dexter Drake
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/05004.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">1569</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">1282</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">119</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/15209/diana-practicing-safe-hex-now-even-hexier-hard-mode-1.0">Diana - Practicing Safe Hex - Now Even Hexier (Hard Mode)</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/486/StartWithTheName" class="survivor">StartWithTheName</a>
+						<small class="reputation">76314</small>
+					</span>
+					·
+					<time datetime="2019-09-11T22:03:16+00:00">Sep 11</time>
+				</div>
+				<a class="card card-tip fg-mystic" data-code="05004" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Diana Stanley
+																			</a>
+								<span>[solo,multiplayer,theme]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/60151.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">73</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">48</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">7</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/62530/got-yourself-a-gun-chapter-2-starter-guide-1.0">Got Yourself a Gun | Chapter 2 Starter Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-05-08T10:34:41+00:00">May 08</time>
+				</div>
+				<a class="card card-tip fg-guardian" data-code="60151" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Tommy Muldoon
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/12007.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">100</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">78</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">11</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/60848/trish-scarborough-i-spy-a-seeker-chapter-2-core-only-1.0">Trish Scarborough: I Spy a Seeker | Chapter 2 Core Only</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-03-23T19:05:52+00:00">Mar 23</time>
+				</div>
+				<a class="card card-tip fg-rogue" data-code="12007" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Trish Scarborough
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/11011.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">309</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">205</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">31</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/53853/michael-uses-weapons-as-words-tdc-blind-run-deck-guide-1.0">Michael Uses Weapons as Words|TDC Blind Run|Deck Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/42890/Valentin1331" class="survivor">Valentin1331</a>
+						<small class="reputation">96999</small>
+					</span>
+					·
+					<time datetime="2025-03-21T17:39:39+00:00">Mar 21</time>
+				</div>
+				<a class="card card-tip fg-rogue" data-code="11011" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Michael McGlen
+																			</a>
+								<span>[multiplayer,theme]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/11017.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">317</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">205</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">32</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/53502/george-s-boatload-of-skills-tdc-blind-run-deck-guide-1.0">George&#039;s Boatload of Skills|TDC Blind Run|Deck Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/42890/Valentin1331" class="survivor">Valentin1331</a>
+						<small class="reputation">96999</small>
+					</span>
+					·
+					<time datetime="2025-03-07T23:01:28+00:00">Mar 07</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="11017" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					George Barnaby
+																			</a>
+								<span>[multiplayer,theme]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/60251.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">61</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">40</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">16</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/62841/who-looks-inside-awakes-chapter-2-starter-guide-1.0">Who Looks Inside, Awakes | Chapter 2 Starter Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-05-22T10:11:17+00:00">May 22</time>
+				</div>
+				<a class="card card-tip fg-seeker" data-code="60251" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Carolyn Fern
+																			</a>
+								<span>[multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/12004.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">58</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">44</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">9</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/62842/shoot-first-questions-later-chapter-2-starter-guide-1.0">Shoot First, Questions Later | Chapter 2 Starter Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-05-22T10:12:12+00:00">May 22</time>
+				</div>
+				<a class="card card-tip fg-seeker" data-code="12004" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Joe Diamond
+																			</a>
+								<span>[solo,multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/60551.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">61</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">45</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">8</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/62680/rancher-rambo-chapter-2-starter-guide-1.0">Rancher Rambo | Chapter 2 Starter Guide</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/69988/HungryColquhoun" class="survivor">HungryColquhoun</a>
+						<small class="reputation">20118</small>
+					</span>
+					·
+					<time datetime="2026-05-15T10:43:08+00:00">May 15</time>
+				</div>
+				<a class="card card-tip fg-survivor" data-code="60551" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Miguel de la Cruz
+																			</a>
+								<span>[multiplayer,theme,beginner]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+		<tr>
+		<td class="decklist-faction-image hidden-xs">
+			<div class="card-thumbnail-wide card-thumbnail-investigator" style="width: 120px; height: 60px; border-radius: 5px; background-image:url(/bundles/cards/08004.png)"></div>
+		</td>
+		<td>
+			<article>
+			<h4>
+				<small class="pull-right">
+					<span class="social-icons">
+	<a id="social-icon-like" href="#" class="social-icon-like" data-toggle="tooltip" data-placement="bottom" title="Like">
+		<span class="fa fa-heart"></span> <span class="num">985</span>
+	</a>
+	<a id="social-icon-favorite" href="#" class="social-icon-favorite" data-toggle="tooltip" data-placement="bottom" title="Favorite">
+		<span class="fa fa-star"></span> <span class="num">825</span>
+	</a>
+	<a id="social-icon-comment" href="#comment-form" class="social-icon-comment" data-toggle="tooltip" data-placement="bottom" title="Comment">
+		<span class="fa fa-comment"></span> <span class="num">57</span>
+	</a>
+	<span class="social-icon-version" data-toggle="tooltip" data-placement="bottom" title="Version">
+		<span class="fa fa-code-fork"></span> <span class="num">1.0</span>
+	</a>
+</span>
+
+				</small>
+				<a class="decklist-name" href="/decklist/view/33136/astronormanical-atlas-deck-guide-1.0">Astronormanical Atlas (Deck Guide)</a>
+			</h4>
+			<div>
+
+			</div>
+			<h5>
+				<div class="pull-right">
+					<span class="username">
+						<a href="/user/profile/26700/chirubime" class="seeker">chirubime</a>
+						<small class="reputation">29608</small>
+					</span>
+					·
+					<time datetime="2021-09-19T20:59:40+00:00">Sep 19</time>
+				</div>
+				<a class="card card-tip fg-seeker" data-code="08004" data-toggle="modal" data-target="#cardModal" data-remote="false" href="">
+					Norman Withers
+																			</a>
+								<span>[solo,multiplayer]</span>
+							</h5>
+			</article>
+		</td>
+	</tr>
+
+</tbody>
+</table>
+
+<div class="text-center">
+	<ul class="pagination pagination-sm" style="margin: 0.2rem;">
+				<li class="disabled"><a href="#">&laquo;</a></li>
+		
+								<li class="active"><a href="/decklists">1 <span class="sr-only">(current)</span></a></li>
+											<li><a href="/decklists/popular/2">2</a></li>
+											<li><a href="/decklists/popular/3">3</a></li>
+											<li><a href="/decklists/popular/1292">1292</a></li>
+					
+				<li class=""><a href="/decklists/popular/2">&raquo;</a></li>
+			</ul>
+</div>
+
+</div>
+
+</div>
+</div>
+
+    <div id="push">
+</div>
+  </div>
+  <footer class="hidden-print">
+    <div class="container">
+
+<div class="row">
+    <div class="col-xs-12">
+
+    <ul class="list-inline">
+    <li><a href="/about">About</a></li>
+    <li><a href="/api/">API</a></li>
+    </ul>
+
+    <p>
+    Based on ThronesDB by Alsciende. Modified by Kam.
+    Contact:
+    <a href="https://reddit.com/user/kamalisk/" title="Reddit"><span class="fa fa-reddit"></span></a>
+    <a href="mailto:s.arkhamdb@kamalisk.com" title="E-mail"><span class="fa fa-envelope"></span></a>
+    </p>
+    <p>
+    Please post bug reports and feature requests on <a href="https://github.com/Kamalisk/arkhamdb">GitHub</a>
+    </p>
+    <p>
+    I set up a <a href="https://www.patreon.com/kamalisk">Patreon</a> for those who want to help support the site.
+    </p>
+    <p>
+    The information presented on this site about Arkham Horror: The Card Game, both literal and graphical, is copyrighted by Fantasy Flight Games.
+    This website is not produced, endorsed, supported, or affiliated with Fantasy Flight Games.
+    </p>
+
+    </div>
+</div>
+
+    </div>
+    </footer>
+    <!--  card modal -->
+<div class="modal" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title card-name">Modal title</h3>
+                <div class="row modal-deck-options">
+                    <div class="col-sm-4 text-center modal-deck-qty">
+                        Deck Quantity: <div class="btn-group modal-qty" data-toggle="buttons"></div>
+                    </div>
+                    <div class="col-sm-4 text-center modal-side-deck-qty">
+                        Side Deck Quantity: <div class="btn-group modal-side-qty" data-toggle="buttons"></div>
+                    </div>
+                    <div class="col-sm-4 text-center modal-deck-ignore">
+                        Ignore Deck Limit: <div class="btn-group modal-ignore" data-toggle="buttons"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6 modal-image hidden-xs"></div>
+                    <div class="col-sm-6 modal-info card-content"></div>
+                </div>
+            </div>
+            <div class="modal-customization">
+            </div>
+            <div class="modal-footer">
+                <a role="button" href="#" class="btn btn-default card-modal-link">Go to card page</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  /cardModal -->
+
+    <script src="/bundles/fosjsrouting/js/router.js"></script>
+    <script src="/js/routing?callback=fos.Router.setData"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.1/jquery.qtip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/0.2.2/jquery.textcomplete.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/4.1.7/highcharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.9.0/js/bootstrap-markdown.min.js"></script>
+    <script type="text/javascript">
+    var app = {};
+    moment.locale('en');
+    $(function() {
+            	});
+    </script>
+
+		<script src="/js/app.js"></script>
+	
+			<script src="/js/d66d88d.js"></script>
+	<script type="text/javascript">
+$(function () {
+	var type = "popular";
+	$('time').each(function (index, element) {
+		var datetime = moment($(element).attr('datetime'));
+		var formatted;
+		switch(type) {
+		case 'popular':
+		case 'recent':
+		case 'hottopics':
+			 formatted = datetime.fromNow();
+			 break;
+		case 'halloffame':
+		case 'favorites':
+		case 'mine':
+		case 'search':
+		default:
+			formatted = datetime.format('ll');
+			 break;
+		}
+		$(element).html(formatted);
+		$(element).attr('title', datetime.format('LLLL'));
+	});
+});
+</script>
+    </body>
+</html>

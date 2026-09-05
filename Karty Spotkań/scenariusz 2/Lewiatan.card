@@ -19,7 +19,7 @@
   ],
   "flavor": "Starzy rybacy mówili, że woda ma pamięć. Nie wspominali, że ma też macki.",
   "attack": "5",
-  "enemy_health": "3<调查员>",
+  "enemy_health": "2<调查员>",
   "evade": "1",
   "enemy_damage": 2,
   "enemy_damage_horror": 2,
@@ -41,7 +41,7 @@
     "flip_horizontal": false,
     "flip_vertical": false
   },
-  "body": "<for> Lewiatan wchodzi do gry wyczerpany, w zwarciu z atutem Barka \"Jadwiga\" (zamiast z badaczem). Dopóki Lewiatan jest gotowy (nie wyczerpany), Barka \"Jadwiga\" nie może się poruszać ani być użyta do akcji Rezygnacja.\n<for> Lewiatan atakuje każdego badacza w swojej lokalizacji ORAZ zadaje 2 obrażenia atutowi Barka \"Jadwiga\".\n<for> Kiedy Lewiatan miałby zostać pokonany: Zamiast tego anuluj wszystkie obrażenia mu zadane, wyczerp go i przemieść do najdalszej lokalizacji o cesze Rzeka (względem jego obecnej pozycji).",
+  "body": "Łowca. Lewiatana nie można Unikać.\n<for> Lewiatan wchodzi do gry wyczerpany, w zwarciu z atutem Barka Jadwiga (zamiast z badaczem). Dopóki Lewiatan jest gotowy (nie wyczerpany), Barka Jadwiga nie może się poruszać ani być użyta do akcji Rezygnacja.\n<for> Lewiatan atakuje każdego badacza w swojej lokalizacji ORAZ zadaje 2 obrażenia atutowi Barka Jadwiga.\n<for> Kiedy Lewiatan miałby zostać pokonany: Zamiast tego anuluj wszystkie obrażenia mu zadane, wyczerp go, przemieść do najdalszej lokalizacji o cesze Rzeka (względem jego obecnej pozycji) i umieśćcie 2 znaczniki Ciśnienia na Barce Jadwiga.\n<for> Na koniec rundy następującej po tej, w której Lewiatan został odepchnięty: przemieść go do lokalizacji Barki Jadwiga.",
   "tts_config": {
     "version": "v2",
     "script_id": "F5F8F6B3"

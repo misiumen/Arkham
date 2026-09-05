@@ -1,0 +1,135 @@
+{
+ "variant": "B",
+ "games": 1500,
+ "kara": false,
+ "win_rate": 0.19333333333333333,
+ "rounds_median": 10.0,
+ "results": {
+  "porazka: wszyscy badacze pokonani": 746,
+  "porazka: barka zatopiona": 369,
+  "wygrana: Rezygnacja z cisnieniem (Most zniszczony)": 290,
+  "porazka: zaglada (Tajemnica 3)": 95
+ },
+ "tests": {
+  "Cala naprzod com(4)": {
+   "n": 4496,
+   "success": 0.07
+  },
+  "Cala naprzod wil(4)": {
+   "n": 16934,
+   "success": 0.49
+  },
+  "Dar Czarnej Kozy wil(4)": {
+   "n": 4857,
+   "success": 0.41
+  },
+  "Fort: com(4)": {
+   "n": 634,
+   "success": 0.13
+  },
+  "Gwaltowny Rozkwit agi(3)": {
+   "n": 2023,
+   "success": 0.49
+  },
+  "Miny: agi(4)": {
+   "n": 1490,
+   "success": 0.72
+  },
+  "Niekontrolowany Rozrost agi(3)": {
+   "n": 4850,
+   "success": 0.48
+  },
+  "Tajemnica 2: agi(3)": {
+   "n": 8359,
+   "success": 0.53
+  },
+  "Twarze w Korze wil(3+)": {
+   "n": 4899,
+   "success": 0.51
+  },
+  "Zapach Feromonow wil(3)": {
+   "n": 4869,
+   "success": 0.6
+  },
+  "badanie": {
+   "n": 15048,
+   "success": 0.79
+  },
+  "ruch barki agi(3)": {
+   "n": 863,
+   "success": 0.9
+  },
+  "ruch barki com(3)": {
+   "n": 2430,
+   "success": 0.9
+  },
+  "unik": {
+   "n": 12914,
+   "success": 0.76
+  },
+  "usun tkanke agi(4)": {
+   "n": 752,
+   "success": 0.43
+  },
+  "usun tkanke com(3)": {
+   "n": 4207,
+   "success": 0.47
+  },
+  "usun tkanke int(3)": {
+   "n": 446,
+   "success": 0.6
+  },
+  "usun tkanke int(4)": {
+   "n": 456,
+   "success": 0.52
+  },
+  "usun tkanke wil(3)": {
+   "n": 313,
+   "success": 0.74
+  },
+  "walka": {
+   "n": 44255,
+   "success": 0.62
+  }
+ },
+ "barriers": {
+  "Zyjacy Zator -> 4 wskazowki": 1467,
+  "Toksyczny Kozuch -> przedmiot": 1227,
+  "Pruskie Miny -> test agi": 1069,
+  "Pruskie Miny -> przedmiot": 80
+ },
+ "avg_damage_per_inv": 8.03,
+ "avg_horror_per_inv": 6.08,
+ "events_per_game": {
+  "tkanki dolaczone": 7.85,
+  "wrog: Nosiciel Zarodnikow": 6.46,
+  "przerazenie: Kozi Pomiot (pokonany)": 5.97,
+  "obrazenia: Lewiatan": 5.57,
+  "przerazenie: Lewiatan": 5.57,
+  "obrazenia: zeton tablicy": 5.21,
+  "przerazenie: Twarze w Korze": 3.85,
+  "spotkanie: hierofanta": 3.27,
+  "wrog: Hierofanta": 3.27,
+  "spotkanie: twarze": 3.27,
+  "spotkanie: pomiot": 3.26,
+  "wrog: Kozi Pomiot": 3.26,
+  "spotkanie: rozkwit": 3.26,
+  "spotkanie: mlode": 3.25,
+  "wrog: Rzeczne Mlode": 3.25,
+  "spotkanie: feromony": 3.25,
+  "spotkanie: nurt": 3.24,
+  "spotkanie: dar": 3.24,
+  "spotkanie: rozrost": 3.23,
+  "spotkanie: rytual": 3.23,
+  "spotkanie: nosiciel": 3.23,
+  "obrazenia: Kozi Pomiot (Msciwy)": 3.11,
+  "badacz pokonany": 2.97,
+  "obrazenia: Kozi Pomiot": 2.93,
+  "obrazenia: Zmutowany Kierownik": 2.87,
+  "obrazenia barki: Lewiatan": 2.79,
+  "pokonany: Kozi Pomiot": 2.66,
+  "tkanka usunieta": 2.63,
+  "obrazenia: Tajemnica 2": 2.61,
+  "przerazenie: Tajemnica 2": 2.61
+ }
+}

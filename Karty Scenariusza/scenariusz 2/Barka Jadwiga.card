@@ -10,7 +10,7 @@
     "language": "pl",
     "type": "玩家卡背"
   },
-  "body": "<for> Na koniec rundy, jeśli w lokalizacji Barki \"Jadwiga\" nie znajduje się żaden badacz: Umieść 1 obrażenie na Barce \"Jadwiga\"\n<act> Wykonaj test <com> (3) lub <agi>(3). Jeśli test się powiedzie, wyczerp Barkę \"Jadwiga\" i przemieść ją do połączonej lokalizacji. Wszyscy badacze w twojej lokalizacji mogą przemieścić się wraz z nią. Ta akcja nie wywołuje ataków okazyjnych.\n<rea> Gdy wróg w twojej lokalizacji wykonuje atak, wyczerp Barkę \"Jadwiga\": Ten wróg otrzymuje 1 obrażenie.",
+  "body": "<for> Na koniec rundy, jeśli w lokalizacji Barki Jadwiga nie znajduje się żaden badacz: Umieść 1 obrażenie na Barce Jadwiga\n<act> Wykonaj test <com> (3) lub <agi>(3). Jeśli test się powiedzie, wyczerp Barkę Jadwiga i przemieść ją do połączonej lokalizacji. Wszyscy badacze w twojej lokalizacji mogą przemieścić się wraz z nią. Ta akcja nie wywołuje ataków okazyjnych.\n<rea> Gdy wróg w twojej lokalizacji wykonuje atak, wyczerp Barkę Jadwiga: Ten wróg otrzymuje 1 obrażenie.",
   "health": 8,
   "class": "中立",
   "subclass": [],
