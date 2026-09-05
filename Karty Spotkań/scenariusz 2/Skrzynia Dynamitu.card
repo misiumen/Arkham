@@ -11,7 +11,7 @@
     "type": "玩家卡背"
   },
   "subtitle": "Zapasy Pruskiej Armii",
-  "cost": -1,
+  "cost": 0,
   "class": "中立",
   "subclass": [],
   "traits": [
