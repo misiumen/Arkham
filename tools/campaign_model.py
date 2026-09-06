@@ -35,7 +35,7 @@ PLAYERS = 4
 #  scen 1: Nory (1), Oboz na mokradlach (1), Zyrij Zerdz (1)
 #  scen 2: 3 karty Barier po 1 (tylko przedmiotem), Arcykaplan 2, Zmutowany Kierownik 1
 #  scen 3: ZADNA karta nie ma pola victory
-VICTORY_AVAILABLE = {1: 3, 2: 6, 3: 3}   # scen 3: Czarna Koza 2, Goniec 1 x1
+VICTORY_AVAILABLE = {1: 3, 2: 6, 3: 6}   # scen 3: Czarna Koza 2, Goniec 1, Ogrod 1, Rynek Jezycki 1, Solacz 1
 # Premie z Fabuly: scen 1 Z1 +4, Z2 (pokonani) +2, Z3/Z4 0; scen 2 +2 za ukonczenie (1a, 1b) i +2 za
 # stracenie Lewiatana (1b); scen 3 tylko Victory X
 SURVIVAL_XP = {1: {"wygrana": 4, "porazka": 2, "zaglada": 0}, 2: {"wygrana": 2, "porazka": 0},
@@ -269,7 +269,7 @@ def cmd_xp():
     tot = 0
     src = {1: "Nory, Oboz na mokradlach, Zyrij; +2 wiesniacy, +2 pochowek",
            2: "3 Bariery (przedmiotem), Arcykaplan 2, Kierownik 1; +2 ukonczenie, +2 Lewiatan (B)",
-           3: "Czarna Koza 2, Goniec 1; Ksiega: +3 PZ (Dalbor przezyl) / +1 PZ"}
+           3: "Czarna Koza 2, Goniec 1, Ogrod/Rynek Jezycki/Solacz po 1; Ksiega: +3 PZ (Dalbor przezyl) / +1 PZ"}
     for i in (1, 2, 3):
         v = VICTORY_AVAILABLE[i]
         b = SURVIVAL_XP[i]["wygrana"] + (2 * TASK_XP if i == 1 else 0) + (2 if i == 2 else 0)

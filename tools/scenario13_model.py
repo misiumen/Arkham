@@ -27,6 +27,7 @@ Pokretla (--tweak K=V); domyslna wartosc = odczyt kart / odpowiedzi autora z 5 I
   GONIEC_DMG=1       0 = Goniec po dotarciu NIE zadaje grupie 1<badacz> obrazen (wrazliwosc)
   KURIER=1           1 = Kurjer Poznanski jako OSOBNA talia (Ksiega: 1 karta na runde po fazie spotkan, jako grupa);
                      po jednej wersji z par (autor); 0 = bez Kurjera
+  KOZA_SELF_HEAL=1   Koza po ataku leczy 1 obrazenie kazdego wroga w swojej i polaczonych lokacjach - 1 = wlacznie z soba
   KOR_START=0        ile z lokacji Biblioteka/Dyrekcja/Linia zaczyna jako Spaczona (Ksiega: pelne zwyciestwo 0,
                      czesciowy sukces 1, porazka 2; kampania ustawia to sama)
   KURIER_PICK=0      ktora wersja z par: 0 = pliki bez numeru (Godzina policyjna, Seans, Targi) i
@@ -50,6 +51,7 @@ GONIEC_DMG = 1
 KURIER = 1
 KURIER_PICK = 0
 KOR_START = 0
+KOZA_SELF_HEAL = 1   # 4f9ffbe: 'ulecz 1 obrazenie kazdego wroga w tej lokalizacji' - 1 = Koza leczy tez siebie; 0 = tylko innych
 DALBOR_PER_ROUND = 1
 AKT_DOOM = 1
 S3_CLUE_CUT = 0     # wrazliwosc (0 = jak na kartach)
@@ -140,8 +142,8 @@ S3_RECOVER = {
     "Cytadela": ("com", 2, "margin"),               # "test com(2). Za kazdy punkt, o ktory test sie udal, zamien 1 zaglade"
     "Mleczarnia Spółdzielcza": ("wil", 3, "margin"),  # "test wil(3). Za kazdy punkt..."
     "Ogród Botaniczny": ("com", 3, 1),              # "Karczuj: test com(3), zamien 1 zaglade"
-    "Ostrów Tumski": ("wil", 2, 1),                 # "test wil(2), zamien 1 zaglade"; porazka = 1 przerazenie
-    "Rynek Jeżycki": ("wil", 3, 1), "Sołacz": ("wil", 3, 1), "Zakłady Cegielskiego": ("wil", 3, 1),
+    "Ostrów Tumski": ("wil", 2, "margin"),          # "test wil(2), za kazdy sukces zamien 1 zaglade"; porazka = 1 przerazenie
+    "Rynek Jeżycki": ("wil", 2, "margin"), "Sołacz": ("wil", 3, "margin"), "Zakłady Cegielskiego": ("wil", 3, 1),
     UAM: ("int", 3, 1),
     "Stary Rynek": None,                            # rewers bez wlasnej akcji; zaglade zdejmuja Rynek Jezycki / Solacz
     # Biblioteka / Dyrekcja / Linia: osobne karty _kor_9 - zbadac ich wskazowki, potem 1 akcja odwraca
@@ -1225,7 +1227,7 @@ class Game3(Base):
                 if p:
                     e["loc"] = p[0]
         for e in list(self.enemies):   # Goncy: 1 lokacja/runde do celu
-            if e["kind"].startswith("goniec") and not e["exhausted"] and e in self.enemies:
+            if e["kind"].startswith("goniec") and not e["exhausted"] and e in self.enemies and not e.get("done"):
                 if e["loc"] != e["target"]:
                     p = self.path(e["loc"], e["target"])
                     e["loc"] = p[0] if p else e["target"]; e["engaged"] = None
@@ -1233,8 +1235,11 @@ class Game3(Base):
                     n = min(e["hp"], self.clues[e["target"]])   # "za kazdy pozostaly punkt zdrowia zamien 1 wskazowke na zaglade"
                     self.clues[e["target"]] -= n
                     self.add_locdoom(e["target"], n)
-                    self.enemies.remove(e)
-                    self.deck.append(e["kind"]); self.rng.shuffle(self.deck)   # "wtasuj Gonca do talii spotkan"
+                    if e["kind"] == "goniec1":   # karta 4f9ffbe: bez "wtasuj"; "gdy pokonany trafia do puli zwyciestwa"
+                        e["done"] = True
+                    else:
+                        self.enemies.remove(e)
+                        self.deck.append(e["kind"]); self.rng.shuffle(self.deck)   # Goniec 2/3: "wtasuj Gonca do talii spotkan"
                     self.log["Goniec zrzucil zaglade"] += 1
                     self.note("%s dotarl do celu: +%d zaglady na %s" % (e["name"], n, e["target"]))
                     alive = self.alive()
@@ -1248,6 +1253,13 @@ class Game3(Base):
     def after_attack(self, e):
         if e["kind"] == "bamber":   # "Po tym, jak Bamber zaatakuje: 1 zaglada na tajemnicy"
             self.add_doom(1)
+        if e["kind"] == "koza":     # 4f9ffbe: "Po wykonaniu ataku: ulecz 1 obrazenie kazdego wroga w tej lokalizacji oraz polaczonych"
+            near = {e["loc"]} | set(self.adj[e["loc"]])
+            for x in self.enemies:
+                if x is e and not KOZA_SELF_HEAL:
+                    continue
+                if x["loc"] in near and x["hp"] < self.ENEMY[x["kind"]]["hp"]:
+                    x["hp"] += 1; self.log["Koza leczy wroga"] += 1
 
     def enemy_bonus(self, e):
         b = 1 if e["loc"] in self.corrupt and e["kind"] == "agitator" else 0
@@ -1257,7 +1269,7 @@ class Game3(Base):
 
     def end_of_turn(self, inv):
         loc = inv["loc"]
-        if "trauma" in self.attached[loc] and not (inv.get("moved") or inv.get("fought")):
+        if "trauma" in self.attached[loc] and not (inv.get("moved") or inv.get("fought") or inv.get("investigated")):
             self.hurt(inv, 0, 1, "Trauma Pruskiego Drylu")   # "nie wykonal Ruchu lub Walki: 1 przerazenie"
         if loc == "Linia Rozlewnicza":
             inv["no_upkeep"] = True   # "nie dobieraja kart ani nie otrzymuja zasobow podczas fazy utrzymania"
@@ -1277,8 +1289,6 @@ class Game3(Base):
         for loc in ("Ostrów Tumski", "Sołacz"):   # "jesli na koniec rundy jest tu wrog z cecha Kultysta -> Spaczona"
             if loc not in self.corrupt and any(e.get("kultysta") and e["loc"] == loc for e in self.enemies):
                 self.corrupt_loc(loc, " przez Kultyste"); self.log["Kultysta spaczyl " + loc] += 1
-        if any(e["kind"] == "koza" for e in self.enemies):   # "Na koniec kazdej rundy umiesc 1 zaglade na tej karcie"
-            self.add_doom(1); self.log["zaglada: Czarna Koza"] += 1
         for loc in list(self.attached):   # Strajk: "Na koniec rundy: odrzuc te karte"
             self.attached[loc] = [k for k in self.attached[loc] if k != "strajk"]
         if self.inflacja:
@@ -1327,6 +1337,9 @@ class Game3(Base):
         self.victory += int(e.get("victory") or 0)
         if e["kind"] == "koza":
             self.note("Czarna Koza pokonana (Dalbor %s)" % ("zyje" if self.dalbor else "zginal"))
+            for loc, l in L3.items():   # Zwyciestwo z lokacji (Ogrod, Rynek Jezycki, Solacz): bez wskazowek, niespaczona
+                if l.get("victory") and self.clues[loc] == 0 and loc not in self.corrupt:
+                    self.victory += l["victory"]; self.log["Zwyciestwo: " + loc] += 1
             self.result = ("wygrana", "Czarna Koza pokonana, Dalbor %s" % ("przezyl" if self.dalbor else "zginal"))
 
     def recover(self, inv, loc):
@@ -1573,7 +1586,7 @@ def cmd_sim(which, profiles, games, seed):
 
 def selftest():
     global LOC_DOOM_COUNTS
-    assert S1_AGENDA == [4, 4, 4, 3] and S3_AGENDA == [4, 8, 14, 16]
+    assert S1_AGENDA == [4, 4, 4, 3] and S3_AGENDA == [4, 8, 14, 18]
     assert S1_ENEMY["zerdz"]["hp"] == 12 and S3_ENEMY["goniec3"]["target"] == "Zakłady Cegielskiego"
     assert S3_ENEMY["koza"]["hp"] == 32 and S3_ENEMY["goniec2"]["hp"] == 4 and S3_ENEMY["cien"]["atk"] is None or True
     prof = [dict(investigator="X%d" % i, faction="guardian", wil=20, int=20, com=20, agi=20,
