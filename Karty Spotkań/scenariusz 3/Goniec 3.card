@@ -31,7 +31,7 @@
   "encounter_group": "f",
   "class": "",
   "attack": "2",
-  "enemy_health": "3<调查员>",
+  "enemy_health": "2<调查员>",
   "evade": "3",
   "enemy_damage_horror": 0,
   "body": "<spa> Cytadela\n<pat> (Zakłady Cegielskiego), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Zakłady Cegielskiego, za każdy pozostały punkt wytrzymałości Gońca zamień 1 żeton wskazówki na 1 żeton zagłady na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań. Badacze jako grupa otrzymują 1<调查员> punktów obrażeń.",
@@ -39,7 +39,7 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "551c949506d5c3014ab7423977fe6ae293299af01caf39edbff1c76df5c0d9d5",
+  "content_hash": "22b972497d2be65535e16f527f7374faf419a88c2c707f9f1b94cfb873da009b",
   "enemy_damage": 1,
   "traits": [
     "Humanoid",

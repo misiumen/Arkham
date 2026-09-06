@@ -34,12 +34,12 @@
   "enemy_health": "3<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Cytadela\n<pat> (Mleczarnia Spółdzielcza), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Mleczarnia Spółdzielcza, za każdy pozostały punkt wytrzymałości Gońca zamień 1 żeton wskazówki na 1 żeton zagłady na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań. Badacze jako grupa otrzymują 1<调查员> punktów obrażeń.",
+  "body": "<spa> Cytadela\n<pat> (Mleczarnia Spółdzielcza), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Mleczarnia Spółdzielcza, za każdy pozostały punkt wytrzymałości Gońca zamień 1 żeton wskazówki na 1 żeton zagłady na tej lokalizacji. Badacze jako grupa otrzymują 1<调查员> punktów obrażeń.\n<for> Gdy Goniec zostanie pokonany trafia do puli zwycięstwa.",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "1b80bc74bc799be3282943cbcbad2006800fd0706e7520e8f43c6c1de6ab96e1",
+  "content_hash": "da2cb2786622490d4c11d333971910a4b5ce5f3ba65b1b95bc52c99c7ce6e80e",
   "enemy_damage": 1,
   "traits": [
     "Humanoid",

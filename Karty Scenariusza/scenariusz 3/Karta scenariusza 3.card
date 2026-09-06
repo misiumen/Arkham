@@ -11,10 +11,10 @@
     "type": "冒险参考卡",
     "name": "Miasto nad Rzeką",
     "scenario_card": {
-      "skull": "--3",
-      "cultist": "--X. X to liczba lokalizacji z cechą {Spaczona}.",
-      "tablet": "--X. X to liczba lokalizacji z cechą {Spaczona}.",
-      "elder_thing": "--3 (zamiast tego --4, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})"
+      "skull": "−2",
+      "cultist": "−1 (zamiast tego −3, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})",
+      "tablet": "−1 (zamiast tego −4, jeśli znajdujesz się na lokalizacji z cechą {Spaczona})",
+      "elder_thing": "−X. X to liczba lokalizacji z cechą {Spaczona}."
     },
     "encounter_group": "f",
     "subtitle": "TRUDNY / EKSPERCKI"
@@ -23,7 +23,7 @@
     "version": "v2",
     "script_id": "5CA1B3BB"
   },
-  "content_hash": "865ad0813b878f8b6b5f020a2cbbfc8df4d1a9ee6e064326baa7498c6427c8e8",
+  "content_hash": "262ab9ca6fa9be85c7fef90bcc85b159ab06e1a1774635a2d55ca09977cc5762",
   "scenario_type": 0,
   "encounter_group": "f",
   "scenario_card": {

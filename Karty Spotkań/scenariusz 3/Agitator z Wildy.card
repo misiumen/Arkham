@@ -39,7 +39,7 @@
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "7cc9ada5a1fb567e142fe8789caa4e31bbc96ee0678c810cb90acdb796e373bf",
+  "content_hash": "94a8252383288aaa2f1840a3c1f92ed51c2473fdec18a00f855cc453a2179a93",
   "enemy_damage": 1,
   "traits": [
     "Humanoid"

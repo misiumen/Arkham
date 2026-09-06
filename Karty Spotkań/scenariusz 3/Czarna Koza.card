@@ -34,12 +34,12 @@
   "enemy_health": "8<调查员>",
   "evade": "2",
   "enemy_damage_horror": 2,
-  "body": "<for> Na koniec każdej rundy umieść 1 żeton zagłady na tej karcie.",
+  "body": "<for> Po wykonaniu ataku: Ulecz 1 punkt obrażeń każdego wroga w tej lokalizacji oraz połączonych.",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "d6be523c4946273975b3cc56d068dc5cc90f90996cef22c43e516419c920a71b",
+  "content_hash": "2b81e07cd3eddb47e96f8f1e837a5c9f4a2ac38d2d726f254303c296e8c07f7d",
   "enemy_damage": 2,
   "traits": [
     "Masywny",

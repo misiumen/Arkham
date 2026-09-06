@@ -34,12 +34,12 @@
   "enemy_health": "3",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<pat> (Ostrów Tumski)\n<pre> Najmniejsza <int>.\n<spa> Uniwersytet Adama Miskatonicka\nPowściągliwy.\n<for> Na koniec fazy Mitów: Jeśli ten wróg jest w zwarciu z badaczem, połóż 1 żeton zagłady na aktualnej tajemnicy.\n",
+  "body": "<pat> (Ostrów Tumski)\n<pre> Najmniejsza <int>.\n<spa> Uniwersytet Adama Miskatonica\nPowściągliwy.\n<for> Na koniec fazy Mitów: Jeśli ten wróg jest w zwarciu z badaczem, połóż 1 żeton zagłady na aktualnej tajemnicy.\n",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "56e6b631259d8a9c5bebfa22dea1f5c557b0b5828981af7ead1cd9f56cda7f71",
+  "content_hash": "8873700d9c8040e9c65944898116eac8813b2adfcc4ae1081a5095b9daff8af6",
   "enemy_damage": 0,
   "traits": [
     "Humanoid",
