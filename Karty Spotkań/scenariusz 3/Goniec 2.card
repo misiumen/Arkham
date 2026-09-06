@@ -34,12 +34,12 @@
   "enemy_health": "1<调查员>",
   "evade": "3",
   "enemy_damage_horror": 1,
-  "body": "<spa> Nadbrzeże Warty\n<pat> (Uniwersytet Adama Miskatonica), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Uniwersytet Adama Miskatonica, za każdy pozostały punkt wytrzymałości Gońca zamień 1 żeton wskazówki na 1 żeton zagłady na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań. Badacze jako grupa otrzymują 1<调查员> punktów obrażeń.",
+  "body": "<spa> Ostrów Tumski\n<pat> (Rynek Jeżycki), Powściągliwy\n<for> Gdy Goniec wejdzie na lokalizację Rynek Jeżycki, za każdy pozostały punkt wytrzymałości Gońca zamień 1 żeton wskazówki na 1 żeton zagłady na tej lokalizacji, a następnie wtasuj Gońca do talii spotkań. Badacze jako grupa otrzymują 1<调查员> punktów obrażeń.",
   "tts_config": {
     "version": "v2",
     "script_id": "2123DB3E"
   },
-  "content_hash": "477bed68ed46b77359679f7aacf87c7309aefa4a0ec30d4bb7efc29d9172754c",
+  "content_hash": "943dcda467b465cee74241aac6bd529dd3db9ff09e4e50f12aecd2a527216e68",
   "enemy_damage": 0,
   "traits": [
     "Humanoid",
