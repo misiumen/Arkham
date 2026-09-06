@@ -168,7 +168,7 @@ def selftest():
     assert l["Zachrystia"]["clues"] == 1
     l3 = by_name(locations("Karty Lokacji/scenariusz 3"))
     assert l3["Sołacz"]["shroud"] == 2 and l3["Sołacz"]["corrupt"]["shroud"] is None   # karta 4f9ffbe: zaslona 2
-    assert l3["Tunele Forteczne"]["shroud"] is None and l3["Tunele Forteczne"]["clues"] == 12
+    assert l3["Tunele Forteczne"]["shroud"] is None and l3["Tunele Forteczne"]["clues"] == 8   # 186f171: 2<badacz>
     e = by_name(enemies("Karty Spotkań/scenariusz 1"))
     assert e["Żyrij Żerdź"]["hp"] == 12 and e["Żyrij Żerdź"]["victory"] == 1
     assert [t for _, t, _, _ in agendas("Karty Scenariusza/scenariusz 3")] == [4, 8, 14, 18]   # 4f9ffbe: T4 = 18

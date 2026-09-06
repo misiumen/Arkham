@@ -164,11 +164,20 @@ S3_ENEMY = {
     "pomiot": _e(E2, "Kozi Pomiot", hunter=True, retaliate=True),
 }
 S3_ENEMY["cien"].update(atk=1, ev=1)   # karta (368a3b4): "X to 1+ liczba lokalizacji Spaczona" -> 1 + enemy_bonus()
-# Goncy: pliki "Goniec 1/2/3" maja rozne zdrowie - wczytaj kazdy osobno
+# Goncy: pliki "Goniec 1/2/3" - zdrowie, rozstawienie (<spa>), cel patrolu (<pat>) i "wtasuj" czytane z kazdej karty
+import re as _re
+_UAM_ALIASES = {"Uniwersytet Adama Miskatonica": UAM, "Uniwesytet Adama Miskatonica": UAM}
 for _i in (1, 2, 3):
-    _g = cd.enemy(os.path.join(cd.ROOT, "Karty Spotkań", "scenariusz 3", "Goniec %d.card" % _i), PLAYERS)
+    _p = os.path.join(cd.ROOT, "Karty Spotkań", "scenariusz 3", "Goniec %d.card" % _i)
+    _g = cd.enemy(_p, PLAYERS)
+    _body = cd.load(_p).get("body") or ""
+    _spa = _re.search(r"<spa>\s*([^<\r\n]+)", _body).group(1).strip()
+    _pat = _re.search(r"<pat>\s*\(([^)]+)\)", _body).group(1).strip()
+    _spa, _pat = _UAM_ALIASES.get(_spa, _spa), _UAM_ALIASES.get(_pat, _pat)
+    assert _spa in L3 and _pat in L3, (_spa, _pat)
     S3_ENEMY["goniec%d" % _i].update(atk=_g["atk"], hp=_g["hp"], ev=_g["ev"], dmg=_g["dmg"], hor=_g["hor"],
-                                     victory=_g["victory"])
+                                     victory=_g["victory"], spawn=_spa, target=_pat,
+                                     returns=("wtasuj" in _body), name="Goniec (%s)" % _pat)
 S3_DECK = {"agitator": Q3["Agitator z Wildy"], "cien": Q3["Cień z Jeżyc"], "student": Q3["Obłąkany Student Teologii"],
            "bamber": Q3["Wkurwiony Bamber"], "sadza": Q3["Czarna Sadza"], "kryzys": Q3["Kryzys Aprowizacyjny"],
            "cenzura": Q3["Państwowa Cenzura"], "smrod": Q3["Smród z Garbar"], "strajk": Q3["Strajk"],
@@ -1230,12 +1239,13 @@ class Game3(Base):
             if e["kind"].startswith("goniec") and not e["exhausted"] and e in self.enemies and not e.get("done"):
                 if e["loc"] != e["target"]:
                     p = self.path(e["loc"], e["target"])
-                    e["loc"] = p[0] if p else e["target"]; e["engaged"] = None
+                    if p:   # brak drogi (np. Dyrekcja "niedostepna") = Goniec czeka
+                        e["loc"] = p[0]; e["engaged"] = None
                 else:
                     n = min(e["hp"], self.clues[e["target"]])   # "za kazdy pozostaly punkt zdrowia zamien 1 wskazowke na zaglade"
                     self.clues[e["target"]] -= n
                     self.add_locdoom(e["target"], n)
-                    if e["kind"] == "goniec1":   # karta 4f9ffbe: bez "wtasuj"; "gdy pokonany trafia do puli zwyciestwa"
+                    if not e.get("returns"):   # karta bez "wtasuj" (Goniec 1): zostaje, po pokonaniu do puli zwyciestwa
                         e["done"] = True
                     else:
                         self.enemies.remove(e)
@@ -1587,7 +1597,7 @@ def cmd_sim(which, profiles, games, seed):
 def selftest():
     global LOC_DOOM_COUNTS
     assert S1_AGENDA == [4, 4, 4, 3] and S3_AGENDA == [4, 8, 14, 18]
-    assert S1_ENEMY["zerdz"]["hp"] == 12 and S3_ENEMY["goniec3"]["target"] == "Zakłady Cegielskiego"
+    assert S1_ENEMY["zerdz"]["hp"] == 12 and S3_ENEMY["goniec3"]["target"] in L3
     assert S3_ENEMY["koza"]["hp"] == 32 and S3_ENEMY["goniec2"]["hp"] == 4 and S3_ENEMY["cien"]["atk"] is None or True
     prof = [dict(investigator="X%d" % i, faction="guardian", wil=20, int=20, com=20, agi=20,
                  health=99, sanity=99, weapons=1, dmg_bonus=9, heal_cards=0, cards=30, allies=0,

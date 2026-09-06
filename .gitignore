@@ -5,3 +5,4 @@
 .cache/table_scenariusz2.json
 __pycache__/
 *.pyc
+/.cache
