@@ -35,11 +35,11 @@ PLAYERS = 4
 #  scen 1: Nory (1), Oboz na mokradlach (1), Zyrij Zerdz (1)
 #  scen 2: 3 karty Barier po 1 (tylko przedmiotem), Arcykaplan 2, Zmutowany Kierownik 1
 #  scen 3: ZADNA karta nie ma pola victory
-VICTORY_AVAILABLE = {1: 3, 2: 6, 3: 0}
+VICTORY_AVAILABLE = {1: 3, 2: 6, 3: 3}   # scen 3: Czarna Koza 2, Goniec 1 x1
 # Premie z Fabuly: scen 1 Z1 +4, Z2 (pokonani) +2, Z3/Z4 0; scen 2 +2 za ukonczenie (1a, 1b) i +2 za
 # stracenie Lewiatana (1b); scen 3 tylko Victory X
 SURVIVAL_XP = {1: {"wygrana": 4, "porazka": 2, "zaglada": 0}, 2: {"wygrana": 2, "porazka": 0},
-               3: {"wygrana": 0, "porazka": 0}}
+               3: {"wygrana": 3, "porazka": 0}}   # scen 3: Ksiega 3 PZ (Dalbor zyje) / 1 PZ
 TASK_XP = 2   # "Wiesniacy zostali uratowani" / "pochowek": +2 PD za zadanie
 
 
@@ -117,7 +117,8 @@ def run_campaign(bases, variant="A", seed=None, log=None, narrate=False):
             g = s2.Game(profs, variant=variant, kara=kara2, seed=rng.random())
         else:
             extra = ["nosiciel", "hierofanta", "pomiot"] if slime else []
-            g = s13.Game3(profs, seed=rng.random(), extra_deck=extra)
+            lost = sum(1 for s in out["scenarios"] if not s["won"])   # Ksiega: pelne zwyciestwo 0, czesciowy 1, porazka 2
+            g = s13.Game3(profs, seed=rng.random(), extra_deck=extra, kor_start=lost)
         res = g.play()
         won = res[0] == "wygrana"
 
@@ -128,6 +129,10 @@ def run_campaign(bases, variant="A", seed=None, log=None, narrate=False):
             earned += TASK_XP
         if scen == 2 and won and variant == "B":
             earned += 2   # Fabula 1b: +2 PD za stracenie Lewiatana w otchlan
+        if scen == 3 and won:
+            earned += 3 if getattr(g, "dalbor", False) else 1   # Ksiega: 3 PZ (Dalbor przezyl) / 1 PZ (zginal)
+            for i in crew:
+                i.wound(phys=1)   # Akt 6 rewers: "Kazdy badacz otrzymuje 1 punkt Fizycznej Traumy"
 
         # traumy: pokonany badacz = 1 trauma; do tego kary z rozwiazan
         for inv_state, sim in zip(crew, g.inv):
@@ -264,7 +269,7 @@ def cmd_xp():
     tot = 0
     src = {1: "Nory, Oboz na mokradlach, Zyrij; +2 wiesniacy, +2 pochowek",
            2: "3 Bariery (przedmiotem), Arcykaplan 2, Kierownik 1; +2 ukonczenie, +2 Lewiatan (B)",
-           3: "brak pol victory w scenariuszu 3"}
+           3: "Czarna Koza 2, Goniec 1; Ksiega: +3 PZ (Dalbor przezyl) / +1 PZ"}
     for i in (1, 2, 3):
         v = VICTORY_AVAILABLE[i]
         b = SURVIVAL_XP[i]["wygrana"] + (2 * TASK_XP if i == 1 else 0) + (2 if i == 2 else 0)

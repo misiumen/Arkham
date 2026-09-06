@@ -25,7 +25,10 @@ Pokretla (--tweak K=V); domyslna wartosc = odczyt kart / odpowiedzi autora z 5 I
                      1 = jak stoi na karcie: quantity 2, grupa f -> 2 kopie w talii spotkan
   KOZA_STATS=0       1 = statystyki Awatara z folderu "Scenariusz 4" zamiast karty Czarna Koza
   GONIEC_DMG=1       0 = Goniec po dotarciu NIE zadaje grupie 1<badacz> obrazen (wrazliwosc)
-  KURIER=1           1 = Artykuly Kuriera w talii spotkan, po jednej wersji z par (autor: "po jednej")
+  KURIER=1           1 = Kurjer Poznanski jako OSOBNA talia (Ksiega: 1 karta na runde po fazie spotkan, jako grupa);
+                     po jednej wersji z par (autor); 0 = bez Kurjera
+  KOR_START=0        ile z lokacji Biblioteka/Dyrekcja/Linia zaczyna jako Spaczona (Ksiega: pelne zwyciestwo 0,
+                     czesciowy sukces 1, porazka 2; kampania ustawia to sama)
   KURIER_PICK=0      ktora wersja z par: 0 = pliki bez numeru (Godzina policyjna, Seans, Targi) i
                      "Seans 2" dla Lo Kittay; 1 = "Godzina policyjna 2", "Seans 3", "Seans 4", "Targi 2"
   DALBOR_PER_ROUND=1 ile razy na runde Dalbor usuwa zaglade (karta: symbol bez limitu - pytanie do autora)
@@ -46,6 +49,7 @@ KOZA_STATS = 0
 GONIEC_DMG = 1
 KURIER = 1
 KURIER_PICK = 0
+KOR_START = 0
 DALBOR_PER_ROUND = 1
 AKT_DOOM = 1
 S3_CLUE_CUT = 0     # wrazliwosc (0 = jak na kartach)
@@ -96,7 +100,7 @@ for _n in [RAMPA, KOSCIOL, ZACHRYSTIA, SRODEK, SKRAJ, POSIADLOSC] + S1_VILLAGE_R
 def _e(src, name, **flags):
     e = src[name]
     return dict(atk=e["atk"], hp=e["hp"], ev=e["ev"], dmg=e["dmg"], hor=e["hor"], name=name,
-                traits=e["traits"], **flags)
+                traits=e["traits"], victory=e.get("victory"), **flags)
 
 
 # flagi = slowa kluczowe z tekstu kart (Lowca / Powsciagliwy / Msciwy)
@@ -157,11 +161,12 @@ S3_ENEMY = {
     "hierofanta": _e(E2, "Hierofanta Tysiąca Pędów", hunter=False),
     "pomiot": _e(E2, "Kozi Pomiot", hunter=True, retaliate=True),
 }
-S3_ENEMY["cien"].update(atk=0, ev=0)   # karta: walka X, unik X (X = liczba Spaczonych) -> enemy_bonus()
+S3_ENEMY["cien"].update(atk=1, ev=1)   # karta (368a3b4): "X to 1+ liczba lokalizacji Spaczona" -> 1 + enemy_bonus()
 # Goncy: pliki "Goniec 1/2/3" maja rozne zdrowie - wczytaj kazdy osobno
 for _i in (1, 2, 3):
     _g = cd.enemy(os.path.join(cd.ROOT, "Karty Spotkań", "scenariusz 3", "Goniec %d.card" % _i), PLAYERS)
-    S3_ENEMY["goniec%d" % _i].update(atk=_g["atk"], hp=_g["hp"], ev=_g["ev"], dmg=_g["dmg"], hor=_g["hor"])
+    S3_ENEMY["goniec%d" % _i].update(atk=_g["atk"], hp=_g["hp"], ev=_g["ev"], dmg=_g["dmg"], hor=_g["hor"],
+                                     victory=_g["victory"])
 S3_DECK = {"agitator": Q3["Agitator z Wildy"], "cien": Q3["Cień z Jeżyc"], "student": Q3["Obłąkany Student Teologii"],
            "bamber": Q3["Wkurwiony Bamber"], "sadza": Q3["Czarna Sadza"], "kryzys": Q3["Kryzys Aprowizacyjny"],
            "cenzura": Q3["Państwowa Cenzura"], "smrod": Q3["Smród z Garbar"], "strajk": Q3["Strajk"],
@@ -956,7 +961,7 @@ class Game3(Base):
     ENEMY = S3_ENEMY
     AGENDA = S3_AGENDA
 
-    def __init__(self, profiles, seed=None, extra_deck=()):
+    def __init__(self, profiles, seed=None, extra_deck=(), kor_start=None):
         Base.__init__(self, profiles, seed)
         self.clues = collections.Counter()
         self.locdoom = collections.Counter()
@@ -975,8 +980,9 @@ class Game3(Base):
         self.deck = [k for k, n in S3_DECK.items() for _ in range(n)]
         if KOZA_IN_DECK:
             self.deck += ["koza"] * (Q3["Czarna Koza"])
-        if KURIER:
-            self.deck += list(KURIER_CARDS)
+        self.kurier_deck = list(KURIER_CARDS) if KURIER else []   # Ksiega: "specjalna talia", 1 karta/runde jako grupa
+        self.rng.shuffle(self.kurier_deck)
+        self.kurier_discard = []
         self.deck += list(extra_deck)
         self.rng.shuffle(self.deck)
         self.discard = []
@@ -985,7 +991,13 @@ class Game3(Base):
         self.stall = 0
         self.attached = collections.defaultdict(list)   # Strajk / Tej / Trauma / Strajk w Cegielskim
         self.dalbor = False
+        self.dalbor_dead = False
+        self.act6b = False
         self.dyrekcja_used = False
+        # Ksiega, "Przygotowanie planszy": czesciowy sukces = 1 losowa z Biblioteka/Dyrekcja/Linia Spaczona, porazka = 2
+        n_kor = KOR_START if kor_start is None else kor_start
+        for loc in self.rng.sample(sorted(L3_KOR), min(n_kor, len(L3_KOR))):
+            self.corrupt_loc(loc, " (start)")
         self.inflacja = None
         if KOZA_STATS:
             self.ENEMY = dict(S3_ENEMY)
@@ -1115,14 +1127,32 @@ class Game3(Base):
                 self.add_locdoom(loc)
         elif card == "cenzura":
             self.log["Cenzura: strata przedmiotu"] += 1
-        elif card in KURIER_CARDS:
-            keep = self.kurier(inv, card)
         if keep is None:
             self.discard.append(card)
             if not self.result:
                 self.draw_encounter(inv)
         elif not keep:
             self.discard.append(card)
+
+    def draw_kurier(self):
+        """Ksiega: "W kazdej rundzie, po zakonczeniu fazy spotkan, ciagniecie jako grupa 1 karte z talii Kurjer"."""
+        if not self.kurier_deck:
+            if not self.kurier_discard:
+                return
+            self.kurier_deck, self.kurier_discard = self.kurier_discard, []
+            self.rng.shuffle(self.kurier_deck); self.log["talia Kurjera przetasowana"] += 1
+        card = self.kurier_deck.pop()
+        self.log["Kurjer: " + card] += 1
+        # kto rozpatruje: badacz w lokacji wymaganej przez karte (dowolny), inaczej pierwszy zywy
+        need = {"seans": ["Stary Rynek"], "kittay": [UAM], "spis": ["Dyrekcja Zakładu", UAM], "kostrzewski": ["Ostrów Tumski"],
+                "morderstwo": ["Stary Rynek"] + sorted(self.adj["Stary Rynek"])}.get(card)
+        cands = [i for i in self.alive() if not need or i["loc"] in need]
+        if not cands:
+            self.kurier_discard.append(card); self.log["Kurjer: bez efektu (nikt w lokacji)"] += 1
+            return
+        inv = max(cands, key=lambda i: i["int"] + i["wil"])
+        if not self.kurier(inv, card):
+            self.kurier_discard.append(card)
 
     def kurier(self, inv, card):
         """Artykuly Kuriera - po jednej wersji (KURIER_PICK). Zwraca True, gdy karta zostaje w grze."""
@@ -1187,6 +1217,13 @@ class Game3(Base):
             if self.result:
                 return
             self.draw_encounter(i)
+        if self.alive() and not self.result:
+            self.draw_kurier()
+        for e in list(self.enemies):   # Student: "<pat> (Ostrow Tumski)" - 1 lokacja/runde w strone Ostrowa
+            if e["kind"] == "student" and not e["exhausted"] and e["loc"] != "Ostrów Tumski" and not e.get("engaged"):
+                p = self.path(e["loc"], "Ostrów Tumski")
+                if p:
+                    e["loc"] = p[0]
         for e in list(self.enemies):   # Goncy: 1 lokacja/runde do celu
             if e["kind"].startswith("goniec") and not e["exhausted"] and e in self.enemies:
                 if e["loc"] != e["target"]:
@@ -1264,8 +1301,16 @@ class Game3(Base):
         self.agenda += 1
         self.log["tajemnica -> %d" % (self.agenda + 1)] += 1
         if self.agenda >= len(self.AGENDA):
-            self.note("Tajemnica 4 dobiegla konca (zaglada na lokacjach: %d)" % sum(self.locdoom.values()))
-            self.result = ("porazka", "zaglada (Tajemnica 4: Miasto pod presja)")
+            # T4 rewers (368a3b4): "Aktywnym aktem staje sie odlozony na bok Akt 6b. W Ostrowie umiesc Czarna Koze.
+            # Jezeli Edmund Dalbor sojusznik jest w grze, zostaje zastapiony przez wroga Edmund Dalbord I Mleczny"
+            self.act6b = True
+            self.act = 5
+            if not any(e["kind"] == "koza" for e in self.enemies):
+                self.spawn("koza", "Ostrów Tumski")
+            if self.dalbor:
+                self.dalbor = False; self.dalbor_dead = True   # wrog "Edmund Dalbord I Mleczny" - brak karty w repo
+            self.note("Tajemnica 4 dobiegla konca: Akt 6b, Czarna Koza na Ostrowie%s" % (", Dalbor stracony" if self.dalbor_dead else ""))
+            self.log["Tajemnica 4 -> Akt 6b"] += 1
             return
         self.note("Tajemnica %d (zaglada na lokacjach: %d)" % (self.agenda + 1, sum(self.locdoom.values())))
         if self.agenda == 3:   # T3 rewers: "1<badacz> przerazenia za kazda odkryta Spaczona, dla grupy"
@@ -1279,9 +1324,10 @@ class Game3(Base):
     def defeat(self, inv, e):
         self.enemies.remove(e)
         self.log["pokonany: " + e["name"]] += 1
+        self.victory += int(e.get("victory") or 0)
         if e["kind"] == "koza":
-            self.note("Czarna Koza pokonana")
-            self.result = ("wygrana", "Czarna Koza pokonana")
+            self.note("Czarna Koza pokonana (Dalbor %s)" % ("zyje" if self.dalbor else "zginal"))
+            self.result = ("wygrana", "Czarna Koza pokonana, Dalbor %s" % ("przezyl" if self.dalbor else "zginal"))
 
     def recover(self, inv, loc):
         """Odzyskanie Spaczonej lokacji wg jej rewersu / karty _kor_9."""
@@ -1334,8 +1380,13 @@ class Game3(Base):
             for i in self.alive():
                 if self.clues[i["loc"]] > 0: self.clues[i["loc"]] -= 1; self.pool += 1; i["clues"] += 1
             self.locdoom[worst] = max(0, self.locdoom[worst] - 2)
-        if self.act in (3, 4):   # Akt 3/4 rewers: "-2 zaglady z wybranej lokalizacji" (Akt 4 pisze 'zetony chaosu')
+        if self.act == 3:    # Akt 3 rewers: "Z wybranej lokalizacji usun 2 zetony zaglady"
             self.locdoom[worst] = max(0, self.locdoom[worst] - 2)
+        if self.act == 4:    # Akt 4 rewers: "Z wybranej lokalizacji lub Tajemnicy usun do 3 zetony zaglady"
+            if self.doom >= self.locdoom[worst]:
+                self.doom = max(0, self.doom - 3)
+            else:
+                self.locdoom[worst] = max(0, self.locdoom[worst] - 3)
         if self.act == 5:    # Akt 5 rewers: -2 zaglady, Dalbor, Czarna Koza na Ostrowie (wyczerpana)
             self.locdoom[worst] = max(0, self.locdoom[worst] - 2)
             self.dalbor = True
