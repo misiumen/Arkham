@@ -3,3 +3,5 @@
 .cache/arkhamdb/
 .cache/sim_scenariusz2.json
 .cache/table_scenariusz2.json
+__pycache__/
+*.pyc
